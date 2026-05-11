@@ -40,56 +40,100 @@ Item {
 
     // ── Expand-all: show hourly for every day simultaneously ───────────────
     readonly property bool expandAll: Plasmoid.configuration.forecastExpandAll === true
-    // Per-day hourly cache: maps dateStr → hourly array; populated sequentially
+    // Per-day hourly cache: maps dateStr → hourly array; populated progressively
     property var _perDayHourlyData: ({})
-    property int _expandAllFetchIdx: -1      // which repeater index is being fetched (-1 = idle)
-    property string _expandAllFetchDate: ""  // dateStr currently being fetched
+    // Per-day loading state: maps dateStr → true while a fetch is in flight
+    property var _loadingDays: ({})
     // Set of dateStr values the user has manually collapsed in expandAll mode
     property var _collapsedDays: ({})
+    property var _expandAllQueue: []
+    property int _expandAllActiveFetches: 0
+    property int _expandAllFetchGeneration: 0
+    readonly property int _expandAllMaxConcurrentFetches: 1
+
+    function _cancelExpandAllFetch(clearData) {
+        _expandAllFetchGeneration++;
+        _expandAllQueue = [];
+        _expandAllActiveFetches = 0;
+        expandAllFetchPump.stop();
+        _loadingDays = {};
+        if (clearData)
+            _perDayHourlyData = {};
+    }
 
     function _startExpandAll() {
         if (!weatherRoot || weatherRoot.dailyData.length === 0) return;
+        _expandAllFetchGeneration++;
+        _expandAllQueue = [];
+        _expandAllActiveFetches = 0;
         _perDayHourlyData = {};
-        _expandAllFetchIdx = 0;
-        _fetchNextDayForExpandAll();
+        var loading = {};
+        var total    = Math.min(Plasmoid.configuration.forecastDays, weatherRoot.dailyData.length);
+        var startDi  = forecastRoot.showToday ? 0 : 1;
+        for (var di = startDi; di < total; di++) {
+            var dateStr = weatherRoot.dailyData[di].dateStr || "";
+            if (!dateStr) continue;
+            _expandAllQueue.push(dateStr);
+            loading[dateStr] = true;
+        }
+        _loadingDays = loading;
+        expandAllFetchPump.restart();
     }
 
-    function _fetchNextDayForExpandAll() {
-        if (!expandAll) { _expandAllFetchIdx = -1; return; }
-        if (!weatherRoot) return;
-        var total = Math.min(Plasmoid.configuration.forecastDays, weatherRoot.dailyData.length);
-        var visCount = forecastRoot.showToday ? total : Math.max(0, total - 1);
-        if (_expandAllFetchIdx >= visCount) { _expandAllFetchIdx = -1; return; }
-        var di = forecastRoot.showToday ? _expandAllFetchIdx : _expandAllFetchIdx + 1;
-        if (di >= weatherRoot.dailyData.length) { _expandAllFetchIdx = -1; return; }
-        _expandAllFetchDate = weatherRoot.dailyData[di].dateStr || "";
-        weatherRoot.hourlyData = [];
-        weatherRoot.fetchHourlyForDate(_expandAllFetchDate);
+    function _pumpExpandAllQueue() {
+        if (!expandAll || !weatherRoot) return;
+        var generation = _expandAllFetchGeneration;
+        while (_expandAllActiveFetches < _expandAllMaxConcurrentFetches && _expandAllQueue.length > 0) {
+            var dateStr = _expandAllQueue.shift();
+            _expandAllActiveFetches++;
+            (function(ds, gen) {
+                weatherRoot.fetchHourlyForDateDirect(ds, function(hourlyArr) {
+                    if (gen !== forecastRoot._expandAllFetchGeneration) return;
+                    var dataUpd = Object.assign({}, forecastRoot._perDayHourlyData);
+                    dataUpd[ds] = hourlyArr || [];
+                    forecastRoot._perDayHourlyData = dataUpd;
+                    var loadDone = Object.assign({}, forecastRoot._loadingDays);
+                    delete loadDone[ds];
+                    forecastRoot._loadingDays = loadDone;
+                    forecastRoot._expandAllActiveFetches = Math.max(0, forecastRoot._expandAllActiveFetches - 1);
+                    if (forecastRoot._expandAllQueue.length > 0)
+                        expandAllFetchPump.restart();
+                });
+            })(dateStr, generation);
+        }
+    }
+
+    Timer {
+        id: expandAllFetchPump
+        interval: 80
+        repeat: false
+        onTriggered: forecastRoot._pumpExpandAllQueue()
     }
 
     onExpandAllChanged: {
         if (expandAll) {
-            expandedIndex = -1;           // close any single-expand panel
-            _autoOpenDone = true;         // suppress autoOpen while expandAll is active
-            _collapsedDays = {};          // reset per-day collapse state
-            if (weatherRoot && weatherRoot.dailyData.length > 0)
+            expandedIndex = -1;
+            _autoOpenDone = true;
+            _collapsedDays = {};
+            _loadingDays   = {};
+            if (visible && weatherRoot && weatherRoot.dailyData.length > 0)
                 _startExpandAll();
         } else {
-            _perDayHourlyData = {};
+            _cancelExpandAllFetch(true);
             _collapsedDays = {};
-            _expandAllFetchIdx = -1;
-            _autoOpenDone = false;        // re-arm autoOpen for single-expand mode
+            _autoOpenDone = false;
         }
     }
 
     function _doAutoOpen() {
-        if (!autoOpen || _autoOpenDone) return;
+        if (_autoOpenDone) return;
         if (!weatherRoot || weatherRoot.dailyData.length === 0) return;
         _autoOpenDone = true;
         if (expandAll) {
             _startExpandAll();
             return;
         }
+        if (!autoOpen) return;
         var firstDataIndex = forecastRoot.showToday ? 0 : 1;
         if (firstDataIndex >= weatherRoot.dailyData.length) return;
         forecastRoot.expandedIndex = 0;
@@ -101,31 +145,34 @@ Item {
         if (visible) {
             _autoOpenDone = false;
             _collapsedDays = {};
+            _loadingDays   = {};
             if (expandAll) {
                 _perDayHourlyData = {};
                 _startExpandAll();
             } else {
                 _doAutoOpen();
             }
+        } else {
+            _cancelExpandAllFetch(false);
         }
     }
 
     Connections {
         target: weatherRoot
         function onDailyDataChanged() {
-            forecastRoot._doAutoOpen();
-        }
-        function onHourlyDataChanged() {
-            // Store per-day data during expandAll sequential fetch
-            if (forecastRoot.expandAll && forecastRoot._expandAllFetchIdx >= 0
-                    && weatherRoot.hourlyData.length > 0
-                    && forecastRoot._expandAllFetchDate) {
-                var copy = weatherRoot.hourlyData.slice();
-                var upd = Object.assign({}, forecastRoot._perDayHourlyData);
-                upd[forecastRoot._expandAllFetchDate] = copy;
-                forecastRoot._perDayHourlyData = upd;   // full reassign triggers bindings
-                forecastRoot._expandAllFetchIdx++;
-                forecastRoot._fetchNextDayForExpandAll();
+            if (!forecastRoot.visible) {
+                forecastRoot._autoOpenDone = false;
+                forecastRoot._cancelExpandAllFetch(true);
+                return;
+            }
+            if (forecastRoot.expandAll) {
+                // expandAll always re-fetches when new data arrives —
+                // independent of autoOpen and _autoOpenDone.
+                forecastRoot._perDayHourlyData = {};
+                forecastRoot._loadingDays      = {};
+                forecastRoot._startExpandAll();
+            } else {
+                forecastRoot._doAutoOpen();
             }
         }
     }
@@ -164,6 +211,15 @@ Item {
     }
 
     // ── empty state ───────────────────────────────────────────────────────
+    BusyIndicator {
+        id: emptyBusy
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.bottom: emptyLabel.top
+        anchors.bottomMargin: 8
+        running: visible
+        visible: weatherRoot && weatherRoot.loading && weatherRoot.dailyData.length === 0
+    }
+
     Label {
         id: emptyLabel
         anchors.centerIn: parent
@@ -205,6 +261,14 @@ Item {
                         if (!forecastRoot.expandAll && forecastRoot.expandedIndex === index)
                             return weatherRoot ? weatherRoot.hourlyData : [];
                         return [];
+                    }
+
+                    readonly property bool _dayIsLoading: {
+                        var dateStr = (weatherRoot && weatherRoot.dailyData[dataIndex])
+                            ? (weatherRoot.dailyData[dataIndex].dateStr || "") : "";
+                        if (forecastRoot.expandAll && dateStr && !forecastRoot._collapsedDays[dateStr])
+                            return !!forecastRoot._loadingDays[dateStr];
+                        return false;
                     }
 
                     // ── day row ─────────────────────────────────────────
@@ -366,9 +430,17 @@ Item {
                             }
                         }
 
+                        // Per-day loading spinner (expandAll parallel fetch)
+                        BusyIndicator {
+                            anchors.centerIn: parent
+                            running: _dayIsLoading
+                            visible: _dayIsLoading
+                        }
+
+                        // Plain loading text for single-expand mode
                         Label {
                             anchors.centerIn: parent
-                            visible: ((forecastRoot.expandAll && !forecastRoot._collapsedDays[weatherRoot.dailyData[dataIndex].dateStr || ""]) || forecastRoot.expandedIndex === index) && _dayHourlyData.length === 0
+                            visible: !_dayIsLoading && ((forecastRoot.expandAll && !forecastRoot._collapsedDays[weatherRoot.dailyData[dataIndex].dateStr || ""]) || forecastRoot.expandedIndex === index) && _dayHourlyData.length === 0
                             text: i18n("Loading hourly data…")
                             color: Kirigami.Theme.textColor
                             font: weatherRoot ? weatherRoot.wf(11, false) : Qt.font({})
