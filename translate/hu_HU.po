@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Advanced Weather Widget\n"
 "Report-Msgid-Bugs-To: https://github.com/pnedyalkov91/advanced-weather-widget/issues\n"
 "POT-Creation-Date: 2026-05-12 08:28+0300\n"
-"PO-Revision-Date: 2026-05-10 14:59+0200\n"
+"PO-Revision-Date: 2026-05-13 08:39+0200\n"
 "Last-Translator: summoner <summoner@disroot.org>\n"
 "Language-Team: Hungarian <>\n"
 "Language: hu_HU\n"
@@ -193,11 +193,11 @@ msgstr "Riasztások:"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:810
 msgid "All days show hourly forecast when opening the tab"
-msgstr ""
+msgstr "A fül megnyitásakor minden napnál megjelenik az óránkénti előrejelzés"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:794
 msgid "All days start collapsed"
-msgstr ""
+msgstr "Minden nap összecsukva indul"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:196
 msgid "All tabs"
@@ -257,7 +257,7 @@ msgstr "Alkalmazza a beállításokat?"
 
 #: contents/ui/config/configLocation.qml:1165
 msgid "Apply detected location"
-msgstr "Észlelt hely alkalmazása"
+msgstr "Észlelt hely használata"
 
 #: contents/ui/config/configLocation.qml:1374
 msgid "Are you sure? This is your last saved location. If you remove it, the widget will no longer show weather information."
@@ -309,7 +309,7 @@ msgstr "Az automatikus észlelés frissítette a koordinátákat."
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:784
 msgid "Auto-open hourly forecast:"
-msgstr ""
+msgstr "Óránkénti előrejelzés automatikus megnyitása:"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:949
 msgid "Automatic"
@@ -459,7 +459,7 @@ msgstr "Kínai időjárás-szolgáltató globális lefedettséggel. API-kulcs sz
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:876
 msgid "Choose Simple Mode Font"
-msgstr ""
+msgstr "Egyszerű mód betűtípusának kiválasztása"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:967
 msgctxt "@action:button"
@@ -705,7 +705,7 @@ msgstr "Véget ért a nappali világosság"
 #: contents/ui/config/tabs/ConfigPanelTab.qml:426
 #: contents/ui/config/tabs/ConfigPanelTab.qml:500
 msgid "Default"
-msgstr ""
+msgstr "Alapértelmezett"
 
 #: contents/ui/config/configLocation.qml:1809
 msgid "Default location (click to unset)"
@@ -932,7 +932,7 @@ msgstr "Kiváló"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:801
 msgid "Expand all days:"
-msgstr ""
+msgstr "Minden nap kibontása:"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:864
 msgid "Expand widget to fill available panel space"
@@ -940,7 +940,7 @@ msgstr "Kisalkalmazás kibontása a rendelkezésre álló panelterület kitölt�
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:611
 msgid "Expanded cards height:"
-msgstr "Kiterjesztett kártyamagasság:"
+msgstr "Kibontott kártyák magassága:"
 
 #: contents/ui/DetailsView.qml:2016
 msgid "Expires"
@@ -1264,11 +1264,11 @@ msgstr "Ikonok"
 
 #: contents/ui/config/configLocation.qml:1155
 msgid "If this looks correct, apply it. Otherwise, choose your location manually."
-msgstr "Ha ez helyesnek tűnik, akkor alkalmazza. Ellenkező esetben válassza ki a helyet kézzel."
+msgstr "Ha ez helyesnek tűnik, akkor vegye használatba. Ellenkező esetben válassza ki a helyet kézzel."
 
 #: contents/ui/config/configGeneral.qml:664
 msgid "If you have just registered a new OpenWeatherMap API key, it might take up to 2 hours for it to become active. Please try again later if it doesn't work immediately."
-msgstr ""
+msgstr "Ha most regisztrált új OpenWeatherMap API-kulcsot, az aktiválás akár 2 órát is igénybe vehet. Ha nem működik azonnal, próbálja meg később."
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:157
 msgid "Imperial (°F, mph, inHg, in)"
@@ -1508,7 +1508,7 @@ msgstr "Helyek betöltése…"
 
 #: contents/ui/RadarView.qml:103
 msgid "Loading radar…"
-msgstr ""
+msgstr "Radar betöltése…"
 
 #: contents/config/config.qml:47
 msgid "Location"
@@ -1910,7 +1910,7 @@ msgstr "Olajfa"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:811
 msgid "Only the clicked day expands"
-msgstr ""
+msgstr "Csak a rákattintott nap bomlik ki"
 
 #: contents/ui/config/configLocation.qml:1106
 #: contents/ui/config/configLocation.qml:1483 contents/ui/RadarView.qml:178
@@ -1919,7 +1919,7 @@ msgstr "Telepítési útmutató megnyitása"
 
 #: contents/ui/RadarView.qml:185
 msgid "Open radar in browser"
-msgstr ""
+msgstr "Radar megnyitása a böngészőben"
 
 #: contents/ui/config/configGeneral.qml:287
 msgid "Open-Meteo (recommended, free)"
@@ -1935,7 +1935,7 @@ msgstr "OpenWeatherMap API-kulcs:"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:793
 msgid "Opens today's hourly forecast automatically (or the next available day)"
-msgstr ""
+msgstr "A mai (vagy a következő elérhető) nap óránkénti előrejelzésének automatikusan megnyitása"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:355
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:420
@@ -2076,11 +2076,11 @@ msgstr "Rossz"
 
 #: contents/ui/SimpleView.qml:317
 msgid "Precip Sum"
-msgstr "Csapadékösszeg"
+msgstr "Összes csapadék"
 
 #: contents/ui/TooltipContent.qml:455
 msgid "Precip. Sum:"
-msgstr "Csapadékösszeg:"
+msgstr "Összes csapadék:"
 
 #: contents/ui/config/configAppearance.qml:1343
 #: contents/ui/config/configAppearance.qml:1466
@@ -2093,7 +2093,7 @@ msgstr "Csapadék"
 #: contents/ui/config/configAppearance.qml:1473
 #: contents/ui/config/configAppearance.qml:1596 contents/ui/DetailsView.qml:308
 msgid "Precipitation Sum"
-msgstr "Csapadékösszeg"
+msgstr "Összes csapadék:"
 
 #: contents/ui/config/configAppearance.qml:1344
 #: contents/ui/config/configAppearance.qml:1467
@@ -2210,7 +2210,7 @@ msgstr "Csak radar"
 
 #: contents/ui/config/configGeneral.qml:728
 msgid "Radar provider: <a href='https://www.rainviewer.com/'>Rain Viewer</a><br/><br/>The widget uses the free RainViewer API, which provides the past 2 hours of weather radar data in 10-minute intervals. Radar forecast is not supported.<br/><br/>Rain Viewer does not guarantee the availability of radar data. They do not conclude contracts with owners of this data. The reason is that the owners can ask them to remove their data from Rain Viewer, change the format, or stop sharing the data. They are trying to keep radar data for as long as possible, but sometimes the owners just stop providing the images."
-msgstr ""
+msgstr "Radarszolgáltató: <a href='[https://www.rainviewer.com/](https://www.rainviewer.com/)'>Rain Viewer</a>A kisalkalmazás az ingyenes RainViewer API-t használja, amely az elmúlt 2 óra radaradatait biztosítja 10 perces időközönként. A radarképes előrejelzés nem támogatott. A Rain Viewer nem garantálja a radaradatok elérhetőségét. Nem kötnek szerződést az adatok tulajdonosaival. Ennek az az oka, hogy a tulajdonosok kérhetik adataik eltávolítását a Rain Viewerről, módosíthatják az adatformátumot, vagy leállíthatják a megosztást. A Rain Viewer igyekszik a lehető legtovább elérhetővé tenni az adatokat, de előfordulhat, hogy a tulajdonosok egyszerűen megszüntetik a képek szolgáltatását."
 
 #: contents/ui/FullView.qml:629
 msgid "Radar:"
@@ -2258,7 +2258,7 @@ msgstr "Frissítés"
 
 #: contents/ui/config/configGeneral.qml:779
 msgid "Refresh weather automatically"
-msgstr "Időjárás automatikus frissítése"
+msgstr "Időjárás-adatok automatikus frissítése"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:857
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:731
@@ -2423,11 +2423,11 @@ msgstr "Súlyos geomágneses vihar."
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:904
 msgid "Shadow Color"
-msgstr ""
+msgstr "Árnyék színe"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:477
 msgid "Shadow color:"
-msgstr ""
+msgstr "Árnyék színe:"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:457
 msgid "Shadow intensity:"
@@ -2472,11 +2472,11 @@ msgstr "Ennek a részletelemnek a megjelenítése vagy elrejtése"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:626
 msgid "Show pollen types in expanded view:"
-msgstr "Pollentípusok megjelenítése a kiterjesztett nézetben:"
+msgstr "Pollentípusok megjelenítése a kibontott nézetben:"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:561
 msgid "Show pollutants in expanded view:"
-msgstr "Szennyező anyagok megjelenítése a kiterjesztett nézetben:"
+msgstr "Szennyező anyagok megjelenítése a kibontott nézetben:"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:407
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:476
@@ -2486,7 +2486,7 @@ msgstr "Előtagikon megjelenítése"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:690
 msgid "Show space weather items in expanded view:"
-msgstr "Űridőjárási elemek megjelenítése kiterjesztett nézetben:"
+msgstr "Űridőjárási elemek megjelenítése a kibontott nézetben:"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:60
 msgid "Show temperature unit:"
@@ -2601,17 +2601,17 @@ msgstr "Hó (éjszaka)"
 #: contents/ui/config/configAppearance.qml:1638 contents/ui/DetailsView.qml:314
 #: contents/ui/SimpleView.qml:323
 msgid "Snow Cover"
-msgstr "Hóréteg"
+msgstr "Hótakaró"
 
 #: contents/ui/TooltipContent.qml:485
 msgid "Snow Cover:"
-msgstr "Hóréteg:"
+msgstr "Hótakaró:"
 
 #: contents/ui/config/configAppearance.qml:1393
 #: contents/ui/config/configAppearance.qml:1516
 #: contents/ui/config/configAppearance.qml:1639
 msgid "Snow depth (cm/in)"
-msgstr "Hóvastagság (cm/in)"
+msgstr "Hótakaró (cm/in)"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:58
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:702
@@ -2809,7 +2809,7 @@ msgstr "Hőmérséklet"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:893
 msgid "Temperature Color"
-msgstr ""
+msgstr "Hőmérséklet színe"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:518
 msgid "Temperature badge"
@@ -2817,7 +2817,7 @@ msgstr "Hőmérsékletjelvény"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:403
 msgid "Temperature color:"
-msgstr ""
+msgstr "Hőmérséklet színe:"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:172
 msgid "Temperature first"
@@ -3115,11 +3115,11 @@ msgstr "Nagyon rossz"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:55
 msgid "Values are rounded to whole numbers"
-msgstr "Az értékek egész számokra vannak kerekítve"
+msgstr "Értékek egész számokra való kerekítése"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:55
 msgid "Values show decimal places"
-msgstr "Az értékek tizedesjegyeket is tartalmaznak"
+msgstr "Értékek tizedesjegyeinek megjelenítése"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:105
 msgid "Vertical"
