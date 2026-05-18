@@ -113,6 +113,12 @@
     <entry name="compressedBadgeSpacing"   type="Int"><default>0</default><min>-20</min><max>20</max></entry>
     <entry name="compressedBadgeColor"     type="String"><default></default></entry>
     <entry name="compressedBadgeOpacity"   type="Double"><default>0.85</default></entry>
+    <!-- System tray uses fixed Simple + Compressed layout, with its own appearance knobs. -->
+    <entry name="traySimpleIconStyle"       type="String"><default>symbolic</default></entry>
+    <entry name="trayCompressedBadgePosition" type="String"><default>bottom-right</default></entry>
+    <entry name="trayCompressedBadgeSpacing"  type="Int"><default>0</default><min>-20</min><max>20</max></entry>
+    <entry name="trayCompressedBadgeColor"    type="String"><default></default></entry>
+    <entry name="trayCompressedBadgeOpacity"  type="Double"><default>0.85</default></entry>
     <entry name="simpleIconSizeMode"    type="String"><default>auto</default></entry>
     <entry name="simpleIconSizeManual"  type="Int"><default>32</default><min>16</min><max>72</max></entry>
     <entry name="simpleFontSizeMode"    type="String"><default>auto</default></entry>

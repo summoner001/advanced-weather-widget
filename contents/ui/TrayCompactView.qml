@@ -27,7 +27,7 @@ Item {
         source: {
             if (!weatherRoot || weatherRoot.weatherCode < 0)
                 return "weather-none-available";
-            var style = Plasmoid.configuration.panelSimpleIconStyle || "symbolic";
+            var style = Plasmoid.configuration.traySimpleIconStyle || "symbolic";
             var isNight = weatherRoot.isNightTime();
             if (style === "symbolic")
                 return W.weatherCodeToIcon(weatherRoot.weatherCode, isNight, true);
@@ -39,11 +39,11 @@ Item {
     TemperatureBadge {
         visible: trayRoot._hasTemp
         temperatureText: trayRoot._trayTemp
-        badgePosition: Plasmoid.configuration.compressedBadgePosition || "bottom-right"
-        badgeSpacing: Plasmoid.configuration.compressedBadgeSpacing || 0
-        badgeColor: Plasmoid.configuration.compressedBadgeColor || ""
-        badgeOpacity: Plasmoid.configuration.compressedBadgeOpacity !== undefined
-            ? Plasmoid.configuration.compressedBadgeOpacity : 0.85
+        badgePosition: Plasmoid.configuration.trayCompressedBadgePosition || "bottom-right"
+        badgeSpacing: Plasmoid.configuration.trayCompressedBadgeSpacing || 0
+        badgeColor: Plasmoid.configuration.trayCompressedBadgeColor || ""
+        badgeOpacity: Plasmoid.configuration.trayCompressedBadgeOpacity !== undefined
+            ? Plasmoid.configuration.trayCompressedBadgeOpacity : 0.85
         fontPixelSize: Math.max(7, Math.round(trayRoot.height / 3))
     }
 }

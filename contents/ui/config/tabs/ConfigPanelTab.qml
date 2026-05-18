@@ -37,12 +37,58 @@ Kirigami.FormLayout {
     /** Emitted when the user clicks Configure… to push the panel sub-page */
     signal pushSubPage
 
+    readonly property bool isSystemTrayConfig: configRoot.isSystemTrayConfig === true
+    readonly property string _panelInfoMode: isSystemTrayConfig ? "simple" : configRoot.cfg_panelInfoMode
+    readonly property int _simpleLayoutType: isSystemTrayConfig ? 2 : configRoot.cfg_panelSimpleLayoutType
+    readonly property string _simpleIconStyle: isSystemTrayConfig ? configRoot.cfg_traySimpleIconStyle : configRoot.cfg_panelSimpleIconStyle
+    readonly property string _badgePosition: isSystemTrayConfig ? configRoot.cfg_trayCompressedBadgePosition : configRoot.cfg_compressedBadgePosition
+    readonly property int _badgeSpacing: isSystemTrayConfig ? configRoot.cfg_trayCompressedBadgeSpacing : configRoot.cfg_compressedBadgeSpacing
+    readonly property string _badgeColor: isSystemTrayConfig ? configRoot.cfg_trayCompressedBadgeColor : configRoot.cfg_compressedBadgeColor
+    readonly property double _badgeOpacity: isSystemTrayConfig ? configRoot.cfg_trayCompressedBadgeOpacity : configRoot.cfg_compressedBadgeOpacity
+    readonly property bool _isSimpleCompressed: _panelInfoMode === "simple" && _simpleLayoutType === 2
+
+    function _setSimpleIconStyle(value) {
+        if (isSystemTrayConfig)
+            configRoot.cfg_traySimpleIconStyle = value;
+        else
+            configRoot.cfg_panelSimpleIconStyle = value;
+    }
+
+    function _setBadgePosition(value) {
+        if (isSystemTrayConfig)
+            configRoot.cfg_trayCompressedBadgePosition = value;
+        else
+            configRoot.cfg_compressedBadgePosition = value;
+    }
+
+    function _setBadgeSpacing(value) {
+        if (isSystemTrayConfig)
+            configRoot.cfg_trayCompressedBadgeSpacing = value;
+        else
+            configRoot.cfg_compressedBadgeSpacing = value;
+    }
+
+    function _setBadgeColor(value) {
+        if (isSystemTrayConfig)
+            configRoot.cfg_trayCompressedBadgeColor = value;
+        else
+            configRoot.cfg_compressedBadgeColor = value;
+    }
+
+    function _setBadgeOpacity(value) {
+        if (isSystemTrayConfig)
+            configRoot.cfg_trayCompressedBadgeOpacity = value;
+        else
+            configRoot.cfg_compressedBadgeOpacity = value;
+    }
+
     Kirigami.Separator {
-        Kirigami.FormData.label: i18n("Panel display settings")
+        Kirigami.FormData.label: panelTab.isSystemTrayConfig ? i18n("System tray display settings") : i18n("Panel display settings")
         Kirigami.FormData.isSection: true
     }
     ComboBox {
         id: panelModeCombo
+        visible: !panelTab.isSystemTrayConfig
         Kirigami.FormData.label: i18n("Display mode:")
         Layout.preferredWidth: 290
         model: [
@@ -70,9 +116,16 @@ Kirigami.FormLayout {
         onActivated: panelTab.configRoot.cfg_panelInfoMode = model[currentIndex].value
     }
 
+    Label {
+        visible: panelTab.isSystemTrayConfig
+        Kirigami.FormData.label: i18n("Display mode:")
+        text: i18n("Simple (icon + temperature)")
+        opacity: 0.8
+    }
+
     // ── Vertical panel truncation warning ──
     Kirigami.InlineMessage {
-        visible: panelTab.configRoot.cfg_panelInfoMode === "single" || panelTab.configRoot.cfg_panelInfoMode === "multiline"
+        visible: !panelTab.isSystemTrayConfig && (panelTab._panelInfoMode === "single" || panelTab._panelInfoMode === "multiline")
         Layout.fillWidth: true
         Layout.columnSpan: 2
         type: Kirigami.MessageType.Information
@@ -83,13 +136,13 @@ Kirigami.FormLayout {
     // ── Simple mode sub‑options ──
 
     Kirigami.Separator {
-        visible: panelTab.configRoot.cfg_panelInfoMode !== "single" && panelTab.configRoot.cfg_panelInfoMode !== "multiline"
-        Kirigami.FormData.label: i18n("Simple display mode settings")
+        visible: panelTab._panelInfoMode !== "single" && panelTab._panelInfoMode !== "multiline"
+        Kirigami.FormData.label: panelTab.isSystemTrayConfig ? i18n("System tray icon settings") : i18n("Simple display mode settings")
         Kirigami.FormData.isSection: true
     }
 
     RowLayout {
-        visible: panelTab.configRoot.cfg_panelInfoMode === "simple"
+        visible: !panelTab.isSystemTrayConfig && panelTab._panelInfoMode === "simple"
         Kirigami.FormData.label: i18n("Layout type:")
         spacing: Kirigami.Units.largeSpacing
         ComboBox {
@@ -121,9 +174,16 @@ Kirigami.FormLayout {
         }
     }
 
+    Label {
+        visible: panelTab.isSystemTrayConfig
+        Kirigami.FormData.label: i18n("Layout type:")
+        text: i18n("Compressed")
+        opacity: 0.8
+    }
+
     // ── Horizontal-layout content filter ──────────────────
     RowLayout {
-        visible: panelTab.configRoot.cfg_panelInfoMode === "simple" && panelTab.configRoot.cfg_panelSimpleLayoutType === 0
+        visible: !panelTab.isSystemTrayConfig && panelTab._panelInfoMode === "simple" && panelTab._simpleLayoutType === 0
         Kirigami.FormData.label: i18n("Show:")
         spacing: Kirigami.Units.largeSpacing
         ComboBox {
@@ -156,7 +216,7 @@ Kirigami.FormLayout {
     }
 
     RowLayout {
-        visible: panelTab.configRoot.cfg_panelInfoMode === "simple" && panelTab.configRoot.cfg_panelSimpleLayoutType !== 2 && (panelTab.configRoot.cfg_panelSimpleLayoutType !== 0 || panelTab.configRoot.cfg_panelSimpleHorizontalContent === "both")
+        visible: !panelTab.isSystemTrayConfig && panelTab._panelInfoMode === "simple" && panelTab._simpleLayoutType !== 2 && (panelTab._simpleLayoutType !== 0 || panelTab.configRoot.cfg_panelSimpleHorizontalContent === "both")
         Kirigami.FormData.label: i18n("Items Order:")
         spacing: Kirigami.Units.largeSpacing
         ComboBox {
@@ -185,7 +245,7 @@ Kirigami.FormLayout {
     }
 
     RowLayout {
-        visible: panelTab.configRoot.cfg_panelInfoMode === "simple"
+        visible: !panelTab.isSystemTrayConfig && panelTab._panelInfoMode === "simple"
         Kirigami.FormData.label: i18n("Widget panel area:")
         spacing: Kirigami.Units.largeSpacing
         ComboBox {
@@ -231,14 +291,23 @@ Kirigami.FormLayout {
     }
 
     RowLayout {
-        visible: panelTab.configRoot.cfg_panelInfoMode === "simple" && (panelTab.configRoot.cfg_panelSimpleLayoutType !== 0 || panelTab.configRoot.cfg_panelSimpleHorizontalContent !== "temp_only")
+        visible: panelTab._panelInfoMode === "simple" && (panelTab._simpleLayoutType !== 0 || panelTab.configRoot.cfg_panelSimpleHorizontalContent !== "temp_only")
         Kirigami.FormData.label: i18n("Weather icon style:")
         spacing: Kirigami.Units.largeSpacing
         ComboBox {
             id: simpleIconStyleCombo
             Layout.preferredWidth: 200
             textRole: "text"
-            model: [
+            model: panelTab.isSystemTrayConfig ? [
+                {
+                    text: i18n("Colorful"),
+                    value: "colorful"
+                },
+                {
+                    text: i18n("Symbolic"),
+                    value: "symbolic"
+                }
+            ] : [
                 {
                     text: i18n("Colorful"),
                     value: "colorful"
@@ -254,15 +323,15 @@ Kirigami.FormLayout {
             ]
             Component.onCompleted: {
                 for (var i = 0; i < model.length; ++i)
-                    if (model[i].value === panelTab.configRoot.cfg_panelSimpleIconStyle) {
+                    if (model[i].value === panelTab._simpleIconStyle) {
                         currentIndex = i;
                         break;
                     }
             }
-            onActivated: panelTab.configRoot.cfg_panelSimpleIconStyle = model[currentIndex].value
+            onActivated: panelTab._setSimpleIconStyle(model[currentIndex].value)
         }
         Button {
-            visible: panelTab.configRoot.cfg_panelSimpleIconStyle === "custom"
+            visible: !panelTab.isSystemTrayConfig && panelTab._simpleIconStyle === "custom"
             text: i18n("Configure weather icons…")
             icon.name: "color-picker"
             onClicked: panelTab.configRoot.conditionIconDialog.openWithContext("panel")
@@ -271,7 +340,7 @@ Kirigami.FormLayout {
 
     // Icon size mode
     RowLayout {
-        visible: panelTab.configRoot.cfg_panelInfoMode === "simple" && (panelTab.configRoot.cfg_panelSimpleLayoutType !== 0 || panelTab.configRoot.cfg_panelSimpleHorizontalContent !== "temp_only")
+        visible: !panelTab.isSystemTrayConfig && panelTab._panelInfoMode === "simple" && (panelTab._simpleLayoutType !== 0 || panelTab.configRoot.cfg_panelSimpleHorizontalContent !== "temp_only")
         Kirigami.FormData.label: i18n("Icon size:")
         spacing: Kirigami.Units.largeSpacing
         ComboBox {
@@ -325,12 +394,12 @@ Kirigami.FormLayout {
                     value: 64
                 }
             ]
-            model: panelTab.configRoot.cfg_panelSimpleIconStyle === "colorful" ? allSizes.filter(function (s) {
+            model: panelTab._simpleIconStyle === "colorful" ? allSizes.filter(function (s) {
                 return s.value <= 48;
             }) : allSizes
             currentIndex: {
                 if (panelTab.configRoot.cfg_simpleIconSizeMode === "auto") {
-                    var target = panelTab.configRoot.cfg_simplePanelDim > 0 ? panelTab.configRoot._autoIconSz(panelTab.configRoot.cfg_panelSimpleLayoutType) : (panelTab.configRoot.cfg_simpleIconAutoSz > 0 ? panelTab.configRoot.cfg_simpleIconAutoSz : 24);
+                    var target = panelTab.configRoot.cfg_simplePanelDim > 0 ? panelTab.configRoot._autoIconSz(panelTab._simpleLayoutType) : (panelTab.configRoot.cfg_simpleIconAutoSz > 0 ? panelTab.configRoot.cfg_simpleIconAutoSz : 24);
                     var best = 0;
                     for (var i = 0; i < model.length; i++) {
                         if (Math.abs(model[i].value - target) < Math.abs(model[best].value - target))
@@ -353,7 +422,7 @@ Kirigami.FormLayout {
 
     // ── Simple mode: font size ────────────────────────────────────────────────
     RowLayout {
-        visible: panelTab.configRoot.cfg_panelInfoMode === "simple" && (panelTab.configRoot.cfg_panelSimpleLayoutType !== 0 || panelTab.configRoot.cfg_panelSimpleHorizontalContent !== "icon_only")
+        visible: !panelTab.isSystemTrayConfig && panelTab._panelInfoMode === "simple" && (panelTab._simpleLayoutType !== 0 || panelTab.configRoot.cfg_panelSimpleHorizontalContent !== "icon_only")
         Kirigami.FormData.label: i18n("Font size:")
         spacing: Kirigami.Units.largeSpacing
         ComboBox {
@@ -384,7 +453,7 @@ Kirigami.FormLayout {
             enabled: panelTab.configRoot.cfg_simpleFontSizeMode === "manual"
             from: 8
             to: 72
-            value: panelTab.configRoot.cfg_simpleFontSizeMode === "auto" ? (panelTab.configRoot.cfg_simplePanelDim > 0 ? panelTab.configRoot._autoFontSz(panelTab.configRoot.cfg_panelSimpleLayoutType) : (panelTab.configRoot.cfg_simpleFontAutoSz > 0 ? panelTab.configRoot.cfg_simpleFontAutoSz : panelTab.configRoot.cfg_simpleFontSizeManual)) : panelTab.configRoot.cfg_simpleFontSizeManual
+            value: panelTab.configRoot.cfg_simpleFontSizeMode === "auto" ? (panelTab.configRoot.cfg_simplePanelDim > 0 ? panelTab.configRoot._autoFontSz(panelTab._simpleLayoutType) : (panelTab.configRoot.cfg_simpleFontAutoSz > 0 ? panelTab.configRoot.cfg_simpleFontAutoSz : panelTab.configRoot.cfg_simpleFontSizeManual)) : panelTab.configRoot.cfg_simpleFontSizeManual
             onValueModified: {
                 if (panelTab.configRoot.cfg_simpleFontSizeMode === "manual")
                     panelTab.configRoot.cfg_simpleFontSizeManual = value;
@@ -399,7 +468,7 @@ Kirigami.FormLayout {
 
     // ── Simple mode: temperature color ───────────────────────────────────────
     RowLayout {
-        visible: panelTab.configRoot.cfg_panelInfoMode === "simple" && (panelTab.configRoot.cfg_panelSimpleLayoutType !== 0 || panelTab.configRoot.cfg_panelSimpleHorizontalContent !== "icon_only")
+        visible: !panelTab.isSystemTrayConfig && panelTab._panelInfoMode === "simple" && (panelTab._simpleLayoutType !== 0 || panelTab.configRoot.cfg_panelSimpleHorizontalContent !== "icon_only")
         Kirigami.FormData.label: i18n("Temperature color:")
         spacing: Kirigami.Units.smallSpacing
         Rectangle {
@@ -439,7 +508,7 @@ Kirigami.FormLayout {
     }
 
     RowLayout {
-        visible: panelTab.configRoot.cfg_panelInfoMode === "simple" && (panelTab.configRoot.cfg_panelSimpleLayoutType !== 0 || panelTab.configRoot.cfg_panelSimpleHorizontalContent !== "icon_only")
+        visible: !panelTab.isSystemTrayConfig && panelTab._panelInfoMode === "simple" && (panelTab._simpleLayoutType !== 0 || panelTab.configRoot.cfg_panelSimpleHorizontalContent !== "icon_only")
         Kirigami.FormData.label: i18n("Temperature shadow:")
         spacing: Kirigami.Units.largeSpacing
         Switch {
@@ -453,7 +522,7 @@ Kirigami.FormLayout {
     }
 
     RowLayout {
-        visible: panelTab.configRoot.cfg_panelInfoMode === "simple" && panelTab.configRoot.cfg_panelSimpleTempShadowEnabled && (panelTab.configRoot.cfg_panelSimpleLayoutType !== 0 || panelTab.configRoot.cfg_panelSimpleHorizontalContent !== "icon_only")
+        visible: !panelTab.isSystemTrayConfig && panelTab._panelInfoMode === "simple" && panelTab.configRoot.cfg_panelSimpleTempShadowEnabled && (panelTab._simpleLayoutType !== 0 || panelTab.configRoot.cfg_panelSimpleHorizontalContent !== "icon_only")
         Kirigami.FormData.label: i18n("Shadow intensity:")
         spacing: Kirigami.Units.largeSpacing
         Slider {
@@ -473,7 +542,7 @@ Kirigami.FormLayout {
     }
 
     RowLayout {
-        visible: panelTab.configRoot.cfg_panelInfoMode === "simple" && panelTab.configRoot.cfg_panelSimpleTempShadowEnabled && (panelTab.configRoot.cfg_panelSimpleLayoutType !== 0 || panelTab.configRoot.cfg_panelSimpleHorizontalContent !== "icon_only")
+        visible: !panelTab.isSystemTrayConfig && panelTab._panelInfoMode === "simple" && panelTab.configRoot.cfg_panelSimpleTempShadowEnabled && (panelTab._simpleLayoutType !== 0 || panelTab.configRoot.cfg_panelSimpleHorizontalContent !== "icon_only")
         Kirigami.FormData.label: i18n("Shadow color:")
         spacing: Kirigami.Units.smallSpacing
         Rectangle {
@@ -514,13 +583,13 @@ Kirigami.FormLayout {
 
     // ── Compressed badge options (only in compressed layout) ───────────
     Kirigami.Separator {
-        visible: panelTab.configRoot.cfg_panelInfoMode === "simple" && panelTab.configRoot.cfg_panelSimpleLayoutType === 2
+        visible: panelTab._isSimpleCompressed
         Kirigami.FormData.label: i18n("Temperature badge")
         Kirigami.FormData.isSection: true
     }
 
     RowLayout {
-        visible: panelTab.configRoot.cfg_panelInfoMode === "simple" && panelTab.configRoot.cfg_panelSimpleLayoutType === 2
+        visible: panelTab._isSimpleCompressed
         Kirigami.FormData.label: i18n("Badge position:")
         spacing: Kirigami.Units.largeSpacing
         ComboBox {
@@ -554,26 +623,26 @@ Kirigami.FormLayout {
                 }
             ]
             Component.onCompleted: {
-                var cur = panelTab.configRoot.cfg_compressedBadgePosition || "bottom-right";
+                var cur = panelTab._badgePosition || "bottom-right";
                 for (var i = 0; i < model.length; ++i)
                     if (model[i].value === cur) {
                         currentIndex = i;
                         break;
                     }
             }
-            onActivated: panelTab.configRoot.cfg_compressedBadgePosition = model[currentIndex].value
+            onActivated: panelTab._setBadgePosition(model[currentIndex].value)
         }
     }
 
     RowLayout {
-        visible: panelTab.configRoot.cfg_panelInfoMode === "simple" && panelTab.configRoot.cfg_panelSimpleLayoutType === 2
+        visible: panelTab._isSimpleCompressed
         Kirigami.FormData.label: i18n("Badge spacing:")
         spacing: Kirigami.Units.largeSpacing
         SpinBox {
             from: -20
             to: 20
-            value: panelTab.configRoot.cfg_compressedBadgeSpacing
-            onValueModified: panelTab.configRoot.cfg_compressedBadgeSpacing = value
+            value: panelTab._badgeSpacing
+            onValueModified: panelTab._setBadgeSpacing(value)
         }
         Label {
             text: "px"
@@ -582,7 +651,7 @@ Kirigami.FormLayout {
     }
 
     RowLayout {
-        visible: panelTab.configRoot.cfg_panelInfoMode === "simple" && panelTab.configRoot.cfg_panelSimpleLayoutType === 2
+        visible: panelTab._isSimpleCompressed
         Kirigami.FormData.label: i18n("Badge background:")
         spacing: Kirigami.Units.largeSpacing
 
@@ -594,10 +663,10 @@ Kirigami.FormLayout {
             border.color: Qt.rgba(Kirigami.Theme.textColor.r, Kirigami.Theme.textColor.g, Kirigami.Theme.textColor.b, 0.3)
             border.width: 1
             color: {
-                var c = panelTab.configRoot.cfg_compressedBadgeColor;
+                var c = panelTab._badgeColor;
                 if (c && c.length > 0)
-                    return Qt.rgba(Qt.color(c).r, Qt.color(c).g, Qt.color(c).b, panelTab.configRoot.cfg_compressedBadgeOpacity);
-                return Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, panelTab.configRoot.cfg_compressedBadgeOpacity);
+                    return Qt.rgba(Qt.color(c).r, Qt.color(c).g, Qt.color(c).b, panelTab._badgeOpacity);
+                return Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, panelTab._badgeOpacity);
             }
             MouseArea {
                 anchors.fill: parent
@@ -609,7 +678,7 @@ Kirigami.FormLayout {
             Layout.preferredWidth: 140
             readOnly: true
             text: {
-                var c = panelTab.configRoot.cfg_compressedBadgeColor;
+                var c = panelTab._badgeColor;
                 return (c && c.length > 0) ? c : i18n("Theme default");
             }
             MouseArea {
@@ -620,13 +689,13 @@ Kirigami.FormLayout {
         }
         Button {
             text: i18n("Reset")
-            visible: (panelTab.configRoot.cfg_compressedBadgeColor || "").length > 0
-            onClicked: panelTab.configRoot.cfg_compressedBadgeColor = ""
+            visible: (panelTab._badgeColor || "").length > 0
+            onClicked: panelTab._setBadgeColor("")
         }
     }
 
     RowLayout {
-        visible: panelTab.configRoot.cfg_panelInfoMode === "simple" && panelTab.configRoot.cfg_panelSimpleLayoutType === 2
+        visible: panelTab._isSimpleCompressed
         Kirigami.FormData.label: i18n("Badge opacity:")
         spacing: Kirigami.Units.largeSpacing
         Slider {
@@ -635,11 +704,11 @@ Kirigami.FormLayout {
             from: 0.0
             to: 1.0
             stepSize: 0.05
-            value: panelTab.configRoot.cfg_compressedBadgeOpacity
-            onMoved: panelTab.configRoot.cfg_compressedBadgeOpacity = value
+            value: panelTab._badgeOpacity
+            onMoved: panelTab._setBadgeOpacity(value)
         }
         Label {
-            text: Math.round(panelTab.configRoot.cfg_compressedBadgeOpacity * 100) + "%"
+            text: Math.round(panelTab._badgeOpacity * 100) + "%"
             opacity: 0.65
             Layout.preferredWidth: 40
         }
@@ -647,18 +716,18 @@ Kirigami.FormLayout {
 
     Platform.ColorDialog {
         id: badgeColorDialog
-        title: i18n("Badge Background Color")
+        title: panelTab.isSystemTrayConfig ? i18n("System Tray Badge Background Color") : i18n("Badge Background Color")
         currentColor: {
-            var c = panelTab.configRoot.cfg_compressedBadgeColor;
+            var c = panelTab._badgeColor;
             return (c && c.length > 0) ? c : Kirigami.Theme.backgroundColor;
         }
-        onAccepted: panelTab.configRoot.cfg_compressedBadgeColor = color.toString()
+        onAccepted: panelTab._setBadgeColor(color.toString())
     }
 
     // ── Multiple lines options (hidden in Simple mode) ─────
     SpinBox {
         Kirigami.FormData.label: i18n("Scroll interval (sec):")
-        visible: panelTab.configRoot.cfg_panelInfoMode === "multiline"
+        visible: panelTab._panelInfoMode === "multiline"
         from: 1
         to: 30
         value: panelTab.configRoot.cfg_panelScrollSeconds
@@ -668,7 +737,7 @@ Kirigami.FormLayout {
     }
     SpinBox {
         Kirigami.FormData.label: i18n("Lines:")
-        visible: panelTab.configRoot.cfg_panelInfoMode === "multiline"
+        visible: panelTab._panelInfoMode === "multiline"
         from: 1
         to: 8
         value: panelTab.configRoot.cfg_panelMultiLines
@@ -678,7 +747,7 @@ Kirigami.FormLayout {
     }
     CheckBox {
         Kirigami.FormData.label: i18n("Scroll animation:")
-        visible: panelTab.configRoot.cfg_panelInfoMode === "multiline"
+        visible: panelTab._panelInfoMode === "multiline"
         text: i18n("Animate row scrolling")
         checked: panelTab.configRoot.cfg_panelMultiAnimate
         onToggled: panelTab.configRoot.cfg_panelMultiAnimate = checked
@@ -686,7 +755,7 @@ Kirigami.FormLayout {
     // Multiline mode: icon style (symbolic vs colorful)
     RowLayout {
         Kirigami.FormData.label: i18n("Main icon style:")
-        visible: panelTab.configRoot.cfg_panelInfoMode === "multiline"
+        visible: panelTab._panelInfoMode === "multiline"
         spacing: 8
         ComboBox {
             id: mlIconStyleCombo
@@ -762,7 +831,7 @@ Kirigami.FormLayout {
         }
     }
     RowLayout {
-        visible: panelTab.configRoot.cfg_panelInfoMode !== "simple"
+        visible: panelTab._panelInfoMode !== "simple"
         Kirigami.FormData.label: i18n("Item width:")
         spacing: 8
         SpinBox {
@@ -776,7 +845,7 @@ Kirigami.FormLayout {
             opacity: 0.65
         }
         Label {
-            text: panelTab.configRoot.cfg_panelInfoMode === "multiline" ? i18n("0 = auto. Increase if items are cut off.") : i18n("0 = auto (120 px per chip). Increase if values are truncated.")
+            text: panelTab._panelInfoMode === "multiline" ? i18n("0 = auto. Increase if items are cut off.") : i18n("0 = auto (120 px per chip). Increase if values are truncated.")
             opacity: 0.65
             font: Kirigami.Theme.smallFont
             wrapMode: Text.WordWrap
@@ -785,7 +854,7 @@ Kirigami.FormLayout {
     }
 
     RowLayout {
-        visible: panelTab.configRoot.cfg_panelInfoMode !== "multiline" && panelTab.configRoot.cfg_panelInfoMode !== "simple"
+        visible: panelTab._panelInfoMode !== "multiline" && panelTab._panelInfoMode !== "simple"
         Kirigami.FormData.label: i18n("Separator:")
         spacing: 6
         ComboBox {
@@ -844,7 +913,7 @@ Kirigami.FormLayout {
         }
     }
     RowLayout {
-        visible: panelTab.configRoot.cfg_panelInfoMode !== "multiline" && panelTab.configRoot.cfg_panelInfoMode !== "simple"
+        visible: panelTab._panelInfoMode !== "multiline" && panelTab._panelInfoMode !== "simple"
         Kirigami.FormData.label: i18n("Item spacing:")
         spacing: 8
         SpinBox {
@@ -859,14 +928,14 @@ Kirigami.FormLayout {
         }
     }
     CheckBox {
-        visible: panelTab.configRoot.cfg_panelInfoMode === "single"
+        visible: panelTab._panelInfoMode === "single"
         Kirigami.FormData.label: i18n("Fill panel:")
         text: i18n("Expand widget to fill available panel space")
         checked: panelTab.configRoot.cfg_panelFillWidth
         onToggled: panelTab.configRoot.cfg_panelFillWidth = checked
     }
     Kirigami.Separator {
-        visible: panelTab.configRoot.cfg_panelInfoMode !== "simple"
+        visible: panelTab._panelInfoMode !== "simple"
         Kirigami.FormData.label: i18n("Panel items settings")
         Kirigami.FormData.isSection: true
     }
@@ -929,7 +998,7 @@ Kirigami.FormLayout {
         }
     }
     RowLayout {
-        visible: panelTab.configRoot.cfg_panelInfoMode !== "simple"
+        visible: panelTab._panelInfoMode !== "simple"
         Kirigami.FormData.label: i18n("Panel font:")
         spacing: Kirigami.Units.smallSpacing
         Switch {
@@ -951,7 +1020,7 @@ Kirigami.FormLayout {
         }
     }
     Label {
-        visible: !panelFontSwitch.checked && panelTab.configRoot.cfg_panelInfoMode !== "simple"
+        visible: !panelFontSwitch.checked && panelTab._panelInfoMode !== "simple"
         Kirigami.FormData.label: ""
         text: i18n("Text will follow the system font and expand to fill the available space.")
         opacity: 0.65
@@ -960,7 +1029,7 @@ Kirigami.FormLayout {
         Layout.maximumWidth: 300
     }
     RowLayout {
-        visible: panelFontSwitch.checked && panelTab.configRoot.cfg_panelInfoMode !== "simple"
+        visible: panelFontSwitch.checked && panelTab._panelInfoMode !== "simple"
         Kirigami.FormData.label: ""
         spacing: Kirigami.Units.smallSpacing
         Button {
@@ -973,7 +1042,7 @@ Kirigami.FormLayout {
         }
     }
     ColumnLayout {
-        visible: panelFontSwitch.checked && panelTab.configRoot.cfg_panelFontFamily.length > 0 && panelTab.configRoot.cfg_panelInfoMode !== "simple"
+        visible: panelFontSwitch.checked && panelTab.configRoot.cfg_panelFontFamily.length > 0 && panelTab._panelInfoMode !== "simple"
         Kirigami.FormData.label: ""
         spacing: 2
         Label {
@@ -990,7 +1059,7 @@ Kirigami.FormLayout {
     }
     // Icon theme selector
     RowLayout {
-        visible: panelTab.configRoot.cfg_panelInfoMode !== "simple"
+        visible: panelTab._panelInfoMode !== "simple"
         Kirigami.FormData.label: i18n("Icon theme:")
         spacing: Kirigami.Units.largeSpacing
         ComboBox {
@@ -1030,12 +1099,12 @@ Kirigami.FormLayout {
         }
         Label {
             text: i18n("Size:")
-            visible: iconThemeCombo.model[iconThemeCombo.currentIndex].value !== "wi-font" && panelTab.configRoot.cfg_panelInfoMode !== "simple"
+            visible: iconThemeCombo.model[iconThemeCombo.currentIndex].value !== "wi-font" && panelTab._panelInfoMode !== "simple"
             opacity: 0.8
         }
         ComboBox {
             id: iconSizeCombo
-            visible: iconThemeCombo.model[iconThemeCombo.currentIndex].value !== "wi-font" && panelTab.configRoot.cfg_panelInfoMode !== "simple"
+            visible: iconThemeCombo.model[iconThemeCombo.currentIndex].value !== "wi-font" && panelTab._panelInfoMode !== "simple"
             Layout.preferredWidth: 90
             textRole: "text"
             model: [
@@ -1070,7 +1139,7 @@ Kirigami.FormLayout {
     }
     // Custom theme: description + button to open Panel Items with icon pickers
     RowLayout {
-        visible: iconThemeCombo.model[iconThemeCombo.currentIndex].value === "custom" && panelTab.configRoot.cfg_panelInfoMode !== "simple"
+        visible: iconThemeCombo.model[iconThemeCombo.currentIndex].value === "custom" && panelTab._panelInfoMode !== "simple"
         Kirigami.FormData.label: ""
         spacing: Kirigami.Units.largeSpacing
         ColumnLayout {
@@ -1094,7 +1163,7 @@ Kirigami.FormLayout {
     }
     // Panel items configure button + preview chips
     Item {
-        visible: panelTab.configRoot.cfg_panelInfoMode !== "simple"
+        visible: panelTab._panelInfoMode !== "simple"
         Kirigami.FormData.label: i18n("Panel items:")
         implicitWidth: panelPreviewRow.implicitWidth
         implicitHeight: panelPreviewRow.implicitHeight

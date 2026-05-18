@@ -20,6 +20,7 @@ import QtQuick.Controls
 import QtQuick.Layouts
 import Qt.labs.platform as Platform
 import org.kde.plasma.components as PlasmaComponents
+import org.kde.plasma.plasmoid
 import org.kde.kcmutils as KCM
 import org.kde.kirigami as Kirigami
 import org.kde.iconthemes as KIconThemes
@@ -39,9 +40,26 @@ KCM.AbstractKCM {
     readonly property url iconsBase: Qt.resolvedUrl("../../icons/")
     readonly property bool wiFontReady: wiFont.status === FontLoader.Ready
     readonly property string wiFontFamily: wiFont.status === FontLoader.Ready ? wiFont.font.family : ""
+    readonly property bool isSystemTrayConfig: _detectSystemTrayConfig()
 
     // Expose the condition icon dialog so external tabs (ConfigWidgetTab) can open it
     property alias conditionIconDialog: conditionIconDialog
+
+    function _detectSystemTrayConfig() {
+        try {
+            if (Plasmoid.containment.containmentType == 129
+                && Plasmoid.formFactor == 2) {
+                return true;
+            }
+        } catch (e) {}
+        try {
+            var pn = (Plasmoid.containment.pluginName || "").toLowerCase();
+            if (pn.indexOf("systemtray") >= 0) {
+                return true;
+            }
+        } catch (e) {}
+        return false;
+    }
 
     // ── Shared icon-config dialog for the Custom icon theme ─────────────────
     // Opens when the user clicks the configure button on a panel item.
@@ -1057,6 +1075,11 @@ KCM.AbstractKCM {
     property int cfg_compressedBadgeSpacing: 0
     property string cfg_compressedBadgeColor: ""
     property double cfg_compressedBadgeOpacity: 0.85
+    property string cfg_traySimpleIconStyle: "symbolic"
+    property string cfg_trayCompressedBadgePosition: "bottom-right"
+    property int cfg_trayCompressedBadgeSpacing: 0
+    property string cfg_trayCompressedBadgeColor: ""
+    property double cfg_trayCompressedBadgeOpacity: 0.85
 
     // ── Widget config aliases ─────────────────────────────────────────────
     property string cfg_tooltipStyle: "verbose"
@@ -1940,7 +1963,7 @@ KCM.AbstractKCM {
 
         PlasmaComponents.TabButton {
             icon.name: "view-list-details"
-            text: i18n("Panel")
+            text: root.isSystemTrayConfig ? i18n("System tray") : i18n("Panel")
         }
         PlasmaComponents.TabButton {
             icon.name: "plasma-symbolic"
