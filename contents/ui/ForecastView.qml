@@ -214,6 +214,12 @@ Item {
     readonly property bool showSunEvents:   Plasmoid.configuration.forecastShowSunEvents !== false
     readonly property bool showToday:       Plasmoid.configuration.forecastShowToday !== false
     readonly property string hourlyLayout:  Plasmoid.configuration.forecastHourlyLayout || "cards"
+    readonly property bool _forecastDualTemp: Plasmoid.configuration.dualTempEnabled === true && Plasmoid.configuration.dualTempInWidget !== false
+    readonly property bool _forecastShowTempUnit: Plasmoid.configuration.showTempUnit === true
+    readonly property int _forecastWindColumnWidth: 104
+    readonly property int _forecastTempColumnWidth: _forecastDualTemp
+        ? (_forecastShowTempUnit ? 178 : 132)
+        : (_forecastShowTempUnit ? 82 : 58)
 
     function _wheelDeltaX(wheel) {
         return wheel.pixelDelta.x !== 0 ? wheel.pixelDelta.x : wheel.angleDelta.x;
@@ -422,10 +428,14 @@ Item {
                             RowLayout {
                                 visible: !isNaN(weatherRoot.dailyData[dataIndex].windKmh)
                                 Layout.alignment: Qt.AlignVCenter
-                                Layout.preferredWidth: 100
-                                Layout.minimumWidth: 100
-                                Layout.maximumWidth: 100
+                                Layout.preferredWidth: Math.max(forecastRoot._forecastWindColumnWidth, implicitWidth)
+                                Layout.minimumWidth: forecastRoot._forecastWindColumnWidth
+                                Layout.maximumWidth: Math.max(forecastRoot._forecastWindColumnWidth, implicitWidth)
                                 spacing: 1
+
+                                Item {
+                                    Layout.fillWidth: true
+                                }
 
                                 Item {
                                     visible: !isNaN(weatherRoot.dailyData[dataIndex].windDir)
@@ -443,23 +453,27 @@ Item {
                                 }
 
                                 Label {
-                                    Layout.fillWidth: true
                                     text: weatherRoot.windValue(weatherRoot.dailyData[dataIndex].windKmh)
                                     color: Qt.rgba(Kirigami.Theme.textColor.r, Kirigami.Theme.textColor.g, Kirigami.Theme.textColor.b, 0.72)
                                     font: weatherRoot.wf(10, false)
                                     elide: Text.ElideRight
+                                }
+
+                                Item {
+                                    Layout.fillWidth: true
                                 }
                             }
 
                             RowLayout {
                                 spacing: 2
                                 Layout.alignment: Qt.AlignRight
-                                Layout.preferredWidth: 84
-                                Layout.minimumWidth: 84
-                                Layout.maximumWidth: 84
-                                Label {
+                                Layout.preferredWidth: Math.max(forecastRoot._forecastTempColumnWidth, implicitWidth)
+                                Layout.minimumWidth: forecastRoot._forecastTempColumnWidth
+                                Layout.maximumWidth: Math.max(forecastRoot._forecastTempColumnWidth, implicitWidth)
+                                Item {
                                     Layout.fillWidth: true
-                                    horizontalAlignment: Text.AlignRight
+                                }
+                                Label {
                                     text: weatherRoot.tempValue(weatherRoot.dailyData[dataIndex].minC)
                                     color: "#42a5f5"
                                     font: weatherRoot.wf(12, false)
@@ -470,7 +484,6 @@ Item {
                                     font: weatherRoot.wf(12, false)
                                 }
                                 Label {
-                                    Layout.fillWidth: true
                                     text: weatherRoot.tempValue(weatherRoot.dailyData[dataIndex].maxC)
                                     color: "#ff6e40"
                                     font: weatherRoot.wf(12, true)
