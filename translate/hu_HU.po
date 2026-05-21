@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Advanced Weather Widget\n"
 "Report-Msgid-Bugs-To: https://github.com/pnedyalkov91/advanced-weather-widget/issues\n"
 "POT-Creation-Date: 2026-05-18 08:42+0300\n"
-"PO-Revision-Date: 2026-05-13 08:39+0200\n"
+"PO-Revision-Date: 2026-05-20 07:58+0300\n"
 "Last-Translator: summoner <summoner@disroot.org>\n"
 "Language-Team: Hungarian <>\n"
 "Language: hu_HU\n"
@@ -2097,7 +2097,7 @@ msgstr "Csapadék"
 #: contents/ui/config/configAppearance.qml:1496
 #: contents/ui/config/configAppearance.qml:1619 contents/ui/DetailsView.qml:308
 msgid "Precipitation Sum"
-msgstr "Összes csapadék:"
+msgstr "Összes csapadék"
 
 #: contents/ui/config/configAppearance.qml:1367
 #: contents/ui/config/configAppearance.qml:1490
@@ -2805,7 +2805,7 @@ msgstr "Szimbolikus (követi a téma színét)"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:719
 msgid "System Tray Badge Background Color"
-msgstr ""
+msgstr "Értesítési területen megjelenő jelvény háttérszíne"
 
 #: contents/ui/config/configLocation.qml:826
 msgid "System location unavailable, trying IP geolocation…"
@@ -2813,15 +2813,15 @@ msgstr "A rendszer helymeghatározási szolgáltatása nem érhető el, IP-cím 
 
 #: contents/ui/config/configAppearance.qml:1966
 msgid "System tray"
-msgstr ""
+msgstr "Értesítési terület"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:86
 msgid "System tray display settings"
-msgstr ""
+msgstr "Értesítési terület megjelenésének beállításai"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:140
 msgid "System tray icon settings"
-msgstr ""
+msgstr "Értesítési terület ikonjának beállításai"
 
 #: contents/ui/components/RadarWebEngineView.qml:75
 #: contents/ui/config/configAppearance.qml:1309
