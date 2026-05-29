@@ -208,6 +208,7 @@ Thank you to everyone who contributed translations to this project ❤️
 - **Italian** - [Aldo Latino](https://github.com/aldolat)
 - **Hungarian** - [summoner001](https://github.com/summoner001)
 - **Polish** - [l3monik](https://github.com/l3monik)
+- **Ukrainian** - [NaviMen (Oleksandr)](https://github.com/NaviMen)
 
 ---
 
