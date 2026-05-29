@@ -69,7 +69,7 @@ Thank you to everyone who contributed translations to this project ❤️
 - **Bulgarian** - Petar Nedyalkov (Author)
 - **Dutch** - Heimen Stoffels (<vistausss@fastmail.com>)
 - **Russian** - [Dmaliog](https://github.com/dmaliog)
-- **French** - [LAZER-TY](https://github.com/LAZER-TY)
+- **French** - [LAZER-TY](https://github.com/LAZER-TY) and [rcspam](https://github.com/rcspam)
 - **Turkish** - [herzane52](https://github.com/herzane52)
 - **Spanish** - [NecaX](https://github.com/NecaX)
 - **Chinese (Traditional)** - [Yo-oo](https://github.com/Yo-oo)
@@ -78,3 +78,4 @@ Thank you to everyone who contributed translations to this project ❤️
 - **Italian** - [Aldo Latino](https://github.com/aldolat)
 - **Hungarian** - [summoner001](https://github.com/summoner001)
 - **Polish** - [l3monik](https://github.com/l3monik)
+- **Ukrainian** - [NaviMen (Oleksandr)](https://github.com/NaviMen)
