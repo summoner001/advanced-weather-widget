@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Advanced Weather Widget\n"
 "Report-Msgid-Bugs-To: https://github.com/pnedyalkov91/advanced-weather-widget/issues\n"
 "POT-Creation-Date: 2026-05-18 08:42+0300\n"
-"PO-Revision-Date: 2026-04-25 16:00+0800\n"
+"PO-Revision-Date: 2026-05-29 22:18+0800\n"
 "Last-Translator: Yo\n"
 "Language-Team: \n"
 "Language: zh_TW\n"
@@ -193,11 +193,11 @@ msgstr "警報："
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:810
 msgid "All days show hourly forecast when opening the tab"
-msgstr ""
+msgstr "開啟頁籤時所有日期均顯示逐時預報"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:794
 msgid "All days start collapsed"
-msgstr ""
+msgstr "所有日期預設收折"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:196
 msgid "All tabs"
@@ -309,7 +309,7 @@ msgstr "自動偵測已更新座標。"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:784
 msgid "Auto-open hourly forecast:"
-msgstr ""
+msgstr "自動展開逐時預報："
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:1018
 msgid "Automatic"
@@ -459,7 +459,7 @@ msgstr "中國天氣服務供應商，涵蓋全球資料，請在下方填入 AP
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:945
 msgid "Choose Simple Mode Font"
-msgstr ""
+msgstr "選擇簡易模式字型"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:1036
 msgctxt "@action:button"
@@ -707,7 +707,7 @@ msgstr "日照結束"
 #: contents/ui/config/tabs/ConfigPanelTab.qml:495
 #: contents/ui/config/tabs/ConfigPanelTab.qml:569
 msgid "Default"
-msgstr ""
+msgstr "預設"
 
 #: contents/ui/config/configLocation.qml:1809
 msgid "Default location (click to unset)"
@@ -935,7 +935,7 @@ msgstr "優"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:801
 msgid "Expand all days:"
-msgstr ""
+msgstr "展開所有日期："
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:933
 msgid "Expand widget to fill available panel space"
@@ -1271,7 +1271,7 @@ msgstr "若資訊正確，請套用；否則請手動選擇您的位置。"
 
 #: contents/ui/config/configGeneral.qml:664
 msgid "If you have just registered a new OpenWeatherMap API key, it might take up to 2 hours for it to become active. Please try again later if it doesn't work immediately."
-msgstr ""
+msgstr "若您剛申請了新的 OpenWeatherMap API 金鑰，可能需要最多 2 小時才會生效。若立即使用無效，請稍後再試。"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:157
 msgid "Imperial (°F, mph, inHg, in)"
@@ -1512,7 +1512,7 @@ msgstr "載入位置中⋯"
 
 #: contents/ui/RadarView.qml:103
 msgid "Loading radar…"
-msgstr ""
+msgstr "載入雷達中⋯"
 
 #: contents/config/config.qml:47
 msgid "Location"
@@ -1914,7 +1914,7 @@ msgstr "橄欖"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:811
 msgid "Only the clicked day expands"
-msgstr ""
+msgstr "僅點擊的日期展開"
 
 #: contents/ui/config/configLocation.qml:1106
 #: contents/ui/config/configLocation.qml:1483 contents/ui/RadarView.qml:178
@@ -1923,7 +1923,7 @@ msgstr "開啟安裝指南"
 
 #: contents/ui/RadarView.qml:185
 msgid "Open radar in browser"
-msgstr ""
+msgstr "在瀏覽器中開啟雷達"
 
 #: contents/ui/config/configGeneral.qml:287
 msgid "Open-Meteo (recommended, free)"
@@ -1939,7 +1939,7 @@ msgstr "OpenWeatherMap API 金鑰："
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:793
 msgid "Opens today's hourly forecast automatically (or the next available day)"
-msgstr ""
+msgstr "自動展開今日逐時預報（或下一個可用日期）"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:355
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:420
@@ -2214,7 +2214,7 @@ msgstr "僅顯示雷達"
 
 #: contents/ui/config/configGeneral.qml:728
 msgid "Radar provider: <a href='https://www.rainviewer.com/'>Rain Viewer</a><br/><br/>The widget uses the free RainViewer API, which provides the past 2 hours of weather radar data in 10-minute intervals. Radar forecast is not supported.<br/><br/>Rain Viewer does not guarantee the availability of radar data. They do not conclude contracts with owners of this data. The reason is that the owners can ask them to remove their data from Rain Viewer, change the format, or stop sharing the data. They are trying to keep radar data for as long as possible, but sometimes the owners just stop providing the images."
-msgstr ""
+msgstr "雷達資料來源：<a href='https://www.rainviewer.com/'>Rain Viewer</a><br/><br/>本小工具使用免費的 RainViewer API，提供過去 2 小時、每 10 分鐘間隔的氣象雷達資料。不支援雷達預報。<br/><br/>Rain Viewer 不保證雷達資料的可用性。他們不與資料擁有者簽訂合約，原因是擁有者可能隨時要求移除資料、更改格式或停止共享。他們會盡力維持雷達資料的持續供應，但有時擁有者會直接停止提供影像。"
 
 #: contents/ui/FullView.qml:636
 msgid "Radar:"
@@ -2427,11 +2427,11 @@ msgstr "嚴重地磁風暴。"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:973
 msgid "Shadow Color"
-msgstr ""
+msgstr "陰影顏色"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:546
 msgid "Shadow color:"
-msgstr ""
+msgstr "陰影顏色："
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:526
 msgid "Shadow intensity:"
@@ -2805,7 +2805,7 @@ msgstr "符號圖示（跟隨主題色彩）"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:719
 msgid "System Tray Badge Background Color"
-msgstr ""
+msgstr "系統匣徽章背景顏色"
 
 #: contents/ui/config/configLocation.qml:826
 msgid "System location unavailable, trying IP geolocation…"
@@ -2813,15 +2813,15 @@ msgstr "系統位置無法使用，嘗試 IP 地理定位⋯"
 
 #: contents/ui/config/configAppearance.qml:1966
 msgid "System tray"
-msgstr ""
+msgstr "系統匣"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:86
 msgid "System tray display settings"
-msgstr ""
+msgstr "系統匣顯示設定"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:140
 msgid "System tray icon settings"
-msgstr ""
+msgstr "系統匣圖示設定"
 
 #: contents/ui/components/RadarWebEngineView.qml:75
 #: contents/ui/config/configAppearance.qml:1309
@@ -2831,7 +2831,7 @@ msgstr "溫度"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:962
 msgid "Temperature Color"
-msgstr ""
+msgstr "溫度顏色"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:587
 msgid "Temperature badge"
@@ -2839,7 +2839,7 @@ msgstr "溫度徽章"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:472
 msgid "Temperature color:"
-msgstr ""
+msgstr "溫度顏色："
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:232
 msgid "Temperature first"
@@ -3384,9 +3384,6 @@ msgstr "系統位置"
 msgid "until dawn"
 msgstr "後日出"
 
-#~ msgid "Radar provider: <a href='https://www.rainviewer.com/'>Rain Viewer</a><br/><br/>Rain Viewer does not guarantee the availability of radar data. They do not conclude contracts with owners of this data. The reason is that the owners can ask them to remove their data from Rain Viewer, change the format, or stop sharing the data. They are trying to keep radar data for as long as possible, but sometimes the owners just stop providing the images."
-#~ msgstr "雷達資料來源：<a href='https://www.rainviewer.com/'>Rain Viewer</a><br/><br/>Rain Viewer 不保證雷達資料的可用性。他們不與資料擁有者簽訂合約，原因是擁有者可能隨時要求移除資料、更改格式或停止共享。他們會盡力維持雷達資料的持續供應，但有時擁有者會直接停止提供影像。"
-
 #~ msgid "Both"
 #~ msgstr "兩者"
 
@@ -3398,6 +3395,9 @@ msgstr "後日出"
 
 #~ msgid "Show sunrise/sunset markers"
 #~ msgstr "顯示日出/日落標記"
+
+#~ msgid "Radar provider: <a href='https://www.rainviewer.com/'>Rain Viewer</a><br/><br/>Rain Viewer does not guarantee the availability of radar data. They do not conclude contracts with owners of this data. The reason is that the owners can ask them to remove their data from Rain Viewer, change the format, or stop sharing the data. They are trying to keep radar data for as long as possible, but sometimes the owners just stop providing the images."
+#~ msgstr "雷達資料來源：<a href='https://www.rainviewer.com/'>Rain Viewer</a><br/><br/>Rain Viewer 不保證雷達資料的可用性。他們不與資料擁有者簽訂合約，原因是擁有者可能隨時要求移除資料、更改格式或停止共享。他們會盡力維持雷達資料的持續供應，但有時擁有者會直接停止提供影像。"
 
 #~ msgid ""
 #~ "Providers are tried in order until one succeeds:\n"
