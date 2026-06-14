@@ -235,6 +235,23 @@
     <entry name="forecastHourlyLayout" type="String"><default>cards</default></entry>
     <entry name="forecastAutoOpen"     type="Bool"><default>true</default></entry>
     <entry name="forecastExpandAll"    type="Bool"><default>false</default></entry>
+
+    <!-- ── Widget — daily forecast extra stats ───────────────────────── -->
+    <entry name="forecastShowWind"       type="Bool"><default>true</default></entry>
+    <entry name="forecastShowPressure"   type="Bool"><default>false</default></entry>
+    <entry name="forecastShowKpIndex"    type="Bool"><default>false</default></entry>
+    <entry name="forecastShowUvIndex"    type="Bool"><default>false</default></entry>
+    <entry name="forecastShowPrecipSum"  type="Bool"><default>false</default></entry>
+    <entry name="forecastShowVisibility" type="Bool"><default>false</default></entry>
+
+    <!-- ── Widget — hourly forecast extra stats ──────────────────────── -->
+    <entry name="forecastHourlyShowWind"       type="Bool"><default>true</default></entry>
+    <entry name="forecastHourlyShowPressure"   type="Bool"><default>false</default></entry>
+    <entry name="forecastHourlyShowKpIndex"    type="Bool"><default>false</default></entry>
+    <entry name="forecastHourlyShowUvIndex"    type="Bool"><default>false</default></entry>
+    <entry name="forecastHourlyShowPrecipSum"  type="Bool"><default>false</default></entry>
+    <entry name="forecastHourlyShowVisibility" type="Bool"><default>false</default></entry>
+
     <entry name="animateTransitions"  type="Bool"><default>true</default></entry>
 
     <!-- ── Tooltip ────────────────────────────────────────────────────── -->

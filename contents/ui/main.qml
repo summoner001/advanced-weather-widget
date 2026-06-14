@@ -163,6 +163,7 @@ PlasmoidItem {
     function _applyPollenData() { pollenData = pollenDataStaged; }
     onPollenDataStagedChanged: Qt.callLater(_applyPollenData)
     property var spaceWeather: null         // NOAA SWPC data object
+    property var spaceWeatherDailyForecast: ({}) // dateStr -> {kp, gScale}, ~3 days ahead
     property string moonriseTimeText: "--"
     property string moonsetTimeText: "--"
     property var hourlyData: []
@@ -738,6 +739,19 @@ PlasmoidItem {
         if (_isImperial())
             return (mm / 25.4).toFixed(2) + " in";
         return mm.toFixed(1) + " mm";
+    }
+
+    function visibilityValue(km) {
+        if (isNaN(km)) return "--";
+        if (_isImperial())
+            return (km * 0.621371).toFixed(1) + " mi";
+        return km.toFixed(1) + " km";
+    }
+
+    /** {kp, gScale} for the given dateStr from the ~3-day NOAA Kp forecast, or null. */
+    function kpForecastForDate(dateStr) {
+        var m = spaceWeatherDailyForecast || {};
+        return m[dateStr] || null;
     }
 
     function uvIndexText(uv) {

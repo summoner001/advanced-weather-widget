@@ -1091,6 +1091,18 @@ KCM.AbstractKCM {
     property string cfg_forecastHourlyLayout: "cards"
     property bool   cfg_forecastAutoOpen:     true
     property bool   cfg_forecastExpandAll:    false
+    property bool   cfg_forecastShowWind:       true
+    property bool   cfg_forecastShowPressure:   false
+    property bool   cfg_forecastShowKpIndex:    false
+    property bool   cfg_forecastShowUvIndex:    false
+    property bool   cfg_forecastShowPrecipSum:  false
+    property bool   cfg_forecastShowVisibility: false
+    property bool   cfg_forecastHourlyShowWind:       true
+    property bool   cfg_forecastHourlyShowPressure:   false
+    property bool   cfg_forecastHourlyShowKpIndex:    false
+    property bool   cfg_forecastHourlyShowUvIndex:    false
+    property bool   cfg_forecastHourlyShowPrecipSum:  false
+    property bool   cfg_forecastHourlyShowVisibility: false
     property bool cfg_roundValues: true
     property bool cfg_showScrollbox: true
     property bool cfg_showUpdateText: true

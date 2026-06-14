@@ -36,7 +36,7 @@ function fetchCurrent(service, chain, idx) {
         + "dew_point_2m,visibility,is_day,precipitation,uv_index,snow_depth"
         + "&daily=weather_code,temperature_2m_max,temperature_2m_min,sunrise,sunset,"
         + "precipitation_sum,snowfall_sum,precipitation_probability_max,wind_speed_10m_max,wind_direction_10m_dominant,"
-        + "uv_index_max";
+        + "uv_index_max,pressure_msl_mean,visibility_mean";
 
     var req = new XMLHttpRequest();
     req.open("GET", url);
@@ -69,7 +69,9 @@ function fetchCurrent(service, chain, idx) {
                     precipProb: d.daily.precipitation_probability_max ? d.daily.precipitation_probability_max[i] : NaN,
                     windKmh: d.daily.wind_speed_10m_max ? d.daily.wind_speed_10m_max[i] : NaN,
                     windDir: d.daily.wind_direction_10m_dominant ? d.daily.wind_direction_10m_dominant[i] : NaN,
-                    uvMax: d.daily.uv_index_max ? d.daily.uv_index_max[i] : NaN
+                    uvMax: d.daily.uv_index_max ? d.daily.uv_index_max[i] : NaN,
+                    pressureHpa: d.daily.pressure_msl_mean ? d.daily.pressure_msl_mean[i] : NaN,
+                    visibilityKm: d.daily.visibility_mean ? d.daily.visibility_mean[i] / 1000.0 : NaN
                 });
         }
         r.weatherDataStaged = {
@@ -169,7 +171,7 @@ function fetchHourly(service, dateStr) {
         + service.latitude
         + "&longitude=" + service.longitude
         + "&timezone=" + encodeURIComponent(tz.length > 0 ? tz : "auto")
-        + "&hourly=temperature_2m,weather_code,wind_speed_10m,wind_direction_10m,relative_humidity_2m,precipitation_probability,precipitation"
+        + "&hourly=temperature_2m,weather_code,wind_speed_10m,wind_direction_10m,relative_humidity_2m,precipitation_probability,precipitation,surface_pressure,visibility,uv_index"
         + "&start_date=" + dateStr + "&end_date=" + dateStr;
     var req = new XMLHttpRequest();
     req.open("GET", url);
@@ -193,7 +195,10 @@ function fetchHourly(service, dateStr) {
                     windDeg: d.hourly.wind_direction_10m ? d.hourly.wind_direction_10m[i] : NaN,
                     humidity: d.hourly.relative_humidity_2m[i],
                     precipProb: d.hourly.precipitation_probability ? d.hourly.precipitation_probability[i] : NaN,
-                    precipMm: d.hourly.precipitation ? d.hourly.precipitation[i] : NaN
+                    precipMm: d.hourly.precipitation ? d.hourly.precipitation[i] : NaN,
+                    pressureHpa: d.hourly.surface_pressure ? d.hourly.surface_pressure[i] : NaN,
+                    visibilityKm: d.hourly.visibility ? d.hourly.visibility[i] / 1000.0 : NaN,
+                    uvIndex: d.hourly.uv_index ? d.hourly.uv_index[i] : NaN
                 });
         r.hourlyData = arr;
     };
