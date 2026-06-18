@@ -6,6 +6,7 @@ A modern, highly customizable weather widget built specifically for KDE Plasma 6
 *   **Granular Precision:** Uses exact Latitude/Longitude coordinates for local data rather than generic city-level lookups.
 *   **Modern UX:** A clean, native-feeling interface with smooth animations and intuitive layouts.
 *   **Feature Rich:** From interactive radar maps and air quality to space weather and moon phases - everything is configurable.
+*   **KDE Notifications support:** Stay informed with KDE notifications for weather alerts, forecasts, the UV index, and the Kp index. All notifications can be individually configured.
 
 ## 📑 Table of Contents
 - [📦 Installation](#-installation)
