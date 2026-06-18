@@ -279,27 +279,27 @@
     <entry name="showUpdateText"         type="Bool"><default>true</default></entry>
 
     <!-- ── Notifications ─────────────────────────────────────────────── -->
-    <entry name="alertNotificationsEnabled" type="Bool"><default>false</default></entry>
-    <entry name="alertNotificationsYellowEnabled" type="Bool"><default>false</default></entry>
+    <entry name="alertNotificationsEnabled" type="Bool"><default>true</default></entry>
+    <entry name="alertNotificationsYellowEnabled" type="Bool"><default>true</default></entry>
     <entry name="alertNotificationsOrangeEnabled" type="Bool"><default>true</default></entry>
     <entry name="alertNotificationsRedEnabled"    type="Bool"><default>true</default></entry>
     <entry name="alertNotificationsCriticalEnabled" type="Bool"><default>true</default></entry>
     <entry name="notificationAlertsRepeatMinutes" type="Int"><default>30</default><min>1</min><max>30</max></entry>
 
-    <entry name="notificationTodayEnabled"   type="Bool"><default>false</default></entry>
+    <entry name="notificationTodayEnabled"   type="Bool"><default>true</default></entry>
     <entry name="notificationTodayTime"      type="String"><default>08:00</default></entry>
 
-    <entry name="notificationTomorrowEnabled"   type="Bool"><default>false</default></entry>
+    <entry name="notificationTomorrowEnabled"   type="Bool"><default>true</default></entry>
     <entry name="notificationTomorrowTime"      type="String"><default>20:00</default></entry>
 
-    <entry name="notificationRainEnabled"   type="Bool"><default>false</default></entry>
+    <entry name="notificationRainEnabled"   type="Bool"><default>true</default></entry>
 
-    <entry name="notificationUvEnabled"   type="Bool"><default>false</default></entry>
+    <entry name="notificationUvEnabled"   type="Bool"><default>true</default></entry>
     <entry name="notificationUvTime"      type="String"><default>08:00</default></entry>
     <entry name="notificationUvLastDate"  type="String"><default></default></entry>
     <entry name="notificationUvLastValue" type="Double"><default>-1</default></entry>
 
-    <entry name="notificationSpaceWeatherEnabled"     type="Bool"><default>false</default></entry>
+    <entry name="notificationSpaceWeatherEnabled"     type="Bool"><default>true</default></entry>
     <entry name="notificationSpaceWeatherTime"        type="String"><default>08:00</default></entry>
     <entry name="notificationSpaceWeatherLastDate"    type="String"><default></default></entry>
     <entry name="notificationSpaceWeatherLastKp"      type="Double"><default>-1</default></entry>

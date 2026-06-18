@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Advanced Weather Widget\n"
 "Report-Msgid-Bugs-To: https://github.com/pnedyalkov91/advanced-weather-widget/issues\n"
-"POT-Creation-Date: 2026-06-14 12:33+0300\n"
+"POT-Creation-Date: 2026-06-18 14:26+0300\n"
 "PO-Revision-Date: 2026-03-15 12:00+0300\n"
 "Last-Translator: dmaliog\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -17,39 +17,39 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: contents/ui/DetailsView.qml:3149 contents/ui/DetailsView.qml:3151
+#: contents/ui/DetailsView.qml:3443 contents/ui/DetailsView.qml:3445
 msgid " until dawn"
 msgstr ""
 
-#: contents/ui/main.qml:1271
+#: contents/ui/main.qml:1313
 msgid "%1 %2"
 msgstr ""
 
-#: contents/ui/main.qml:1215
+#: contents/ui/main.qml:1257
 msgid "%1 - Today"
 msgstr ""
 
-#: contents/ui/main.qml:1288
+#: contents/ui/main.qml:1330
 msgid "%1 - Tomorrow"
 msgstr ""
 
-#: contents/ui/main.qml:1375
+#: contents/ui/main.qml:1417
 msgid "%1 ending"
 msgstr ""
 
-#: contents/ui/main.qml:1369
+#: contents/ui/main.qml:1411
 msgid "%1 expected"
 msgstr ""
 
-#: contents/ui/main.qml:1376
+#: contents/ui/main.qml:1418
 msgid "%1 expected to end %2."
 msgstr ""
 
-#: contents/ui/main.qml:1370
+#: contents/ui/main.qml:1412
 msgid "%1 possible %2."
 msgstr ""
 
-#: contents/ui/main.qml:1200
+#: contents/ui/main.qml:1242
 msgid "%1 will be %2 with a low of %3 and a high of %4."
 msgstr ""
 
@@ -79,7 +79,7 @@ msgstr "0 = авто (120 пикселей на элемент). Увеличь�
 msgid "0 = auto. Increase if items are cut off."
 msgstr "0 = авто. Увеличьте, если элементы обрезаются."
 
-#: contents/ui/main.qml:856
+#: contents/ui/main.qml:874
 msgid "1 Alert"
 msgstr ""
 
@@ -118,19 +118,19 @@ msgstr ""
 msgid "68°F"
 msgstr ""
 
-#: contents/ui/main.qml:1015
+#: contents/ui/main.qml:1034
 msgid "<b>Effective:</b> %1"
 msgstr ""
 
-#: contents/ui/main.qml:1012
+#: contents/ui/main.qml:1031
 msgid "<b>Headline:</b> %1"
 msgstr ""
 
-#: contents/ui/main.qml:1018
+#: contents/ui/main.qml:1037
 msgid "<b>Instruction:</b> %1"
 msgstr ""
 
-#: contents/ui/main.qml:1021
+#: contents/ui/main.qml:1040
 msgid "<b>Provider:</b> %1"
 msgstr ""
 
@@ -146,15 +146,15 @@ msgstr ""
 msgid "API key is empty."
 msgstr ""
 
-#: contents/ui/DetailsView.qml:794 contents/ui/main.qml:773
+#: contents/ui/DetailsView.qml:1088 contents/ui/main.qml:791
 msgid "AQHI"
 msgstr ""
 
-#: contents/ui/DetailsView.qml:794 contents/ui/main.qml:773
+#: contents/ui/DetailsView.qml:1088 contents/ui/main.qml:791
 msgid "AQI"
 msgstr ""
 
-#: contents/ui/DetailsView.qml:1701 contents/ui/js/spaceWeather.js:171
+#: contents/ui/DetailsView.qml:1995 contents/ui/js/spaceWeather.js:171
 msgid "Active"
 msgstr ""
 
@@ -178,14 +178,14 @@ msgstr "Добавить местоположение"
 msgid "Advanced (all tabs)"
 msgstr ""
 
-#: contents/ui/main.qml:1251
+#: contents/ui/main.qml:1293
 msgid "Afternoon"
 msgstr ""
 
-#: contents/ui/config/configAppearance.qml:1387
-#: contents/ui/config/configAppearance.qml:1510
-#: contents/ui/config/configAppearance.qml:1633 contents/ui/DetailsView.qml:310
-#: contents/ui/SimpleView.qml:319
+#: contents/ui/config/configAppearance.qml:1399
+#: contents/ui/config/configAppearance.qml:1522
+#: contents/ui/config/configAppearance.qml:1645 contents/ui/DetailsView.qml:316
+#: contents/ui/SimpleView.qml:266
 msgid "Air Quality"
 msgstr ""
 
@@ -193,9 +193,9 @@ msgstr ""
 msgid "Air Quality:"
 msgstr ""
 
-#: contents/ui/config/configAppearance.qml:1388
-#: contents/ui/config/configAppearance.qml:1511
-#: contents/ui/config/configAppearance.qml:1634
+#: contents/ui/config/configAppearance.qml:1400
+#: contents/ui/config/configAppearance.qml:1523
+#: contents/ui/config/configAppearance.qml:1646
 msgid "Air quality index"
 msgstr ""
 
@@ -228,14 +228,14 @@ msgid "Air quality options"
 msgstr ""
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:653
-#: contents/ui/DetailsView.qml:1108 contents/ui/main.qml:796
+#: contents/ui/DetailsView.qml:1402 contents/ui/main.qml:814
 msgid "Alder"
 msgstr ""
 
-#: contents/ui/config/configAppearance.qml:1408
-#: contents/ui/config/configAppearance.qml:1531
-#: contents/ui/config/configAppearance.qml:1654 contents/ui/DetailsView.qml:313
-#: contents/ui/SimpleView.qml:322
+#: contents/ui/config/configAppearance.qml:1420
+#: contents/ui/config/configAppearance.qml:1543
+#: contents/ui/config/configAppearance.qml:1666 contents/ui/DetailsView.qml:319
+#: contents/ui/SimpleView.qml:269
 msgid "Alerts"
 msgstr ""
 
@@ -287,12 +287,12 @@ msgstr ""
 msgid "Animate row scrolling"
 msgstr "Анимировать прокрутку строк"
 
-#: contents/ui/config/configAppearance.qml:1332
+#: contents/ui/config/configAppearance.qml:1344
 msgid "Apparent (feels-like) temperature"
 msgstr "Ощущаемая температура"
 
-#: contents/ui/config/configAppearance.qml:1434
-#: contents/ui/config/configAppearance.qml:1571
+#: contents/ui/config/configAppearance.qml:1446
+#: contents/ui/config/configAppearance.qml:1583
 msgid "Apparent temperature"
 msgstr "Ощущаемая температура"
 
@@ -315,18 +315,18 @@ msgstr "Применить обнаруженное местоположение
 msgid "Are you sure? This is your last saved location. If you remove it, the widget will no longer show weather information."
 msgstr ""
 
-#: contents/ui/DetailsView.qml:3151
+#: contents/ui/DetailsView.qml:3445
 msgid "Around midnight — "
 msgstr ""
 
-#: contents/ui/config/configAppearance.qml:1346
-#: contents/ui/config/configAppearance.qml:1448
-#: contents/ui/config/configAppearance.qml:1592
+#: contents/ui/config/configAppearance.qml:1358
+#: contents/ui/config/configAppearance.qml:1460
+#: contents/ui/config/configAppearance.qml:1604
 msgid "Atmospheric pressure"
 msgstr "Атмосферное давление"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:720
-#: contents/ui/DetailsView.qml:1651
+#: contents/ui/DetailsView.qml:1945
 msgid "Aurora Visibility"
 msgstr ""
 
@@ -411,7 +411,7 @@ msgid "Behavior"
 msgstr ""
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:654
-#: contents/ui/DetailsView.qml:1110 contents/ui/main.qml:797
+#: contents/ui/DetailsView.qml:1404 contents/ui/main.qml:815
 msgid "Birch"
 msgstr ""
 
@@ -456,7 +456,7 @@ msgstr "Маркер  •"
 msgid "Button guide"
 msgstr "Подсказка по кнопкам"
 
-#: contents/ui/DetailsView.qml:1690
+#: contents/ui/DetailsView.qml:1984
 msgid "Bz (Magnetic Field)"
 msgstr ""
 
@@ -476,11 +476,11 @@ msgstr "Отмена"
 msgid "Cancel rename"
 msgstr ""
 
-#: contents/ui/DetailsView.qml:919
+#: contents/ui/DetailsView.qml:1213
 msgid "Carbon Monoxide (CO)"
 msgstr ""
 
-#: contents/ui/config/tabs/ConfigWidgetTab.qml:837
+#: contents/ui/config/tabs/ConfigWidgetTab.qml:913
 msgid "Cards"
 msgstr ""
 
@@ -537,7 +537,7 @@ msgstr ""
 msgid "Choose on map"
 msgstr ""
 
-#: contents/ui/config/configAppearance.qml:1353
+#: contents/ui/config/configAppearance.qml:1365
 msgid "City / location name"
 msgstr "Название города / местоположения"
 
@@ -554,12 +554,12 @@ msgstr "Ясно (день)"
 msgid "Clear (night)"
 msgstr "Ясно (ночь)"
 
-#: contents/ui/main.qml:1552
+#: contents/ui/main.qml:1594
 msgid "Clear night"
 msgstr "Ясная ночь"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:670
-#: contents/ui/main.qml:1552
+#: contents/ui/main.qml:1594
 msgid "Clear sky"
 msgstr "Ясное небо"
 
@@ -588,7 +588,7 @@ msgstr "Цветные"
 msgid "Colorful (KDE color icons)"
 msgstr "Цветные (цветные значки KDE)"
 
-#: contents/ui/config/tabs/ConfigWidgetTab.qml:887
+#: contents/ui/config/tabs/ConfigWidgetTab.qml:1025
 msgid "Compass in forecast:"
 msgstr ""
 
@@ -597,8 +597,8 @@ msgstr ""
 msgid "Compressed"
 msgstr "Сжатый"
 
-#: contents/ui/config/configAppearance.qml:1302
-#: contents/ui/config/configAppearance.qml:1563 contents/ui/DetailsView.qml:306
+#: contents/ui/config/configAppearance.qml:1314
+#: contents/ui/config/configAppearance.qml:1575 contents/ui/DetailsView.qml:312
 msgid "Condition"
 msgstr "Состояние"
 
@@ -660,22 +660,22 @@ msgstr ""
 msgid "Coordinates"
 msgstr ""
 
-#: contents/ui/config/configNotifications.qml:194
+#: contents/ui/config/configNotifications.qml:232
 msgid "Critical notifications are still shown even when Do Not Disturb is enabled, or while you're playing a game or watching a fullscreen video (if those options are enabled in System Settings → Notifications)."
 msgstr ""
 
-#: contents/ui/config/configAppearance.qml:1423
-#: contents/ui/config/configAppearance.qml:1546
-#: contents/ui/config/configAppearance.qml:1669
+#: contents/ui/config/configAppearance.qml:1435
+#: contents/ui/config/configAppearance.qml:1558
+#: contents/ui/config/configAppearance.qml:1681
 msgid "Current date and/or time"
 msgstr ""
 
-#: contents/ui/config/configAppearance.qml:1360
+#: contents/ui/config/configAppearance.qml:1372
 msgid "Current moon phase"
 msgstr "Текущая фаза луны"
 
-#: contents/ui/config/configAppearance.qml:1310
-#: contents/ui/config/configAppearance.qml:1557
+#: contents/ui/config/configAppearance.qml:1322
+#: contents/ui/config/configAppearance.qml:1569
 msgid "Current temperature"
 msgstr "Текущая температура"
 
@@ -706,6 +706,10 @@ msgstr "Пользовательские значки для каждого со
 msgid "Custom…"
 msgstr "Пользовательский…"
 
+#: contents/ui/config/tabs/ConfigWidgetTab.qml:823
+msgid "Daily Forecast Settings"
+msgstr ""
+
 #: contents/ui/config/configGeneral.qml:446
 msgid "Dark Sky-compatible API with US alerts. API key required below."
 msgstr ""
@@ -718,9 +722,9 @@ msgstr "Тире  –"
 msgid "Data Refresh"
 msgstr "Обновление данных"
 
-#: contents/ui/config/configAppearance.qml:1422
-#: contents/ui/config/configAppearance.qml:1545
-#: contents/ui/config/configAppearance.qml:1668 contents/ui/DetailsView.qml:315
+#: contents/ui/config/configAppearance.qml:1434
+#: contents/ui/config/configAppearance.qml:1557
+#: contents/ui/config/configAppearance.qml:1680 contents/ui/DetailsView.qml:321
 msgid "Date / Time"
 msgstr ""
 
@@ -748,15 +752,15 @@ msgstr ""
 msgid "Date:"
 msgstr ""
 
-#: contents/ui/DetailsView.qml:3147
+#: contents/ui/DetailsView.qml:3441
 msgid "Dawn approaching — "
 msgstr ""
 
-#: contents/ui/DetailsView.qml:3127
+#: contents/ui/DetailsView.qml:3421
 msgid "Day"
 msgstr ""
 
-#: contents/ui/DetailsView.qml:3155
+#: contents/ui/DetailsView.qml:3449
 msgid "Daylight over"
 msgstr ""
 
@@ -777,12 +781,12 @@ msgstr ""
 msgid "Dense drizzle"
 msgstr ""
 
-#: contents/ui/DetailsView.qml:2009 contents/ui/DetailsView.qml:2011
+#: contents/ui/DetailsView.qml:2303 contents/ui/DetailsView.qml:2305
 msgid "Description"
 msgstr ""
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:80
-#: contents/ui/config/tabs/ConfigWidgetTab.qml:174 contents/ui/FullView.qml:539
+#: contents/ui/config/tabs/ConfigWidgetTab.qml:174 contents/ui/FullView.qml:554
 msgid "Details"
 msgstr "Подробно"
 
@@ -803,11 +807,11 @@ msgstr ""
 msgid "Details only"
 msgstr ""
 
-#: contents/ui/main.qml:302
+#: contents/ui/main.qml:307
 msgid "Detect / change location"
 msgstr ""
 
-#: contents/ui/FullView.qml:370
+#: contents/ui/FullView.qml:385
 msgid "Detect / change location…"
 msgstr "Определить / изменить местоположение…"
 
@@ -815,12 +819,12 @@ msgstr "Определить / изменить местоположение…"
 msgid "Detecting…"
 msgstr "Определение…"
 
-#: contents/ui/config/configAppearance.qml:1468 contents/ui/DetailsView.qml:303
-#: contents/ui/SimpleView.qml:314
+#: contents/ui/config/configAppearance.qml:1480 contents/ui/DetailsView.qml:309
+#: contents/ui/SimpleView.qml:261
 msgid "Dew Point"
 msgstr "Точка росы"
 
-#: contents/ui/config/configAppearance.qml:1469
+#: contents/ui/config/configAppearance.qml:1481
 msgid "Dew point temperature"
 msgstr "Температура точки росы"
 
@@ -844,7 +848,7 @@ msgstr "Отключено"
 msgid "Discard"
 msgstr "Отменить"
 
-#: contents/ui/main.qml:344
+#: contents/ui/main.qml:349
 msgid "Dismiss"
 msgstr ""
 
@@ -863,9 +867,9 @@ msgstr "Режим отображения:"
 msgid "Displaying °C and °F together"
 msgstr ""
 
-#: contents/ui/config/configAppearance.qml:1395
-#: contents/ui/config/configAppearance.qml:1518
-#: contents/ui/config/configAppearance.qml:1641
+#: contents/ui/config/configAppearance.qml:1407
+#: contents/ui/config/configAppearance.qml:1530
+#: contents/ui/config/configAppearance.qml:1653
 msgid "Dominant pollen type and index"
 msgstr ""
 
@@ -879,7 +883,7 @@ msgid "Drag to reorder shown items"
 msgstr "Перетащите, чтобы изменить порядок отображаемых элементов"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:53
-#: contents/ui/main.qml:1566
+#: contents/ui/main.qml:1608
 msgid "Drizzle"
 msgstr "Морось"
 
@@ -891,7 +895,7 @@ msgstr ""
 msgid "Each QWeather project has a unique API host. Find yours at console.qweather.com under your project settings."
 msgstr ""
 
-#: contents/ui/config/configNotifications.qml:143
+#: contents/ui/config/configNotifications.qml:181
 msgid "Each notification type can be enabled independently, with its own daily time where applicable."
 msgstr ""
 
@@ -903,11 +907,11 @@ msgstr ""
 msgid "Edit location details"
 msgstr ""
 
-#: contents/ui/DetailsView.qml:2014
+#: contents/ui/DetailsView.qml:2308
 msgid "Effective"
 msgstr ""
 
-#: contents/ui/config/configNotifications.qml:154
+#: contents/ui/config/configNotifications.qml:192
 msgid "Enable alert notifications"
 msgstr ""
 
@@ -993,7 +997,7 @@ msgstr ""
 msgid "Error (code %1)"
 msgstr ""
 
-#: contents/ui/DetailsView.qml:3149
+#: contents/ui/DetailsView.qml:3443
 msgid "Evening — "
 msgstr ""
 
@@ -1013,12 +1017,12 @@ msgstr "Расширить виджет, чтобы заполнить дост�
 msgid "Expanded cards height:"
 msgstr ""
 
-#: contents/ui/DetailsView.qml:2016
+#: contents/ui/DetailsView.qml:2310
 msgid "Expires"
 msgstr ""
 
 #: contents/ui/js/airQuality.js:52 contents/ui/js/spaceWeather.js:168
-#: contents/ui/js/spaceWeather.js:182 contents/ui/main.qml:750
+#: contents/ui/js/spaceWeather.js:182 contents/ui/main.qml:768
 msgid "Extreme"
 msgstr ""
 
@@ -1026,7 +1030,7 @@ msgstr ""
 msgid "Extreme geomagnetic storm."
 msgstr ""
 
-#: contents/ui/js/airQuality.js:52 contents/ui/main.qml:764
+#: contents/ui/js/airQuality.js:52 contents/ui/main.qml:782
 msgid "Extremely Poor"
 msgstr ""
 
@@ -1034,18 +1038,22 @@ msgstr ""
 msgid "Fahrenheit (°F)"
 msgstr "Фаренгейт (°F)"
 
-#: contents/ui/WeatherService.qml:732
+#: contents/ui/WeatherService.qml:720
+msgid "Failed to load weather providers"
+msgstr ""
+
+#: contents/ui/WeatherService.qml:708
 msgid "Failed: %1"
 msgstr "Ошибка: %1"
 
-#: contents/ui/js/airQuality.js:48 contents/ui/main.qml:760
+#: contents/ui/js/airQuality.js:48 contents/ui/main.qml:778
 msgid "Fair"
 msgstr ""
 
-#: contents/ui/config/configAppearance.qml:1331
-#: contents/ui/config/configAppearance.qml:1433
-#: contents/ui/config/configAppearance.qml:1570 contents/ui/DetailsView.qml:298
-#: contents/ui/SimpleView.qml:311
+#: contents/ui/config/configAppearance.qml:1343
+#: contents/ui/config/configAppearance.qml:1445
+#: contents/ui/config/configAppearance.qml:1582 contents/ui/DetailsView.qml:304
+#: contents/ui/SimpleView.qml:258
 msgid "Feels Like"
 msgstr "Ощущается как"
 
@@ -1053,7 +1061,7 @@ msgstr "Ощущается как"
 msgid "Feels like:"
 msgstr "Ощущается как:"
 
-#: contents/ui/FullView.qml:85 contents/ui/SimpleView.qml:57
+#: contents/ui/FullView.qml:85 contents/ui/SimpleView.qml:59
 msgid "Feels like: %1"
 msgstr "Ощущается как: %1"
 
@@ -1069,7 +1077,7 @@ msgstr "Заполнить панель:"
 msgid "Find"
 msgstr ""
 
-#: contents/ui/main.qml:1729
+#: contents/ui/main.qml:1771
 msgid "First Quarter"
 msgstr "Первая четверть"
 
@@ -1077,7 +1085,7 @@ msgstr "Первая четверть"
 msgid "First day of week:"
 msgstr ""
 
-#: contents/ui/DetailsView.qml:1766
+#: contents/ui/DetailsView.qml:2060
 msgid "Flare Warning"
 msgstr ""
 
@@ -1091,7 +1099,7 @@ msgstr ""
 #: contents/ui/config/configAppearance.qml:248
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:52
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:678
-#: contents/ui/main.qml:1560
+#: contents/ui/main.qml:1602
 msgid "Fog"
 msgstr "Туман"
 
@@ -1109,7 +1117,7 @@ msgid "Footer:"
 msgstr "Нижний колонтитул:"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:84
-#: contents/ui/config/tabs/ConfigWidgetTab.qml:175 contents/ui/FullView.qml:540
+#: contents/ui/config/tabs/ConfigWidgetTab.qml:175 contents/ui/FullView.qml:555
 msgid "Forecast"
 msgstr "Прогноз"
 
@@ -1121,7 +1129,7 @@ msgstr "Дней прогноза:"
 msgid "Forecast only"
 msgstr ""
 
-#: contents/ui/config/tabs/ConfigWidgetTab.qml:878
+#: contents/ui/config/tabs/ConfigWidgetTab.qml:1016
 msgid "Forecast:"
 msgstr ""
 
@@ -1135,7 +1143,7 @@ msgstr "Бесплатный и открытый. Ключ API не требуе
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:54
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:686
-#: contents/ui/main.qml:1572
+#: contents/ui/main.qml:1614
 msgid "Freezing drizzle"
 msgstr "Ледяная морось"
 
@@ -1149,7 +1157,7 @@ msgstr ""
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:56
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:694
-#: contents/ui/main.qml:1582
+#: contents/ui/main.qml:1624
 msgid "Freezing rain"
 msgstr "Ледяной дождь"
 
@@ -1165,11 +1173,11 @@ msgstr ""
 msgid "Friday"
 msgstr ""
 
-#: contents/ui/main.qml:1733
+#: contents/ui/main.qml:1775
 msgid "Full Moon"
 msgstr "Полнолуние"
 
-#: contents/ui/DetailsView.qml:2399
+#: contents/ui/DetailsView.qml:2693
 msgid "Future alerts"
 msgstr ""
 
@@ -1187,28 +1195,28 @@ msgid "GeoClue2 unavailable, trying system location…"
 msgstr ""
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:717
-#: contents/ui/DetailsView.qml:1537
+#: contents/ui/DetailsView.qml:1831
 msgid "Geomagnetic Storm"
 msgstr ""
 
-#: contents/ui/config/configNotifications.qml:293 contents/ui/main.qml:1462
+#: contents/ui/config/configNotifications.qml:331 contents/ui/main.qml:1504
 msgid "Geomagnetic activity"
 msgstr ""
 
-#: contents/ui/main.qml:1459
+#: contents/ui/main.qml:1501
 msgid "Geomagnetic activity will be %1 (Kp %2)"
 msgstr ""
 
-#: contents/ui/js/airQuality.js:47 contents/ui/main.qml:759
+#: contents/ui/js/airQuality.js:47 contents/ui/main.qml:777
 msgid "Good"
 msgstr ""
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:655
-#: contents/ui/DetailsView.qml:1112 contents/ui/main.qml:798
+#: contents/ui/DetailsView.qml:1406 contents/ui/main.qml:816
 msgid "Grass"
 msgstr ""
 
-#: contents/ui/DetailsView.qml:2006
+#: contents/ui/DetailsView.qml:2300
 msgid "Headline"
 msgstr ""
 
@@ -1217,20 +1225,20 @@ msgstr ""
 msgid "Heavy"
 msgstr ""
 
-#: contents/ui/main.qml:1568
+#: contents/ui/main.qml:1610
 msgid "Heavy drizzle"
 msgstr "Сильная морось"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:692
-#: contents/ui/main.qml:1578
+#: contents/ui/main.qml:1620
 msgid "Heavy rain"
 msgstr "Сильный дождь"
 
-#: contents/ui/main.qml:1596
+#: contents/ui/main.qml:1638
 msgid "Heavy showers"
 msgstr "Сильные ливни"
 
-#: contents/ui/main.qml:1588
+#: contents/ui/main.qml:1630
 msgid "Heavy snow"
 msgstr "Сильный снег"
 
@@ -1242,7 +1250,7 @@ msgstr ""
 msgid "Heavy snowfall"
 msgstr ""
 
-#: contents/ui/main.qml:1606
+#: contents/ui/main.qml:1648
 msgid "Heavy thunderstorm with hail"
 msgstr "Сильная гроза с градом"
 
@@ -1260,9 +1268,10 @@ msgstr "Скрыть в подробностях"
 msgid "Hide prefix icon"
 msgstr "Скрыть значок-префикс"
 
-#: contents/ui/FullView.qml:478 contents/ui/js/pollen.js:44
-#: contents/ui/js/spaceWeather.js:183 contents/ui/js/spaceWeather.js:195
-#: contents/ui/main.qml:748 contents/ui/main.qml:792
+#: contents/ui/DetailsView.qml:1028 contents/ui/FullView.qml:493
+#: contents/ui/js/pollen.js:44 contents/ui/js/spaceWeather.js:183
+#: contents/ui/js/spaceWeather.js:195 contents/ui/main.qml:766
+#: contents/ui/main.qml:810
 msgid "High"
 msgstr "Макс"
 
@@ -1278,11 +1287,11 @@ msgstr ""
 msgid "Horizontal"
 msgstr "Горизонтальный"
 
-#: contents/ui/config/tabs/ConfigWidgetTab.qml:823
+#: contents/ui/config/tabs/ConfigWidgetTab.qml:899
 msgid "Hourly Forecast Settings"
 msgstr ""
 
-#: contents/ui/config/tabs/ConfigWidgetTab.qml:833
+#: contents/ui/config/tabs/ConfigWidgetTab.qml:909
 msgid "Hourly layout:"
 msgstr ""
 
@@ -1290,10 +1299,10 @@ msgstr ""
 msgid "How often the rows scroll to reveal the next item"
 msgstr "Как часто строки прокручиваются, чтобы показать следующий элемент"
 
-#: contents/ui/config/configAppearance.qml:1338
-#: contents/ui/config/configAppearance.qml:1440
-#: contents/ui/config/configAppearance.qml:1584 contents/ui/DetailsView.qml:299
-#: contents/ui/SimpleView.qml:312
+#: contents/ui/config/configAppearance.qml:1350
+#: contents/ui/config/configAppearance.qml:1452
+#: contents/ui/config/configAppearance.qml:1596 contents/ui/DetailsView.qml:305
+#: contents/ui/SimpleView.qml:259
 msgid "Humidity"
 msgstr "Влажность"
 
@@ -1379,7 +1388,7 @@ msgid ""
 "You can still search for a location or enter coordinates manually. Note that auto-detection will continue to work using an IP fallback, but it may be less accurate and won’t update in real time as you move around."
 msgstr ""
 
-#: contents/ui/RadarView.qml:163
+#: contents/ui/RadarView.qml:176
 msgid ""
 "Install it for your distribution:\n"
 "- Fedora / RHEL: qt6-qtwebengine\n"
@@ -1387,7 +1396,7 @@ msgid ""
 "- Debian / Kubuntu / KDE Neon: qml6-module-qtwebengine"
 msgstr ""
 
-#: contents/ui/DetailsView.qml:2018
+#: contents/ui/DetailsView.qml:2312
 msgid "Instruction"
 msgstr ""
 
@@ -1459,7 +1468,7 @@ msgstr "Сохранить изменения, внесенные в элеме�
 msgid "Keep the changes you made to Tooltip Items?"
 msgstr "Сохранить изменения, внесенные в элементы всплывающей подсказки?"
 
-#: contents/ui/FullView.qml:356
+#: contents/ui/FullView.qml:371
 msgid "Keep widget open"
 msgstr ""
 
@@ -1468,11 +1477,16 @@ msgid "Knots (kn)"
 msgstr "Узлы (уз)"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:718
-#: contents/ui/DetailsView.qml:1572
+#: contents/ui/DetailsView.qml:1866
 msgid "Kp Index"
 msgstr ""
 
-#: contents/ui/main.qml:1737
+#: contents/ui/config/tabs/ConfigWidgetTab.qml:836
+#: contents/ui/config/tabs/ConfigWidgetTab.qml:948
+msgid "Kp index/G forecast:"
+msgstr ""
+
+#: contents/ui/main.qml:1779
 msgid "Last Quarter"
 msgstr "Последняя четверть"
 
@@ -1508,19 +1522,19 @@ msgid "Light"
 msgstr ""
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:680
-#: contents/ui/main.qml:1564
+#: contents/ui/main.qml:1606
 msgid "Light drizzle"
 msgstr "Легкая морось"
 
-#: contents/ui/main.qml:1570
+#: contents/ui/main.qml:1612
 msgid "Light freezing drizzle"
 msgstr "Легкая ледяная морось"
 
-#: contents/ui/main.qml:1580
+#: contents/ui/main.qml:1622
 msgid "Light freezing rain"
 msgstr "Небольшой ледяной дождь"
 
-#: contents/ui/main.qml:1574
+#: contents/ui/main.qml:1616
 msgid "Light rain"
 msgstr "Небольшой дождь"
 
@@ -1532,11 +1546,11 @@ msgstr ""
 msgid "Light rain / Drizzle (night)"
 msgstr ""
 
-#: contents/ui/main.qml:1592
+#: contents/ui/main.qml:1634
 msgid "Light showers"
 msgstr "Слабые ливни"
 
-#: contents/ui/main.qml:1584
+#: contents/ui/main.qml:1626
 msgid "Light snow"
 msgstr "Небольшой снег"
 
@@ -1548,7 +1562,7 @@ msgstr ""
 msgid "Light snow (night)"
 msgstr ""
 
-#: contents/ui/main.qml:1598
+#: contents/ui/main.qml:1640
 msgid "Light snow showers"
 msgstr "Небольшой снегопад"
 
@@ -1560,15 +1574,15 @@ msgstr "Строк:"
 msgid "List"
 msgstr ""
 
-#: contents/ui/DetailsView.qml:537
+#: contents/ui/DetailsView.qml:543
 msgid "Loading details…"
 msgstr "Загрузка подробностей…"
 
-#: contents/ui/ForecastView.qml:302
+#: contents/ui/ForecastView.qml:338
 msgid "Loading forecast…"
 msgstr "Загрузка прогноза…"
 
-#: contents/ui/ForecastView.qml:564
+#: contents/ui/ForecastView.qml:765
 msgid "Loading hourly data…"
 msgstr "Загрузка почасовых данных…"
 
@@ -1576,7 +1590,7 @@ msgstr "Загрузка почасовых данных…"
 msgid "Loading locations…"
 msgstr "Загрузка местоположений…"
 
-#: contents/ui/RadarView.qml:103
+#: contents/ui/RadarView.qml:116
 msgid "Loading radar…"
 msgstr ""
 
@@ -1589,7 +1603,7 @@ msgstr "Местоположение"
 msgid "Location '%1' is already in your saved list. You can apply the selected location, but it will not be saved again."
 msgstr ""
 
-#: contents/ui/config/configAppearance.qml:1352
+#: contents/ui/config/configAppearance.qml:1364
 msgid "Location Name"
 msgstr "Название местоположения"
 
@@ -1652,9 +1666,10 @@ msgstr "Долгота:"
 msgid "Looking up location…"
 msgstr ""
 
-#: contents/ui/FullView.qml:498 contents/ui/js/pollen.js:42
-#: contents/ui/js/spaceWeather.js:185 contents/ui/js/spaceWeather.js:197
-#: contents/ui/main.qml:746 contents/ui/main.qml:790
+#: contents/ui/DetailsView.qml:1028 contents/ui/FullView.qml:513
+#: contents/ui/js/pollen.js:42 contents/ui/js/spaceWeather.js:185
+#: contents/ui/js/spaceWeather.js:197 contents/ui/main.qml:764
+#: contents/ui/main.qml:808
 msgid "Low"
 msgstr "Мин"
 
@@ -1668,7 +1683,7 @@ msgstr "Стиль основного значка:"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:49
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:672
-#: contents/ui/main.qml:1554
+#: contents/ui/main.qml:1596
 msgid "Mainly clear"
 msgstr "Преимущественно ясно"
 
@@ -1721,7 +1736,7 @@ msgstr ""
 msgid "Minor geomagnetic storm."
 msgstr ""
 
-#: contents/ui/config/configAppearance.qml:1978
+#: contents/ui/config/configAppearance.qml:1990
 msgid "Misc"
 msgstr "Разное"
 
@@ -1736,7 +1751,7 @@ msgstr ""
 #: contents/ui/components/RadarWebEngineView.qml:92
 #: contents/ui/js/airQuality.js:49 contents/ui/js/pollen.js:43
 #: contents/ui/js/spaceWeather.js:184 contents/ui/js/spaceWeather.js:196
-#: contents/ui/main.qml:747 contents/ui/main.qml:761 contents/ui/main.qml:791
+#: contents/ui/main.qml:765 contents/ui/main.qml:779 contents/ui/main.qml:809
 msgid "Moderate"
 msgstr ""
 
@@ -1764,11 +1779,11 @@ msgstr ""
 msgid "Monday"
 msgstr ""
 
-#: contents/ui/DetailsView.qml:305
+#: contents/ui/DetailsView.qml:311
 msgid "Moon"
 msgstr ""
 
-#: contents/ui/config/configAppearance.qml:1359
+#: contents/ui/config/configAppearance.qml:1371
 msgid "Moon Phase"
 msgstr "Фаза луны"
 
@@ -1776,8 +1791,8 @@ msgstr "Фаза луны"
 msgid "Moon mode:"
 msgstr ""
 
-#: contents/ui/config/configAppearance.qml:1482
-#: contents/ui/config/configAppearance.qml:1605
+#: contents/ui/config/configAppearance.qml:1494
+#: contents/ui/config/configAppearance.qml:1617
 msgid "Moon phase and moonrise/moonset"
 msgstr ""
 
@@ -1799,8 +1814,8 @@ msgstr ""
 msgid "Moon phase options"
 msgstr ""
 
-#: contents/ui/config/configAppearance.qml:1483
-#: contents/ui/config/configAppearance.qml:1606
+#: contents/ui/config/configAppearance.qml:1495
+#: contents/ui/config/configAppearance.qml:1618
 msgid "Moon phase, moonrise & moonset"
 msgstr ""
 
@@ -1809,8 +1824,8 @@ msgstr ""
 msgid "Moon:"
 msgstr "Луна:"
 
-#: contents/ui/DetailsView.qml:3359 contents/ui/DetailsView.qml:3364
-#: contents/ui/DetailsView.qml:3681 contents/ui/DetailsView.qml:3686
+#: contents/ui/DetailsView.qml:3653 contents/ui/DetailsView.qml:3658
+#: contents/ui/DetailsView.qml:3975 contents/ui/DetailsView.qml:3980
 msgid "Moonrise"
 msgstr ""
 
@@ -1832,7 +1847,7 @@ msgstr ""
 msgid "Moonrise only"
 msgstr ""
 
-#: contents/ui/DetailsView.qml:3357 contents/ui/DetailsView.qml:3679
+#: contents/ui/DetailsView.qml:3651 contents/ui/DetailsView.qml:3973
 msgid "Moonrise/Moonset"
 msgstr ""
 
@@ -1842,8 +1857,8 @@ msgstr ""
 msgid "Moonrise:"
 msgstr ""
 
-#: contents/ui/DetailsView.qml:3361 contents/ui/DetailsView.qml:3364
-#: contents/ui/DetailsView.qml:3683 contents/ui/DetailsView.qml:3686
+#: contents/ui/DetailsView.qml:3655 contents/ui/DetailsView.qml:3658
+#: contents/ui/DetailsView.qml:3977 contents/ui/DetailsView.qml:3980
 msgid "Moonset"
 msgstr ""
 
@@ -1864,7 +1879,7 @@ msgstr ""
 msgid "Moonset:"
 msgstr ""
 
-#: contents/ui/main.qml:1250
+#: contents/ui/main.qml:1292
 msgid "Morning"
 msgstr ""
 
@@ -1873,7 +1888,7 @@ msgid "Most allergy sufferers will experience discomfort."
 msgstr ""
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:656
-#: contents/ui/DetailsView.qml:1114 contents/ui/main.qml:799
+#: contents/ui/DetailsView.qml:1408 contents/ui/main.qml:817
 msgid "Mugwort"
 msgstr ""
 
@@ -1881,9 +1896,9 @@ msgstr ""
 msgid "Multiple lines (tall panel)"
 msgstr "Несколько строк (высокая панель)"
 
-#: contents/ui/config/configAppearance.qml:1402
-#: contents/ui/config/configAppearance.qml:1525
-#: contents/ui/config/configAppearance.qml:1648
+#: contents/ui/config/configAppearance.qml:1414
+#: contents/ui/config/configAppearance.qml:1537
+#: contents/ui/config/configAppearance.qml:1660
 msgid "NOAA Kp index and geomagnetic activity"
 msgstr ""
 
@@ -1899,15 +1914,15 @@ msgstr ""
 msgid "Network error"
 msgstr ""
 
-#: contents/ui/main.qml:1725
+#: contents/ui/main.qml:1767
 msgid "New Moon"
 msgstr "Новолуние"
 
-#: contents/ui/DetailsView.qml:3124
+#: contents/ui/DetailsView.qml:3418
 msgid "Night"
 msgstr ""
 
-#: contents/ui/DetailsView.qml:913
+#: contents/ui/DetailsView.qml:1207
 msgid "Nitrogen Dioxide (NO₂)"
 msgstr ""
 
@@ -1915,11 +1930,11 @@ msgstr ""
 msgid "No"
 msgstr ""
 
-#: contents/ui/DetailsView.qml:537
+#: contents/ui/DetailsView.qml:543
 msgid "No details data"
 msgstr "Нет данных подробностей"
 
-#: contents/ui/ForecastView.qml:302
+#: contents/ui/ForecastView.qml:338
 msgid "No forecast data"
 msgstr "Нет данных прогноза"
 
@@ -1927,7 +1942,15 @@ msgstr "Нет данных прогноза"
 msgid "No geomagnetic storm activity."
 msgstr ""
 
-#: contents/ui/FullView.qml:197
+#: contents/ui/ForecastView.qml:1197 contents/ui/ForecastView.qml:1646
+msgid "No info"
+msgstr ""
+
+#: contents/ui/ForecastView.qml:577
+msgid "No information"
+msgstr ""
+
+#: contents/ui/FullView.qml:212
 msgid "No location set"
 msgstr "Местоположение не задано"
 
@@ -1943,14 +1966,18 @@ msgstr "Метеостанции для '%1' не найдены"
 #: contents/ui/components/RadarWebEngineView.qml:534
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:348
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:200
-#: contents/ui/js/spaceWeather.js:198 contents/ui/main.qml:854
-#: contents/ui/main.qml:856
+#: contents/ui/js/spaceWeather.js:198 contents/ui/main.qml:872
+#: contents/ui/main.qml:874
 msgid "None"
 msgstr ""
 
 #: contents/ui/config/configLocation.qml:629
 msgid "None Selected"
 msgstr "Ничего не выбрано"
+
+#: contents/ui/DetailsView.qml:1028
+msgid "Normal"
+msgstr ""
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:272
 msgid "Not available (HTTP %1)"
@@ -1964,27 +1991,27 @@ msgstr ""
 msgid "Note: size may be reduced if the panel is not thick enough."
 msgstr "Примечание: размер может быть уменьшен, если панель недостаточно толстая."
 
-#: contents/config/config.qml:62 contents/ui/config/configNotifications.qml:135
+#: contents/config/config.qml:62 contents/ui/config/configNotifications.qml:173
 msgid "Notifications"
 msgstr ""
 
-#: contents/ui/config/configNotifications.qml:262
+#: contents/ui/config/configNotifications.qml:300
 msgid "Notify about upcoming rain/storms"
 msgstr ""
 
-#: contents/ui/config/configNotifications.qml:276
+#: contents/ui/config/configNotifications.qml:314
 msgid "Notify with today's UV forecast"
 msgstr ""
 
-#: contents/ui/config/configNotifications.qml:222
+#: contents/ui/config/configNotifications.qml:260
 msgid "Notify with today's forecast"
 msgstr ""
 
-#: contents/ui/config/configNotifications.qml:296
+#: contents/ui/config/configNotifications.qml:334
 msgid "Notify with today's geomagnetic activity forecast"
 msgstr ""
 
-#: contents/ui/config/configNotifications.qml:242
+#: contents/ui/config/configNotifications.qml:280
 msgid "Notify with tomorrow's forecast"
 msgstr ""
 
@@ -2002,7 +2029,7 @@ msgid "OK"
 msgstr "ОК"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:657
-#: contents/ui/DetailsView.qml:1116 contents/ui/main.qml:800
+#: contents/ui/DetailsView.qml:1410 contents/ui/main.qml:818
 msgid "Olive"
 msgstr ""
 
@@ -2011,11 +2038,11 @@ msgid "Only the clicked day expands"
 msgstr ""
 
 #: contents/ui/config/configLocation.qml:1106
-#: contents/ui/config/configLocation.qml:1483 contents/ui/RadarView.qml:178
+#: contents/ui/config/configLocation.qml:1483 contents/ui/RadarView.qml:191
 msgid "Open install guide"
 msgstr ""
 
-#: contents/ui/RadarView.qml:185
+#: contents/ui/RadarView.qml:198
 msgid "Open radar in browser"
 msgstr ""
 
@@ -2041,18 +2068,18 @@ msgstr ""
 msgid "Options"
 msgstr ""
 
-#: contents/ui/config/configNotifications.qml:171
+#: contents/ui/config/configNotifications.qml:209
 msgid "Orange"
 msgstr ""
 
 #: contents/ui/config/configAppearance.qml:242
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:51
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:676
-#: contents/ui/main.qml:1558
+#: contents/ui/main.qml:1600
 msgid "Overcast"
 msgstr "Пасмурно"
 
-#: contents/ui/DetailsView.qml:915
+#: contents/ui/DetailsView.qml:1209
 msgid "Ozone (O₃)"
 msgstr ""
 
@@ -2068,7 +2095,7 @@ msgstr ""
 msgid "PM2.5"
 msgstr ""
 
-#: contents/ui/config/configAppearance.qml:1966
+#: contents/ui/config/configAppearance.qml:1978
 #: contents/ui/config/tabs/ConfigMiscTab.qml:132
 msgid "Panel"
 msgstr "Панель"
@@ -2093,17 +2120,17 @@ msgstr "Настройки элементов панели"
 msgid "Panel items:"
 msgstr "Элементы панели:"
 
-#: contents/ui/DetailsView.qml:911
+#: contents/ui/DetailsView.qml:1205
 msgid "Particulate Matter (PM10)"
 msgstr ""
 
-#: contents/ui/DetailsView.qml:909
+#: contents/ui/DetailsView.qml:1203
 msgid "Particulate Matter (PM2.5)"
 msgstr ""
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:50
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:674
-#: contents/ui/main.qml:1556 contents/ui/main.qml:1608
+#: contents/ui/main.qml:1598 contents/ui/main.qml:1650
 msgid "Partly cloudy"
 msgstr "Переменная облачность"
 
@@ -2153,14 +2180,14 @@ msgstr ""
 msgid "Play"
 msgstr ""
 
-#: contents/ui/config/configAppearance.qml:1394
-#: contents/ui/config/configAppearance.qml:1517
-#: contents/ui/config/configAppearance.qml:1640 contents/ui/DetailsView.qml:311
-#: contents/ui/SimpleView.qml:320
+#: contents/ui/config/configAppearance.qml:1406
+#: contents/ui/config/configAppearance.qml:1529
+#: contents/ui/config/configAppearance.qml:1652 contents/ui/DetailsView.qml:317
+#: contents/ui/SimpleView.qml:267
 msgid "Pollen"
 msgstr ""
 
-#: contents/ui/DetailsView.qml:1261
+#: contents/ui/DetailsView.qml:1555
 msgid "Pollen data not available for this location."
 msgstr ""
 
@@ -2172,38 +2199,43 @@ msgstr ""
 msgid "Pollen:"
 msgstr ""
 
-#: contents/ui/js/airQuality.js:50 contents/ui/main.qml:762
+#: contents/ui/js/airQuality.js:50 contents/ui/main.qml:780
 msgid "Poor"
 msgstr ""
 
-#: contents/ui/main.qml:348
+#: contents/ui/main.qml:353
 msgid "Postpone %1 min"
 msgstr ""
 
-#: contents/ui/SimpleView.qml:317
+#: contents/ui/SimpleView.qml:264
 msgid "Precip Sum"
+msgstr ""
+
+#: contents/ui/config/tabs/ConfigWidgetTab.qml:858
+#: contents/ui/config/tabs/ConfigWidgetTab.qml:972
+msgid "Precip sum:"
 msgstr ""
 
 #: contents/ui/TooltipContent.qml:455
 msgid "Precip. Sum:"
 msgstr ""
 
-#: contents/ui/config/configAppearance.qml:1366
-#: contents/ui/config/configAppearance.qml:1489
-#: contents/ui/config/configAppearance.qml:1612 contents/ui/DetailsView.qml:307
-#: contents/ui/SimpleView.qml:316
+#: contents/ui/config/configAppearance.qml:1378
+#: contents/ui/config/configAppearance.qml:1501
+#: contents/ui/config/configAppearance.qml:1624 contents/ui/DetailsView.qml:313
+#: contents/ui/SimpleView.qml:263
 msgid "Precipitation"
 msgstr ""
 
-#: contents/ui/config/configAppearance.qml:1373
-#: contents/ui/config/configAppearance.qml:1496
-#: contents/ui/config/configAppearance.qml:1619 contents/ui/DetailsView.qml:308
+#: contents/ui/config/configAppearance.qml:1385
+#: contents/ui/config/configAppearance.qml:1508
+#: contents/ui/config/configAppearance.qml:1631 contents/ui/DetailsView.qml:314
 msgid "Precipitation Sum"
 msgstr ""
 
-#: contents/ui/config/configAppearance.qml:1367
-#: contents/ui/config/configAppearance.qml:1490
-#: contents/ui/config/configAppearance.qml:1613
+#: contents/ui/config/configAppearance.qml:1379
+#: contents/ui/config/configAppearance.qml:1502
+#: contents/ui/config/configAppearance.qml:1625
 msgid "Precipitation rate (mm/h)"
 msgstr ""
 
@@ -2216,12 +2248,17 @@ msgid "Prefix style:"
 msgstr "Стиль префикса:"
 
 #: contents/ui/components/RadarWebEngineView.qml:77
-#: contents/ui/config/configAppearance.qml:1345
-#: contents/ui/config/configAppearance.qml:1447
-#: contents/ui/config/configAppearance.qml:1591 contents/ui/DetailsView.qml:300
-#: contents/ui/SimpleView.qml:313
+#: contents/ui/config/configAppearance.qml:1357
+#: contents/ui/config/configAppearance.qml:1459
+#: contents/ui/config/configAppearance.qml:1603 contents/ui/DetailsView.qml:306
+#: contents/ui/SimpleView.qml:260
 msgid "Pressure"
 msgstr "Давление"
+
+#: contents/ui/config/tabs/ConfigWidgetTab.qml:829
+#: contents/ui/config/tabs/ConfigWidgetTab.qml:940
+msgid "Pressure forecast:"
+msgstr ""
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:283
 #: contents/ui/TooltipContent.qml:438
@@ -2236,7 +2273,7 @@ msgstr ""
 msgid "Primary unit shown first (e.g. °C / °F)"
 msgstr ""
 
-#: contents/ui/DetailsView.qml:2020
+#: contents/ui/DetailsView.qml:2314
 msgid "Provider"
 msgstr ""
 
@@ -2257,8 +2294,8 @@ msgstr ""
 msgid "Provider website:"
 msgstr ""
 
-#: contents/ui/config/configGeneral.qml:413 contents/ui/DetailsView.qml:1784
-#: contents/ui/DetailsView.qml:2498
+#: contents/ui/config/configGeneral.qml:413 contents/ui/DetailsView.qml:2078
+#: contents/ui/DetailsView.qml:2792
 msgid "Provider:"
 msgstr "Провайдер:"
 
@@ -2293,7 +2330,7 @@ msgstr ""
 msgid "QtLocation and QtPositioning are not installed"
 msgstr ""
 
-#: contents/ui/RadarView.qml:138
+#: contents/ui/RadarView.qml:151
 msgid "QtWebEngine is not installed"
 msgstr ""
 
@@ -2303,7 +2340,7 @@ msgstr ""
 
 #: contents/ui/components/RadarWebEngineView.qml:72
 #: contents/ui/config/configGeneral.qml:706
-#: contents/ui/config/tabs/ConfigWidgetTab.qml:176 contents/ui/FullView.qml:541
+#: contents/ui/config/tabs/ConfigWidgetTab.qml:176 contents/ui/FullView.qml:556
 msgid "Radar"
 msgstr ""
 
@@ -2315,18 +2352,18 @@ msgstr ""
 msgid "Radar provider: <a href='https://www.rainviewer.com/'>Rain Viewer</a><br/><br/>The widget uses the free RainViewer API, which provides the past 2 hours of weather radar data in 10-minute intervals. Radar forecast is not supported.<br/><br/>Rain Viewer does not guarantee the availability of radar data. They do not conclude contracts with owners of this data. The reason is that the owners can ask them to remove their data from Rain Viewer, change the format, or stop sharing the data. They are trying to keep radar data for as long as possible, but sometimes the owners just stop providing the images."
 msgstr ""
 
-#: contents/ui/FullView.qml:636
+#: contents/ui/FullView.qml:713
 msgid "Radar:"
 msgstr ""
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:658
-#: contents/ui/DetailsView.qml:1118 contents/ui/main.qml:801
+#: contents/ui/DetailsView.qml:1412 contents/ui/main.qml:819
 msgid "Ragweed"
 msgstr ""
 
 #: contents/ui/components/RadarWebEngineView.qml:73
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:55
-#: contents/ui/main.qml:1347 contents/ui/main.qml:1576
+#: contents/ui/main.qml:1389 contents/ui/main.qml:1618
 msgid "Rain"
 msgstr "Дождь"
 
@@ -2342,7 +2379,7 @@ msgstr ""
 msgid "Rain showers"
 msgstr ""
 
-#: contents/ui/config/configNotifications.qml:259
+#: contents/ui/config/configNotifications.qml:297
 msgid "Rain/Storm"
 msgstr ""
 
@@ -2358,12 +2395,12 @@ msgstr ""
 msgid "Recommended — e.g. 560"
 msgstr ""
 
-#: contents/ui/config/configNotifications.qml:176
+#: contents/ui/config/configNotifications.qml:214
 msgid "Red"
 msgstr ""
 
-#: contents/ui/config/configLocation.qml:1533 contents/ui/FullView.qml:393
-#: contents/ui/main.qml:308
+#: contents/ui/config/configLocation.qml:1533 contents/ui/FullView.qml:408
+#: contents/ui/main.qml:313
 msgid "Refresh"
 msgstr "Обновить"
 
@@ -2392,12 +2429,12 @@ msgstr ""
 msgid "Region default (short)"
 msgstr ""
 
-#: contents/ui/config/configAppearance.qml:1441
-#: contents/ui/config/configAppearance.qml:1585
+#: contents/ui/config/configAppearance.qml:1453
+#: contents/ui/config/configAppearance.qml:1597
 msgid "Relative humidity %"
 msgstr "Относительная влажность %"
 
-#: contents/ui/config/configAppearance.qml:1339
+#: contents/ui/config/configAppearance.qml:1351
 msgid "Relative humidity percentage"
 msgstr "Процент относительной влажности"
 
@@ -2413,7 +2450,7 @@ msgstr ""
 msgid "Rename location"
 msgstr ""
 
-#: contents/ui/config/configNotifications.qml:202
+#: contents/ui/config/configNotifications.qml:240
 msgid "Repeat reminder every:"
 msgstr ""
 
@@ -2444,7 +2481,7 @@ msgstr "Сбросить всё к умолчаниям"
 msgid "Reset to default"
 msgstr "Сбросить к умолчанию"
 
-#: contents/ui/main.qml:1562
+#: contents/ui/main.qml:1604
 msgid "Rime fog"
 msgstr "Ледяной туман"
 
@@ -2514,7 +2551,7 @@ msgstr ""
 msgid "Set <b>%1</b> as your default location?"
 msgstr ""
 
-#: contents/ui/FullView.qml:206
+#: contents/ui/FullView.qml:221
 msgid "Set Location…"
 msgstr "Задать местоположение…"
 
@@ -2536,7 +2573,7 @@ msgstr "Задать свои значки…"
 msgid "Severe geomagnetic storm."
 msgstr ""
 
-#: contents/ui/config/configNotifications.qml:164
+#: contents/ui/config/configNotifications.qml:202
 msgid "Severities:"
 msgstr ""
 
@@ -2623,7 +2660,7 @@ msgstr "Показать/скрыть ключ"
 msgid "Show:"
 msgstr "Показывать:"
 
-#: contents/ui/main.qml:1594
+#: contents/ui/main.qml:1636
 msgid "Showers"
 msgstr "Ливни"
 
@@ -2657,7 +2694,7 @@ msgstr "Простой (значок + температура)"
 msgid "Simple Mode Items"
 msgstr ""
 
-#: contents/ui/config/tabs/ConfigWidgetTab.qml:868
+#: contents/ui/config/tabs/ConfigWidgetTab.qml:1006
 msgid "Simple Widget"
 msgstr ""
 
@@ -2704,7 +2741,7 @@ msgid "Small circle  ⚬"
 msgstr "Маленький круг  ⚬"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:57
-#: contents/ui/main.qml:1586
+#: contents/ui/main.qml:1628
 msgid "Snow"
 msgstr "Снег"
 
@@ -2716,10 +2753,10 @@ msgstr ""
 msgid "Snow (night)"
 msgstr ""
 
-#: contents/ui/config/configAppearance.qml:1415
-#: contents/ui/config/configAppearance.qml:1538
-#: contents/ui/config/configAppearance.qml:1661 contents/ui/DetailsView.qml:314
-#: contents/ui/SimpleView.qml:323
+#: contents/ui/config/configAppearance.qml:1427
+#: contents/ui/config/configAppearance.qml:1550
+#: contents/ui/config/configAppearance.qml:1673 contents/ui/DetailsView.qml:320
+#: contents/ui/SimpleView.qml:270
 msgid "Snow Cover"
 msgstr ""
 
@@ -2727,25 +2764,25 @@ msgstr ""
 msgid "Snow Cover:"
 msgstr ""
 
-#: contents/ui/config/configAppearance.qml:1416
-#: contents/ui/config/configAppearance.qml:1539
-#: contents/ui/config/configAppearance.qml:1662
+#: contents/ui/config/configAppearance.qml:1428
+#: contents/ui/config/configAppearance.qml:1551
+#: contents/ui/config/configAppearance.qml:1674
 msgid "Snow depth (cm/in)"
 msgstr ""
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:58
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:702
-#: contents/ui/main.qml:1590
+#: contents/ui/main.qml:1632
 msgid "Snow grains"
 msgstr "Снежные зерна"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:60
-#: contents/ui/main.qml:1600
+#: contents/ui/main.qml:1642
 msgid "Snow showers"
 msgstr "Снегопады"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:719
-#: contents/ui/DetailsView.qml:1612
+#: contents/ui/DetailsView.qml:1906
 msgid "Solar Wind"
 msgstr ""
 
@@ -2753,10 +2790,10 @@ msgstr ""
 msgid "Space"
 msgstr "Пробел"
 
-#: contents/ui/config/configAppearance.qml:1401
-#: contents/ui/config/configAppearance.qml:1524
-#: contents/ui/config/configAppearance.qml:1647 contents/ui/DetailsView.qml:312
-#: contents/ui/SimpleView.qml:321
+#: contents/ui/config/configAppearance.qml:1413
+#: contents/ui/config/configAppearance.qml:1536
+#: contents/ui/config/configAppearance.qml:1659 contents/ui/DetailsView.qml:318
+#: contents/ui/SimpleView.qml:268
 msgid "Space Weather"
 msgstr ""
 
@@ -2790,7 +2827,7 @@ msgstr ""
 msgid "StormGlass API Key:"
 msgstr ""
 
-#: contents/ui/config/tabs/ConfigWidgetTab.qml:838
+#: contents/ui/config/tabs/ConfigWidgetTab.qml:914
 msgid "Strip"
 msgstr ""
 
@@ -2802,12 +2839,12 @@ msgstr ""
 msgid "Strong geomagnetic storm."
 msgstr ""
 
-#: contents/ui/DetailsView.qml:917
+#: contents/ui/DetailsView.qml:1211
 msgid "Sulfur Dioxide (SO₂)"
 msgstr ""
 
-#: contents/ui/config/configAppearance.qml:1462
-#: contents/ui/config/configAppearance.qml:1599
+#: contents/ui/config/configAppearance.qml:1474
+#: contents/ui/config/configAppearance.qml:1611
 msgid "Sun rise & set times"
 msgstr "Время восхода и заката"
 
@@ -2827,9 +2864,9 @@ msgstr "Параметры времени солнца"
 msgid "Sunday"
 msgstr ""
 
-#: contents/ui/DetailsView.qml:2914 contents/ui/DetailsView.qml:2918
-#: contents/ui/DetailsView.qml:3240 contents/ui/DetailsView.qml:3244
-#: contents/ui/ForecastView.qml:844
+#: contents/ui/DetailsView.qml:3208 contents/ui/DetailsView.qml:3212
+#: contents/ui/DetailsView.qml:3534 contents/ui/DetailsView.qml:3538
+#: contents/ui/ForecastView.qml:1045
 msgid "Sunrise"
 msgstr ""
 
@@ -2837,7 +2874,7 @@ msgstr ""
 msgid "Sunrise / Sunset:"
 msgstr ""
 
-#: contents/ui/config/configAppearance.qml:1317
+#: contents/ui/config/configAppearance.qml:1329
 msgid "Sunrise and sunset times"
 msgstr "Время восхода и заката"
 
@@ -2855,13 +2892,13 @@ msgstr ""
 msgid "Sunrise only  07:17"
 msgstr "Только восход  07:17"
 
-#: contents/ui/config/configAppearance.qml:1316
-#: contents/ui/config/configAppearance.qml:1461
-#: contents/ui/config/configAppearance.qml:1598 contents/ui/DetailsView.qml:302
+#: contents/ui/config/configAppearance.qml:1328
+#: contents/ui/config/configAppearance.qml:1473
+#: contents/ui/config/configAppearance.qml:1610 contents/ui/DetailsView.qml:308
 msgid "Sunrise/Sunset"
 msgstr "Восход/Закат"
 
-#: contents/ui/config/tabs/ConfigWidgetTab.qml:850
+#: contents/ui/config/tabs/ConfigWidgetTab.qml:926
 msgid "Sunrise/sunset markers:"
 msgstr ""
 
@@ -2870,8 +2907,8 @@ msgstr ""
 msgid "Sunrise:"
 msgstr "Восход:"
 
-#: contents/ui/DetailsView.qml:2916 contents/ui/DetailsView.qml:2918
-#: contents/ui/DetailsView.qml:3242 contents/ui/DetailsView.qml:3244
+#: contents/ui/DetailsView.qml:3210 contents/ui/DetailsView.qml:3212
+#: contents/ui/DetailsView.qml:3536 contents/ui/DetailsView.qml:3538
 msgid "Sunset"
 msgstr ""
 
@@ -2898,7 +2935,7 @@ msgstr "Закат:"
 msgid "Swap order:"
 msgstr ""
 
-#: contents/ui/FullView.qml:309
+#: contents/ui/FullView.qml:324
 msgid "Switch location"
 msgstr ""
 
@@ -2926,7 +2963,7 @@ msgstr ""
 msgid "System location unavailable, trying IP geolocation…"
 msgstr ""
 
-#: contents/ui/config/configAppearance.qml:1966
+#: contents/ui/config/configAppearance.qml:1978
 msgid "System tray"
 msgstr ""
 
@@ -2939,8 +2976,8 @@ msgid "System tray icon settings"
 msgstr ""
 
 #: contents/ui/components/RadarWebEngineView.qml:75
-#: contents/ui/config/configAppearance.qml:1309
-#: contents/ui/config/configAppearance.qml:1556
+#: contents/ui/config/configAppearance.qml:1321
+#: contents/ui/config/configAppearance.qml:1568
 msgid "Temperature"
 msgstr "Температура"
 
@@ -2998,7 +3035,7 @@ msgstr "Текстовые метки (Температура, Ветер…)"
 msgid "Text will follow the system font and expand to fill the available space."
 msgstr "Текст будет следовать системному шрифту и расширяться, чтобы заполнить доступное пространство."
 
-#: contents/ui/RadarView.qml:148
+#: contents/ui/RadarView.qml:161
 msgid "The Radar tab requires the QtWebEngine package, which is not installed on this system."
 msgstr ""
 
@@ -3009,6 +3046,11 @@ msgstr ""
 #: contents/ui/config/configAppearance.qml:465
 msgid "The condition icon will automatically reflect the current weather using your KDE system icon theme. No customisation is needed."
 msgstr "Значок состояния будет автоматически отражать текущую погоду, используя вашу системную тему значков KDE. Настройка не требуется."
+
+#: contents/ui/config/tabs/ConfigWidgetTab.qml:844
+#: contents/ui/config/tabs/ConfigWidgetTab.qml:957
+msgid "The geomagnetic (Kp/G) forecast is only available up to 3 days ahead"
+msgstr ""
 
 #: contents/ui/config/configLocation.qml:1089
 msgid "The map picker requires the QtLocation and QtPositioning packages, which are not installed on this system."
@@ -3024,7 +3066,7 @@ msgstr ""
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:61
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:714
-#: contents/ui/main.qml:1347 contents/ui/main.qml:1602
+#: contents/ui/main.qml:1389 contents/ui/main.qml:1644
 msgid "Thunderstorm"
 msgstr "Гроза"
 
@@ -3038,7 +3080,7 @@ msgstr ""
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:62
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:716
-#: contents/ui/main.qml:1604
+#: contents/ui/main.qml:1646
 msgid "Thunderstorm with hail"
 msgstr "Гроза с градом"
 
@@ -3062,7 +3104,7 @@ msgstr ""
 msgid "Time format:"
 msgstr ""
 
-#: contents/ui/config/configNotifications.qml:102
+#: contents/ui/config/configNotifications.qml:120
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:826
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:700
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:694
@@ -3082,26 +3124,26 @@ msgstr "Часовой пояс:"
 msgid "To unlock additional map layers (Rain, Clouds, Temperature, Wind, Pressure): disable Adaptive mode, select OpenWeatherMap as your weather provider, and enter your API key above. When you are ready, you can enable Adaptive mode again."
 msgstr ""
 
-#: contents/ui/ForecastView.qml:391 contents/ui/main.qml:1214
-#: contents/ui/SimpleView.qml:476
+#: contents/ui/ForecastView.qml:436 contents/ui/main.qml:1256
+#: contents/ui/SimpleView.qml:423
 msgid "Today"
 msgstr "Сегодня"
 
-#: contents/ui/config/configAppearance.qml:1374
-#: contents/ui/config/configAppearance.qml:1497
-#: contents/ui/config/configAppearance.qml:1620
+#: contents/ui/config/configAppearance.qml:1386
+#: contents/ui/config/configAppearance.qml:1509
+#: contents/ui/config/configAppearance.qml:1632
 msgid "Today's total precipitation (mm/in)"
 msgstr ""
 
-#: contents/ui/config/configNotifications.qml:219
+#: contents/ui/config/configNotifications.qml:257
 msgid "Today's weather"
 msgstr ""
 
-#: contents/ui/main.qml:1287
+#: contents/ui/main.qml:1329
 msgid "Tomorrow"
 msgstr ""
 
-#: contents/ui/config/configNotifications.qml:239
+#: contents/ui/config/configNotifications.qml:277
 msgid "Tomorrow forecast"
 msgstr ""
 
@@ -3113,11 +3155,11 @@ msgstr ""
 msgid "Tomorrow.io API Key:"
 msgstr ""
 
-#: contents/ui/main.qml:1252
+#: contents/ui/main.qml:1294
 msgid "Tonight"
 msgstr ""
 
-#: contents/ui/config/configAppearance.qml:1974
+#: contents/ui/config/configAppearance.qml:1986
 #: contents/ui/config/tabs/ConfigMiscTab.qml:137
 msgid "Tooltip"
 msgstr "Всплывающая подсказка"
@@ -3162,7 +3204,7 @@ msgstr ""
 msgid "Top Right"
 msgstr ""
 
-#: contents/ui/config/configNotifications.qml:185
+#: contents/ui/config/configNotifications.qml:223
 msgid "Treat alert notifications as critical"
 msgstr ""
 
@@ -3170,10 +3212,10 @@ msgstr ""
 msgid "Truncate (single line)"
 msgstr "Обрезать (одна строка)"
 
-#: contents/ui/config/configAppearance.qml:1380
-#: contents/ui/config/configAppearance.qml:1503
-#: contents/ui/config/configAppearance.qml:1626 contents/ui/DetailsView.qml:309
-#: contents/ui/SimpleView.qml:318
+#: contents/ui/config/configAppearance.qml:1392
+#: contents/ui/config/configAppearance.qml:1515
+#: contents/ui/config/configAppearance.qml:1638 contents/ui/DetailsView.qml:315
+#: contents/ui/SimpleView.qml:265
 msgid "UV Index"
 msgstr ""
 
@@ -3181,17 +3223,22 @@ msgstr ""
 msgid "UV Index:"
 msgstr ""
 
-#: contents/ui/config/configNotifications.qml:273 contents/ui/main.qml:1422
+#: contents/ui/config/configNotifications.qml:311 contents/ui/main.qml:1464
 msgid "UV index"
 msgstr ""
 
-#: contents/ui/main.qml:1419
+#: contents/ui/config/tabs/ConfigWidgetTab.qml:851
+#: contents/ui/config/tabs/ConfigWidgetTab.qml:964
+msgid "UV index forecast:"
+msgstr ""
+
+#: contents/ui/main.qml:1461
 msgid "UV will be %1 (%2)"
 msgstr ""
 
-#: contents/ui/config/configAppearance.qml:1381
-#: contents/ui/config/configAppearance.qml:1504
-#: contents/ui/config/configAppearance.qml:1627
+#: contents/ui/config/configAppearance.qml:1393
+#: contents/ui/config/configAppearance.qml:1516
+#: contents/ui/config/configAppearance.qml:1639
 msgid "Ultraviolet index"
 msgstr ""
 
@@ -3210,7 +3257,7 @@ msgstr "Единицы измерения"
 
 #: contents/ui/config/configLocation.qml:1753
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:717
-#: contents/ui/FullView.qml:333
+#: contents/ui/FullView.qml:348
 msgid "Unknown"
 msgstr ""
 
@@ -3218,7 +3265,7 @@ msgstr ""
 msgid "Unknown location"
 msgstr ""
 
-#: contents/ui/FullView.qml:356
+#: contents/ui/FullView.qml:371
 msgid "Unpin widget"
 msgstr ""
 
@@ -3243,15 +3290,15 @@ msgstr "Ближайшее (следующий восход или закат)"
 msgid "Upcoming rise/set only"
 msgstr ""
 
-#: contents/ui/WeatherService.qml:117
+#: contents/ui/WeatherService.qml:129
 msgid "Update timed out. Tap to retry."
 msgstr ""
 
-#: contents/ui/WeatherService.qml:697
+#: contents/ui/WeatherService.qml:673
 msgid "Updated %1"
 msgstr ""
 
-#: contents/ui/FullView.qml:377
+#: contents/ui/FullView.qml:392
 msgid "Updating…"
 msgstr "Обновление…"
 
@@ -3292,12 +3339,12 @@ msgstr "Значения показываются с десятичными зн
 msgid "Vertical"
 msgstr "Вертикальный"
 
-#: contents/ui/js/pollen.js:45 contents/ui/main.qml:749
-#: contents/ui/main.qml:793
+#: contents/ui/js/pollen.js:45 contents/ui/main.qml:767
+#: contents/ui/main.qml:811
 msgid "Very High"
 msgstr ""
 
-#: contents/ui/js/airQuality.js:51 contents/ui/main.qml:763
+#: contents/ui/js/airQuality.js:51 contents/ui/main.qml:781
 msgid "Very Poor"
 msgstr ""
 
@@ -3305,15 +3352,17 @@ msgstr ""
 msgid "Violent rain showers"
 msgstr ""
 
-#: contents/ui/config/configAppearance.qml:1475 contents/ui/DetailsView.qml:304
-#: contents/ui/SimpleView.qml:315
+#: contents/ui/config/configAppearance.qml:1487 contents/ui/DetailsView.qml:310
+#: contents/ui/SimpleView.qml:262
 msgid "Visibility"
 msgstr "Видимость"
 
-#: contents/ui/config/configAppearance.qml:1476
+#: contents/ui/config/configAppearance.qml:1488
 msgid "Visibility distance"
 msgstr "Дальность видимости"
 
+#: contents/ui/config/tabs/ConfigWidgetTab.qml:865
+#: contents/ui/config/tabs/ConfigWidgetTab.qml:980
 #: contents/ui/TooltipContent.qml:445
 msgid "Visibility:"
 msgstr "Видимость:"
@@ -3330,19 +3379,19 @@ msgstr ""
 msgid "Visual Crossing API Key:"
 msgstr ""
 
-#: contents/ui/main.qml:1739
+#: contents/ui/main.qml:1781
 msgid "Waning Crescent"
 msgstr "Стареющий месяц"
 
-#: contents/ui/main.qml:1735
+#: contents/ui/main.qml:1777
 msgid "Waning Gibbous"
 msgstr "Убывающая луна"
 
-#: contents/ui/main.qml:1727
+#: contents/ui/main.qml:1769
 msgid "Waxing Crescent"
 msgstr "Растущий месяц"
 
-#: contents/ui/main.qml:1731
+#: contents/ui/main.qml:1773
 msgid "Waxing Gibbous"
 msgstr "Растущая луна"
 
@@ -3362,22 +3411,22 @@ msgstr "Провайдер погоды"
 msgid "Weather Widget"
 msgstr "Виджет погоды"
 
-#: contents/ui/main.qml:1012
+#: contents/ui/main.qml:1031
 msgid "Weather alert"
 msgstr ""
 
-#: contents/ui/config/configAppearance.qml:1409
-#: contents/ui/config/configAppearance.qml:1532
-#: contents/ui/config/configAppearance.qml:1655
-#: contents/ui/config/configNotifications.qml:151
+#: contents/ui/config/configAppearance.qml:1421
+#: contents/ui/config/configAppearance.qml:1544
+#: contents/ui/config/configAppearance.qml:1667
+#: contents/ui/config/configNotifications.qml:189
 msgid "Weather alerts"
 msgstr ""
 
-#: contents/ui/config/configAppearance.qml:1564
+#: contents/ui/config/configAppearance.qml:1576
 msgid "Weather condition text"
 msgstr "Текст состояния погоды"
 
-#: contents/ui/config/configAppearance.qml:1303
+#: contents/ui/config/configAppearance.qml:1315
 msgid "Weather icon + condition text"
 msgstr "Значок погоды + текст состояния"
 
@@ -3389,7 +3438,7 @@ msgstr "Стиль значка погоды:"
 msgid "Weather icon theme:"
 msgstr ""
 
-#: contents/ui/WeatherService.qml:697
+#: contents/ui/WeatherService.qml:673
 msgid "Weather provider:"
 msgstr ""
 
@@ -3409,11 +3458,11 @@ msgstr ""
 msgid "Weatherbit API Key:"
 msgstr ""
 
-#: contents/ui/DetailsView.qml:2022
+#: contents/ui/DetailsView.qml:2316
 msgid "Website"
 msgstr ""
 
-#: contents/ui/config/configAppearance.qml:1970
+#: contents/ui/config/configAppearance.qml:1982
 #: contents/ui/config/tabs/ConfigMiscTab.qml:127
 msgid "Widget"
 msgstr "Виджет"
@@ -3427,18 +3476,18 @@ msgid "Widget panel area:"
 msgstr ""
 
 #: contents/ui/components/RadarWebEngineView.qml:76
-#: contents/ui/config/configAppearance.qml:1323
-#: contents/ui/config/configAppearance.qml:1454
-#: contents/ui/config/configAppearance.qml:1577 contents/ui/DetailsView.qml:301
+#: contents/ui/config/configAppearance.qml:1335
+#: contents/ui/config/configAppearance.qml:1466
+#: contents/ui/config/configAppearance.qml:1589 contents/ui/DetailsView.qml:307
 msgid "Wind"
 msgstr "Ветер"
 
-#: contents/ui/config/configAppearance.qml:1455
-#: contents/ui/config/configAppearance.qml:1578
+#: contents/ui/config/configAppearance.qml:1467
+#: contents/ui/config/configAppearance.qml:1590
 msgid "Wind speed + direction"
 msgstr "Скорость ветра + направление"
 
-#: contents/ui/config/configAppearance.qml:1324
+#: contents/ui/config/configAppearance.qml:1336
 msgid "Wind speed and direction"
 msgstr "Скорость и направление ветра"
 
@@ -3446,6 +3495,8 @@ msgstr "Скорость и направление ветра"
 msgid "Wind speed:"
 msgstr "Скорость ветра:"
 
+#: contents/ui/config/tabs/ConfigWidgetTab.qml:872
+#: contents/ui/config/tabs/ConfigWidgetTab.qml:988
 #: contents/ui/TooltipContent.qml:422
 msgid "Wind:"
 msgstr "Ветер:"
@@ -3455,11 +3506,11 @@ msgid "Wrap to next line"
 msgstr "Переносить на следующую строку"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:722
-#: contents/ui/DetailsView.qml:1757
+#: contents/ui/DetailsView.qml:2051
 msgid "X-ray Flare Class"
 msgstr ""
 
-#: contents/ui/config/configNotifications.qml:166
+#: contents/ui/config/configNotifications.qml:204
 msgid "Yellow"
 msgstr ""
 
@@ -3476,6 +3527,10 @@ msgstr ""
 msgid "You can see date/time format reference at: <a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method\">Qt documentation</a>"
 msgstr ""
 
+#: contents/ui/config/tabs/ConfigWidgetTab.qml:891
+msgid "You may need to increase the widget's width to see all the selected information"
+msgstr ""
+
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:490
 msgid "Zoom in"
 msgstr ""
@@ -3484,27 +3539,27 @@ msgstr ""
 msgid "Zoom out"
 msgstr ""
 
-#: contents/ui/main.qml:1392
+#: contents/ui/main.qml:1434
 msgid "a decrease from yesterday"
 msgstr ""
 
-#: contents/ui/main.qml:1243
+#: contents/ui/main.qml:1285
 msgid "a few clouds"
 msgstr ""
 
-#: contents/ui/main.qml:1391
+#: contents/ui/main.qml:1433
 msgid "an increase from yesterday"
 msgstr ""
 
-#: contents/ui/main.qml:1244
+#: contents/ui/main.qml:1286
 msgid "clear skies"
 msgstr ""
 
-#: contents/ui/main.qml:1242
+#: contents/ui/main.qml:1284
 msgid "cloudy skies"
 msgstr ""
 
-#: contents/ui/main.qml:1239
+#: contents/ui/main.qml:1281
 msgid "drizzle"
 msgstr ""
 
@@ -3512,7 +3567,7 @@ msgstr ""
 msgid "e.g. Sofia, Bulgaria"
 msgstr ""
 
-#: contents/ui/main.qml:1401 contents/ui/main.qml:1444
+#: contents/ui/main.qml:1443 contents/ui/main.qml:1486
 msgid "extreme"
 msgstr ""
 
@@ -3520,15 +3575,15 @@ msgstr ""
 msgid "feet"
 msgstr ""
 
-#: contents/ui/main.qml:1240
+#: contents/ui/main.qml:1282
 msgid "fog"
 msgstr ""
 
-#: contents/ui/main.qml:1237
+#: contents/ui/main.qml:1279
 msgid "freezing rain"
 msgstr ""
 
-#: contents/ui/main.qml:990
+#: contents/ui/main.qml:1009
 msgid "from %1"
 msgstr ""
 
@@ -3536,19 +3591,19 @@ msgstr ""
 msgid "ft"
 msgstr ""
 
-#: contents/ui/main.qml:1399
+#: contents/ui/main.qml:1441
 msgid "high"
 msgstr ""
 
-#: contents/ui/main.qml:1352
+#: contents/ui/main.qml:1394
 msgid "in the next hours"
 msgstr ""
 
-#: contents/ui/DetailsView.qml:3155
+#: contents/ui/DetailsView.qml:3449
 msgid "left"
 msgstr ""
 
-#: contents/ui/main.qml:1397
+#: contents/ui/main.qml:1439
 msgid "low"
 msgstr ""
 
@@ -3564,20 +3619,20 @@ msgstr "met.no (бесплатно)"
 msgid "meters"
 msgstr ""
 
-#: contents/ui/main.qml:1440
+#: contents/ui/main.qml:1482
 msgid "minor"
 msgstr ""
 
 #: contents/ui/config/configGeneral.qml:799
-#: contents/ui/config/configNotifications.qml:210
+#: contents/ui/config/configNotifications.qml:248
 msgid "minutes"
 msgstr "минут"
 
-#: contents/ui/main.qml:1398 contents/ui/main.qml:1441
+#: contents/ui/main.qml:1440 contents/ui/main.qml:1483
 msgid "moderate"
 msgstr ""
 
-#: contents/ui/main.qml:1241
+#: contents/ui/main.qml:1283
 msgid "overcast skies"
 msgstr ""
 
@@ -3595,39 +3650,39 @@ msgstr ""
 msgid "px width"
 msgstr ""
 
-#: contents/ui/main.qml:1439
+#: contents/ui/main.qml:1481
 msgid "quiet"
 msgstr ""
 
-#: contents/ui/main.qml:1238
+#: contents/ui/main.qml:1280
 msgid "rain"
 msgstr ""
 
-#: contents/ui/main.qml:1443
+#: contents/ui/main.qml:1485
 msgid "severe"
 msgstr ""
 
-#: contents/ui/main.qml:1236
+#: contents/ui/main.qml:1278
 msgid "showers"
 msgstr ""
 
-#: contents/ui/main.qml:1232
+#: contents/ui/main.qml:1274
 msgid "showers and thunderstorms"
 msgstr ""
 
-#: contents/ui/main.qml:1393
+#: contents/ui/main.qml:1435
 msgid "similar to yesterday"
 msgstr ""
 
-#: contents/ui/main.qml:1235
+#: contents/ui/main.qml:1277
 msgid "snow"
 msgstr ""
 
-#: contents/ui/main.qml:1234
+#: contents/ui/main.qml:1276
 msgid "snow showers"
 msgstr ""
 
-#: contents/ui/main.qml:1442
+#: contents/ui/main.qml:1484
 msgid "strong"
 msgstr ""
 
@@ -3635,35 +3690,36 @@ msgstr ""
 msgid "system location"
 msgstr ""
 
-#: contents/ui/main.qml:1355
+#: contents/ui/main.qml:1397
 msgid "this afternoon"
 msgstr ""
 
-#: contents/ui/main.qml:1354
+#: contents/ui/main.qml:1396
 msgid "this morning"
 msgstr ""
 
-#: contents/ui/main.qml:1356
+#: contents/ui/main.qml:1398
 msgid "this night"
 msgstr ""
 
-#: contents/ui/main.qml:1233
+#: contents/ui/main.qml:1275
 msgid "thunderstorms"
 msgstr ""
 
-#: contents/ui/main.qml:991
+#: contents/ui/main.qml:1010
 msgid "until %1"
 msgstr ""
 
-#: contents/ui/DetailsView.qml:3152
+#: contents/ui/DetailsView.qml:3446
 msgid "until dawn"
 msgstr ""
 
-#: contents/ui/main.qml:1400
+#: contents/ui/main.qml:1442
 msgid "very high"
 msgstr ""
 
-#: contents/ui/main.qml:998 contents/ui/main.qml:1212 contents/ui/main.qml:1285
+#: contents/ui/main.qml:1017 contents/ui/main.qml:1254
+#: contents/ui/main.qml:1327
 msgid "your location"
 msgstr ""
 
