@@ -100,7 +100,7 @@ function fetchCurrent(service, W, chain, idx) {
             humidityPercent: (c.humidity !== undefined) ? c.humidity : NaN,
             windKmh:         (c.windSpeed !== undefined) ? c.windSpeed * 3.6 : NaN,
             windDirection:   (c.windDirection !== undefined) ? c.windDirection : NaN,
-            pressureHpa:     (c.pressureSurfaceLevel !== undefined) ? c.pressureSurfaceLevel : NaN,
+            pressureHpa:     (c.pressureSeaLevel !== undefined) ? c.pressureSeaLevel : ((c.pressureSurfaceLevel !== undefined) ? c.pressureSurfaceLevel : NaN),  // prefer sea-level
             dewPointC:       (c.dewPoint !== undefined) ? c.dewPoint : NaN,
             visibilityKm:    (c.visibility !== undefined) ? c.visibility : NaN,
             precipMmh:       (c.precipitationIntensity !== undefined) ? c.precipitationIntensity : NaN,

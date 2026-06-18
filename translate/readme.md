@@ -5,22 +5,23 @@
 
 |  Locale  |  Lines  | % Done|
 |----------|---------|-------|
-| Template |     739 |       |
-| bg       | 739/739 |  100% |
-| cs_CZ    | 698/739 |   94% |
-| de       | 291/739 |   39% |
-| es       | 627/739 |   84% |
-| fr       | 739/739 |  100% |
-| hu_HU    | 739/739 |  100% |
-| it_IT    | 739/739 |  100% |
-| nl       | 734/739 |   99% |
-| pl_PL    | 734/739 |   99% |
-| pt_BR    | 290/739 |   39% |
-| ru       | 291/739 |   39% |
-| tr_TR    | 291/739 |   39% |
-| uk_UA    | 739/739 |  100% |
-| zh_CN    | 627/739 |   84% |
-| zh_TW    | 718/739 |   97% |
+| Template |     823 |       |
+| bg       | 823/823 |  100% |
+| cs_CZ    | 698/823 |   84% |
+| de       | 291/823 |   35% |
+| es       | 627/823 |   76% |
+| fr       | 738/823 |   89% |
+| hu_HU    | 738/823 |   89% |
+| it_IT    | 738/823 |   89% |
+| nl       | 735/823 |   89% |
+| pl_PL    | 734/823 |   89% |
+| pt_BR    | 290/823 |   35% |
+| ru       | 291/823 |   35% |
+| tr_TR    | 291/823 |   35% |
+| uk       | 738/823 |   89% |
+| zh_CN    | 627/823 |   76% |
+| zh_TW    | 718/823 |   87% |
+
 
 
 Translations are welcome! If you would like to help translate the widget into your language, please follow the instructions below.

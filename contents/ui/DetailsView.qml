@@ -30,6 +30,8 @@ import "js/weather.js" as W
 import "js/moonphase.js" as Moon
 import "js/moonpath.js" as MoonPath
 import "js/sunpath.js" as SunPath
+import "js/windCompass.js" as WindCompass
+import "js/pressureGauge.js" as PressureGauge
 import "js/suncalc.js" as SC
 import "js/iconResolver.js" as IconResolver
 import "js/configUtils.js" as ConfigUtils
@@ -225,6 +227,10 @@ Item {
     // Collapse state for the two arc cards.
     property bool _sunExpanded: true
     property bool _moonExpanded: true
+    // Wind compass / pressure gauge default to collapsed (opt-in expansion) so
+    // adding the feature doesn't change every user's existing card layout.
+    property bool _windExpanded: false
+    property bool _pressureExpanded: false
     property bool _alertsExpanded: false
     property bool _aqiExpanded: false
     property bool _pollenExpanded: false
@@ -390,12 +396,12 @@ Item {
     property int _dateTimeTick: 0
     Timer {
         interval: 60000
-        running: detailsView.detailIds.indexOf("datetime") >= 0
+        running: root.detailIds.indexOf("datetime") >= 0
         repeat: true
-        onTriggered: detailsView._dateTimeTick++
+        onTriggered: root._dateTimeTick++
     }
     readonly property string _dvDatetime: {
-        var _ = detailsView._dateTimeTick;
+        var _ = root._dateTimeTick;
         if (!weatherRoot)
             return "--";
         return weatherRoot._formatItemDateTime(Plasmoid.configuration.detailsDateTimeFormat, Plasmoid.configuration.detailsTimeFormat);
@@ -573,7 +579,7 @@ Item {
                             required property string modelData   // the detail ID
 
                             // Card height
-                            readonly property bool isExpandedCard: card.modelData === "suntimes" || card.modelData === "moonphase" || (card.modelData === "alerts" && weatherRoot && weatherRoot.weatherAlerts && weatherRoot.weatherAlerts.length > 1) || card.modelData === "airquality" || card.modelData === "pollen" || card.modelData === "spaceweather" || (card.modelData === "datetime" && !root.isList)
+                            readonly property bool isExpandedCard: card.modelData === "suntimes" || card.modelData === "moonphase" || (card.modelData === "alerts" && weatherRoot && weatherRoot.weatherAlerts && weatherRoot.weatherAlerts.length > 1) || card.modelData === "airquality" || card.modelData === "pollen" || card.modelData === "spaceweather" || (card.modelData === "datetime" && !root.isList) || ((card.modelData === "wind" || card.modelData === "pressure") && !root.isList)
                             // suntimes and moonphase: height scales with card width
                             // so the arc grows when the widget is stretched.
                             readonly property int autoHeight: {
@@ -593,6 +599,8 @@ Item {
                                     return arcLikeHeight;
                                 if (card.modelData === "suntimes" || card.modelData === "moonphase" || card.modelData === "datetime")
                                     return arcLikeHeight;
+                                if (card.modelData === "wind" || card.modelData === "pressure")
+                                    return arcLikeHeight;
                                 if (isExpandedCard)
                                     return 80;
                                 return 30;  // ← adjust this value to change regular card height
@@ -609,6 +617,10 @@ Item {
                                     return root._sunExpanded;
                                 if (card.modelData === "moonphase")
                                     return root._moonExpanded;
+                                if (card.modelData === "wind")
+                                    return root._windExpanded;
+                                if (card.modelData === "pressure")
+                                    return root._pressureExpanded;
                                 if (card.modelData === "alerts")
                                     return root._alertsExpanded;
                                 if (card.modelData === "airquality")
@@ -686,7 +698,8 @@ Item {
                                 }
                             }
 
-                            // Wind special (icon + speed + arrow)
+                            // Wind special (icon + speed + arrow) — LIST MODE only.
+                            // Cards mode uses the expandable compass card below.
                             RowLayout {
                                 anchors {
                                     fill: parent
@@ -694,7 +707,7 @@ Item {
                                     rightMargin: 10
                                 }
                                 spacing: 8
-                                visible: card.modelData === "wind"
+                                visible: card.modelData === "wind" && root.isList
 
                                 WeatherIcon {
                                     iconInfo: root.showIconFor("wind") ? root.resolveIcon("wind") : null
@@ -739,6 +752,287 @@ Item {
                                     }
                                 }
                             } // RowLayout (standard)
+
+                            // ── Wind compass (cards mode, expandable) ─────────────
+                            Item {
+                                id: windCard
+                                anchors.fill: parent
+                                clip: true
+                                visible: card.modelData === "wind" && !root.isList
+
+                                // Collapsed header — styled like a standard row
+                                RowLayout {
+                                    id: windHeader
+                                    visible: !card._isArcExpanded
+                                    anchors.top: parent.top
+                                    anchors.left: parent.left
+                                    anchors.right: parent.right
+                                    anchors.leftMargin: 10
+                                    anchors.rightMargin: 10
+                                    height: card._isArcExpanded ? 0 : root.regularCardHeight
+                                    spacing: 8
+
+                                    WeatherIcon {
+                                        iconInfo: root.showIconFor("wind") ? root.resolveIcon("wind") : null
+                                        iconSize: root.iconSize
+                                        iconColor: root.iconColorFor(root.accentFor("wind"))
+                                        Layout.alignment: Qt.AlignVCenter
+                                    }
+                                    Label {
+                                        text: root.labelFor("wind") + ":"
+                                        color: Kirigami.Theme.textColor
+                                        opacity: 0.55
+                                        font: root.weatherRoot ? root.weatherRoot.wf(11, false) : Qt.font({})
+                                        elide: Text.ElideRight
+                                        Layout.alignment: Qt.AlignVCenter
+                                    }
+                                    Item { Layout.fillWidth: true }
+                                    Label {
+                                        text: root.weatherRoot ? root.weatherRoot.windValue(root.weatherRoot.windKmh) : "--"
+                                        color: root.valueColor
+                                        font: root.weatherRoot ? root.weatherRoot.wf(13, true) : Qt.font({ bold: true })
+                                        Layout.alignment: Qt.AlignVCenter
+                                    }
+                                    Item {
+                                        visible: root.weatherRoot && !isNaN(root.weatherRoot.windDirection)
+                                        implicitWidth: root.iconSize
+                                        implicitHeight: root.iconSize
+                                        Layout.alignment: Qt.AlignVCenter
+                                        Text {
+                                            anchors.centerIn: parent
+                                            text: root.weatherRoot ? W.windDirectionGlyph(root.weatherRoot.windDirection) : ""
+                                            font.family: wiFont.status === FontLoader.Ready ? wiFont.font.family : ""
+                                            font.pixelSize: root.iconSize
+                                            color: Kirigami.Theme.textColor
+                                        }
+                                    }
+                                    Kirigami.Icon {
+                                        source: "arrow-down"
+                                        implicitWidth: 14
+                                        implicitHeight: 14
+                                        opacity: 0.45
+                                        Layout.alignment: Qt.AlignVCenter
+                                    }
+                                }
+                                MouseArea {
+                                    anchors.top: windHeader.top
+                                    anchors.left: windHeader.left
+                                    anchors.right: windHeader.right
+                                    height: windHeader.height
+                                    cursorShape: Qt.PointingHandCursor
+                                    onClicked: root._windExpanded = !card._isArcExpanded
+                                }
+
+                                // Collapse button (expanded only)
+                                Item {
+                                    visible: card._isArcExpanded
+                                    anchors.top: parent.top
+                                    anchors.right: parent.right
+                                    anchors.topMargin: 6
+                                    anchors.rightMargin: 8
+                                    width: 24
+                                    height: 24
+                                    z: 2
+                                    Kirigami.Icon {
+                                        anchors.fill: parent
+                                        source: "arrow-up"
+                                        opacity: 0.50
+                                    }
+                                    MouseArea {
+                                        anchors.fill: parent
+                                        cursorShape: Qt.PointingHandCursor
+                                        onClicked: root._windExpanded = false
+                                    }
+                                }
+
+                                // Wind speed + compass — centred as a group within the card.
+                                Column {
+                                    id: windCenterColumn
+                                    visible: card._isArcExpanded
+                                    anchors.centerIn: parent
+                                    spacing: 6
+
+                                    // Wind speed — font follows the widget's Plasma-scaled
+                                    // font size (wf()); colour follows the theme like every
+                                    // other value label (root.valueColor), so it stays
+                                    // readable in light themes too.
+                                    Label {
+                                        id: windSpeedLabel
+                                        anchors.horizontalCenter: parent.horizontalCenter
+                                        text: root.weatherRoot ? root.weatherRoot.windValue(root.weatherRoot.windKmh) : "--"
+                                        color: root.valueColor
+                                        font: root.weatherRoot ? root.weatherRoot.wf(15, true) : Qt.font({ bold: true })
+                                    }
+
+                                    // Compass canvas — scales with the expanded card's size.
+                                    Canvas {
+                                        id: windCanvas
+                                        anchors.horizontalCenter: parent.horizontalCenter
+                                        readonly property real _maxW: windCard.width - 40
+                                        readonly property real _maxH: windCard.height - windSpeedLabel.height - windCenterColumn.spacing - 24
+                                        width: Math.max(70, Math.min(_maxW, _maxH))
+                                        height: width
+                                        antialiasing: true
+                                        readonly property real _dirVal: root.weatherRoot ? root.weatherRoot.windDirection : NaN
+                                        readonly property real _speedKmh: root.weatherRoot ? root.weatherRoot.windKmh : NaN
+                                        readonly property color _textCol: Kirigami.Theme.textColor
+                                        onWidthChanged: requestPaint()
+                                        onHeightChanged: requestPaint()
+                                        onVisibleChanged: if (visible) requestPaint()
+                                        on_DirValChanged: requestPaint()
+                                        on_SpeedKmhChanged: requestPaint()
+                                        on_TextColChanged: requestPaint()
+                                        onPaint: {
+                                            var ctx2d = getContext("2d");
+                                            WindCompass.drawWindCompass(ctx2d, width, height,
+                                                _dirVal,
+                                                String(_textCol),
+                                                null,
+                                                "",
+                                                root.isDark,
+                                                _speedKmh);
+                                        }
+                                    } // Canvas (compass)
+                                } // Column (centred speed + compass)
+                            } // Item (wind compass)
+
+                            // ── Pressure gauge (cards mode, expandable) ───────────
+                            Item {
+                                id: pressureCard
+                                anchors.fill: parent
+                                clip: true
+                                visible: card.modelData === "pressure" && !root.isList
+
+                                // Collapsed header
+                                RowLayout {
+                                    id: pressureHeader
+                                    visible: !card._isArcExpanded
+                                    anchors.top: parent.top
+                                    anchors.left: parent.left
+                                    anchors.right: parent.right
+                                    anchors.leftMargin: 10
+                                    anchors.rightMargin: 10
+                                    height: card._isArcExpanded ? 0 : root.regularCardHeight
+                                    spacing: 8
+
+                                    WeatherIcon {
+                                        iconInfo: root.showIconFor("pressure") ? root.resolveIcon("pressure") : null
+                                        iconSize: root.iconSize
+                                        iconColor: root.iconColorFor(root.accentFor("pressure"))
+                                        Layout.alignment: Qt.AlignVCenter
+                                    }
+                                    Label {
+                                        text: root.labelFor("pressure") + ":"
+                                        color: Kirigami.Theme.textColor
+                                        opacity: 0.55
+                                        font: root.weatherRoot ? root.weatherRoot.wf(11, false) : Qt.font({})
+                                        elide: Text.ElideRight
+                                        Layout.alignment: Qt.AlignVCenter
+                                    }
+                                    Item { Layout.fillWidth: true }
+                                    Label {
+                                        text: root.weatherRoot ? root.weatherRoot.pressureValue(root.weatherRoot.pressureHpa) : "--"
+                                        color: root.valueColor
+                                        font: root.weatherRoot ? root.weatherRoot.wf(13, true) : Qt.font({ bold: true })
+                                        Layout.alignment: Qt.AlignVCenter
+                                    }
+                                    Kirigami.Icon {
+                                        source: "arrow-down"
+                                        implicitWidth: 14
+                                        implicitHeight: 14
+                                        opacity: 0.45
+                                        Layout.alignment: Qt.AlignVCenter
+                                    }
+                                }
+                                MouseArea {
+                                    anchors.top: pressureHeader.top
+                                    anchors.left: pressureHeader.left
+                                    anchors.right: pressureHeader.right
+                                    height: pressureHeader.height
+                                    cursorShape: Qt.PointingHandCursor
+                                    onClicked: root._pressureExpanded = !card._isArcExpanded
+                                }
+
+                                // Collapse button (expanded only)
+                                Item {
+                                    visible: card._isArcExpanded
+                                    anchors.top: parent.top
+                                    anchors.right: parent.right
+                                    anchors.topMargin: 6
+                                    anchors.rightMargin: 8
+                                    width: 24
+                                    height: 24
+                                    z: 2
+                                    Kirigami.Icon {
+                                        anchors.fill: parent
+                                        source: "arrow-up"
+                                        opacity: 0.50
+                                    }
+                                    MouseArea {
+                                        anchors.fill: parent
+                                        cursorShape: Qt.PointingHandCursor
+                                        onClicked: root._pressureExpanded = false
+                                    }
+                                }
+
+                                // Gauge canvas
+                                Canvas {
+                                    id: pressureCanvas
+                                    visible: card._isArcExpanded
+                                    anchors.top: parent.top
+                                    anchors.left: parent.left
+                                    anchors.right: parent.right
+                                    anchors.topMargin: 8
+                                    height: parent.height - 8
+                                    antialiasing: true
+                                    onWidthChanged: requestPaint()
+                                    onHeightChanged: requestPaint()
+                                    property real _hpa: root.weatherRoot ? root.weatherRoot.pressureHpa : NaN
+                                    on_HpaChanged: requestPaint()
+                                    onVisibleChanged: if (visible) requestPaint()
+                                    onPaint: {
+                                        var ctx2d = getContext("2d");
+                                        // null accent → drawPressureGauge uses the LO..HI
+                                        // colour scale (low=blue, normal=teal, high=amber)
+                                        // instead of a single fixed colour.
+                                        PressureGauge.drawPressureGauge(ctx2d, width, height,
+                                            _hpa, root.isDark, null);
+                                    }
+                                }
+
+                                // Centre overlay: icon + pressure value + band label
+                                Column {
+                                    visible: card._isArcExpanded
+                                    anchors.horizontalCenter: pressureCanvas.horizontalCenter
+                                    anchors.bottom: pressureCanvas.bottom
+                                    anchors.bottomMargin: Math.round(pressureCanvas.height * 0.18)
+                                    spacing: 2
+                                    WeatherIcon {
+                                        anchors.horizontalCenter: parent.horizontalCenter
+                                        iconInfo: root.showIconFor("pressure") ? root.resolveIcon("pressure") : null
+                                        iconSize: root.iconSize
+                                        iconColor: root.iconColorFor(root.weatherRoot ? PressureGauge.pressureColor(root.weatherRoot.pressureHpa, root.isDark) : root.accentFor("pressure"))
+                                    }
+                                    Label {
+                                        anchors.horizontalCenter: parent.horizontalCenter
+                                        text: root.weatherRoot ? root.weatherRoot.pressureValue(root.weatherRoot.pressureHpa) : "--"
+                                        color: root.valueColor
+                                        font: root.weatherRoot ? root.weatherRoot.wf(15, true) : Qt.font({ bold: true })
+                                    }
+                                    Label {
+                                        anchors.horizontalCenter: parent.horizontalCenter
+                                        visible: root.weatherRoot && !isNaN(root.weatherRoot.pressureHpa)
+                                        text: {
+                                            if (!root.weatherRoot) return "";
+                                            var b = PressureGauge.band(root.weatherRoot.pressureHpa);
+                                            return b === "low" ? i18n("Low") : b === "high" ? i18n("High") : i18n("Normal");
+                                        }
+                                        color: Kirigami.Theme.textColor
+                                        opacity: 0.6
+                                        font: root.weatherRoot ? root.weatherRoot.wf(10, false) : Qt.font({})
+                                    }
+                                }
+                            } // Item (pressure gauge)
 
                             // ── Air Quality display ──────────────────────────────────
                             Item {

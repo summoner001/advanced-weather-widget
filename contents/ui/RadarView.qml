@@ -37,8 +37,15 @@ Item {
     implicitHeight: 380
 
     onWeatherRootChanged: _syncLoadedItem()
-    onVisibleChanged: {
-        console.log("[Advanced Weather Widget Radar] wrapper visible changed:", visible,
+    onVisibleChanged: _maybeDeferLoad()
+
+    // Created already-visible when the parent tab Loader builds us on first
+    // visit, so onVisibleChanged may never fire — kick the deferred load here
+    // too. Harmless if onVisibleChanged also fires (the timer just restarts).
+    Component.onCompleted: _maybeDeferLoad()
+
+    function _maybeDeferLoad() {
+        console.log("[Advanced Weather Widget Radar] wrapper maybeDeferLoad; visible=", visible,
                     "loadEmbeddedRadar=", loadEmbeddedRadar,
                     "loaderStatus=", _loaderStatusText(radarLoader.status));
         if (visible && !loadEmbeddedRadar)
@@ -65,6 +72,12 @@ Item {
         anchors.fill: parent
         active: radarRoot.visible && radarRoot.loadEmbeddedRadar
         source: Qt.resolvedUrl("components/RadarWebEngineView.qml")
+        // Load synchronously: QtWebEngine has GUI-thread requirements during
+        // init and is historically fragile when created via an async Loader,
+        // so for this crash-sensitive component we prefer the conventional
+        // synchronous path. Responsiveness is already handled by the 250 ms
+        // deferredLoadTimer above (the tab switches instantly; Chromium is
+        // only instantiated once the tab has settled).
         asynchronous: false
 
         onStatusChanged: {

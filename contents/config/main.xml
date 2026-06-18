@@ -235,6 +235,23 @@
     <entry name="forecastHourlyLayout" type="String"><default>cards</default></entry>
     <entry name="forecastAutoOpen"     type="Bool"><default>true</default></entry>
     <entry name="forecastExpandAll"    type="Bool"><default>false</default></entry>
+
+    <!-- ── Widget — daily forecast extra stats ───────────────────────── -->
+    <entry name="forecastShowWind"       type="Bool"><default>true</default></entry>
+    <entry name="forecastShowPressure"   type="Bool"><default>false</default></entry>
+    <entry name="forecastShowKpIndex"    type="Bool"><default>false</default></entry>
+    <entry name="forecastShowUvIndex"    type="Bool"><default>false</default></entry>
+    <entry name="forecastShowPrecipSum"  type="Bool"><default>false</default></entry>
+    <entry name="forecastShowVisibility" type="Bool"><default>false</default></entry>
+
+    <!-- ── Widget — hourly forecast extra stats ──────────────────────── -->
+    <entry name="forecastHourlyShowWind"       type="Bool"><default>true</default></entry>
+    <entry name="forecastHourlyShowPressure"   type="Bool"><default>false</default></entry>
+    <entry name="forecastHourlyShowKpIndex"    type="Bool"><default>false</default></entry>
+    <entry name="forecastHourlyShowUvIndex"    type="Bool"><default>false</default></entry>
+    <entry name="forecastHourlyShowPrecipSum"  type="Bool"><default>false</default></entry>
+    <entry name="forecastHourlyShowVisibility" type="Bool"><default>false</default></entry>
+
     <entry name="animateTransitions"  type="Bool"><default>true</default></entry>
 
     <!-- ── Tooltip ────────────────────────────────────────────────────── -->
@@ -260,6 +277,37 @@
     <entry name="refreshIntervalMinutes" type="Int"><default>15</default><min>5</min><max>180</max></entry>
     <entry name="autoRefresh"            type="Bool"><default>true</default></entry>
     <entry name="showUpdateText"         type="Bool"><default>true</default></entry>
+
+    <!-- ── Notifications ─────────────────────────────────────────────── -->
+    <entry name="alertNotificationsEnabled" type="Bool"><default>true</default></entry>
+    <entry name="alertNotificationsYellowEnabled" type="Bool"><default>true</default></entry>
+    <entry name="alertNotificationsOrangeEnabled" type="Bool"><default>true</default></entry>
+    <entry name="alertNotificationsRedEnabled"    type="Bool"><default>true</default></entry>
+    <entry name="alertNotificationsCriticalEnabled" type="Bool"><default>true</default></entry>
+    <entry name="notificationAlertsRepeatMinutes" type="Int"><default>30</default><min>1</min><max>30</max></entry>
+
+    <entry name="notificationTodayEnabled"   type="Bool"><default>true</default></entry>
+    <entry name="notificationTodayTime"      type="String"><default>08:00</default></entry>
+
+    <entry name="notificationTomorrowEnabled"   type="Bool"><default>true</default></entry>
+    <entry name="notificationTomorrowTime"      type="String"><default>20:00</default></entry>
+
+    <entry name="notificationRainEnabled"   type="Bool"><default>true</default></entry>
+
+    <entry name="notificationUvEnabled"   type="Bool"><default>true</default></entry>
+    <entry name="notificationUvTime"      type="String"><default>08:00</default></entry>
+    <entry name="notificationUvLastDate"  type="String"><default></default></entry>
+    <entry name="notificationUvLastValue" type="Double"><default>-1</default></entry>
+
+    <entry name="notificationSpaceWeatherEnabled"     type="Bool"><default>true</default></entry>
+    <entry name="notificationSpaceWeatherTime"        type="String"><default>08:00</default></entry>
+    <entry name="notificationSpaceWeatherLastDate"    type="String"><default></default></entry>
+    <entry name="notificationSpaceWeatherLastKp"      type="Double"><default>-1</default></entry>
+
+    <!-- Internal: JSON map of "already sent" once-per-day notification keys → timestamp.
+         Persisted so the once-per-day dedup survives a plasmashell restart. -->
+    <entry name="notificationSentKeys"               type="String"><default>{}</default></entry>
+
     <entry name="singlePanelRow"         type="Bool"><default>true</default></entry>
     <entry name="showScrollbox"          type="Bool"><default>true</default></entry>
     <entry name="scrollboxLines"         type="Int"><default>2</default><min>1</min><max>6</max></entry>

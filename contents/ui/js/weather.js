@@ -258,6 +258,33 @@ function formatTemp(celsius, unit, round, showUnit) {
     return numStr + "\u00B0"; // Unicode degree symbol
 }
 
+/** True for WMO weather codes whose icon implies some form of precipitation
+ *  (drizzle/rain/showers, snow, thunderstorm). */
+function isPrecipCode(code) {
+    return (code >= 51 && code <= 67) || (code >= 71 && code <= 86) ||
+        code === 95 || code === 96 || code === 99;
+}
+
+/**
+ * Formats an hourly precipitation-probability percentage for display.
+ * Open-Meteo's `weather_code` and `precipitation_probability` are derived
+ * from different model fields and can disagree for a given hour (e.g. a
+ * thunderstorm code with a 0% probability) — this is an upstream data
+ * inconsistency, not a bug in how we read the API. When the icon implies
+ * precipitation, floor the displayed percentage to a small nonzero value
+ * so it doesn't visually contradict the icon.
+ * @param {number} precipProb  Precipitation probability (0-100), may be NaN
+ * @param {number} code        WMO weather code driving the hour's icon
+ */
+function hourlyPrecipProbText(precipProb, code) {
+    if (precipProb === undefined || precipProb === null || isNaN(precipProb))
+        return null;
+    var pct = Math.round(precipProb);
+    if (pct < 5 && isPrecipCode(code))
+        pct = 5;
+    return pct + "%";
+}
+
 /**
  * Formats a wind speed value.
  * @param {number} kmh   Speed in km/h

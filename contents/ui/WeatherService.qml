@@ -27,18 +27,10 @@ import QtQuick
 import org.kde.plasma.plasmoid
 
 import "js/weather.js" as W
-import "providers/openMeteo.js" as OpenMeteoJS
-import "providers/openWeather.js" as OpenWeatherJS
-import "providers/weatherApi.js" as WeatherApiJS
-import "providers/metNo.js" as MetNoJS
-import "providers/pirateWeather.js" as PirateWeatherJS
-import "providers/visualCrossing.js" as VisualCrossingJS
-import "providers/tomorrowIo.js" as TomorrowIoJS
-import "providers/stormGlass.js" as StormGlassJS
-import "providers/weatherbit.js" as WeatherbitJS
-import "providers/qWeather.js" as QWeatherJS
-import "providers/alerts.js" as AlertsJS
-import "providers/spaceWeather_provider.js" as SpaceWeatherJS
+// NOTE: the 12 provider .js modules are intentionally NOT imported here.
+// They live in Providers.qml, which is created lazily on the first fetch
+// (see _providers()) so ~3.7k lines of provider JS stay off the shell-startup
+// critical path. W stays imported because fetchHourlyForDateDirect uses it inline.
 
 QtObject {
     id: service
@@ -46,6 +38,26 @@ QtObject {
     // ── Public interface ──────────────────────────────────────────────────
     /** Reference to the PlasmoidItem root — set from main.qml */
     property var weatherRoot
+
+    // ── Lazy provider dispatcher ─────────────────────────────────────────
+    // Providers.qml (which imports all 12 provider modules) is loaded on first
+    // use instead of at widget construction, keeping provider JS off the shell-
+    // startup path. createComponent is synchronous for local files, so the
+    // object is ready immediately after the first call.
+    property var _providersComponent: null
+    property var _providersObj: null
+    function _providers() {
+        if (_providersObj) return _providersObj;
+        if (!_providersComponent)
+            _providersComponent = Qt.createComponent(Qt.resolvedUrl("Providers.qml"));
+        if (_providersComponent.status === Component.Ready) {
+            _providersObj = _providersComponent.createObject(service);
+        } else if (_providersComponent.status === Component.Error) {
+            console.warn("[WeatherService] Failed to load Providers.qml:",
+                         _providersComponent.errorString());
+        }
+        return _providersObj;
+    }
 
     // ── Config mirrors (accessible from non-pragma JS providers) ──────────
     // Read directly from individual Plasmoid.configuration entries.
@@ -155,7 +167,8 @@ QtObject {
         var now = Date.now();
         if (!_lastSpaceWeatherFetch || (now - _lastSpaceWeatherFetch) > 600000) {
             _lastSpaceWeatherFetch = now;
-            SpaceWeatherJS.fetchSpaceWeather(service);
+            var _pSW = _providers();
+            if (_pSW) _pSW.fetchSpaceWeather(service);
         }
     }
 
@@ -164,47 +177,9 @@ QtObject {
         var provider = Plasmoid.configuration.weatherProvider || "adaptive";
         var ap = (provider === "adaptive") ? "openMeteo" : provider;
 
-        if (ap === "openMeteo") {
-            OpenMeteoJS.fetchHourly(service, dateStr);
-            return;
-        }
-        if (ap === "pirateWeather") {
-            PirateWeatherJS.fetchHourly(service, W, dateStr);
-            return;
-        }
-        if (ap === "openWeather") {
-            OpenWeatherJS.fetchHourly(service, W, dateStr);
-            return;
-        }
-        if (ap === "weatherApi") {
-            WeatherApiJS.fetchHourly(service, W, dateStr);
-            return;
-        }
-        if (ap === "metno") {
-            MetNoJS.fetchHourly(service, W, dateStr);
-            return;
-        }
-        if (ap === "visualCrossing") {
-            VisualCrossingJS.fetchHourly(service, W, dateStr);
-            return;
-        }
-        if (ap === "tomorrowIo") {
-            TomorrowIoJS.fetchHourly(service, W, dateStr);
-            return;
-        }
-        if (ap === "stormGlass") {
-            StormGlassJS.fetchHourly(service, W, dateStr);
-            return;
-        }
-        if (ap === "weatherbit") {
-            WeatherbitJS.fetchHourly(service, W, dateStr);
-            return;
-        }
-        if (ap === "qWeather") {
-            QWeatherJS.fetchHourly(service, W, dateStr);
-            return;
-        }
-        weatherRoot.hourlyData = [];
+        var _p = _providers();
+        if (!_p || !_p.fetchHourly(ap, service, dateStr))
+            weatherRoot.hourlyData = [];
     }
 
     /**
@@ -654,7 +629,8 @@ QtObject {
         var r = weatherRoot;
         if (!r.weatherAlerts || r.weatherAlerts.length === 0) {
             console.log("[WeatherService] No native alerts → fetching via AlertsJS (countryCode=" + countryCode + ")");
-            AlertsJS.fetchAlerts(service);
+            var _pA = _providers();
+            if (_pA) _pA.fetchAlerts(service);
         } else {
             console.log("[WeatherService] Provider set", r.weatherAlerts.length, "native alert(s) → skipping AlertsJS");
         }
@@ -736,43 +712,15 @@ QtObject {
             return;
         }
         var p = chain[idx];
-        if (p === "pirateWeather") {
-            PirateWeatherJS.fetchCurrent(service, W, chain, idx);
+        var _p = _providers();
+        if (!_p) {
+            // Providers.qml failed to load — fail this refresh gracefully.
+            weatherRoot.loading = false;
+            _safetyTimer.stop();
+            weatherRoot.updateText = i18n("Failed to load weather providers");
             return;
         }
-        if (p === "visualCrossing") {
-            VisualCrossingJS.fetchCurrent(service, W, chain, idx);
-            return;
-        }
-        if (p === "tomorrowIo") {
-            TomorrowIoJS.fetchCurrent(service, W, chain, idx);
-            return;
-        }
-        if (p === "stormGlass") {
-            StormGlassJS.fetchCurrent(service, W, chain, idx);
-            return;
-        }
-        if (p === "weatherbit") {
-            WeatherbitJS.fetchCurrent(service, W, chain, idx);
-            return;
-        }
-        if (p === "qWeather") {
-            QWeatherJS.fetchCurrent(service, W, chain, idx);
-            return;
-        }
-        if (p === "openWeather") {
-            OpenWeatherJS.fetchCurrent(service, W, chain, idx);
-            return;
-        }
-        if (p === "weatherApi") {
-            WeatherApiJS.fetchCurrent(service, W, chain, idx);
-            return;
-        }
-        if (p === "metno") {
-            MetNoJS.fetchCurrent(service, W, chain, idx);
-            return;
-        }
-        OpenMeteoJS.fetchCurrent(service, chain, idx); // default
+        _p.fetchCurrent(p, service, chain, idx);
     }
 
     // ─── Shared Open-Meteo air-quality + pollen fallback ────────────────────

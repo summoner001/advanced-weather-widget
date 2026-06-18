@@ -197,6 +197,29 @@ function fetchSpaceWeather(service) {
         },
         function() { state.flux = NaN; _tryAssemble(); }
     );
+
+    // ── 5) Kp/G forecast (3-hourly, ~3 days ahead) — independent of the
+    // main assembly above; powers the optional daily-forecast Kp/G stat. ──
+    _get("https://services.swpc.noaa.gov/products/noaa-planetary-k-index-forecast.json",
+        function(text) {
+            if (service._refreshGen !== gen) return;
+            var byDate = {};
+            try {
+                var arr = JSON.parse(text);
+                for (var i = 0; i < arr.length; i++) {
+                    var entry = arr[i];
+                    var tag = entry.time_tag;
+                    var kp = parseFloat(entry.kp);
+                    if (!tag || isNaN(kp)) continue;
+                    var dateStr = tag.substring(0, 10);
+                    if (!byDate[dateStr] || kp > byDate[dateStr].kp)
+                        byDate[dateStr] = { kp: kp, gScale: entry.noaa_scale || _kpToGScale(kp) };
+                }
+            } catch(e) { byDate = {}; }
+            r.spaceWeatherDailyForecast = byDate;
+        },
+        function() {}
+    );
 }
 
 // ── Internal HTTP helper ──────────────────────────────────────────────────────

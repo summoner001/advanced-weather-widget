@@ -34,6 +34,7 @@ import QtQuick.Layouts
 import QtPositioning
 import org.kde.plasma.plasmoid
 import org.kde.plasma.core as PlasmaCore
+import org.kde.notification
 import org.kde.kirigami as Kirigami
 
 import "js/weather.js" as W
@@ -142,11 +143,31 @@ PlasmoidItem {
     function aqiSo2()   { return aqiData ? aqiData.so2   : NaN; }
     function aqiO3()    { return aqiData ? aqiData.o3    : NaN; }
     property var weatherAlerts: []         // [{headline, severity, description}]
+    // Alert notification de-duplication cache (key -> true).
+    // Resets on location change or when notifications are disabled.
+    property var _notifiedAlertFingerprints: ({})
+    property bool _alertNotificationBaselineReady: false
+    property string _alertNotificationLocationKey: ""
+    // True once the user dismisses the current alert(s) — suppresses
+    // re-notification until a genuinely new alert appears.
+    property bool _alertNotificationDismissed: false
+    // Epoch ms of the next allowed repeat/postponed notification for the
+    // currently active alert(s). 0 = due immediately.
+    property real _alertNotificationNextDueMs: 0
+    property var _notificationSentKeys: ({})
+    // Keys older than this are pruned when persisting, so the stored map can't
+    // grow without bound (e.g. time-based rain keys). 3 days covers "today" +
+    // a buffer across DST / timezone shifts.
+    readonly property int _notificationSentKeyMaxAgeMs: 3 * 24 * 60 * 60 * 1000
+    property var _notificationHourlyWindow: []
+    property int _notificationHourlyReqId: 0
+    property real _notificationHourlyLastFetchMs: 0
     property var pollenDataStaged: []
     property var pollenData: []             // [{key, value}] UPI 0–12 per pollen type — set via _applyPollenData
     function _applyPollenData() { pollenData = pollenDataStaged; }
     onPollenDataStagedChanged: Qt.callLater(_applyPollenData)
     property var spaceWeather: null         // NOAA SWPC data object
+    property var spaceWeatherDailyForecast: ({}) // dateStr -> {kp, gScale}, ~3 days ahead
     property string moonriseTimeText: "--"
     property string moonsetTimeText: "--"
     property var hourlyData: []
@@ -304,6 +325,35 @@ PlasmoidItem {
     WeatherService {
         id: weatherService
         weatherRoot: root
+    }
+
+    Notification {
+        id: alertNotification
+        componentName: "plasma_workspace"
+        eventId: "notification"
+        iconName: _bundledAlertIcon("storm-warning")
+        flags: Notification.CloseOnTimeout | Notification.SkipGrouping | Notification.DefaultEvent
+    }
+
+    // Dedicated notification for weather alerts — stays open (no auto-timeout)
+    // and offers Dismiss / Postpone actions.
+    Notification {
+        id: weatherAlertNotification
+        componentName: "plasma_workspace"
+        eventId: "notification"
+        iconName: _bundledAlertIcon("storm-warning")
+        flags: Notification.Persistent | Notification.SkipGrouping | Notification.DefaultEvent
+
+        actions: [
+            NotificationAction {
+                label: i18n("Dismiss")
+                onActivated: root._alertNotificationDismissed = true
+            },
+            NotificationAction {
+                label: i18n("Postpone %1 min", Plasmoid.configuration.notificationAlertsRepeatMinutes)
+                onActivated: root._postponeAlertNotification()
+            }
+        ]
     }
 
     // ══════════════════════════════════════════════════════════════════════
@@ -695,6 +745,19 @@ PlasmoidItem {
         return mm.toFixed(1) + " mm";
     }
 
+    function visibilityValue(km) {
+        if (isNaN(km)) return "--";
+        if (_isImperial())
+            return (km * 0.621371).toFixed(1) + " mi";
+        return km.toFixed(1) + " km";
+    }
+
+    /** {kp, gScale} for the given dateStr from the ~3-day NOAA Kp forecast, or null. */
+    function kpForecastForDate(dateStr) {
+        var m = spaceWeatherDailyForecast || {};
+        return m[dateStr] || null;
+    }
+
     function uvIndexText(uv) {
         if (isNaN(uv)) return "--";
         var v = Math.round(uv * 10) / 10;
@@ -827,6 +890,691 @@ PlasmoidItem {
             case 12: return "\uF019"; // rain-flood
             default: return "\uF0CE"; // generic warning
         }
+    }
+
+    function _resetAlertNotificationState() {
+        _notifiedAlertFingerprints = ({});
+        _alertNotificationBaselineReady = false;
+        _alertNotificationDismissed = false;
+        _alertNotificationNextDueMs = 0;
+    }
+
+    function _resetAllNotificationState() {
+        _resetAlertNotificationState();
+        _notificationSentKeys = ({});
+        Plasmoid.configuration.notificationSentKeys = "{}";
+    }
+
+    function _alertNotificationLocationSignature() {
+        var lat = parseFloat(Plasmoid.configuration.latitude);
+        var lon = parseFloat(Plasmoid.configuration.longitude);
+        if (isNaN(lat)) lat = 0;
+        if (isNaN(lon)) lon = 0;
+        return lat.toFixed(2) + "," + lon.toFixed(2);
+    }
+
+    function _notificationTimeToMinutes(raw, fallback) {
+        var s = (raw || "").trim();
+        var m = /^([01]?\d|2[0-3]):([0-5]\d)$/.exec(s);
+        if (!m) return fallback;
+        return parseInt(m[1], 10) * 60 + parseInt(m[2], 10);
+    }
+
+    function _notificationTypeEnabled(type) {
+        switch (type) {
+        case "alerts": return Plasmoid.configuration.alertNotificationsEnabled === true;
+        case "today": return Plasmoid.configuration.notificationTodayEnabled === true;
+        case "tomorrow": return Plasmoid.configuration.notificationTomorrowEnabled === true;
+        case "rain": return Plasmoid.configuration.notificationRainEnabled === true;
+        case "uv": return Plasmoid.configuration.notificationUvEnabled === true;
+        case "space": return Plasmoid.configuration.notificationSpaceWeatherEnabled === true;
+        default: return false;
+        }
+    }
+
+    /** Allows a once-per-day notification any time at/after timeStr (and before midnight).
+     *  The actual once-per-day limit is enforced by _sendNotificationOnce's per-day key,
+     *  so a missed evaluator tick around the scheduled time (e.g. plasmashell restart,
+     *  suspend) doesn't skip the notification entirely for that day. */
+    function _dailyTimeAllows(timeStr, now) {
+        var t = _notificationTimeToMinutes(timeStr, 8 * 60);
+        var nowM = now.getHours() * 60 + now.getMinutes();
+        return nowM >= t;
+    }
+
+    function _alertColorAllowed(color) {
+        var c = (color || "").toLowerCase();
+        // Backward-compatible fallback to old minSeverity if new switches are absent.
+        var hasSwitches = (Plasmoid.configuration.alertNotificationsYellowEnabled !== undefined)
+            && (Plasmoid.configuration.alertNotificationsOrangeEnabled !== undefined)
+            && (Plasmoid.configuration.alertNotificationsRedEnabled !== undefined);
+        if (!hasSwitches) {
+            var p = alertColorPriority(c);
+            var minSeverity = (Plasmoid.configuration.alertNotificationsMinSeverity || "orange").toLowerCase();
+            if (minSeverity === "red")
+                return p >= 3;
+            if (minSeverity === "yellow")
+                return p >= 1;
+            return p >= 2;
+        }
+        if (c === "red")
+            return Plasmoid.configuration.alertNotificationsRedEnabled === true;
+        if (c === "orange")
+            return Plasmoid.configuration.alertNotificationsOrangeEnabled === true;
+        if (c === "yellow")
+            return Plasmoid.configuration.alertNotificationsYellowEnabled === true;
+        return true;
+    }
+
+
+    function _isAlertActiveNow(a, now) {
+        var onset = a && a.onset ? new Date(a.onset) : null;
+        var expires = a && a.expires ? new Date(a.expires) : null;
+        return (!onset || onset <= now) && (!expires || expires >= now);
+    }
+
+    function _alertFingerprint(a) {
+        var name = (a.displayName || a.headline || "").trim().toLowerCase();
+        var src = (a.source || "").trim().toLowerCase();
+        var onset = a.onset || "";
+        var expires = a.expires || "";
+        return [name, src, onset, expires].join("|");
+    }
+
+    /** Clamp the configured alert repeat/postpone interval to 1–30 minutes. */
+    function _alertNotificationRepeatMinutes() {
+        var m = parseInt(Plasmoid.configuration.notificationAlertsRepeatMinutes, 10);
+        if (isNaN(m)) m = 30;
+        return Math.max(1, Math.min(30, m));
+    }
+
+    function _postponeAlertNotification() {
+        _alertNotificationDismissed = false;
+        _alertNotificationNextDueMs = Date.now() + _alertNotificationRepeatMinutes() * 60000;
+    }
+
+    function _formatAlertTimestamp(raw) {
+        if (!raw) return "";
+        var d = new Date(raw);
+        if (isNaN(d.getTime())) return "";
+        return d.toLocaleDateString(Qt.locale(), Locale.ShortFormat) + " "
+            + d.toLocaleTimeString(Qt.locale(), Locale.ShortFormat);
+    }
+
+    /** "<onset> – <expires>" / "until <expires>" / "from <onset>" / "". */
+    function _alertEffectiveRangeText(a) {
+        var onset = _formatAlertTimestamp(a.onset || a.effective);
+        var expires = _formatAlertTimestamp(a.expires);
+        if (onset && expires) return onset + " – " + expires;
+        if (onset) return i18n("from %1", onset);
+        if (expires) return i18n("until %1", expires);
+        return "";
+    }
+
+    /** Notification title: "<Location>, <Region>" (region from the alert area, if known). */
+    function _alertNotificationTitle(a, location) {
+        var loc = (location || "").trim();
+        if (loc.length === 0) loc = i18n("your location");
+        var region = (a.area || "").trim();
+        return region.length > 0 ? (loc + ", " + region) : loc;
+    }
+
+    /** Escapes HTML-significant characters so alert text can't break the
+     *  notification body's <b> markup. */
+    function _escapeHtml(s) {
+        return (s || "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    }
+
+    /** Notification body: headline, effective range, instruction, provider. */
+    function _alertNotificationBody(a) {
+        var lines = [];
+        lines.push(i18n("<b>Headline:</b> %1", _escapeHtml(a.displayName || a.headline || i18n("Weather alert"))));
+        var range = _alertEffectiveRangeText(a);
+        if (range.length > 0)
+            lines.push(i18n("<b>Effective:</b> %1", range));
+        var instruction = (a.instruction || "").trim();
+        if (instruction.length > 0)
+            lines.push(i18n("<b>Instruction:</b> %1", _escapeHtml(instruction)));
+        var provider = (a.senderName || a.source || "").trim();
+        if (provider.length > 0)
+            lines.push(i18n("<b>Provider:</b> %1", _escapeHtml(provider)));
+        return lines.join("\n");
+    }
+
+    /** Builds an absolute file path to a bundled flat-color weather icon. */
+    function _bundledAlertIcon(stem) {
+        return _iconsBaseDir + "flat-color/32/wi-" + stem + ".svg";
+    }
+
+    /**
+     * Picks an icon for the alert notification matching the alert's weather
+     * type. Rain, snow/ice, fog and thunderstorm use the KDE icon theme's
+     * native weather icons; the remaining types use the bundled flat-color
+     * icon set, falling back to a generic storm-warning icon when unknown.
+     */
+    function _alertNotificationIconName(a) {
+        switch (a.awarenessType) {
+        case 2:                                         // snow/ice
+        case 9:  return "weather-snow";                 // avalanche
+        case 3:  return "weather-storm";                // thunderstorm
+        case 4:  return "weather-fog";                  // fog
+        case 10:
+        case 12: return "weather-showers";              // rain / rain-flood
+        }
+        var stem = "storm-warning";
+        switch (a.awarenessType) {
+        case 1:  stem = "strong-wind"; break;          // wind
+        case 5:  stem = "hot"; break;                  // high temperature
+        case 6:  stem = "snowflake-cold"; break;       // low temperature
+        case 7:  stem = "small-craft-advisory"; break; // coastal event
+        case 8:  stem = "fire"; break;                 // forest fire
+        case 11: stem = "flood"; break;                // flooding
+        }
+        return _bundledAlertIcon(stem);
+    }
+
+    /** Sends (or refreshes) the persistent weather-alert notification for a single alert. */
+    function _sendAlertNotification(alert) {
+        var location = (_locName() || "").trim();
+        weatherAlertNotification.title = _alertNotificationTitle(alert, location);
+        weatherAlertNotification.text = _alertNotificationBody(alert);
+        weatherAlertNotification.iconName = _alertNotificationIconName(alert);
+        if (Plasmoid.configuration.alertNotificationsCriticalEnabled) {
+            weatherAlertNotification.urgency = Notification.CriticalUrgency;
+        } else {
+            var p = alertColorPriority(alert.color);
+            weatherAlertNotification.urgency = (p >= 3) ? Notification.HighUrgency
+                : (p >= 2) ? Notification.NormalUrgency
+                : Notification.LowUrgency;
+        }
+        weatherAlertNotification.sendEvent();
+    }
+
+    /** Sends one separate notification per active alert. */
+    function _sendAlertNotifications(alerts) {
+        for (var i = 0; i < alerts.length; i++)
+            _sendAlertNotification(alerts[i]);
+    }
+
+    function _sendNotification(title, text, urgency, iconName) {
+        alertNotification.title = title;
+        alertNotification.text = text;
+        alertNotification.urgency = urgency;
+        alertNotification.iconName = iconName || _bundledAlertIcon("storm-warning");
+        alertNotification.sendEvent();
+    }
+
+    function _sendNotificationOnce(key, title, text, urgency, iconName) {
+        if (!key || key.length === 0) {
+            _sendNotification(title, text, urgency, iconName);
+            return true;
+        }
+        if (_notificationSentKeys[key])
+            return false;
+        _notificationSentKeys[key] = Date.now();
+        _persistNotificationSentKeys();
+        _sendNotification(title, text, urgency, iconName);
+        return true;
+    }
+
+    /** Load the persisted once-per-day keys so dedup survives a plasmashell restart. */
+    function _loadNotificationSentKeys() {
+        try {
+            var o = JSON.parse(Plasmoid.configuration.notificationSentKeys || "{}");
+            _notificationSentKeys = (o && typeof o === "object") ? o : ({});
+        } catch (e) {
+            _notificationSentKeys = ({});
+        }
+    }
+
+    /** Prune stale keys, then write the map back to config. */
+    function _persistNotificationSentKeys() {
+        var cutoff = Date.now() - _notificationSentKeyMaxAgeMs;
+        var pruned = {};
+        for (var k in _notificationSentKeys) {
+            if (_notificationSentKeys.hasOwnProperty(k) && _notificationSentKeys[k] >= cutoff)
+                pruned[k] = _notificationSentKeys[k];
+        }
+        _notificationSentKeys = pruned;
+        Plasmoid.configuration.notificationSentKeys = JSON.stringify(pruned);
+    }
+
+    /**
+     * Weather-alert notifications fire whenever a new alert becomes active
+     * (no day/time schedule — alerts are checked on every weather refresh,
+     * which polls every refreshIntervalMinutes). While an alert remains
+     * active, the notification repeats every notificationAlertsRepeatMinutes
+     * (10–30, default 30) until the user dismisses it (no repeat until a
+     * new alert appears) or postpones it (repeats again after the same
+     * interval).
+     */
+    function _processAlertNotifications(now) {
+        if (!Plasmoid.configuration.alertNotificationsEnabled) {
+            _resetAlertNotificationState();
+            return;
+        }
+
+        var sig = _alertNotificationLocationSignature();
+        if (_alertNotificationLocationKey !== sig) {
+            _alertNotificationLocationKey = sig;
+            _resetAlertNotificationState();
+        }
+
+        var alerts = weatherAlerts || [];
+        if (alerts.length === 0) {
+            if (!loading) {
+                _notifiedAlertFingerprints = ({});
+                _alertNotificationBaselineReady = true;
+                _alertNotificationDismissed = false;
+                _alertNotificationNextDueMs = 0;
+            }
+            return;
+        }
+
+        var activeAlerts = [];
+        var activeKeys = {};
+        for (var i = 0; i < alerts.length; i++) {
+            var a = alerts[i];
+            if (!_isAlertActiveNow(a, now))
+                continue;
+            if (!_alertColorAllowed(a.color))
+                continue;
+            var key = _alertFingerprint(a);
+            activeAlerts.push(a);
+            activeKeys[key] = true;
+        }
+
+        if (activeAlerts.length === 0) {
+            _notifiedAlertFingerprints = ({});
+            _alertNotificationBaselineReady = true;
+            _alertNotificationDismissed = false;
+            _alertNotificationNextDueMs = 0;
+            return;
+        }
+
+        var nextNotified = {};
+        for (var oldKey in _notifiedAlertFingerprints) {
+            if (_notifiedAlertFingerprints.hasOwnProperty(oldKey) && activeKeys[oldKey])
+                nextNotified[oldKey] = true;
+        }
+
+        if (!_alertNotificationBaselineReady) {
+            _notifiedAlertFingerprints = activeKeys;
+            _alertNotificationBaselineReady = true;
+            return;
+        }
+
+        var hasNewAlert = false;
+        for (var j = 0; j < activeAlerts.length; j++) {
+            if (!nextNotified[_alertFingerprint(activeAlerts[j])]) {
+                hasNewAlert = true;
+                break;
+            }
+        }
+        _notifiedAlertFingerprints = activeKeys;
+
+        if (hasNewAlert) {
+            _alertNotificationDismissed = false;
+            _sendAlertNotifications(activeAlerts);
+            _alertNotificationNextDueMs = now.getTime() + _alertNotificationRepeatMinutes() * 60000;
+            return;
+        }
+
+        if (_alertNotificationDismissed)
+            return;
+
+        if (now.getTime() >= _alertNotificationNextDueMs) {
+            _sendAlertNotifications(activeAlerts);
+            _alertNotificationNextDueMs = now.getTime() + _alertNotificationRepeatMinutes() * 60000;
+        }
+    }
+
+    /** Lowercases the first character, for mid-sentence use (e.g. "Overcast" -> "overcast"). */
+    function _lowercaseFirst(s) {
+        if (!s || s.length === 0) return s;
+        return s.charAt(0).toLowerCase() + s.slice(1);
+    }
+
+    /** "<Day> will be <condition> with a low of <min> and a high of <max>." */
+    function _highLowSummary(dayLabel, condition, d) {
+        var hi = tempValue(d.maxC);
+        var lo = tempValue(d.minC);
+        return i18n("%1 will be %2 with a low of %3 and a high of %4.",
+            dayLabel, _lowercaseFirst(condition), lo, hi);
+    }
+
+    function _processTodayNotification(now) {
+        if (!_notificationTypeEnabled("today"))
+            return;
+        if (!_dailyTimeAllows(Plasmoid.configuration.notificationTodayTime, now))
+            return;
+        if (!dailyData || dailyData.length === 0)
+            return;
+        var d = dailyData[0];
+        var location = (_locName() || "").trim() || i18n("your location");
+        var condition = weatherCodeToText(d.code);
+        var msg = _highLowSummary(i18n("Today"), condition, d);
+        var title = i18n("%1 - Today", location);
+        var icon = W.weatherCodeToIcon(d.code, isNightTime());
+        var dateKey = d.dateStr || Qt.formatDate(now, "yyyy-MM-dd");
+        _sendNotificationOnce("today:" + dateKey, title, msg, Notification.NormalUrgency, icon);
+    }
+
+    function _conditionPriority(code) {
+        if (code === 95 || code === 96 || code === 99) return 6; // thunderstorm
+        if (code >= 71 && code <= 86) return 5;                  // snow / snow showers
+        if ((code >= 51 && code <= 67) || (code >= 80 && code <= 82)) return 4; // drizzle/rain/showers
+        if (code === 45 || code === 48) return 3;                // fog
+        if (code === 3) return 2;
+        if (code === 2) return 1;
+        return 0;
+    }
+
+    function _conditionPhrase(code) {
+        if (code === 96 || code === 99) return i18n("showers and thunderstorms");
+        if (code === 95) return i18n("thunderstorms");
+        if (code === 85 || code === 86) return i18n("snow showers");
+        if (code >= 71 && code <= 77) return i18n("snow");
+        if (code >= 80 && code <= 82) return i18n("showers");
+        if (code === 56 || code === 57 || code === 66 || code === 67) return i18n("freezing rain");
+        if (code >= 61 && code <= 65) return i18n("rain");
+        if (code === 51 || code === 53 || code === 55) return i18n("drizzle");
+        if (code === 45 || code === 48) return i18n("fog");
+        if (code === 3) return i18n("overcast skies");
+        if (code === 2) return i18n("cloudy skies");
+        if (code === 1) return i18n("a few clouds");
+        return i18n("clear skies");
+    }
+
+    /** Picks the most notable part-of-day condition (morning/afternoon/tonight) for dateStr. */
+    function _dayConditionSummary(dateStr, fallbackCode) {
+        var segs = [
+            { label: i18n("Morning"), startH: 6, endH: 12, best: -1, code: 0 },
+            { label: i18n("Afternoon"), startH: 12, endH: 18, best: -1, code: 0 },
+            { label: i18n("Tonight"), startH: 18, endH: 24, best: -1, code: 0 }
+        ];
+        var arr = _notificationHourlyWindow || [];
+        for (var i = 0; i < arr.length; i++) {
+            var p = arr[i];
+            if (p.dateStr !== dateStr) continue;
+            var hour = new Date(p.timeMs).getHours();
+            for (var s = 0; s < segs.length; s++) {
+                if (hour >= segs[s].startH && hour < segs[s].endH) {
+                    var pr = _conditionPriority(p.code);
+                    if (pr > segs[s].best) { segs[s].best = pr; segs[s].code = p.code; }
+                }
+            }
+        }
+        var winner = null;
+        for (var k = 0; k < segs.length; k++) {
+            if (segs[k].best >= 3 && (!winner || segs[k].best > winner.best))
+                winner = segs[k];
+        }
+        if (winner) return i18n("%1 %2", winner.label, _conditionPhrase(winner.code));
+        return weatherCodeToText(fallbackCode);
+    }
+
+    function _processTomorrowNotification(now) {
+        if (!_notificationTypeEnabled("tomorrow"))
+            return;
+        if (!_dailyTimeAllows(Plasmoid.configuration.notificationTomorrowTime, now))
+            return;
+        if (!dailyData || dailyData.length < 2)
+            return;
+        var d = dailyData[1];
+        if (!d || !d.dateStr)
+            return;
+        var location = (_locName() || "").trim() || i18n("your location");
+        var condition = _dayConditionSummary(d.dateStr, d.code);
+        var msg = _highLowSummary(i18n("Tomorrow"), condition, d);
+        var title = i18n("%1 - Tomorrow", location);
+        var icon = W.weatherCodeToIcon(d.code, false);
+        _sendNotificationOnce("tomorrow:" + d.dateStr, title, msg, Notification.NormalUrgency, icon);
+    }
+
+    function _isStormCode(code) {
+        return code === 95 || code === 96 || code === 99;
+    }
+
+    function _isRainOrStormCode(code) {
+        if (_isStormCode(code)) return true;
+        return code >= 51 && code <= 82;
+    }
+
+    function _hourSampleEpoch(dateStr, hhmm) {
+        if (!dateStr || !hhmm || hhmm.length < 4)
+            return NaN;
+        return new Date(dateStr + "T" + hhmm + ":00").getTime();
+    }
+
+    function _nextRainTransition(nowMs, wantStart) {
+        var arr = _notificationHourlyWindow || [];
+        if (arr.length === 0)
+            return null;
+        var prevWet = false;
+        var prevCode = NaN;
+        var hadPast = false;
+        for (var i = 0; i < arr.length; i++) {
+            var p = arr[i];
+            if (p.timeMs <= nowMs) {
+                prevWet = p.wet;
+                prevCode = p.code;
+                hadPast = true;
+            } else {
+                break;
+            }
+        }
+        if (!hadPast) {
+            prevWet = false;
+            prevCode = NaN;
+        }
+        if (!wantStart && !prevWet)
+            return null;
+        for (var j = 0; j < arr.length; j++) {
+            var c = arr[j];
+            if (c.timeMs <= nowMs)
+                continue;
+            if (wantStart && !prevWet && c.wet)
+                return { timeMs: c.timeMs, wet: c.wet, code: c.code, dateStr: c.dateStr, prevCode: prevCode };
+            if (!wantStart && prevWet && !c.wet)
+                return { timeMs: c.timeMs, wet: c.wet, code: c.code, dateStr: c.dateStr, prevCode: prevCode };
+            prevWet = c.wet;
+            prevCode = c.code;
+        }
+        return null;
+    }
+
+    /** "Thunderstorm" for storm codes (95/96/99), otherwise "Rain". */
+    function _rainOrThunderLabel(code) {
+        return _isStormCode(code) ? i18n("Thunderstorm") : i18n("Rain");
+    }
+
+    /** "in the next hours" / "this morning" / "this afternoon" / "this night" for a target time. */
+    function _dayPartLabel(targetMs, nowMs) {
+        if ((targetMs - nowMs) <= 3 * 3600000) return i18n("in the next hours");
+        var h = new Date(targetMs).getHours();
+        if (h >= 6 && h < 12) return i18n("this morning");
+        if (h >= 12 && h < 18) return i18n("this afternoon");
+        return i18n("this night");
+    }
+
+    function _processRainNotifications(now) {
+        if (!Plasmoid.configuration.notificationRainEnabled)
+            return;
+        if ((_notificationHourlyWindow || []).length === 0)
+            return;
+        var nowMs = now.getTime();
+        var startEv = _nextRainTransition(nowMs, true);
+        var endEv = _nextRainTransition(nowMs, false);
+        if (startEv && (!endEv || startEv.timeMs <= endEv.timeMs)) {
+            var label = _rainOrThunderLabel(startEv.code);
+            var title = i18n("%1 expected", label);
+            var msg = i18n("%1 possible %2.", label, _dayPartLabel(startEv.timeMs, nowMs));
+            var icon = W.weatherCodeToIcon(startEv.code, isNightTime());
+            _sendNotificationOnce("rain-start:" + startEv.timeMs, title, msg, Notification.NormalUrgency, icon);
+        } else if (endEv) {
+            var label2 = _rainOrThunderLabel(endEv.prevCode);
+            var title2 = i18n("%1 ending", label2);
+            var msg2 = i18n("%1 expected to end %2.", label2, _dayPartLabel(endEv.timeMs, nowMs));
+            var icon2 = W.weatherCodeToIcon(endEv.prevCode, isNightTime());
+            _sendNotificationOnce("rain-end:" + endEv.timeMs, title2, msg2, Notification.NormalUrgency, icon2);
+        }
+    }
+
+    function _yesterdayDateStr(todayStr) {
+        var d = new Date(todayStr + "T00:00:00");
+        d.setDate(d.getDate() - 1);
+        return Qt.formatDate(d, "yyyy-MM-dd");
+    }
+
+    /** "an increase/decrease/similar ... from yesterday", or "" if no valid prior value. */
+    function _trendText(curr, prevVal, prevDateStr, todayStr) {
+        if (prevDateStr !== _yesterdayDateStr(todayStr) || isNaN(prevVal) || prevVal < 0) return "";
+        if (curr > prevVal + 0.05) return i18n("an increase from yesterday");
+        if (curr < prevVal - 0.05) return i18n("a decrease from yesterday");
+        return i18n("similar to yesterday");
+    }
+
+    function _uvLevelText(uv) {
+        if (uv <= 2) return i18n("low");
+        if (uv <= 5) return i18n("moderate");
+        if (uv <= 7) return i18n("high");
+        if (uv <= 10) return i18n("very high");
+        return i18n("extreme");
+    }
+
+    function _processUvNotification(now) {
+        if (!Plasmoid.configuration.notificationUvEnabled)
+            return;
+        if (!_dailyTimeAllows(Plasmoid.configuration.notificationUvTime, now))
+            return;
+        if (!dailyData || dailyData.length === 0)
+            return;
+        var d = dailyData[0];
+        var uvMax = (d.uvMax !== undefined && !isNaN(d.uvMax)) ? d.uvMax : uvIndex;
+        if (isNaN(uvMax))
+            return;
+        var todayStr = d.dateStr || Qt.formatDate(now, "yyyy-MM-dd");
+        var trend = _trendText(uvMax, Plasmoid.configuration.notificationUvLastValue,
+            Plasmoid.configuration.notificationUvLastDate, todayStr);
+        var valueText = (Math.round(uvMax * 10) / 10).toString();
+        var msg = i18n("UV will be %1 (%2)", _uvLevelText(uvMax), valueText);
+        if (trend.length > 0) msg = msg + ", " + trend;
+        msg = msg + ".";
+        var title = i18n("UV index");
+        var fired = _sendNotificationOnce("uv-today:" + todayStr, title,
+            msg, Notification.NormalUrgency, "weather-clear");
+        if (fired) {
+            Plasmoid.configuration.notificationUvLastDate = todayStr;
+            Plasmoid.configuration.notificationUvLastValue = uvMax;
+        }
+    }
+
+    function _gScaleToNumber(g) {
+        var s = (g || "G0").toString().toUpperCase().replace("G", "");
+        var n = parseInt(s, 10);
+        return isNaN(n) ? 0 : n;
+    }
+
+    function _kpLevelText(gScale) {
+        switch (_gScaleToNumber(gScale || "G0")) {
+        case 0: return i18n("quiet");
+        case 1: return i18n("minor");
+        case 2: return i18n("moderate");
+        case 3: return i18n("strong");
+        case 4: return i18n("severe");
+        default: return i18n("extreme");
+        }
+    }
+
+    function _processSpaceWeatherNotification(now) {
+        if (!Plasmoid.configuration.notificationSpaceWeatherEnabled)
+            return;
+        if (!_dailyTimeAllows(Plasmoid.configuration.notificationSpaceWeatherTime, now))
+            return;
+        var sw = spaceWeather;
+        if (!sw || isNaN(sw.kp))
+            return;
+        var todayStr = Qt.formatDate(now, "yyyy-MM-dd");
+        var trend = _trendText(sw.kp, Plasmoid.configuration.notificationSpaceWeatherLastKp,
+            Plasmoid.configuration.notificationSpaceWeatherLastDate, todayStr);
+        var msg = i18n("Geomagnetic activity will be %1 (Kp %2)", _kpLevelText(sw.gScale), sw.kp.toFixed(1));
+        if (trend.length > 0) msg = msg + ", " + trend;
+        msg = msg + ".";
+        var title = i18n("Geomagnetic activity");
+        var fired = _sendNotificationOnce("space-today:" + todayStr, title,
+            msg, Notification.NormalUrgency, "weather-clear-night");
+        if (fired) {
+            Plasmoid.configuration.notificationSpaceWeatherLastDate = todayStr;
+            Plasmoid.configuration.notificationSpaceWeatherLastKp = sw.kp;
+        }
+    }
+
+    /** Runs fn(now), logging (but not propagating) any exception so one
+     *  failing notification type can't block the others. */
+    function _safeNotificationStep(name, fn, now) {
+        try {
+            fn(now);
+        } catch (e) {
+            console.warn("[weather notifications] " + name + " failed: " + e);
+        }
+    }
+
+    function _evaluateNotifications() {
+        var now = new Date();
+        _safeNotificationStep("alerts", _processAlertNotifications, now);
+        _safeNotificationStep("today", _processTodayNotification, now);
+        _safeNotificationStep("tomorrow", _processTomorrowNotification, now);
+        _safeNotificationStep("rain", _processRainNotifications, now);
+        _safeNotificationStep("uv", _processUvNotification, now);
+        _safeNotificationStep("space", _processSpaceWeatherNotification, now);
+    }
+
+    function _refreshNotificationRainWindowIfNeeded(force) {
+        if (!hasSelectedTown) {
+            _notificationHourlyWindow = [];
+            return;
+        }
+        if (!_notificationTypeEnabled("rain") && !_notificationTypeEnabled("tomorrow")) {
+            _notificationHourlyWindow = [];
+            return;
+        }
+        var nowMs = Date.now();
+        var pollMs = Math.max(5, Plasmoid.configuration.refreshIntervalMinutes || 15) * 60000;
+        if (!force && (nowMs - _notificationHourlyLastFetchMs) < pollMs)
+            return;
+        _notificationHourlyLastFetchMs = nowMs;
+
+        var today = Qt.formatDate(new Date(), "yyyy-MM-dd");
+        var tomorrowDate = new Date();
+        tomorrowDate.setDate(tomorrowDate.getDate() + 1);
+        var tomorrow = Qt.formatDate(tomorrowDate, "yyyy-MM-dd");
+        var reqId = ++_notificationHourlyReqId;
+
+        fetchHourlyForDateDirect(today, function(a) {
+            if (reqId !== _notificationHourlyReqId) return;
+            fetchHourlyForDateDirect(tomorrow, function(b) {
+                if (reqId !== _notificationHourlyReqId) return;
+                var merged = [];
+                function pushSamples(dateStr, rows) {
+                    rows = rows || [];
+                    for (var i = 0; i < rows.length; i++) {
+                        var h = rows[i];
+                        var tms = _hourSampleEpoch(dateStr, h.hour || "");
+                        if (isNaN(tms)) continue;
+                        var code = (h.code !== undefined) ? h.code : NaN;
+                        var precip = (h.precipMm !== undefined && h.precipMm !== null) ? h.precipMm : NaN;
+                        var wet = _isRainOrStormCode(code) || (!isNaN(precip) && precip >= 0.2);
+                        merged.push({ timeMs: tms, wet: wet, code: code, dateStr: dateStr });
+                    }
+                }
+                pushSamples(today, a || []);
+                pushSamples(tomorrow, b || []);
+                merged.sort(function(x, y) { return x.timeMs - y.timeMs; });
+                _notificationHourlyWindow = merged;
+                _evaluateNotifications();
+            });
+        });
     }
 
     // ══════════════════════════════════════════════════════════════════════
@@ -1052,11 +1800,23 @@ PlasmoidItem {
         moonsetTimeText  = t.set  || "--";
     }
 
+    onWeatherAlertsChanged: _evaluateNotifications()
+    onDailyDataChanged: _evaluateNotifications()
+    onUvIndexChanged: _evaluateNotifications()
+    onSpaceWeatherChanged: _evaluateNotifications()
+
     onLoadingChanged: {
         if (!loading) {
             weatherService._safetyTimer.stop();
             if (weatherData && !isNaN(weatherData.temperatureC))
                 _computeMoonTimes();
+            _refreshNotificationRainWindowIfNeeded(true);
+            _evaluateNotifications();
+            if (Plasmoid.configuration.alertNotificationsEnabled
+                    && !_alertNotificationBaselineReady
+                    && (!weatherAlerts || weatherAlerts.length === 0)) {
+                _alertNotificationBaselineReady = true;
+            }
         }
     }
 
@@ -1484,6 +2244,20 @@ PlasmoidItem {
         onTriggered: refreshWeather()
     }
 
+    // Notification evaluator loop. Runs every 30s so postponed alert
+    // reminders (down to 1 minute) fire promptly; the hourly rain/tomorrow
+    // data fetch inside _refreshNotificationRainWindowIfNeeded is separately
+    // throttled to refreshIntervalMinutes, so this doesn't add extra requests.
+    Timer {
+        interval: 30000
+        running: true
+        repeat: true
+        onTriggered: {
+            _refreshNotificationRainWindowIfNeeded(false);
+            _evaluateNotifications();
+        }
+    }
+
     // Config-change debounce — coalesces rapid-fire signals that occur when
     // KDE KCM applies all cfg_ values at once on Apply/OK.  latitude, longitude,
     // timezone and locationName are written to Plasmoid.configuration one by one;
@@ -1567,6 +2341,12 @@ PlasmoidItem {
         } catch(e) {}
         _updateHasSelectedTown();
         refreshDebounce.restart();
+        // Restore the once-per-day "already sent" keys BEFORE the first evaluation
+        // so a plasmashell restart doesn't re-fire daily notifications already
+        // shown today (e.g. the geomagnetic-activity summary).
+        _loadNotificationSentKeys();
+        _refreshNotificationRainWindowIfNeeded(true);
+        _evaluateNotifications();
         if (Plasmoid.configuration.autoDetectLocation)
             _startAutoDetect();
     }
@@ -1588,22 +2368,87 @@ PlasmoidItem {
         }
         function onLocationNameChanged() {
             root._updateHasSelectedTown();
+            root._resetAllNotificationState();
             if (!root._batchingLocation) refreshDebounce.restart();
         }
         function onLatitudeChanged() {
+            root._resetAllNotificationState();
+            root._refreshNotificationRainWindowIfNeeded(true);
             if (!root._batchingLocation) refreshDebounce.restart();
         }
         function onLongitudeChanged() {
+            root._resetAllNotificationState();
+            root._refreshNotificationRainWindowIfNeeded(true);
             if (!root._batchingLocation) refreshDebounce.restart();
         }
         function onTimezoneChanged() {
+            root._resetAllNotificationState();
+            root._refreshNotificationRainWindowIfNeeded(true);
             if (!root._batchingLocation) refreshDebounce.restart();
         }
         function onWeatherProviderChanged() {
+            root._resetAllNotificationState();
+            root._refreshNotificationRainWindowIfNeeded(true);
             refreshDebounce.restart();
         }
         function onForecastDaysChanged() {
+            root._refreshNotificationRainWindowIfNeeded(true);
             refreshDebounce.restart();
+        }
+        function onAlertNotificationsEnabledChanged() {
+            root._resetAlertNotificationState();
+            root._evaluateNotifications();
+        }
+        function onAlertNotificationsYellowEnabledChanged() {
+            root._resetAlertNotificationState();
+            root._evaluateNotifications();
+        }
+        function onAlertNotificationsOrangeEnabledChanged() {
+            root._resetAlertNotificationState();
+            root._evaluateNotifications();
+        }
+        function onAlertNotificationsRedEnabledChanged() {
+            root._resetAlertNotificationState();
+            root._evaluateNotifications();
+        }
+        function onNotificationAlertsDaysChanged() {
+            root._resetAlertNotificationState();
+            root._evaluateNotifications();
+        }
+        function onNotificationAlertsTimesChanged() {
+            root._evaluateNotifications();
+        }
+        function onNotificationTodayEnabledChanged() {
+            root._resetAllNotificationState();
+            root._evaluateNotifications();
+        }
+        function onNotificationTodayTimeChanged() {
+            root._evaluateNotifications();
+        }
+        function onNotificationTomorrowEnabledChanged() {
+            root._resetAllNotificationState();
+            root._refreshNotificationRainWindowIfNeeded(true);
+            root._evaluateNotifications();
+        }
+        function onNotificationTomorrowTimeChanged() {
+            root._evaluateNotifications();
+        }
+        function onNotificationRainEnabledChanged() {
+            root._resetAllNotificationState();
+            root._refreshNotificationRainWindowIfNeeded(true);
+            root._evaluateNotifications();
+        }
+        function onNotificationUvEnabledChanged() {
+            root._evaluateNotifications();
+        }
+        function onNotificationUvTimeChanged() {
+            root._evaluateNotifications();
+        }
+        function onNotificationSpaceWeatherEnabledChanged() {
+            root._evaluateNotifications();
+        }
+        function onNotificationSpaceWeatherTimeChanged() {
+            root._evaluateNotifications();
         }
         function onPanelInfoModeChanged() {
             root.panelScrollIndex = 0;

@@ -816,6 +816,82 @@ ColumnLayout {
             }
 
             // ═══════════════════════════════════════════════════════════════
+            // SECTION: Daily Forecast Settings
+            // ═══════════════════════════════════════════════════════════════
+            Kirigami.Separator {
+                Kirigami.FormData.isSection: true
+                Kirigami.FormData.label: i18n("Daily Forecast Settings")
+            }
+
+            Item { Layout.preferredHeight: Kirigami.Units.smallSpacing }
+
+            RowLayout {
+                Kirigami.FormData.label: i18n("Pressure forecast:")
+                Switch {
+                    checked: widgetTab.configRoot.cfg_forecastShowPressure
+                    onToggled: widgetTab.configRoot.cfg_forecastShowPressure = checked
+                }
+            }
+            RowLayout {
+                Kirigami.FormData.label: i18n("Kp index/G forecast:")
+                Switch {
+                    id: forecastShowKpIndexSwitch
+                    checked: widgetTab.configRoot.cfg_forecastShowKpIndex
+                    onToggled: widgetTab.configRoot.cfg_forecastShowKpIndex = checked
+                }
+                Label {
+                    visible: forecastShowKpIndexSwitch.checked
+                    text: i18n("The geomagnetic (Kp/G) forecast is only available up to 3 days ahead")
+                    wrapMode: Text.WordWrap
+                    Layout.fillWidth: true
+                    opacity: 0.7
+                }
+            }
+            RowLayout {
+                Kirigami.FormData.label: i18n("UV index forecast:")
+                Switch {
+                    checked: widgetTab.configRoot.cfg_forecastShowUvIndex
+                    onToggled: widgetTab.configRoot.cfg_forecastShowUvIndex = checked
+                }
+            }
+            RowLayout {
+                Kirigami.FormData.label: i18n("Precip sum:")
+                Switch {
+                    checked: widgetTab.configRoot.cfg_forecastShowPrecipSum
+                    onToggled: widgetTab.configRoot.cfg_forecastShowPrecipSum = checked
+                }
+            }
+            RowLayout {
+                Kirigami.FormData.label: i18n("Visibility:")
+                Switch {
+                    checked: widgetTab.configRoot.cfg_forecastShowVisibility
+                    onToggled: widgetTab.configRoot.cfg_forecastShowVisibility = checked
+                }
+            }
+            RowLayout {
+                Kirigami.FormData.label: i18n("Wind:")
+                Switch {
+                    checked: widgetTab.configRoot.cfg_forecastShowWind
+                    onToggled: widgetTab.configRoot.cfg_forecastShowWind = checked
+                }
+            }
+
+            Kirigami.InlineMessage {
+                Layout.fillWidth: true
+                Layout.columnSpan: 2
+                visible: [
+                    widgetTab.configRoot.cfg_forecastShowPressure,
+                    widgetTab.configRoot.cfg_forecastShowKpIndex,
+                    widgetTab.configRoot.cfg_forecastShowUvIndex,
+                    widgetTab.configRoot.cfg_forecastShowPrecipSum,
+                    widgetTab.configRoot.cfg_forecastShowVisibility,
+                    widgetTab.configRoot.cfg_forecastShowWind
+                ].filter(function(v) { return v === true; }).length >= 2
+                type: Kirigami.MessageType.Information
+                text: i18n("You may need to increase the widget's width to see all the selected information")
+            }
+
+            // ═══════════════════════════════════════════════════════════════
             // SECTION: Hourly Forecast Settings
             // ═══════════════════════════════════════════════════════════════
             Kirigami.Separator {
@@ -852,6 +928,68 @@ ColumnLayout {
                 Switch {
                     checked: widgetTab.configRoot.cfg_forecastShowSunEvents
                     onToggled: widgetTab.configRoot.cfg_forecastShowSunEvents = checked
+                }
+            }
+
+            Item {
+                Layout.preferredHeight: Kirigami.Units.smallSpacing
+                visible: widgetTab.configRoot.cfg_widgetLayoutMode !== "simple"
+            }
+
+            RowLayout {
+                Kirigami.FormData.label: i18n("Pressure forecast:")
+                visible: widgetTab.configRoot.cfg_widgetLayoutMode !== "simple"
+                Switch {
+                    checked: widgetTab.configRoot.cfg_forecastHourlyShowPressure
+                    onToggled: widgetTab.configRoot.cfg_forecastHourlyShowPressure = checked
+                }
+            }
+            RowLayout {
+                Kirigami.FormData.label: i18n("Kp index/G forecast:")
+                visible: widgetTab.configRoot.cfg_widgetLayoutMode !== "simple"
+                Switch {
+                    id: forecastHourlyShowKpIndexSwitch
+                    checked: widgetTab.configRoot.cfg_forecastHourlyShowKpIndex
+                    onToggled: widgetTab.configRoot.cfg_forecastHourlyShowKpIndex = checked
+                }
+                Label {
+                    visible: forecastHourlyShowKpIndexSwitch.checked
+                    text: i18n("The geomagnetic (Kp/G) forecast is only available up to 3 days ahead")
+                    wrapMode: Text.WordWrap
+                    Layout.fillWidth: true
+                    opacity: 0.7
+                }
+            }
+            RowLayout {
+                Kirigami.FormData.label: i18n("UV index forecast:")
+                visible: widgetTab.configRoot.cfg_widgetLayoutMode !== "simple"
+                Switch {
+                    checked: widgetTab.configRoot.cfg_forecastHourlyShowUvIndex
+                    onToggled: widgetTab.configRoot.cfg_forecastHourlyShowUvIndex = checked
+                }
+            }
+            RowLayout {
+                Kirigami.FormData.label: i18n("Precip sum:")
+                visible: widgetTab.configRoot.cfg_widgetLayoutMode !== "simple"
+                Switch {
+                    checked: widgetTab.configRoot.cfg_forecastHourlyShowPrecipSum
+                    onToggled: widgetTab.configRoot.cfg_forecastHourlyShowPrecipSum = checked
+                }
+            }
+            RowLayout {
+                Kirigami.FormData.label: i18n("Visibility:")
+                visible: widgetTab.configRoot.cfg_widgetLayoutMode !== "simple"
+                Switch {
+                    checked: widgetTab.configRoot.cfg_forecastHourlyShowVisibility
+                    onToggled: widgetTab.configRoot.cfg_forecastHourlyShowVisibility = checked
+                }
+            }
+            RowLayout {
+                Kirigami.FormData.label: i18n("Wind:")
+                visible: widgetTab.configRoot.cfg_widgetLayoutMode !== "simple"
+                Switch {
+                    checked: widgetTab.configRoot.cfg_forecastHourlyShowWind
+                    onToggled: widgetTab.configRoot.cfg_forecastHourlyShowWind = checked
                 }
             }
 
