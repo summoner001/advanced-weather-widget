@@ -3310,7 +3310,7 @@ msgstr "Het bijwerken is mislukt — klik om opnieuw te proberen."
 
 #: contents/ui/WeatherService.qml:673
 msgid "Updated %1"
-msgstr "%1 is bijgewerkt"
+msgstr "Bijgewerkt om %1"
 
 #: contents/ui/FullView.qml:392
 msgid "Updating…"
