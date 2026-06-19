@@ -324,8 +324,43 @@ PlasmoidItem {
         weatherRoot: root
     }
 
+    // Each notification category gets its own Notification instance.
+    // QML's Notification.sendEvent() updates the *same* underlying
+    // notification (by id) on repeat calls rather than creating a new one —
+    // sharing one instance across categories meant that when several were
+    // due in the same evaluator tick, each sendEvent() silently replaced the
+    // previous category's still-in-flight notification, so only the last
+    // one evaluated (space weather) ever appeared on screen.
     Notification {
-        id: alertNotification
+        id: todayNotification
+        componentName: "plasma_workspace"
+        eventId: "notification"
+        iconName: _bundledAlertIcon("storm-warning")
+        flags: Notification.CloseOnTimeout | Notification.SkipGrouping | Notification.DefaultEvent
+    }
+    Notification {
+        id: tomorrowNotification
+        componentName: "plasma_workspace"
+        eventId: "notification"
+        iconName: _bundledAlertIcon("storm-warning")
+        flags: Notification.CloseOnTimeout | Notification.SkipGrouping | Notification.DefaultEvent
+    }
+    Notification {
+        id: rainNotification
+        componentName: "plasma_workspace"
+        eventId: "notification"
+        iconName: _bundledAlertIcon("storm-warning")
+        flags: Notification.CloseOnTimeout | Notification.SkipGrouping | Notification.DefaultEvent
+    }
+    Notification {
+        id: uvNotification
+        componentName: "plasma_workspace"
+        eventId: "notification"
+        iconName: _bundledAlertIcon("storm-warning")
+        flags: Notification.CloseOnTimeout | Notification.SkipGrouping | Notification.DefaultEvent
+    }
+    Notification {
+        id: spaceWeatherNotification
         componentName: "plasma_workspace"
         eventId: "notification"
         iconName: _bundledAlertIcon("storm-warning")
@@ -894,11 +929,20 @@ PlasmoidItem {
         Plasmoid.configuration.alertNotificationState = "{}";
     }
 
-    function _resetAllNotificationState() {
-        _resetAlertNotificationState();
-        _notificationSentKeys = ({});
-        Plasmoid.configuration.notificationSentKeys = "{}";
+    /** Marks a once-per-day key as already sent (without actually sending a
+     *  notification) — used when a category is toggled back on, so it stays
+     *  silent for today/now instead of immediately firing, and only resumes
+     *  notifying from its next natural occurrence (e.g. tomorrow). */
+    function _markNotificationSentKey(key) {
+        _notificationSentKeys[key] = Date.now();
+        _persistNotificationSentKeys();
     }
+
+    // Rain notifications are keyed by a dynamically-computed upcoming event
+    // timestamp (no stable per-day key to pre-mark), so re-arming uses a
+    // one-shot suppression flag instead: skip exactly the first evaluation
+    // right after enabling, then resume normal firing.
+    property bool _suppressRainNotificationOnce: false
 
     function _notificationTimeToMinutes(raw, fallback) {
         var s = (raw || "").trim();
@@ -1114,24 +1158,38 @@ PlasmoidItem {
         weatherAlertNotification.sendEvent();
     }
 
-    function _sendNotification(title, text, urgency, iconName) {
-        alertNotification.title = title;
-        alertNotification.text = text;
-        alertNotification.urgency = urgency;
-        alertNotification.iconName = iconName || _bundledAlertIcon("storm-warning");
-        alertNotification.sendEvent();
+    /** Picks the dedicated Notification instance for a dedup key's category,
+     *  so simultaneously-due notifications don't clobber each other (see the
+     *  comment above the Notification declarations). */
+    function _notificationObjectForKey(key) {
+        if (key.indexOf("today:") === 0) return todayNotification;
+        if (key.indexOf("tomorrow:") === 0) return tomorrowNotification;
+        if (key.indexOf("rain-") === 0) return rainNotification;
+        if (key.indexOf("uv-") === 0) return uvNotification;
+        if (key.indexOf("space-") === 0) return spaceWeatherNotification;
+        return todayNotification;
+    }
+
+    function _sendNotification(title, text, urgency, iconName, notificationObj) {
+        var n = notificationObj || todayNotification;
+        n.title = title;
+        n.text = text;
+        n.urgency = urgency;
+        n.iconName = iconName || _bundledAlertIcon("storm-warning");
+        n.sendEvent();
     }
 
     function _sendNotificationOnce(key, title, text, urgency, iconName) {
+        var notificationObj = _notificationObjectForKey(key);
         if (!key || key.length === 0) {
-            _sendNotification(title, text, urgency, iconName);
+            _sendNotification(title, text, urgency, iconName, notificationObj);
             return true;
         }
         if (_notificationSentKeys[key])
             return false;
         _notificationSentKeys[key] = Date.now();
         _persistNotificationSentKeys();
-        _sendNotification(title, text, urgency, iconName);
+        _sendNotification(title, text, urgency, iconName, notificationObj);
         return true;
     }
 
@@ -1424,6 +1482,10 @@ PlasmoidItem {
             return;
         if ((_notificationHourlyWindow || []).length === 0)
             return;
+        if (_suppressRainNotificationOnce) {
+            _suppressRainNotificationOnce = false;
+            return;
+        }
         var nowMs = now.getTime();
         var startEv = _nextRainTransition(nowMs, true);
         var endEv = _nextRainTransition(nowMs, false);
@@ -2281,11 +2343,25 @@ PlasmoidItem {
     // with only the first value updated (e.g. lat written, lon still 0) which
     // sends a bad API request and shows garbage data.  The 350 ms window allows
     // all config keys to settle before a single real refresh is performed.
+    // _pendingRainWindowRefresh piggybacks the same settling window: calling
+    // _refreshNotificationRainWindowIfNeeded() directly from the individual
+    // onLatitudeChanged/onLongitudeChanged handlers (as a previous version
+    // did) reads service.latitude/longitude before both have been written,
+    // fetching hourly data for a mismatched old/new coordinate pair — so the
+    // rain/upcoming-hours notification silently has no data after a location
+    // switch. Deferring it here guarantees coordinates have settled first.
+    property bool _pendingRainWindowRefresh: false
     Timer {
         id: refreshDebounce
         interval: 600
         repeat: false
-        onTriggered: refreshWeather()
+        onTriggered: {
+            refreshWeather();
+            if (root._pendingRainWindowRefresh) {
+                root._pendingRainWindowRefresh = false;
+                root._refreshNotificationRainWindowIfNeeded(true);
+            }
+        }
     }
 
     // Persists location to KConfig after popup closes — avoids blocking KConfig
@@ -2386,69 +2462,83 @@ PlasmoidItem {
         // Location/provider/timezone changes must NOT reset alert-notification
         // state: it's keyed by alert identity (fingerprint), not location, so
         // dismiss/postpone correctly survive switching locations. They also
-        // must NOT call _resetAllNotificationState(), which wipes
-        // _notificationSentKeys — that would make today/tomorrow/rain/UV/
-        // space-weather notifications (deduped only by date) re-fire
-        // immediately for the new location even though they already fired today.
+        // must NOT clear _notificationSentKeys — that would make
+        // today/tomorrow/rain/UV/space-weather notifications (deduped only by
+        // date) re-fire immediately for the new location even though they
+        // already fired today.
         function onLocationNameChanged() {
             root._updateHasSelectedTown();
             root.weatherAlerts = [];
             if (!root._batchingLocation) refreshDebounce.restart();
         }
         function onLatitudeChanged() {
-            root._refreshNotificationRainWindowIfNeeded(true);
+            root._pendingRainWindowRefresh = true;
             root.weatherAlerts = [];
             if (!root._batchingLocation) refreshDebounce.restart();
         }
         function onLongitudeChanged() {
-            root._refreshNotificationRainWindowIfNeeded(true);
+            root._pendingRainWindowRefresh = true;
             root.weatherAlerts = [];
             if (!root._batchingLocation) refreshDebounce.restart();
         }
         function onTimezoneChanged() {
-            root._refreshNotificationRainWindowIfNeeded(true);
+            root._pendingRainWindowRefresh = true;
             if (!root._batchingLocation) refreshDebounce.restart();
         }
         function onWeatherProviderChanged() {
-            root._refreshNotificationRainWindowIfNeeded(true);
+            root._pendingRainWindowRefresh = true;
             refreshDebounce.restart();
         }
         function onForecastDaysChanged() {
-            root._refreshNotificationRainWindowIfNeeded(true);
+            root._pendingRainWindowRefresh = true;
             refreshDebounce.restart();
         }
+        // These must NOT call _resetAlertNotificationState(): that wipes the
+        // dismiss/postpone state for every alert (all severities), so toggling
+        // just one severity switch would re-notify every other already-
+        // dismissed active alert too. Alerts excluded by _alertColorAllowed()
+        // are simply skipped in _processAlertNotifications — no reset needed;
+        // their dismiss state (if any) is preserved for when they're re-enabled.
         function onAlertNotificationsEnabledChanged() {
-            root._resetAlertNotificationState();
             root._evaluateNotifications();
         }
         function onAlertNotificationsYellowEnabledChanged() {
-            root._resetAlertNotificationState();
             root._evaluateNotifications();
         }
         function onAlertNotificationsOrangeEnabledChanged() {
-            root._resetAlertNotificationState();
             root._evaluateNotifications();
         }
         function onAlertNotificationsRedEnabledChanged() {
-            root._resetAlertNotificationState();
             root._evaluateNotifications();
         }
         function onNotificationAlertsDaysChanged() {
-            root._resetAlertNotificationState();
             root._evaluateNotifications();
         }
         function onNotificationAlertsTimesChanged() {
             root._evaluateNotifications();
         }
+        // Toggling a category back ON must not immediately fire it just
+        // because Apply was hit — it should stay silent until its next
+        // natural occurrence. So pre-mark today's key as "already sent"
+        // rather than clearing it (which would make _evaluateNotifications()
+        // treat it as never-fired and send right away).
         function onNotificationTodayEnabledChanged() {
-            root._resetAllNotificationState();
+            if (Plasmoid.configuration.notificationTodayEnabled) {
+                var dateKey = (root.dailyData && root.dailyData[0] && root.dailyData[0].dateStr)
+                    || Qt.formatDate(new Date(), "yyyy-MM-dd");
+                root._markNotificationSentKey("today:" + dateKey);
+            }
             root._evaluateNotifications();
         }
         function onNotificationTodayTimeChanged() {
             root._evaluateNotifications();
         }
         function onNotificationTomorrowEnabledChanged() {
-            root._resetAllNotificationState();
+            if (Plasmoid.configuration.notificationTomorrowEnabled) {
+                var d = root.dailyData && root.dailyData[1];
+                if (d && d.dateStr)
+                    root._markNotificationSentKey("tomorrow:" + d.dateStr);
+            }
             root._refreshNotificationRainWindowIfNeeded(true);
             root._evaluateNotifications();
         }
@@ -2456,7 +2546,8 @@ PlasmoidItem {
             root._evaluateNotifications();
         }
         function onNotificationRainEnabledChanged() {
-            root._resetAllNotificationState();
+            if (Plasmoid.configuration.notificationRainEnabled)
+                root._suppressRainNotificationOnce = true;
             root._refreshNotificationRainWindowIfNeeded(true);
             root._evaluateNotifications();
         }
