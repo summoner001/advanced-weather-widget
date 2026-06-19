@@ -5,9 +5,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Advanced Weather Widget\n"
-"Report-Msgid-Bugs-To: https://github.com/pnedyalkov91/advanced-weather-widget/issues\n"
+"Report-Msgid-Bugs-To: https://github.com/pnedyalkov91/advanced-weather-widget/"
+"issues\n"
 "POT-Creation-Date: 2026-06-19 17:03+0300\n"
-"PO-Revision-Date: 2026-06-18 21:58+0200\n"
+"PO-Revision-Date: 2026-06-19 19:26+0200\n"
 "Last-Translator: Aldo Latino <aldolat@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it_IT\n"
@@ -138,7 +139,7 @@ msgstr "<b>Fornitore:</b> %1"
 #: contents/ui/main.qml:1096
 #, javascript-format
 msgid "<b>Severity:</b> %1%2"
-msgstr ""
+msgstr "<b>Gravità:</b> %1%2"
 
 #: contents/ui/config/configGeneral.qml:745
 msgid ""
@@ -725,8 +726,15 @@ msgid "Coordinates"
 msgstr "Coordinate"
 
 #: contents/ui/config/configNotifications.qml:232
-msgid "Critical notifications are still shown even when Do Not Disturb is enabled, or while you're playing a game or watching a fullscreen video (if those options are enabled in System Settings → Notifications)."
-msgstr "Le notifiche critiche vengono comunque visualizzate anche quando la modalità Non disturbare è attiva oppure mentre si gioca o si guarda un video a schermo intero (se queste opzioni sono abilitate in Impostazioni di sistema → Notifiche)."
+msgid ""
+"Critical notifications are still shown even when Do Not Disturb is enabled, or"
+" while you're playing a game or watching a fullscreen video (if those options "
+"are enabled in System Settings → Notifications)."
+msgstr ""
+"Le notifiche critiche vengono comunque visualizzate anche quando la modalità N"
+"on disturbare è attiva oppure mentre si gioca o si guarda un video a schermo i"
+"ntero (se queste opzioni sono abilitate in Impostazioni di sistema → Notifiche"
+")."
 
 #: contents/ui/config/configAppearance.qml:1435
 #: contents/ui/config/configAppearance.qml:1558
@@ -966,8 +974,12 @@ msgstr ""
 "com nelle impostazioni del progetto."
 
 #: contents/ui/config/configNotifications.qml:181
-msgid "Each notification type can be enabled independently, with its own daily time where applicable."
-msgstr "Ciascun tipo di notifica può essere attivato in modo indipendente, con un proprio orario giornaliero laddove applicabile."
+msgid ""
+"Each notification type can be enabled independently, with its own daily time w"
+"here applicable."
+msgstr ""
+"Ciascun tipo di notifica può essere attivato in modo indipendente, con un prop"
+"rio orario giornaliero laddove applicabile."
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:383
 msgid "Edit Saved Location"
@@ -2619,7 +2631,7 @@ msgstr "Percentuale di umidità relativa"
 
 #: contents/ui/components/RadarWebEngineView.qml:499
 msgid "Reload radar"
-msgstr ""
+msgstr "Ricarica il radar"
 
 #: contents/ui/config/configLocation.qml:1349
 msgid "Remove last location?"
@@ -2695,7 +2707,7 @@ msgstr "Intervallo scorrimento (sec):"
 #: contents/ui/config/configLocation.qml:1566
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:293
 msgid "Search Location"
-msgstr "Cerca Posizione"
+msgstr "Cerca la posizione"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:538
 msgid "Search a weather station to set your location"
@@ -3250,7 +3262,8 @@ msgstr ""
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:844
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:957
 msgid "The geomagnetic (Kp/G) forecast is only available up to 3 days ahead"
-msgstr "La previsione geomagnetica (Kp/G) è disponibile solo fino a 3 giorni in avanti"
+msgstr ""
+"La previsione geomagnetica (Kp/G) è disponibile solo fino a 3 giorni in avanti"
 
 #: contents/ui/config/configLocation.qml:1089
 msgid ""
@@ -3747,8 +3760,12 @@ msgstr ""
 "o/qt-6/qml-qtqml-qt.html#formatDateTime-method\">Documentazione Qt</a>"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:891
-msgid "You may need to increase the widget's width to see all the selected information"
-msgstr "Si dovrebbe aumentare la larghezza del widget per poter vedere tutte le informazioni desiderate"
+msgid ""
+"You may need to increase the widget's width to see all the selected informatio"
+"n"
+msgstr ""
+"Si dovrebbe aumentare la larghezza del widget per poter vedere tutte le inform"
+"azioni desiderate"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:490
 msgid "Zoom in"
