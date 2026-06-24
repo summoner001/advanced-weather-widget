@@ -1736,7 +1736,12 @@ Item {
                                                     RowLayout {
                                                         Layout.alignment: Qt.AlignHCenter
                                                         spacing: -5
-                                                        visible: modelData.precipMm !== undefined && !isNaN(modelData.precipMm) && modelData.precipMm > 0
+                                                        // Open-Meteo can report a trace precip amount (e.g. 0.1 mm)
+                                                        // for an hour whose weather code and probability are dry.
+                                                        // Only show the rate when the code itself implies precipitation,
+                                                        // so it doesn't contradict a clear/sunny icon at 0% probability.
+                                                        visible: modelData.precipMm !== undefined && !isNaN(modelData.precipMm)
+                                                                 && modelData.precipMm > 0 && W.isPrecipCode(modelData.code)
                                                         WeatherIcon {
                                                             iconInfo: IconResolver.resolve("preciprate", 32, forecastRoot.iconsBaseDir,
                                                                 forecastRoot.widgetIconTheme === "kde" ? "flat-color" :
