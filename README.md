@@ -197,12 +197,12 @@ Thank you to everyone who contributed translations to this project ❤️
 
 - **German** - [HolySoap](https://github.com/HolySoap)
 - **Brazilian Portuguese** - [PauloAlbqrq](https://github.com/PauloAlbqrq)
-- **Bulgarian** - Petar Nedyalkov (me)
+- **Bulgarian** - Petar Nedyalkov (Author)
 - **Dutch** - Heimen Stoffels (<vistausss@fastmail.com>)
 - **Russian** - [Dmaliog](https://github.com/dmaliog)
 - **French** - [LAZER-TY](https://github.com/LAZER-TY) and [rcspam](https://github.com/rcspam)
 - **Turkish** - [herzane52](https://github.com/herzane52)
-- **Spanish** - [NecaX](https://github.com/NecaX)
+- **Spanish** - [NecaX](https://github.com/NecaX) and [BroxiCoros](https://github.com/BroxiCoros)
 - **Chinese (Traditional)** - [Yo-oo](https://github.com/Yo-oo)
 - **Chinese (Simplified)** - [Guokangz](https://github.com/Guokangz)
 - **Czech** - [Zero-MF](https://github.com/Zero-MF)
@@ -210,6 +210,7 @@ Thank you to everyone who contributed translations to this project ❤️
 - **Hungarian** - [summoner001](https://github.com/summoner001)
 - **Polish** - [l3monik](https://github.com/l3monik)
 - **Ukrainian** - [NaviMen (Oleksandr)](https://github.com/NaviMen)
+- **Japanese** - [presire](https://github.com/presire)
 
 ---
 

@@ -1,24 +1,24 @@
-# Translation of Advanced Weather Widget to Ukrainian.
+# Japanese translation for Advanced Weather Widget.
 # Copyright (C) 2026 THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the Advanced Weather Widget package.
-# Oleksandr Afanasiev, 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Advanced Weather Widget\n"
 "Report-Msgid-Bugs-To: https://github.com/pnedyalkov91/advanced-weather-widget/issues\n"
 "POT-Creation-Date: 2026-06-24 15:24+0300\n"
-"PO-Revision-Date: 2026-05-26 16:39+0300\n"
-"Last-Translator: Oleksandr Afanasiev\n"
-"Language-Team: Ukrainian\n"
-"Language: uk\n"
+"PO-Revision-Date: 2026-06-22 00:00+0900\n"
+"Last-Translator: \n"
+"Language-Team: Japanese\n"
+"Language: ja_JP\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: contents/ui/DetailsView.qml:3443 contents/ui/DetailsView.qml:3445
 msgid " until dawn"
-msgstr " до світанку"
+msgstr " 夜明けまで"
 
 #: contents/ui/main.qml:1493
 msgid "%1 %2"
@@ -26,36 +26,36 @@ msgstr "%1 %2"
 
 #: contents/ui/main.qml:1437
 msgid "%1 - Today"
-msgstr "%1 - Сьогодні"
+msgstr "%1 - 今日"
 
 #: contents/ui/main.qml:1510
 msgid "%1 - Tomorrow"
-msgstr "%1 - Завтра"
+msgstr "%1 - 明日"
 
 #: contents/ui/main.qml:1619
 msgid "%1 ending"
-msgstr "%1 закінчується"
+msgstr "%1 終了予定"
 
 #: contents/ui/main.qml:1613
 msgid "%1 expected"
-msgstr "Очікується %1"
+msgstr "%1 予想"
 
 #: contents/ui/main.qml:1620
 msgid "%1 expected to end %2."
-msgstr "Очікується, що %1 закінчиться %2."
+msgstr "%1 は %2 に終了予定。"
 
 #: contents/ui/main.qml:1614
 msgid "%1 possible %2."
-msgstr "Можливий %1 %2."
+msgstr "%1 の可能性あり %2。"
 
 #: contents/ui/main.qml:1422
 msgid "%1 will be %2 with a low of %3 and a high of %4."
-msgstr "%1 буде %2, мінімум %3, максимум %4."
+msgstr "%1 は %2、最低 %3、最高 %4。"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:1049
 msgctxt "@info %1 size %2 family"
 msgid "%1pt %2"
-msgstr "%1пт %2"
+msgstr "%1pt %2"
 
 #: contents/ui/js/spaceWeather.js:167 contents/ui/js/spaceWeather.js:181
 #: contents/ui/js/spaceWeather.js:193
@@ -64,54 +64,54 @@ msgstr "--"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:449
 msgid "-180 to 180 (e.g. 23.3219)"
-msgstr "-180 до 180 (напр. 23.3219)"
+msgstr "-180 から 180（例: 23.3219）"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:432
 msgid "-90 to 90 (e.g. 42.6977)"
-msgstr "-90 до 90 (напр. 42.6977)"
+msgstr "-90 から 90（例: 42.6977）"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:848
 msgid "0 = auto (120 px per chip). Increase if values are truncated."
-msgstr "0 = авто (120 пікселів на елемент). Збільште, якщо значення обрізаються."
+msgstr "0 = 自動（チップあたり 120 px）。値が切り捨てられる場合は増やしてください。"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:848
 msgid "0 = auto. Increase if items are cut off."
-msgstr "0 = авто. Збільште, якщо елементи обрізаються."
+msgstr "0 = 自動。項目が切り捨てられる場合は増やしてください。"
 
 #: contents/ui/main.qml:915
 msgid "1 Alert"
-msgstr "1 Попередження"
+msgstr "1 件のアラート"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:835
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:709
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:703
 msgid "12-hour format"
-msgstr "12-годинний формат"
+msgstr "12時間表示"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:847
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:721
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:715
 msgid "12h"
-msgstr "12г"
+msgstr "12h"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:835
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:709
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:703
 msgid "24-hour format"
-msgstr "24-годинний формат"
+msgstr "24時間表示"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:847
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:721
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:715
 msgid "24h"
-msgstr "24г"
+msgstr "24h"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:1083
 #: contents/ui/config/tabs/ConfigTooltipTab.qml:212
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:44
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:53
 msgid "3D Oxygen (Bundled)"
-msgstr "3D Oxygen (Вбудовано)"
+msgstr "3D Oxygen（同梱）"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:117
 msgid "68°F"
@@ -119,36 +119,36 @@ msgstr "68°F"
 
 #: contents/ui/main.qml:1187
 msgid "<b>Effective:</b> %1"
-msgstr "<b>Діє з:</b> %1"
+msgstr "<b>発効:</b> %1"
 
 #: contents/ui/main.qml:1184
 msgid "<b>Headline:</b> %1"
-msgstr "<b>Заголовок:</b> %1"
+msgstr "<b>見出し:</b> %1"
 
 #: contents/ui/main.qml:1190
 msgid "<b>Instruction:</b> %1"
-msgstr "<b>Інструкція:</b> %1"
+msgstr "<b>指示:</b> %1"
 
 #: contents/ui/main.qml:1193
 msgid "<b>Provider:</b> %1"
-msgstr "<b>Постачальник:</b> %1"
+msgstr "<b>プロバイダ:</b> %1"
 
 #: contents/ui/main.qml:1182
 #, javascript-format
 msgid "<b>Severity:</b> %1%2"
-msgstr "<b>Серйозність:</b> %1%2"
+msgstr "<b>深刻度:</b> %1%2"
 
 #: contents/ui/config/configGeneral.qml:745
 msgid "<b>Why OWM layers may not match RainViewer radar</b><br/><br/>OWM precipitation/cloud layers are <b>static model tiles</b> - they show a smoothed NWP (Numerical Weather Prediction) output, not actual radar returns. They represent where the model <i>thinks</i> it is raining based on interpolation between weather stations and model runs.<br/><br/>RainViewer uses <b>real weather radar composites</b> from radar stations - actual measured reflectivity updated every 2–10 minutes. This discrepancy is expected and known."
-msgstr "<b>Чому шари OWM можуть не збігатися з радаром RainViewer</b><br/><br/>Шари опадів/хмарності OWM — це <b>статичні плитки моделі</b>: вони показують згладжений результат чисельного прогнозу погоди (NWP), а не фактичні дані радара. Вони відображають місця, де, на <i>думку</i> моделі, йде дощ, на основі інтерполяції між метеостанціями та запусками моделей.<br/><br/>RainViewer використовує <b>реальні знімки метеорологічних радарів</b> із радарних станцій — фактично виміряну відбивну здатність, яка оновлюється кожні 2–10 хвилин. Ця невідповідність є очікуваною та відомою."
+msgstr "<b>OWM のレイヤーが RainViewer レーダーと一致しない理由</b><br/><br/>OWM の降水・雲レイヤーは<b>静的なモデルタイル</b>であり、実際のレーダー観測ではなく、平滑化された NWP（数値予報）の出力を表示します。気象観測所とモデル実行の間の補間に基づいて、モデルが雨が降っていると<i>推定</i>している場所を表しています。<br/><br/>RainViewer はレーダー観測所からの<b>実際の気象レーダー合成画像</b>を使用し、2〜10 分ごとに更新される実際の観測反射強度を表示します。この差異は想定されており、既知の現象です。"
 
 #: contents/ui/config/configGeneral.qml:450
 msgid "AI-powered weather intelligence. API key required below."
-msgstr "Прогноз погоди на базі ШІ. Нижче потрібен ключ API."
+msgstr "AI 搭載の気象情報サービス。下に API キーが必要です。"
 
 #: contents/ui/config/configGeneral.qml:211
 msgid "API key is empty."
-msgstr "Ключ API порожній."
+msgstr "API キーが空です。"
 
 #: contents/ui/DetailsView.qml:1088 contents/ui/main.qml:832
 msgid "AQHI"
@@ -160,179 +160,179 @@ msgstr "AQI"
 
 #: contents/ui/DetailsView.qml:1995 contents/ui/js/spaceWeather.js:171
 msgid "Active"
-msgstr "Активно"
+msgstr "活動中"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:393
 msgid "Adaptive (Open-Meteo)"
-msgstr "Адаптивний (Open-Meteo)"
+msgstr "アダプティブ（Open-Meteo）"
 
 #: contents/ui/config/configGeneral.qml:383
 msgid "Adaptive (auto-fallback)"
-msgstr "Адаптивний (авторезервування)"
+msgstr "アダプティブ（自動フォールバック）"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:384
 msgid "Add Location Manually"
-msgstr "Додати розташування вручну"
+msgstr "位置を手動で追加"
 
 #: contents/ui/CompactView.qml:787 contents/ui/CompactView.qml:1123
 msgid "Add a location"
-msgstr "Додати розташування"
+msgstr "位置を追加"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:115
 msgid "Advanced (all tabs)"
-msgstr "Розширений (усі вкладки)"
+msgstr "詳細（すべてのタブ）"
 
 #: contents/ui/main.qml:1473
 msgid "Afternoon"
-msgstr "День"
+msgstr "午後"
 
 #: contents/ui/config/configAppearance.qml:1399
 #: contents/ui/config/configAppearance.qml:1522
 #: contents/ui/config/configAppearance.qml:1645 contents/ui/DetailsView.qml:316
 #: contents/ui/SimpleView.qml:266
 msgid "Air Quality"
-msgstr "Якість повітря"
+msgstr "空気質"
 
 #: contents/ui/TooltipContent.qml:465
 msgid "Air Quality:"
-msgstr "Якість повітря:"
+msgstr "空気質:"
 
 #: contents/ui/config/configAppearance.qml:1400
 #: contents/ui/config/configAppearance.qml:1523
 #: contents/ui/config/configAppearance.qml:1646
 msgid "Air quality index"
-msgstr "Індекс якості повітря"
+msgstr "空気質指数"
 
 #: contents/ui/js/airQuality.js:48
 msgid "Air quality is acceptable."
-msgstr "Якість повітря прийнятна."
+msgstr "空気質は許容範囲です。"
 
 #: contents/ui/js/airQuality.js:52
 msgid "Air quality is extremely poor."
-msgstr "Якість повітря вкрай погана."
+msgstr "空気質は極めて悪いです。"
 
 #: contents/ui/js/airQuality.js:49
 msgid "Air quality is fair."
-msgstr "Якість повітря посередня."
+msgstr "空気質はまあまあです。"
 
 #: contents/ui/js/airQuality.js:50
 msgid "Air quality is poor."
-msgstr "Якість повітря погана."
+msgstr "空気質は悪いです。"
 
 #: contents/ui/js/airQuality.js:47
 msgid "Air quality is satisfactory."
-msgstr "Якість повітря задовільна."
+msgstr "空気質は良好です。"
 
 #: contents/ui/js/airQuality.js:51
 msgid "Air quality is very poor."
-msgstr "Якість повітря дуже погана."
+msgstr "空気質は非常に悪いです。"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:351
 msgid "Air quality options"
-msgstr "Налаштування якості повітря"
+msgstr "空気質オプション"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:653
 #: contents/ui/DetailsView.qml:1402 contents/ui/main.qml:855
 msgid "Alder"
-msgstr "Вільха"
+msgstr "ヤナギ"
 
 #: contents/ui/config/configAppearance.qml:1420
 #: contents/ui/config/configAppearance.qml:1543
 #: contents/ui/config/configAppearance.qml:1666 contents/ui/DetailsView.qml:319
 #: contents/ui/SimpleView.qml:269
 msgid "Alerts"
-msgstr "Попередження"
+msgstr "アラート"
 
 #: contents/ui/TooltipContent.qml:480
 msgid "Alerts:"
-msgstr "Попередження:"
+msgstr "アラート:"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:810
 msgid "All days show hourly forecast when opening the tab"
-msgstr "Усі дні показують погодинний прогноз при відкритті вкладки"
+msgstr "タブを開いたとき、すべての日に時間予報を表示"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:794
 msgid "All days start collapsed"
-msgstr "Усі дні спочатку згорнуті"
+msgstr "すべての日を折りたたんで表示"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:196
 msgid "All tabs"
-msgstr "Усі вкладки"
+msgstr "すべてのタブ"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:371
 msgid "Alt: %1 %2"
-msgstr "Вис: %1 %2"
+msgstr "標高: %1 %2"
 
 #: contents/ui/config/configLocation.qml:1777
 msgid "Alt: %1 m"
-msgstr "Вис: %1 м"
+msgstr "標高: %1 m"
 
 #: contents/ui/config/configGeneral.qml:444
 msgid "Alternative provider. API key required below."
-msgstr "Альтернативний провайдер. Нижче потрібен ключ API."
+msgstr "代替プロバイダ。下に API キーが必要です。"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:461
 msgid "Altitude (%1):"
-msgstr "Висота (%1):"
+msgstr "標高（%1）:"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:480
 msgid "Altitude is optional, but strongly recommended for accurate forecasts. MET Norway (met.no) uses it to correct temperature and pressure for elevation; leaving it at 0 for a mountain location will return sea-level values."
-msgstr "Висота є необов'язковою, але настійно рекомендується для точних прогнозів. MET Norway (met.no) використовує її для коригування температури та тиску відносно висоти; якщо залишити 0 для гірської місцевості, будуть повернуті значення рівня моря."
+msgstr "標高は省略可能ですが、正確な予報のためには強く推奨されます。MET Norway (met.no) は標高に応じて気温と気圧を補正します。山岳地帯で 0 のままにすると、海抜の値が返されます。"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:610
 msgid "Altitude:"
-msgstr "Висота:"
+msgstr "標高:"
 
 #: contents/ui/config/configGeneral.qml:640
 msgid "An API key is required for %1. Weather data cannot be retrieved without it."
-msgstr "Для %1 потрібен ключ API. Дані про погоду неможливо отримати без нього."
+msgstr "%1 には API キーが必要です。API キーがないと気象データを取得できません。"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:751
 msgid "Animate row scrolling"
-msgstr "Анімувати прокрутку рядків"
+msgstr "行スクロールをアニメーション"
 
 #: contents/ui/config/configAppearance.qml:1344
 msgid "Apparent (feels-like) temperature"
-msgstr "Відчувана температура"
+msgstr "体感温度"
 
 #: contents/ui/config/configAppearance.qml:1446
 #: contents/ui/config/configAppearance.qml:1583
 msgid "Apparent temperature"
-msgstr "Відчувана температура"
+msgstr "体感温度"
 
 #: contents/config/config.qml:57
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:130
 msgid "Appearance"
-msgstr "Вигляд"
+msgstr "外観"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:50
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:39
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:38
 msgid "Apply Settings?"
-msgstr "Застосувати налаштування?"
+msgstr "設定を適用しますか?"
 
 #: contents/ui/config/configLocation.qml:1165
 msgid "Apply detected location"
-msgstr "Застосувати виявлене розташування"
+msgstr "検出した位置を適用"
 
 #: contents/ui/config/configLocation.qml:1374
 msgid "Are you sure? This is your last saved location. If you remove it, the widget will no longer show weather information."
-msgstr "Ви впевнені? Це ваше останнє збережене розташування. Якщо ви видалите його, віджет більше не показуватиме інформацію про погоду."
+msgstr "本当によろしいですか? これは最後に保存した位置です。削除すると、ウィジェットは気象情報を表示しなくなります。"
 
 #: contents/ui/DetailsView.qml:3445
 msgid "Around midnight — "
-msgstr "Близько півночі — "
+msgstr "真夜中頃 — "
 
 #: contents/ui/config/configAppearance.qml:1358
 #: contents/ui/config/configAppearance.qml:1460
 #: contents/ui/config/configAppearance.qml:1604
 msgid "Atmospheric pressure"
-msgstr "Атмосферний тиск"
+msgstr "大気圧"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:720
 #: contents/ui/DetailsView.qml:1945
 msgid "Aurora Visibility"
-msgstr "Видимість полярного сяйва"
+msgstr "オーロラ可視性"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:257
 #: contents/ui/config/tabs/ConfigPanelTab.qml:352
@@ -345,45 +345,45 @@ msgstr "Видимість полярного сяйва"
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:584
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:618
 msgid "Auto"
-msgstr "Авто"
+msgstr "自動"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:108
 msgid "Auto (detect on save)"
-msgstr "Авто (визначити при збереженні)"
+msgstr "自動（保存時に検出）"
 
 #: contents/ui/config/configLocation.qml:1518
 msgid "Auto-detection first asks GeoClue2, the system location service, for your current position. If system location is unavailable, the widget estimates your location from your public IP address, which is usually less precise and only updates when detection runs again."
-msgstr "Автовизначення спочатку запитує GeoClue2, системну службу геолокації, про вашу поточну позицію. Якщо вона недоступна, віджет оцінює розташування за вашою публічною IP-адресою, що зазвичай є менш точним і оновлюється лише під час повторного запуску виявлення."
+msgstr "自動検出では、まずシステム位置サービスである GeoClue2 に現在位置を問い合わせます。システム位置が利用できない場合、ウィジェットは公衆 IP アドレスから位置を推定します。これは通常精度が低く、検出を再実行したときにのみ更新されます。"
 
 #: contents/ui/config/configLocation.qml:1479
 msgid "Auto-detection is limited without QtLocation and QtPositioning. It will fall back to IP-based detection, which may be less accurate and will not update in real time as you move. If you want to improve auto-detection accuracy, please install the required packages for your distribution. For more details, see the install guide."
-msgstr "Автовизначення обмежене без QtLocation та QtPositioning. Воно перейде на виявлення за IP-адресою, що може бути менш точним і не оновлюватиметься в реальному часі. Якщо ви хочете покращити точність автовизначення, встановіть необхідні пакунки для вашого дистрибутива."
+msgstr "QtLocation と QtPositioning がないと自動検出は制限されます。IP ベースの検出にフォールバックしますが、精度が低く、移動してもリアルタイムで更新されません。自動検出の精度を向上させるには、ディストリビューション用の必要なパッケージをインストールしてください。詳細はインストールガイドを参照してください。"
 
 #: contents/ui/config/configLocation.qml:747
 msgid "Auto-detection updated coordinates."
-msgstr "Автовизначення оновило координати."
+msgstr "自動検出で座標を更新しました。"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:784
 msgid "Auto-open hourly forecast:"
-msgstr "Автоматично відкривати погодинний прогноз:"
+msgstr "時間予報を自動展開:"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:1018
 msgid "Automatic"
-msgstr "Автоматично"
+msgstr "自動"
 
 #: contents/ui/config/configLocation.qml:1502
 msgid "Automatically detect location"
-msgstr "Автоматично визначати розташування"
+msgstr "位置を自動検出"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:266
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:126
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:124
 msgid "Available"
-msgstr "Доступно"
+msgstr "利用可能"
 
 #: contents/ui/config/configNotifications.qml:48 contents/ui/main.qml:948
 msgid "Avalanche"
-msgstr "Лавина"
+msgstr "雪崩"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:100
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:371
@@ -392,58 +392,58 @@ msgstr "Лавина"
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:84
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:83
 msgid "Back"
-msgstr "Назад"
+msgstr "戻る"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:719
 msgid "Badge Background Color"
-msgstr "Колір фону значка"
+msgstr "バッジの背景色"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:655
 msgid "Badge background:"
-msgstr "Фон значка:"
+msgstr "バッジの背景:"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:699
 msgid "Badge opacity:"
-msgstr "Непрозорість значка:"
+msgstr "バッジの不透明度:"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:593
 msgid "Badge position:"
-msgstr "Позиція значка:"
+msgstr "バッジの位置:"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:639
 msgid "Badge spacing:"
-msgstr "Відступ значка:"
+msgstr "バッジの間隔:"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:160
 msgid "Behavior"
-msgstr "Поведінка"
+msgstr "動作"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:654
 #: contents/ui/DetailsView.qml:1404 contents/ui/main.qml:856
 msgid "Birch"
-msgstr "Береза"
+msgstr "カバ"
 
 #: contents/ui/config/configAppearance.qml:732
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:536
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:526
 msgid "Both  07:17 / 18:03"
-msgstr "Обидва  07:17 / 18:03"
+msgstr "両方  07:17 / 18:03"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:464
 msgid "Both (sunrise & sunset)"
-msgstr "Обидва (схід і захід)"
+msgstr "両方（日の出と日の入り）"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:617
 msgid "Bottom Center"
-msgstr "Внизу по центру"
+msgstr "下中央"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:605
 msgid "Bottom Left"
-msgstr "Внизу зліва"
+msgstr "左下"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:601
 msgid "Bottom Right"
-msgstr "Внизу справа"
+msgstr "右下"
 
 #: contents/ui/config/configAppearance.qml:528
 #: contents/ui/config/configAppearance.qml:680
@@ -452,21 +452,21 @@ msgstr "Внизу справа"
 #: contents/ui/config/configAppearance.qml:966
 #: contents/ui/config/configAppearance.qml:1009
 msgid "Browse…"
-msgstr "Огляд…"
+msgstr "参照…"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:865
 msgid "Bullet  •"
-msgstr "Маркер  •"
+msgstr "中黒  •"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:936
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:784
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:775
 msgid "Button guide"
-msgstr "Підказки кнопок"
+msgstr "ボタンガイド"
 
 #: contents/ui/DetailsView.qml:1984
 msgid "Bz (Magnetic Field)"
-msgstr "Bz (Магнітне поле)"
+msgstr "Bz（磁場）"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:594
 msgid "CO"
@@ -478,157 +478,157 @@ msgstr "CO"
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:68
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:67
 msgid "Cancel"
-msgstr "Скасувати"
+msgstr "キャンセル"
 
 #: contents/ui/config/configLocation.qml:1842
 msgid "Cancel rename"
-msgstr "Скасувати перейменування"
+msgstr "名前変更をキャンセル"
 
 #: contents/ui/DetailsView.qml:1213
 msgid "Carbon Monoxide (CO)"
-msgstr "Чаадний газ (CO)"
+msgstr "一酸化炭素（CO）"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:913
 msgid "Cards"
-msgstr "Картки"
+msgstr "カード"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:566
 msgid "Cards (2 columns)"
-msgstr "Картки (2 стовпці)"
+msgstr "カード（2列）"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:577
 msgid "Cards height:"
-msgstr "Висота карток:"
+msgstr "カードの高さ:"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:227
 msgid "Celsius (°C)"
-msgstr "Цельсій (°C)"
+msgstr "摂氏（°C）"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:540
 msgid "Changes staged. Click the main Apply button to save."
-msgstr "Зміни підготовлено. Натисніть кнопку 'Застосувати', щоб зберегти."
+msgstr "変更がステージングされました。メインの適用ボタンをクリックして保存してください。"
 
 #: contents/ui/config/configGeneral.qml:88
 #: contents/ui/config/configLocation.qml:481
 msgid "Checking location availability…"
-msgstr "Перевірка доступності розташування…"
+msgstr "位置の利用可能性を確認中…"
 
 #: contents/ui/config/configGeneral.qml:456
 msgid "Chinese weather provider with global coverage. API key required below."
-msgstr "Китайський погодний провайдер з глобальним покриттям. Нижче потрібен ключ API."
+msgstr "グローバルカバレッジの中国気象プロバイダ。下に API キーが必要です。"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:945
 msgid "Choose Simple Mode Font"
-msgstr "Вибрати шрифт простого режиму"
+msgstr "シンプルモードのフォントを選択"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:1036
 msgctxt "@action:button"
 msgid "Choose Style…"
-msgstr "Вибрати стиль…"
+msgstr "スタイルを選択…"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:984
 msgid "Choose a Panel Font"
-msgstr "Вибрати шрифт панелі"
+msgstr "パネルのフォントを選択"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:978
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:818
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:804
 msgid "Choose a custom icon for this item"
-msgstr "Вибрати власний значок для цього елемента"
+msgstr "この項目のカスタムアイコンを選択"
 
 #: contents/ui/config/configLocation.qml:1574
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:256
 msgid "Choose on Map"
-msgstr "Вибрати на карті"
+msgstr "地図上で選択"
 
 #: contents/ui/config/configLocation.qml:1189
 msgid "Choose on map"
-msgstr "Вибрати на карті"
+msgstr "地図上で選択"
 
 #: contents/ui/config/configAppearance.qml:1365
 msgid "City / location name"
-msgstr "Назва міста / місця"
+msgstr "都市 / 位置名"
 
 #: contents/ui/config/configGeneral.qml:601
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:48
 msgid "Clear"
-msgstr "Ясно"
+msgstr "クリア"
 
 #: contents/ui/config/configAppearance.qml:209
 msgid "Clear (day)"
-msgstr "Ясно (день)"
+msgstr "晴れ（昼）"
 
 #: contents/ui/config/configAppearance.qml:214
 msgid "Clear (night)"
-msgstr "Ясно (ніч)"
+msgstr "晴れ（夜）"
 
 #: contents/ui/main.qml:1826
 msgid "Clear night"
-msgstr "Ясна ніч"
+msgstr "晴れた夜"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:670
 #: contents/ui/main.qml:1826
 msgid "Clear sky"
-msgstr "Ясне небо"
+msgstr "快晴"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:578
 msgid "Click \"Test across providers\" to check if the coordinates are serviceable by each supported weather provider. Providers requiring an API key that is not configured will be skipped."
-msgstr "Натисніть \"Тестувати серед провайдерів\", щоб перевірити, чи обслуговуються координати кожним з підтримуваних провайдерів погоди. Провайдери, що вимагають неналаштований ключ API, будуть пропущені."
+msgstr "「プロバイダ横断テスト」をクリックして、座標が各対応気象プロバイダで利用可能か確認します。API キーが必要だが設定されていないプロバイダはスキップされます。"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:635
 msgid "Click on the map to select a location"
-msgstr "Клацніть на карті, щоб вибрати місцезнаходження"
+msgstr "地図をクリックして位置を選択"
 
 #: contents/ui/TooltipContent.qml:256
 msgid "Click to configure a location"
-msgstr "Клацніть, щоб налаштувати розташування"
+msgstr "クリックして位置を設定"
 
 #: contents/ui/components/RadarWebEngineView.qml:74
 msgid "Clouds"
-msgstr "Хмари"
+msgstr "雲"
 
 #: contents/ui/config/configNotifications.qml:46 contents/ui/main.qml:946
 msgid "Coastal event"
-msgstr "Прибережне явище"
+msgstr "沿岸現象"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:303
 #: contents/ui/config/tabs/ConfigPanelTab.qml:312
 msgid "Colorful"
-msgstr "Кольоровий"
+msgstr "カラー"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:766
 msgid "Colorful (KDE color icons)"
-msgstr "Кольоровий (кольорові значки KDE)"
+msgstr "カラー（KDE カラーアイコン）"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:1025
 msgid "Compass in forecast:"
-msgstr "Компас у прогнозі:"
+msgstr "予報内のコンパス:"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:162
 #: contents/ui/config/tabs/ConfigPanelTab.qml:180
 msgid "Compressed"
-msgstr "Стиснутий"
+msgstr "圧縮"
 
 #: contents/ui/config/configAppearance.qml:1314
 #: contents/ui/config/configAppearance.qml:1575 contents/ui/DetailsView.qml:312
 msgid "Condition"
-msgstr "Умови"
+msgstr "天気"
 
 #: contents/ui/config/configAppearance.qml:423
 msgid "Condition Icons"
-msgstr "Значки умов"
+msgstr "天気アイコン"
 
 #: contents/ui/TooltipContent.qml:417
 msgid "Condition:"
-msgstr "Умови:"
+msgstr "天気:"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:991
 msgid "Configure display mode options"
-msgstr "Налаштувати параметри режиму відображення"
+msgstr "表示モードオプションを設定"
 
 #: contents/ui/config/configAppearance.qml:619
 msgid "Configure icon — %1"
-msgstr "Налаштувати значок — %1"
+msgstr "アイコンを設定 — %1"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:368
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:388
@@ -637,12 +637,12 @@ msgstr "Налаштувати значок — %1"
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:428
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:448
 msgid "Configure icon…"
-msgstr "Налаштувати значок…"
+msgstr "アイコンを設定…"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:335
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:150
 msgid "Configure weather icons…"
-msgstr "Налаштувати значки погоди…"
+msgstr "天気アイコンを設定…"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:789
 #: contents/ui/config/tabs/ConfigPanelTab.qml:1202
@@ -650,58 +650,58 @@ msgstr "Налаштувати значки погоди…"
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:695
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:740
 msgid "Configure…"
-msgstr "Налаштувати…"
+msgstr "設定…"
 
 #: contents/ui/config/configLocation.qml:1834
 msgid "Confirm rename"
-msgstr "Підтвердити перейменування"
+msgstr "名前変更を確定"
 
 #: contents/ui/config/configLocation.qml:1119
 msgid "Confirm your location"
-msgstr "Підтвердіть ваше розташування"
+msgstr "位置を確認"
 
 #: contents/ui/config/configGeneral.qml:278
 msgid "Connection failed (HTTP %1)."
-msgstr "Помилка з'єднання (HTTP %1)."
+msgstr "接続に失敗しました（HTTP %1）。"
 
 #: contents/ui/config/configGeneral.qml:271
 msgid "Connection successful! %1 key is valid."
-msgstr "З'єднання успішне! Ключ %1 дійсний."
+msgstr "接続に成功しました! %1 のキーは有効です。"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:270
 msgid "Coordinates"
-msgstr "Координати"
+msgstr "座標"
 
 #: contents/ui/config/configNotifications.qml:284
 msgid "Critical notifications are still shown even when Do Not Disturb is enabled, or while you're playing a game or watching a fullscreen video (if those options are enabled in System Settings → Notifications)."
-msgstr "Критичні сповіщення відображаються навіть при увімкненому режимі «Не турбувати» або під час гри чи перегляду відео на весь екран (якщо ці параметри ввімкнено в Системних параметрах → Сповіщення)."
+msgstr "重要な通知は、Do Not Disturb が有効でも、ゲーム中や全画面動画視聴中でも表示されます（システム設定 → 通知でそのオプションが有効な場合）。"
 
 #: contents/ui/config/configAppearance.qml:1435
 #: contents/ui/config/configAppearance.qml:1558
 #: contents/ui/config/configAppearance.qml:1681
 msgid "Current date and/or time"
-msgstr "Поточна дата та/або час"
+msgstr "現在の日付と時刻"
 
 #: contents/ui/config/configAppearance.qml:1372
 msgid "Current moon phase"
-msgstr "Поточна фаза місяця"
+msgstr "現在の月相"
 
 #: contents/ui/config/configAppearance.qml:1322
 #: contents/ui/config/configAppearance.qml:1569
 msgid "Current temperature"
-msgstr "Поточна температура"
+msgstr "現在の気温"
 
 #: contents/ui/config/tabs/ConfigTooltipTab.qml:216
 msgid "Custom"
-msgstr "Власний"
+msgstr "カスタム"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:165
 msgid "Custom (set each unit manually)"
-msgstr "Власний (встановити кожну одиницю вручну)"
+msgstr "カスタム（各单位を手動設定）"
 
 #: contents/ui/config/configAppearance.qml:451
 msgid "Custom per-condition icons"
-msgstr "Власні значки для кожної умови"
+msgstr "状態別カスタムアイコン"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:781
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:861
@@ -716,409 +716,409 @@ msgstr "Власні значки для кожної умови"
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:264
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:323
 msgid "Custom…"
-msgstr "Власний…"
+msgstr "カスタム…"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:823
 msgid "Daily Forecast Settings"
-msgstr "Налаштування щоденного прогнозу"
+msgstr "日別予報設定"
 
 #: contents/ui/config/configGeneral.qml:446
 msgid "Dark Sky-compatible API with US alerts. API key required below."
-msgstr "API-сумісний з Dark Sky з оповіщеннями для США. Нижче потрібен ключ API."
+msgstr "Dark Sky 互換 API（米国アラート対応）。下に API キーが必要です。"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:873
 msgid "Dash  –"
-msgstr "Тире  –"
+msgstr "ダッシュ  –"
 
 #: contents/ui/config/configGeneral.qml:763
 msgid "Data Refresh"
-msgstr "Оновлення даних"
+msgstr "データ更新"
 
 #: contents/ui/config/configAppearance.qml:1434
 #: contents/ui/config/configAppearance.qml:1557
 #: contents/ui/config/configAppearance.qml:1680 contents/ui/DetailsView.qml:321
 msgid "Date / Time"
-msgstr "Дата / Час"
+msgstr "日付 / 時刻"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:354
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:419
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:414
 msgid "Date / Time options"
-msgstr "Налаштування Дати / Часу"
+msgstr "日付 / 時刻オプション"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:240
 msgid "Date and time in header:"
-msgstr "Дата і час у заголовку:"
+msgstr "ヘッダーに日付と時刻:"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:249
 msgid "Date format:"
-msgstr "Формат дати:"
+msgstr "日付形式:"
 
 #: contents/ui/TooltipContent.qml:620
 msgid "Date/Time:"
-msgstr "Дата/Час:"
+msgstr "日付/時刻:"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:766
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:640
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:634
 msgid "Date:"
-msgstr "Дата:"
+msgstr "日付:"
 
 #: contents/ui/DetailsView.qml:3441
 msgid "Dawn approaching — "
-msgstr "Наближається світанок — "
+msgstr "夜明けが近づいています — "
 
 #: contents/ui/DetailsView.qml:3421
 msgid "Day"
-msgstr "День"
+msgstr "昼"
 
 #: contents/ui/DetailsView.qml:3449
 msgid "Daylight over"
-msgstr "Світловий день завершився"
+msgstr "昼光が終了"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:495
 #: contents/ui/config/tabs/ConfigPanelTab.qml:569
 msgid "Default"
-msgstr "За замовчуванням"
+msgstr "デフォルト"
 
 #: contents/ui/config/configLocation.qml:1809
 msgid "Default location (click to unset)"
-msgstr "Типове розташування (натисніть, щоб скасувати)"
+msgstr "デフォルト位置（クリックで解除）"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:166
 msgid "Default tab:"
-msgstr "Типова вкладка:"
+msgstr "デフォルトタブ:"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:684
 msgid "Dense drizzle"
-msgstr "Густа мряка"
+msgstr "濃い霧雨"
 
 #: contents/ui/DetailsView.qml:2303 contents/ui/DetailsView.qml:2305
 msgid "Description"
-msgstr "Опис"
+msgstr "説明"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:80
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:174 contents/ui/FullView.qml:560
 msgid "Details"
-msgstr "Деталі"
+msgstr "詳細"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:114
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:653
 msgid "Details Items"
-msgstr "Елементи деталей"
+msgstr "詳細項目"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:659
 msgid "Details items:"
-msgstr "Елементи деталей:"
+msgstr "詳細項目:"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:559
 msgid "Details layout:"
-msgstr "Макет деталей:"
+msgstr "詳細レイアウト:"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:197
 msgid "Details only"
-msgstr "Тільки деталі"
+msgstr "詳細のみ"
 
 #: contents/ui/main.qml:304
 msgid "Detect / change location"
-msgstr "Визначити / змінити розташування"
+msgstr "位置を検出 / 変更"
 
 #: contents/ui/FullView.qml:385
 msgid "Detect / change location…"
-msgstr "Визначити / змінити розташування…"
+msgstr "位置を検出 / 変更…"
 
 #: contents/ui/config/configLocation.qml:1530
 msgid "Detecting…"
-msgstr "Визначення…"
+msgstr "検出中…"
 
 #: contents/ui/config/configAppearance.qml:1480 contents/ui/DetailsView.qml:309
 #: contents/ui/SimpleView.qml:261
 msgid "Dew Point"
-msgstr "Точка роси"
+msgstr "露点"
 
 #: contents/ui/config/configAppearance.qml:1481
 msgid "Dew point temperature"
-msgstr "Температура точки роси"
+msgstr "露点温度"
 
 #: contents/ui/TooltipContent.qml:441
 msgid "Dew point:"
-msgstr "Точка роси:"
+msgstr "露点:"
 
 #: contents/ui/config/configNotifications.qml:317
 msgid "Disable a type to silence it, or give it its own repeat interval. The interval is used only when 'Repeat reminder until dismissed' is on."
-msgstr "Вимкніть тип, щоб приховати його, або задайте йому власний інтервал повторення. Інтервал використовується лише коли увімкнено «Повторювати нагадування до закриття»."
+msgstr "種類を無効にすると通知を停止できます。または独自の繰り返し間隔を設定できます。この間隔は「閉じるまでリマインダーを繰り返す」がオンの場合にのみ使用されます。"
 
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:488
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:483
 msgid "Disable item"
-msgstr "Вимкнути елемент"
+msgstr "項目を無効化"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:519
 #: contents/ui/config/tabs/ConfigTooltipTab.qml:47
 msgid "Disabled"
-msgstr "Вимкнено"
+msgstr "無効"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:69
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:58
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:57
 msgid "Discard"
-msgstr "Відхилити"
+msgstr "破棄"
 
 #: contents/ui/main.qml:387
 msgid "Dismiss"
-msgstr "Закрити"
+msgstr "閉じる"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:43
 msgid "Display"
-msgstr "Відображення"
+msgstr "表示"
 
 #: contents/ui/config/configAppearance.qml:717
 #: contents/ui/config/configAppearance.qml:873
 #: contents/ui/config/tabs/ConfigPanelTab.qml:92
 #: contents/ui/config/tabs/ConfigPanelTab.qml:121
 msgid "Display mode:"
-msgstr "Режим відображення:"
+msgstr "表示モード:"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:86
 msgid "Displaying °C and °F together"
-msgstr "Відображення °C та °F разом"
+msgstr "°C と °F を同時表示"
 
 #: contents/ui/config/configAppearance.qml:1407
 #: contents/ui/config/configAppearance.qml:1530
 #: contents/ui/config/configAppearance.qml:1653
 msgid "Dominant pollen type and index"
-msgstr "Домінуючий тип пилку та індекс"
+msgstr "優勢な花粉の種類と指数"
 
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:802
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:790
 msgid "Drag to reorder enabled items"
-msgstr "Перетягніть, щоб змінити порядок увімкнених елементів"
+msgstr "ドラッグして有効な項目を並べ替え"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:951
 msgid "Drag to reorder shown items"
-msgstr "Перетягніть, щоб змінити порядок показаних елементів"
+msgstr "ドラッグして表示項目を並べ替え"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:53
 #: contents/ui/main.qml:1840
 msgid "Drizzle"
-msgstr "Мряка"
+msgstr "霧雨"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:74
 msgid "Dual temperature"
-msgstr "Подвійна температура"
+msgstr "二重温度表示"
 
 #: contents/ui/config/configGeneral.qml:682
 msgid "Each QWeather project has a unique API host. Find yours at console.qweather.com under your project settings."
-msgstr "Кожен проект QWeather має унікальний хост API. Знайдіть свій на console.qweather.com у налаштуваннях вашого проекту."
+msgstr "各 QWeather プロジェクトには固有の API ホストがあります。console.qweather.com のプロジェクト設定で確認してください。"
 
 #: contents/ui/config/configNotifications.qml:300
 msgid "Each alert is shown only once, without Dismiss and Postpone buttons."
-msgstr "Кожне попередження показується лише один раз, без кнопок «Закрити» та «Відкласти»."
+msgstr "各警報は「閉じる」「延期」ボタンなしで一度だけ表示されます。"
 
 #: contents/ui/config/configNotifications.qml:232
 msgid "Each notification type can be enabled independently, with its own daily time where applicable."
-msgstr "Кожен тип сповіщень можна увімкнути окремо, з власним щоденним часом, де це доступно."
+msgstr "各通知タイプは個別に有効化でき、該当する場合は毎日の時刻も設定できます。"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:383
 msgid "Edit Saved Location"
-msgstr "Редагувати збережене розташування"
+msgstr "保存した位置を編集"
 
 #: contents/ui/config/configLocation.qml:1864
 msgid "Edit location details"
-msgstr "Редагувати деталі розташування"
+msgstr "位置の詳細を編集"
 
 #: contents/ui/DetailsView.qml:2308
 msgid "Effective"
-msgstr "Набирає чинності"
+msgstr "発効"
 
 #: contents/ui/config/configNotifications.qml:243
 msgid "Enable alert notifications"
-msgstr "Увімкнути сповіщення про попередження"
+msgstr "アラート通知を有効化"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:568
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:633
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:697
 msgid "Enable all"
-msgstr "Увімкнути всі"
+msgstr "すべて有効化"
 
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:488
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:483
 msgid "Enable item"
-msgstr "Увімкнути елемент"
+msgstr "項目を有効化"
 
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:830
 msgid "Enable or disable this item"
-msgstr "Увімкнути або вимкнути цей елемент"
+msgstr "この項目を有効化または無効化"
 
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:848
 msgid "Enable or disable this item on the panel"
-msgstr "Увімкнути або вимкнути цей елемент на панелі"
+msgstr "パネル上のこの項目を有効化または無効化"
 
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:126
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:124
 #: contents/ui/config/tabs/ConfigPanelTab.qml:519
 #: contents/ui/config/tabs/ConfigTooltipTab.qml:47
 msgid "Enabled"
-msgstr "Увімкнено"
+msgstr "有効"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:412
 msgid "Enter Location"
-msgstr "Введіть розташування"
+msgstr "位置を入力"
 
 #: contents/ui/config/configLocation.qml:1588
 msgid "Enter Manually"
-msgstr "Ввести вручну"
+msgstr "手動で入力"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:542
 msgid "Enter a location name and valid coordinates, then click the main Apply button."
-msgstr "Введіть назву розташування та дійсні координати, потім натисніть головну кнопку 'Застосувати'."
+msgstr "位置名と有効な座標を入力し、メインの適用ボタンをクリックしてください。"
 
 #: contents/ui/config/configLocation.qml:1592
 msgid "Enter exact latitude, longitude, and optional elevation for a more local forecast. You can copy coordinates from OpenStreetMap, GeoNames, or Google Maps."
-msgstr "Введіть точну широту, довготу та (необов'язково) висоту для більш локального прогнозу. Ви можете скопіювати координати з OpenStreetMap, GeoNames або Google Maps."
+msgstr "よりローカルな予報のため、正確な緯度、経度、および任意の標高を入力してください。OpenStreetMap、GeoNames、Google Maps から座標をコピーできます。"
 
 #: contents/ui/config/configLocation.qml:1179
 msgid "Enter manually"
-msgstr "Ввести вручну"
+msgstr "手動で入力"
 
 #: contents/ui/config/configGeneral.qml:519
 msgid "Enter your OpenWeatherMap API key"
-msgstr "Введіть ваш ключ API OpenWeatherMap"
+msgstr "OpenWeatherMap API キーを入力"
 
 #: contents/ui/config/configGeneral.qml:521
 msgid "Enter your Pirate Weather API key"
-msgstr "Введіть ваш ключ API Pirate Weather"
+msgstr "Pirate Weather API キーを入力"
 
 #: contents/ui/config/configGeneral.qml:531
 msgid "Enter your QWeather API key"
-msgstr "Введіть ваш ключ API QWeather"
+msgstr "QWeather API キーを入力"
 
 #: contents/ui/config/configGeneral.qml:527
 msgid "Enter your StormGlass API key"
-msgstr "Введіть ваш ключ API StormGlass"
+msgstr "StormGlass API キーを入力"
 
 #: contents/ui/config/configGeneral.qml:525
 msgid "Enter your Tomorrow.io API key"
-msgstr "Введіть ваш ключ API Tomorrow.io"
+msgstr "Tomorrow.io API キーを入力"
 
 #: contents/ui/config/configGeneral.qml:523
 msgid "Enter your Visual Crossing API key"
-msgstr "Введіть ваш ключ API Visual Crossing"
+msgstr "Visual Crossing API キーを入力"
 
 #: contents/ui/config/configGeneral.qml:532
 msgid "Enter your WeatherAPI.com key"
-msgstr "Введіть ваш ключ API WeatherAPI.com"
+msgstr "WeatherAPI.com キーを入力"
 
 #: contents/ui/config/configGeneral.qml:529
 msgid "Enter your Weatherbit API key"
-msgstr "Введіть ваш ключ API Weatherbit"
+msgstr "Weatherbit API キーを入力"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:256
 msgid "Error (code %1)"
-msgstr "Помилка (код %1)"
+msgstr "エラー（コード %1）"
 
 #: contents/ui/DetailsView.qml:3443
 msgid "Evening — "
-msgstr "Вечір — "
+msgstr "夕方 — "
 
 #: contents/ui/js/spaceWeather.js:194
 msgid "Excellent"
-msgstr "Відмінно"
+msgstr "最高"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:801
 msgid "Expand all days:"
-msgstr "Розгорнути всі дні:"
+msgstr "すべての日を展開:"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:933
 msgid "Expand widget to fill available panel space"
-msgstr "Розширити віджет, щоб заповнити доступне місце на панелі"
+msgstr "ウィジェットを展開して利用可能なパネル領域を埋める"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:611
 msgid "Expanded cards height:"
-msgstr "Висота розгорнутих карток:"
+msgstr "展開カードの高さ:"
 
 #: contents/ui/DetailsView.qml:2310
 msgid "Expires"
-msgstr "Закінчується"
+msgstr "失効"
 
 #: contents/ui/js/airQuality.js:52 contents/ui/js/spaceWeather.js:168
 #: contents/ui/js/spaceWeather.js:182 contents/ui/main.qml:809
 msgid "Extreme"
-msgstr "Екстремальний"
+msgstr "極端"
 
 #: contents/ui/js/spaceWeather.js:87
 msgid "Extreme geomagnetic storm."
-msgstr "Екстремальна геомагнітна буря."
+msgstr "極度の地磁気嵐。"
 
 #: contents/ui/js/airQuality.js:52 contents/ui/main.qml:823
 msgid "Extremely Poor"
-msgstr "Вкрай погана"
+msgstr "極めて悪い"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:231
 msgid "Fahrenheit (°F)"
-msgstr "Фаренгейт (°F)"
+msgstr "華氏（°F）"
 
 #: contents/ui/WeatherService.qml:728
 msgid "Failed to load weather providers"
-msgstr "Не вдалося завантажити постачальників погоди"
+msgstr "気象プロバイダの読み込みに失敗しました"
 
 #: contents/ui/WeatherService.qml:716
 msgid "Failed: %1"
-msgstr "Помилка: %1"
+msgstr "失敗: %1"
 
 #: contents/ui/js/airQuality.js:48 contents/ui/main.qml:819
 msgid "Fair"
-msgstr "Справедлива"
+msgstr "まあまあ"
 
 #: contents/ui/config/configAppearance.qml:1343
 #: contents/ui/config/configAppearance.qml:1445
 #: contents/ui/config/configAppearance.qml:1582 contents/ui/DetailsView.qml:304
 #: contents/ui/SimpleView.qml:258
 msgid "Feels Like"
-msgstr "Відчувається як"
+msgstr "体感温度"
 
 #: contents/ui/TooltipContent.qml:414
 msgid "Feels like:"
-msgstr "Відчувається як:"
+msgstr "体感温度:"
 
 #: contents/ui/FullView.qml:85 contents/ui/SimpleView.qml:59
 msgid "Feels like: %1"
-msgstr "Відчувається як: %1"
+msgstr "体感温度: %1"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:261
 msgid "Fill panel"
-msgstr "Заповнити панель"
+msgstr "パネルを埋める"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:932
 msgid "Fill panel:"
-msgstr "Заповнити панель:"
+msgstr "パネルを埋める:"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:314
 msgid "Find"
-msgstr "Знайти"
+msgstr "検索"
 
 #: contents/ui/main.qml:2003
 msgid "First Quarter"
-msgstr "Перша чверть"
+msgstr "上弦の月"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:893
 msgid "First day of week:"
-msgstr "Перший день тижня:"
+msgstr "週の最初の日:"
 
 #: contents/ui/DetailsView.qml:2060
 msgid "Flare Warning"
-msgstr "Попередження про спалахи"
+msgstr "フレア警報"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:1079
 #: contents/ui/config/tabs/ConfigTooltipTab.qml:208
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:43
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:52
 msgid "Flat Color (Bundled)"
-msgstr "Плоскі кольори (Вбудовано)"
+msgstr "フラットカラー（同梱）"
 
 #: contents/ui/config/configNotifications.qml:50 contents/ui/main.qml:950
 msgid "Flood"
-msgstr "Повінь"
+msgstr "洪水"
 
 #: contents/ui/config/configAppearance.qml:248
 #: contents/ui/config/configNotifications.qml:43
@@ -1126,290 +1126,290 @@ msgstr "Повінь"
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:678
 #: contents/ui/main.qml:943 contents/ui/main.qml:1834
 msgid "Fog"
-msgstr "Туман"
+msgstr "霧"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:1071
 #: contents/ui/config/tabs/ConfigTooltipTab.qml:200
 msgid "Font icons (default)"
-msgstr "Шрифтові значки (за замовчуванням)"
+msgstr "フォントアイコン（デフォルト）"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:426
 msgid "Font size:"
-msgstr "Розмір шрифту:"
+msgstr "フォントサイズ:"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:214
 msgid "Footer:"
-msgstr "Нижній колонтитул:"
+msgstr "フッター:"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:84
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:175 contents/ui/FullView.qml:561
 msgid "Forecast"
-msgstr "Прогноз"
+msgstr "予報"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:770
 msgid "Forecast days:"
-msgstr "Дні прогнозу:"
+msgstr "予報日数:"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:198
 msgid "Forecast only"
-msgstr "Лише прогноз"
+msgstr "予報のみ"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:1016
 msgid "Forecast:"
-msgstr "Прогноз:"
+msgstr "予報:"
 
 #: contents/ui/config/configNotifications.qml:47 contents/ui/main.qml:947
 msgid "Forest fire"
-msgstr "Лісова пожежа"
+msgstr "森林火災"
 
 #: contents/ui/config/configGeneral.qml:458
 msgid "Free Norwegian Meteorological Institute service. No API key needed."
-msgstr "Безкоштовна служба Норвезького метеорологічного інституту. Ключ API не потрібен."
+msgstr "ノルウェー気象研究所の無料サービス。API キーは不要です。"
 
 #: contents/ui/config/configGeneral.qml:459
 msgid "Free and open-source. No API key needed. Recommended."
-msgstr "Вільний код. Ключ API не потрібен. Рекомендовано."
+msgstr "無料でオープンソース。API キーは不要です。推奨。"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:54
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:686
 #: contents/ui/main.qml:1846
 msgid "Freezing drizzle"
-msgstr "Крижана мряка"
+msgstr "着氷性の霧雨"
 
 #: contents/ui/config/configAppearance.qml:276
 msgid "Freezing drizzle (day)"
-msgstr "Крижана мряка (день)"
+msgstr "着氷性の霧雨（昼）"
 
 #: contents/ui/config/configAppearance.qml:281
 msgid "Freezing drizzle (night)"
-msgstr "Крижана мряка (ніч)"
+msgstr "着氷性の霧雨（夜）"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:56
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:694
 #: contents/ui/main.qml:1856
 msgid "Freezing rain"
-msgstr "Крижаний дощ"
+msgstr "着氷性の雨"
 
 #: contents/ui/config/configAppearance.qml:287
 msgid "Freezing rain (day)"
-msgstr "Крижаний дощ (день)"
+msgstr "着氷性の雨（昼）"
 
 #: contents/ui/config/configAppearance.qml:292
 msgid "Freezing rain (night)"
-msgstr "Крижаний дощ (ніч)"
+msgstr "着氷性の雨（夜）"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:905
 msgid "Friday"
-msgstr "П'ятниця"
+msgstr "金曜日"
 
 #: contents/ui/main.qml:2007
 msgid "Full Moon"
-msgstr "Повний місяць"
+msgstr "満月"
 
 #: contents/ui/DetailsView.qml:2693
 msgid "Future alerts"
-msgstr "Майбутні попередження"
+msgstr "将来のアラート"
 
 #: contents/ui/config/configLocation.qml:1530
 msgid "GPS / GeoClue2 unavailable (install qt6-qtlocation for best accuracy). Using IP-based detection."
-msgstr "GPS / GeoClue2 недоступні (встановіть qt6-qtlocation для кращої точності). Використовується виявлення на основі IP."
+msgstr "GPS / GeoClue2 が利用できません（最高精度のため qt6-qtlocation をインストール）。IP ベースの検出を使用します。"
 
 #: contents/config/config.qml:52 contents/ui/config/tabs/ConfigWidgetTab.qml:76
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:764
 msgid "General"
-msgstr "Загальні"
+msgstr "一般"
 
 #: contents/ui/config/configLocation.qml:813
 msgid "GeoClue2 unavailable, trying system location…"
-msgstr "GeoClue2 недоступна, спроба отримати системне розташування…"
+msgstr "GeoClue2 が利用できません。システム位置を試行中…"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:717
 #: contents/ui/DetailsView.qml:1831
 msgid "Geomagnetic Storm"
-msgstr "Геомагнітна буря"
+msgstr "地磁気嵐"
 
 #: contents/ui/config/configNotifications.qml:443 contents/ui/main.qml:1731
 msgid "Geomagnetic activity"
-msgstr "Геомагнітна активність"
+msgstr "地磁気活動"
 
 #: contents/ui/main.qml:1728
 msgid "Geomagnetic activity will be %1 (Kp %2)"
-msgstr "Геомагнітна активність буде %1 (Kp %2)"
+msgstr "地磁気活動は %1（Kp %2）になる予想"
 
 #: contents/ui/js/airQuality.js:47 contents/ui/main.qml:818
 msgid "Good"
-msgstr "Добра"
+msgstr "良好"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:655
 #: contents/ui/DetailsView.qml:1406 contents/ui/main.qml:857
 msgid "Grass"
-msgstr "Трава"
+msgstr "イネ科"
 
 #: contents/ui/DetailsView.qml:2300
 msgid "Headline"
-msgstr "Заголовок"
+msgstr "見出し"
 
 #: contents/ui/components/RadarWebEngineView.qml:93
 #: contents/ui/components/RadarWebEngineView.qml:538
 msgid "Heavy"
-msgstr "Сильний"
+msgstr "強い"
 
 #: contents/ui/main.qml:1842
 msgid "Heavy drizzle"
-msgstr "Сильна мряка"
+msgstr "強い霧雨"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:692
 #: contents/ui/main.qml:1852
 msgid "Heavy rain"
-msgstr "Сильний дощ"
+msgstr "大雨"
 
 #: contents/ui/main.qml:1870
 msgid "Heavy showers"
-msgstr "Сильні зливи"
+msgstr "強いにわか雨"
 
 #: contents/ui/main.qml:1862
 msgid "Heavy snow"
-msgstr "Сильний сніг"
+msgstr "大雪"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:712
 msgid "Heavy snow showers"
-msgstr "Сильні снігові зливи"
+msgstr "強いにわか雪"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:700
 msgid "Heavy snowfall"
-msgstr "Сильний снігопад"
+msgstr "大雪"
 
 #: contents/ui/main.qml:1880
 msgid "Heavy thunderstorm with hail"
-msgstr "Сильна гроза з градом"
+msgstr "ひょうを伴う激しい雷雨"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:144
 msgid "Hidden"
-msgstr "Приховано"
+msgstr "非表示"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:419
 msgid "Hide from details"
-msgstr "Приховати з деталей"
+msgstr "詳細から非表示"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:407
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:476
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:471
 msgid "Hide prefix icon"
-msgstr "Приховати значок префікса"
+msgstr "接頭アイコンを非表示"
 
 #: contents/ui/DetailsView.qml:1028 contents/ui/FullView.qml:499
 #: contents/ui/js/pollen.js:44 contents/ui/js/spaceWeather.js:183
 #: contents/ui/js/spaceWeather.js:195 contents/ui/main.qml:807
 #: contents/ui/main.qml:851
 msgid "High"
-msgstr "Високий"
+msgstr "高"
 
 #: contents/ui/config/configGeneral.qml:454
 msgid "High precision forecast provider. API key required below."
-msgstr "Високоточний провайдер прогнозу. Нижче потрібен ключ API."
+msgstr "高精度予報プロバイダ。下に API キーが必要です。"
 
 #: contents/ui/config/configNotifications.qml:44 contents/ui/main.qml:944
 msgid "High temperature"
-msgstr "Висока температура"
+msgstr "高温"
 
 #: contents/ui/config/configGeneral.qml:448
 msgid "Historical and forecast data provider. API key required below."
-msgstr "Провайдер історичних та прогнозних даних. Нижче потрібен ключ API."
+msgstr "過去と予報データプロバイダ。下に API キーが必要です。"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:154
 msgid "Horizontal"
-msgstr "Горизонтально"
+msgstr "水平"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:899
 msgid "Hourly Forecast Settings"
-msgstr "Налаштування погодинного прогнозу"
+msgstr "時間別予報設定"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:909
 msgid "Hourly layout:"
-msgstr "Макет по годинах:"
+msgstr "時間別レイアウト:"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:735
 msgid "How often the rows scroll to reveal the next item"
-msgstr "Як часто прокручуються рядки для відображення наступного елемента"
+msgstr "次の項目を表示するための行スクロール間隔"
 
 #: contents/ui/config/configAppearance.qml:1350
 #: contents/ui/config/configAppearance.qml:1452
 #: contents/ui/config/configAppearance.qml:1596 contents/ui/DetailsView.qml:305
 #: contents/ui/SimpleView.qml:259
 msgid "Humidity"
-msgstr "Вологість"
+msgstr "湿度"
 
 #: contents/ui/TooltipContent.qml:435
 msgid "Humidity:"
-msgstr "Вологість:"
+msgstr "湿度:"
 
 #: contents/ui/config/configLocation.qml:932
 #: contents/ui/config/configLocation.qml:963
 msgid "IP geolocation"
-msgstr "Геолокація за IP"
+msgstr "IP 位置情報"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:195
 msgid "Icon and temperature"
-msgstr "Значок та температура"
+msgstr "アイコンと気温"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:228
 msgid "Icon first"
-msgstr "Спочатку значок"
+msgstr "アイコンを先"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:203
 msgid "Icon only"
-msgstr "Лише значок"
+msgstr "アイコンのみ"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:344
 msgid "Icon size:"
-msgstr "Розмір значка:"
+msgstr "アイコンサイズ:"
 
 #: contents/ui/config/configAppearance.qml:440
 msgid "Icon source:"
-msgstr "Джерело значка:"
+msgstr "アイコンソース:"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:1063
 #: contents/ui/config/tabs/ConfigTooltipTab.qml:191
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:482
 msgid "Icon theme:"
-msgstr "Тема значків:"
+msgstr "アイコンテーマ:"
 
 #: contents/ui/config/configAppearance.qml:658
 msgid "Icon:"
-msgstr "Значок:"
+msgstr "アイコン:"
 
 #: contents/ui/config/tabs/ConfigTooltipTab.qml:184
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:477
 msgid "Icons"
-msgstr "Значки"
+msgstr "アイコン"
 
 #: contents/ui/config/configLocation.qml:1155
 msgid "If this looks correct, apply it. Otherwise, choose your location manually."
-msgstr "Якщо це виглядає правильно, застосуйте. Інакше виберіть своє розташування вручну."
+msgstr "正しい場合は適用してください。そうでない場合は、位置を手動で選択してください。"
 
 #: contents/ui/config/configGeneral.qml:664
 msgid "If you have just registered a new OpenWeatherMap API key, it might take up to 2 hours for it to become active. Please try again later if it doesn't work immediately."
-msgstr "Якщо ви щойно зареєстрували новий ключ API OpenWeatherMap, може знадобитися до 2 годин, щоб він став активним. Спробуйте пізніше, якщо це не працює відразу."
+msgstr "新しく OpenWeatherMap API キーを登録したばかりの場合、有効になるまで最大 2 時間かかることがあります。すぐに動作しない場合は、後でもう一度お試しください。"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:157
 msgid "Imperial (°F, mph, inHg, in)"
-msgstr "Імперські (°F, миль/год, дюйм рт.ст., дюйм)"
+msgstr "ヤード・ポンド法（°F、mph、inHg、in）"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:132
 msgid "In a vertical panel, long item labels may be truncated. Consider using \"Simple\" mode, increasing the panel width, or reducing the font size."
-msgstr "У вертикальній панелі довгі мітки елементів можуть обрізатися. Розгляньте використання режиму \"Простий\", збільшення ширини панелі або зменшення розміру шрифту."
+msgstr "垂直パネルでは、長い項目ラベルが切り捨てられる場合があります。「シンプル」モードの使用、パネル幅の増加、またはフォントサイズの縮小を検討してください。"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:314
 msgid ""
 "Individual dropdowns are editable only in Custom mode.\n"
 "Other presets set units automatically."
 msgstr ""
-"Окремі випадаючі списки можна редагувати лише у власному режимі.\n"
-"Інші пресети встановлюють одиниці виміру автоматично."
+"個別のドロップダウンはカスタムモードでのみ編集できます。\n"
+"他のプリセットは単位を自動的に設定します。"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:216
 msgid "Individual units"
-msgstr "Окремі одиниці"
+msgstr "個別の単位"
 
 #: contents/ui/config/configLocation.qml:1102
 msgid ""
@@ -1420,12 +1420,12 @@ msgid ""
 "\n"
 "You can still search for a location or enter coordinates manually. Note that auto-detection will continue to work using an IP fallback, but it may be less accurate and won’t update in real time as you move around."
 msgstr ""
-"Встановіть для вашого дистрибутива:\n"
+"ディストリビューション用にインストールしてください:\n"
 "  • Fedora / RHEL / Arch: qt6-qtlocation\n"
 "  • openSUSE: qt6-location\n"
-"  • Debian / Kubuntu / KDE Neon: qml6-module-qtlocation та qml6-module-qtpositioning\n"
+"  • Debian / Kubuntu / KDE Neon: qml6-module-qtlocation および qml6-module-qtpositioning\n"
 "\n"
-"Ви все ще можете шукати розташування або вводити координати вручну. Зауважте, що автовизначення продовжуватиме працювати за допомогою резервного IP, але воно може бути менш точним і не оновлюватиметься в реальному часі."
+"位置の検索や座標の手動入力は引き続き可能です。自動検出は IP フォールバックで引き続き動作しますが、精度が低く、移動時にリアルタイムで更新されません。"
 
 #: contents/ui/RadarView.qml:176
 msgid ""
@@ -1434,313 +1434,313 @@ msgid ""
 "- openSUSE / Arch: qt6-webengine\n"
 "- Debian / Kubuntu / KDE Neon: qml6-module-qtwebengine"
 msgstr ""
-"Встановіть для вашого дистрибутива:\n"
+"ディストリビューション用にインストールしてください:\n"
 "- Fedora / RHEL: qt6-qtwebengine\n"
 "- openSUSE / Arch: qt6-webengine\n"
 "- Debian / Kubuntu / KDE Neon: qml6-module-qtwebengine"
 
 #: contents/ui/DetailsView.qml:2312
 msgid "Instruction"
-msgstr "Інструкція"
+msgstr "指示"
 
 #: contents/ui/config/configGeneral.qml:790
 msgid "Interval:"
-msgstr "Інтервал:"
+msgstr "間隔:"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:268
 msgid "Invalid API key (HTTP %1)"
-msgstr "Недійсний ключ API (HTTP %1)"
+msgstr "無効な API キー（HTTP %1）"
 
 #: contents/ui/config/configGeneral.qml:275
 msgid "Invalid API key. Please check and try again."
-msgstr "Недійсний ключ API. Будь ласка, перевірте і спробуйте ще раз."
+msgstr "無効な API キーです。確認して再試行してください。"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:261
 msgid "Invalid response"
-msgstr "Недійсна відповідь"
+msgstr "無効なレスポンス"
 
 #: contents/ui/config/configGeneral.qml:265
 msgid "Invalid response from QWeather."
-msgstr "Недійсна відповідь від QWeather."
+msgstr "QWeather からのレスポンスが無効です。"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:917
 msgid "Item spacing:"
-msgstr "Відступ елемента:"
+msgstr "項目の間隔:"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:835
 msgid "Item width:"
-msgstr "Ширина елемента:"
+msgstr "項目の幅:"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:220
 msgid "Items Order:"
-msgstr "Порядок елементів:"
+msgstr "項目の順序:"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:1087
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:41
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:49
 msgid "KDE Icon Theme"
-msgstr "Тема значків KDE"
+msgstr "KDE アイコンテーマ"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:50
 msgid "KDE Symbolic"
-msgstr "KDE Символічні"
+msgstr "KDE シンボリック"
 
 #: contents/ui/config/configAppearance.qml:446
 msgid "KDE System Icons (automatic, follows weather code)"
-msgstr "Системні значки KDE (автоматично, залежить від коду погоди)"
+msgstr "KDE システムアイコン（自動、天気コードに追従）"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:526
 msgid "KDE icon themes don't fully support many item icons. You can set your own icons by clicking \"Set your own icons\"."
-msgstr "Теми значків KDE не повністю підтримують багато значків елементів. Ви можете встановити власні значки, натиснувши \"Встановити власні значки\"."
+msgstr "KDE アイコンテーマは多くの項目アイコンを完全にはサポートしていません。「独自のアイコンを設定」をクリックして独自のアイコンを設定できます。"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:61
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:50
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:49
 msgid "Keep Changes"
-msgstr "Зберегти зміни"
+msgstr "変更を保持"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:56
 msgid "Keep the changes you made to Details Items?"
-msgstr "Зберегти зміни, внесені до Елементів деталей?"
+msgstr "詳細項目に加えた変更を保持しますか?"
 
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:45
 msgid "Keep the changes you made to Panel Items?"
-msgstr "Зберегти зміни, внесені до Елементів панелі?"
+msgstr "パネル項目に加えた変更を保持しますか?"
 
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:44
 msgid "Keep the changes you made to Tooltip Items?"
-msgstr "Зберегти зміни, внесені до Елементів підказки?"
+msgstr "ツールチップ項目に加えた変更を保持しますか?"
 
 #: contents/ui/FullView.qml:371
 msgid "Keep widget open"
-msgstr "Тримати віджет відкритим"
+msgstr "ウィジェットを開いたままにする"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:266
 msgid "Knots (kn)"
-msgstr "Вузли (вуз)"
+msgstr "ノット（kn）"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:718
 #: contents/ui/DetailsView.qml:1866
 msgid "Kp Index"
-msgstr "Kp індекс"
+msgstr "Kp 指数"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:836
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:948
 msgid "Kp index/G forecast:"
-msgstr "Прогноз індексу Kp/G:"
+msgstr "Kp 指数 / G 予報:"
 
 #: contents/ui/main.qml:2011
 msgid "Last Quarter"
-msgstr "Остання чверть"
+msgstr "下弦の月"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:595
 msgid "Lat:"
-msgstr "Шир:"
+msgstr "緯度:"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:367
 msgid "Lat: %1°"
-msgstr "Шир: %1°"
+msgstr "緯度: %1°"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:293
 msgid "Latitude"
-msgstr "Широта"
+msgstr "緯度"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:429
 msgid "Latitude:"
-msgstr "Широта:"
+msgstr "緯度:"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:102
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:550
 msgid "Layout"
-msgstr "Макет"
+msgstr "レイアウト"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:146
 #: contents/ui/config/tabs/ConfigPanelTab.qml:179
 msgid "Layout type:"
-msgstr "Тип макету:"
+msgstr "レイアウトタイプ:"
 
 #: contents/ui/components/RadarWebEngineView.qml:91
 #: contents/ui/components/RadarWebEngineView.qml:538
 msgid "Light"
-msgstr "Слабкий"
+msgstr "弱い"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:680
 #: contents/ui/main.qml:1838
 msgid "Light drizzle"
-msgstr "Слабка мряка"
+msgstr "弱い霧雨"
 
 #: contents/ui/main.qml:1844
 msgid "Light freezing drizzle"
-msgstr "Слабка крижана мряка"
+msgstr "弱い着氷性の霧雨"
 
 #: contents/ui/main.qml:1854
 msgid "Light freezing rain"
-msgstr "Слабкий крижаний дощ"
+msgstr "弱い着氷性の雨"
 
 #: contents/ui/main.qml:1848
 msgid "Light rain"
-msgstr "Слабкий дощ"
+msgstr "小雨"
 
 #: contents/ui/config/configAppearance.qml:254
 msgid "Light rain / Drizzle (day)"
-msgstr "Слабкий дощ / Мряка (день)"
+msgstr "小雨 / 霧雨（昼）"
 
 #: contents/ui/config/configAppearance.qml:259
 msgid "Light rain / Drizzle (night)"
-msgstr "Слабкий дощ / Мряка (ніч)"
+msgstr "小雨 / 霧雨（夜）"
 
 #: contents/ui/main.qml:1866
 msgid "Light showers"
-msgstr "Слабкі зливи"
+msgstr "弱いにわか雨"
 
 #: contents/ui/main.qml:1858
 msgid "Light snow"
-msgstr "Слабкий сніг"
+msgstr "小雪"
 
 #: contents/ui/config/configAppearance.qml:298
 msgid "Light snow (day)"
-msgstr "Слабкий сніг (день)"
+msgstr "小雪（昼）"
 
 #: contents/ui/config/configAppearance.qml:303
 msgid "Light snow (night)"
-msgstr "Слабкий сніг (ніч)"
+msgstr "小雪（夜）"
 
 #: contents/ui/main.qml:1872
 msgid "Light snow showers"
-msgstr "Слабкі снігові зливи"
+msgstr "弱いにわか雪"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:739
 msgid "Lines:"
-msgstr "Рядки:"
+msgstr "行数:"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:567
 msgid "List"
-msgstr "Список"
+msgstr "リスト"
 
 #: contents/ui/DetailsView.qml:543
 msgid "Loading details…"
-msgstr "Завантаження деталей…"
+msgstr "詳細を読み込み中…"
 
 #: contents/ui/ForecastView.qml:347
 msgid "Loading forecast…"
-msgstr "Завантаження прогнозу…"
+msgstr "予報を読み込み中…"
 
 #: contents/ui/ForecastView.qml:775
 msgid "Loading hourly data…"
-msgstr "Завантаження погодинних даних…"
+msgstr "時間別データを読み込み中…"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:538
 msgid "Loading locations…"
-msgstr "Завантаження розташувань…"
+msgstr "位置を読み込み中…"
 
 #: contents/ui/RadarView.qml:116
 msgid "Loading radar…"
-msgstr "Завантаження радара…"
+msgstr "レーダーを読み込み中…"
 
 #: contents/config/config.qml:47
 msgid "Location"
-msgstr "Розташування"
+msgstr "位置"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:513
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:92
 msgid "Location '%1' is already in your saved list. You can apply the selected location, but it will not be saved again."
-msgstr "Розташування '%1' вже є у вашому збереженому списку. Ви можете застосувати вибране розташування, але воно не буде збережено знову."
+msgstr "位置 '%1' は既に保存リストにあります。選択した位置を適用できますが、再度保存されません。"
 
 #: contents/ui/config/configAppearance.qml:1364
 msgid "Location Name"
-msgstr "Назва розташування"
+msgstr "位置名"
 
 #: contents/ui/config/configLocation.qml:745
 msgid "Location auto-detected."
-msgstr "Розташування автовизначено."
+msgstr "位置を自動検出しました。"
 
 #: contents/ui/config/configLocation.qml:1530
 msgid "Location detection is depending on system configuration and permissions."
-msgstr "Визначення розташування залежить від конфігурації системи та дозволів."
+msgstr "位置検出はシステム設定と権限に依存します。"
 
 #: contents/ui/config/configGeneral.qml:174
 #: contents/ui/config/configLocation.qml:536
 msgid "Location is available on %1."
-msgstr "Розташування доступне на %1."
+msgstr "位置は %1 で利用可能です。"
 
 #: contents/ui/config/configGeneral.qml:177
 #: contents/ui/config/configLocation.qml:539
 msgid "Location is not available on %1 (HTTP %2). Try a different provider or location."
-msgstr "Розташування недоступне на %1 (HTTP %2). Спробуйте іншого провайдера або розташування."
+msgstr "位置は %1 で利用できません（HTTP %2）。別のプロバイダまたは位置をお試しください。"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:270
 msgid "Location name"
-msgstr "Назва розташування"
+msgstr "位置名"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:418
 #: contents/ui/config/tabs/ConfigTooltipTab.qml:61
 msgid "Location name:"
-msgstr "Назва розташування:"
+msgstr "位置名:"
 
 #: contents/ui/config/configLocation.qml:1515
 msgid "Location package notice"
-msgstr "Повідомлення про пакунок розташування"
+msgstr "位置パッケージの通知"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:541
 msgid "Location staged. Click the main Apply button to save."
-msgstr "Розташування підготовлено. Натисніть кнопку 'Застосувати', щоб зберегти."
+msgstr "位置がステージングされました。メインの適用ボタンをクリックして保存してください。"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:346
 msgid "Location:"
-msgstr "Розташування:"
+msgstr "位置:"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:602
 msgid "Lon:"
-msgstr "Довг:"
+msgstr "経度:"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:368
 msgid "Lon: %1°"
-msgstr "Довг: %1°"
+msgstr "経度: %1°"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:305
 msgid "Longitude"
-msgstr "Довгота"
+msgstr "経度"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:446
 msgid "Longitude:"
-msgstr "Довгота:"
+msgstr "経度:"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:561
 msgid "Looking up location…"
-msgstr "Пошук розташування…"
+msgstr "位置を検索中…"
 
 #: contents/ui/DetailsView.qml:1028 contents/ui/FullView.qml:519
 #: contents/ui/js/pollen.js:42 contents/ui/js/spaceWeather.js:185
 #: contents/ui/js/spaceWeather.js:197 contents/ui/main.qml:805
 #: contents/ui/main.qml:849
 msgid "Low"
-msgstr "Низький"
+msgstr "低"
 
 #: contents/ui/config/configNotifications.qml:45 contents/ui/main.qml:945
 msgid "Low temperature"
-msgstr "Низька температура"
+msgstr "低温"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:721
 msgid "Magnetic Field (Bz)"
-msgstr "Магнітне поле (Bz)"
+msgstr "磁場（Bz）"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:757
 msgid "Main icon style:"
-msgstr "Стиль головного значка:"
+msgstr "メインアイコンのスタイル:"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:49
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:672
 #: contents/ui/main.qml:1828
 msgid "Mainly clear"
-msgstr "Переважно ясно"
+msgstr "概ね晴れ"
 
 #: contents/ui/config/configAppearance.qml:220
 msgid "Mainly clear (day)"
-msgstr "Переважно ясно (день)"
+msgstr "概ね晴れ（昼）"
 
 #: contents/ui/config/configAppearance.qml:225
 msgid "Mainly clear (night)"
-msgstr "Переважно ясно (ніч)"
+msgstr "概ね晴れ（夜）"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:265
 #: contents/ui/config/tabs/ConfigPanelTab.qml:356
@@ -1753,201 +1753,201 @@ msgstr "Переважно ясно (ніч)"
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:585
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:619
 msgid "Manual"
-msgstr "Вручну"
+msgstr "手動"
 
 #: contents/ui/config/configGeneral.qml:452
 msgid "Marine and weather data provider. API key required below."
-msgstr "Провайдер морських та погодних даних. Нижче потрібен ключ API."
+msgstr "海洋・気象データプロバイダ。下に API キーが必要です。"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:153
 msgid "Metric (°C, km/h, hPa, mm)"
-msgstr "Метричні (°C, км/год, гПа, мм)"
+msgstr "メートル法（°C、km/h、hPa、mm）"
 
 #: contents/ui/js/pollen.js:43
 msgid "Mild symptoms in highly sensitive individuals."
-msgstr "Слабкі симптоми у дуже чутливих людей."
+msgstr "高感受性の人に軽度の症状が出る可能性があります。"
 
 #: contents/ui/js/pollen.js:42
 msgid "Minimal to no risk."
-msgstr "Мінімальний ризик або його відсутність."
+msgstr "リスクはほぼありません。"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:440
 msgid "Minimum height:"
-msgstr "Мінімальна висота:"
+msgstr "最小の高さ:"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:411
 msgid "Minimum width:"
-msgstr "Мінімальна ширина:"
+msgstr "最小の幅:"
 
 #: contents/ui/js/spaceWeather.js:91
 msgid "Minor geomagnetic storm."
-msgstr "Незначна геомагнітна буря."
+msgstr "弱い地磁気嵐。"
 
 #: contents/ui/config/configAppearance.qml:1990
 msgid "Misc"
-msgstr "Різне"
+msgstr "その他"
 
 #: contents/ui/components/RadarWebEngineView.qml:538
 msgid "Mod"
-msgstr "Помірний"
+msgstr "中"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:108
 msgid "Mode:"
-msgstr "Режим:"
+msgstr "モード:"
 
 #: contents/ui/components/RadarWebEngineView.qml:92
 #: contents/ui/js/airQuality.js:49 contents/ui/js/pollen.js:43
 #: contents/ui/js/spaceWeather.js:184 contents/ui/js/spaceWeather.js:196
 #: contents/ui/main.qml:806 contents/ui/main.qml:820 contents/ui/main.qml:850
 msgid "Moderate"
-msgstr "Помірний"
+msgstr "中程度"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:682
 msgid "Moderate drizzle"
-msgstr "Помірна мряка"
+msgstr "適度な霧雨"
 
 #: contents/ui/js/spaceWeather.js:90
 msgid "Moderate geomagnetic storm."
-msgstr "Помірна геомагнітна буря."
+msgstr "中程度の地磁気嵐。"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:690
 msgid "Moderate rain"
-msgstr "Помірний дощ"
+msgstr "適度な雨"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:706
 msgid "Moderate rain showers"
-msgstr "Помірні зливи"
+msgstr "適度なにわか雨"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:698
 msgid "Moderate snowfall"
-msgstr "Помірний снігопад"
+msgstr "適度な降雪"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:904
 msgid "Monday"
-msgstr "Понеділок"
+msgstr "月曜日"
 
 #: contents/ui/DetailsView.qml:311
 msgid "Moon"
-msgstr "Місяць"
+msgstr "月"
 
 #: contents/ui/config/configAppearance.qml:1371
 msgid "Moon Phase"
-msgstr "Фаза місяця"
+msgstr "月相"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:500
 msgid "Moon mode:"
-msgstr "Режим місяця:"
+msgstr "月のモード:"
 
 #: contents/ui/config/configAppearance.qml:1494
 #: contents/ui/config/configAppearance.qml:1617
 msgid "Moon phase and moonrise/moonset"
-msgstr "Фаза місяця та схід/захід місяця"
+msgstr "月相と月の出 / 月の入り"
 
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:568
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:562
 msgid "Moon phase mode:"
-msgstr "Режим фази місяця:"
+msgstr "月相のモード:"
 
 #: contents/ui/config/configAppearance.qml:896
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:521
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:584
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:578
 msgid "Moon phase only"
-msgstr "Лише фаза місяця"
+msgstr "月相のみ"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:350
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:418
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:413
 msgid "Moon phase options"
-msgstr "Параметри фази місяця"
+msgstr "月相オプション"
 
 #: contents/ui/config/configAppearance.qml:1495
 #: contents/ui/config/configAppearance.qml:1618
 msgid "Moon phase, moonrise & moonset"
-msgstr "Фаза місяця, схід і захід місяця"
+msgstr "月相、月の出 & 月の入り"
 
 #: contents/ui/TooltipContent.qml:496 contents/ui/TooltipContent.qml:538
 #: contents/ui/TooltipContent.qml:560
 msgid "Moon:"
-msgstr "Місяць:"
+msgstr "月:"
 
 #: contents/ui/DetailsView.qml:3653 contents/ui/DetailsView.qml:3658
 #: contents/ui/DetailsView.qml:3975 contents/ui/DetailsView.qml:3980
 msgid "Moonrise"
-msgstr "Схід місяця"
+msgstr "月の出"
 
 #: contents/ui/config/configAppearance.qml:900
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:525
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:588
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:582
 msgid "Moonrise & moonset only"
-msgstr "Лише схід і захід місяця"
+msgstr "月の出 & 月の入りのみ"
 
 #: contents/ui/config/configAppearance.qml:947
 msgid "Moonrise icon:"
-msgstr "Значок сходу місяця:"
+msgstr "月の出のアイコン:"
 
 #: contents/ui/config/configAppearance.qml:904
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:529
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:596
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:590
 msgid "Moonrise only"
-msgstr "Лише схід місяця"
+msgstr "月の出のみ"
 
 #: contents/ui/DetailsView.qml:3651 contents/ui/DetailsView.qml:3973
 msgid "Moonrise/Moonset"
-msgstr "Схід/Захід місяця"
+msgstr "月の出 / 月の入り"
 
 #: contents/ui/TooltipContent.qml:499 contents/ui/TooltipContent.qml:521
 #: contents/ui/TooltipContent.qml:528 contents/ui/TooltipContent.qml:552
 #: contents/ui/TooltipContent.qml:561
 msgid "Moonrise:"
-msgstr "Схід місяця:"
+msgstr "月の出:"
 
 #: contents/ui/DetailsView.qml:3655 contents/ui/DetailsView.qml:3658
 #: contents/ui/DetailsView.qml:3977 contents/ui/DetailsView.qml:3980
 msgid "Moonset"
-msgstr "Захід місяця"
+msgstr "月の入り"
 
 #: contents/ui/config/configAppearance.qml:990
 msgid "Moonset icon:"
-msgstr "Значок заходу місяця:"
+msgstr "月の入りのアイコン:"
 
 #: contents/ui/config/configAppearance.qml:908
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:533
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:600
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:594
 msgid "Moonset only"
-msgstr "Лише захід місяця"
+msgstr "月の入りのみ"
 
 #: contents/ui/TooltipContent.qml:503 contents/ui/TooltipContent.qml:518
 #: contents/ui/TooltipContent.qml:528 contents/ui/TooltipContent.qml:549
 #: contents/ui/TooltipContent.qml:562
 msgid "Moonset:"
-msgstr "Захід місяця:"
+msgstr "月の入り:"
 
 #: contents/ui/main.qml:1472
 msgid "Morning"
-msgstr "Ранок"
+msgstr "午前"
 
 #: contents/ui/js/pollen.js:44
 msgid "Most allergy sufferers will experience discomfort."
-msgstr "Більшість алергіків відчуватиме дискомфорт."
+msgstr "多くのアレルギー患者が不快感を感じます。"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:656
 #: contents/ui/DetailsView.qml:1408 contents/ui/main.qml:858
 msgid "Mugwort"
-msgstr "Полин"
+msgstr "ヨモギ"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:100
 msgid "Multiple lines (tall panel)"
-msgstr "Кілька рядків (висока панель)"
+msgstr "複数行（高いパネル）"
 
 #: contents/ui/config/configAppearance.qml:1414
 #: contents/ui/config/configAppearance.qml:1537
 #: contents/ui/config/configAppearance.qml:1660
 msgid "NOAA Kp index and geomagnetic activity"
-msgstr "Індекс Kp NOAA та геомагнітна активність"
+msgstr "NOAA Kp 指数および地磁気活動"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:591
 msgid "NO₂"
@@ -1955,59 +1955,59 @@ msgstr "NO₂"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:407
 msgid "Need the coordinates for a place? You can look them up at <a href=\"https://www.mapcoordinates.net/\">mapcoordinates.net</a>."
-msgstr "Потрібні координати місця? Ви можете знайти їх на <a href=\"https://www.mapcoordinates.net/\">mapcoordinates.net</a>."
+msgstr "場所の座標が必要ですか?<a href=\"https://www.mapcoordinates.net/\">mapcoordinates.net</a> で検索できます。"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:270
 msgid "Network error"
-msgstr "Помилка мережі"
+msgstr "ネットワークエラー"
 
 #: contents/ui/main.qml:1999
 msgid "New Moon"
-msgstr "Молодик"
+msgstr "新月"
 
 #: contents/ui/DetailsView.qml:3418
 msgid "Night"
-msgstr "Ніч"
+msgstr "夜"
 
 #: contents/ui/DetailsView.qml:1207
 msgid "Nitrogen Dioxide (NO₂)"
-msgstr "Діоксид азоту (NO₂)"
+msgstr "二酸化窒素（NO₂）"
 
 #: contents/ui/config/configLocation.qml:1301
 msgid "No"
-msgstr "Ні"
+msgstr "いいえ"
 
 #: contents/ui/DetailsView.qml:543
 msgid "No details data"
-msgstr "Немає даних деталей"
+msgstr "詳細データがありません"
 
 #: contents/ui/ForecastView.qml:347
 msgid "No forecast data"
-msgstr "Немає даних прогнозу"
+msgstr "予報データがありません"
 
 #: contents/ui/js/spaceWeather.js:92
 msgid "No geomagnetic storm activity."
-msgstr "Немає активності геомагнітних бур."
+msgstr "地磁気嵐の活動はありません。"
 
 #: contents/ui/ForecastView.qml:1218 contents/ui/ForecastView.qml:1667
 msgid "No info"
-msgstr "Немає інформації"
+msgstr "情報なし"
 
 #: contents/ui/ForecastView.qml:586
 msgid "No information"
-msgstr "Немає інформації"
+msgstr "情報なし"
 
 #: contents/ui/FullView.qml:212
 msgid "No location set"
-msgstr "Розташування не встановлено"
+msgstr "位置が設定されていません"
 
 #: contents/ui/config/configLocation.qml:1621
 msgid "No saved locations. Save the current location to quickly switch between places."
-msgstr "Немає збережених розташувань. Збережіть поточне розташування, щоб швидко перемикатися між місцями."
+msgstr "保存された位置がありません。現在の位置を保存すると、場所をすばやく切り替えられます。"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:538
 msgid "No weather stations found for '%1'"
-msgstr "Метеостанцій не знайдено для '%1'"
+msgstr "'%1' の気象観測所が見つかりません"
 
 #: contents/ui/components/RadarWebEngineView.qml:90
 #: contents/ui/components/RadarWebEngineView.qml:538
@@ -2016,123 +2016,123 @@ msgstr "Метеостанцій не знайдено для '%1'"
 #: contents/ui/js/spaceWeather.js:198 contents/ui/main.qml:913
 #: contents/ui/main.qml:915
 msgid "None"
-msgstr "Немає"
+msgstr "なし"
 
 #: contents/ui/config/configLocation.qml:629
 msgid "None Selected"
-msgstr "Нічого не вибрано"
+msgstr "未選択"
 
 #: contents/ui/DetailsView.qml:1028
 msgid "Normal"
-msgstr "Нормальна"
+msgstr "通常"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:272
 msgid "Not available (HTTP %1)"
-msgstr "Недоступно (HTTP %1)"
+msgstr "利用できません（HTTP %1）"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:620
 msgid "Not tested"
-msgstr "Не перевірено"
+msgstr "未テスト"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:1053
 msgid "Note: size may be reduced if the panel is not thick enough."
-msgstr "Примітка: розмір може бути зменшений, якщо панель недостатньо товста."
+msgstr "注意: パネルが十分な厚さでない場合、サイズが縮小されることがあります。"
 
 #: contents/config/config.qml:62 contents/ui/config/configNotifications.qml:223
 msgid "Notifications"
-msgstr "Сповіщення"
+msgstr "通知"
 
 #: contents/ui/config/configNotifications.qml:398
 msgid "Notify about upcoming rain/storms"
-msgstr "Сповіщати про наближення дощу/штормів"
+msgstr "今後の雨 / 嵐を通知"
 
 #: contents/ui/config/configNotifications.qml:412
 msgid "Notify about upcoming snow"
-msgstr "Сповіщати про наближення снігу"
+msgstr "降雪が予想される場合に通知する"
 
 #: contents/ui/config/configNotifications.qml:426
 msgid "Notify with today's UV forecast"
-msgstr "Сповіщати про прогноз УФ-індексу на сьогодні"
+msgstr "本日の UV 予報を通知"
 
 #: contents/ui/config/configNotifications.qml:358
 msgid "Notify with today's forecast"
-msgstr "Сповіщати про прогноз на сьогодні"
+msgstr "本日の予報を通知"
 
 #: contents/ui/config/configNotifications.qml:446
 msgid "Notify with today's geomagnetic activity forecast"
-msgstr "Сповіщати про прогноз геомагнітної активності на сьогодні"
+msgstr "本日の地磁気活動予報を通知"
 
 #: contents/ui/config/configNotifications.qml:378
 msgid "Notify with tomorrow's forecast"
-msgstr "Сповіщати про прогноз на завтра"
+msgstr "明日の予報を通知"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:398
 #, javascript-format
 msgid "Now: %1%2"
-msgstr "Зараз: %1%2"
+msgstr "現在: %1%2"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:745
 msgid "Number of item rows visible at once. Resize the panel height in KDE settings to match."
-msgstr "Кількість рядків елементів, видимих одночасно. Змініть висоту панелі в налаштуваннях KDE для відповідності."
+msgstr "一度に表示される項目の行数。KDE 設定でパネルの高さを一致するよう調整してください。"
 
 #: contents/ui/config/configAppearance.qml:569
 msgid "OK"
-msgstr "ОК"
+msgstr "OK"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:657
 #: contents/ui/DetailsView.qml:1410 contents/ui/main.qml:859
 msgid "Olive"
-msgstr "Олива"
+msgstr "オリーブ"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:811
 msgid "Only the clicked day expands"
-msgstr "Тільки натиснутий день розгортається"
+msgstr "クリックした日のみ展開"
 
 #: contents/ui/config/configLocation.qml:1106
 #: contents/ui/config/configLocation.qml:1483 contents/ui/RadarView.qml:191
 msgid "Open install guide"
-msgstr "Відкрити посібник зі встановлення"
+msgstr "インストールガイドを開く"
 
 #: contents/ui/RadarView.qml:198
 msgid "Open radar in browser"
-msgstr "Відкрити радар у браузері"
+msgstr "ブラウザでレーダーを開く"
 
 #: contents/ui/config/configGeneral.qml:287
 msgid "Open-Meteo (recommended, free)"
-msgstr "Open-Meteo (рекомендовано, безкоштовно)"
+msgstr "Open-Meteo（推奨、無料）"
 
 #: contents/ui/config/configGeneral.qml:295
 msgid "OpenWeatherMap (Key Required)"
-msgstr "OpenWeatherMap (Потрібен ключ)"
+msgstr "OpenWeatherMap（キー必須）"
 
 #: contents/ui/config/configGeneral.qml:492
 msgid "OpenWeatherMap API Key:"
-msgstr "Ключ API OpenWeatherMap:"
+msgstr "OpenWeatherMap API キー:"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:793
 msgid "Opens today's hourly forecast automatically (or the next available day)"
-msgstr "Автоматично відкриває сьогоднішній погодинний прогноз (або наступний доступний день)"
+msgstr "本日の時間別予報を自動的に開く（または次に利用可能な日）"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:355
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:420
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:415
 msgid "Options"
-msgstr "Налаштування"
+msgstr "オプション"
 
 #: contents/ui/config/configNotifications.qml:260
 msgid "Orange"
-msgstr "Оранжевий"
+msgstr "オレンジ"
 
 #: contents/ui/config/configAppearance.qml:242
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:51
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:676
 #: contents/ui/main.qml:1832
 msgid "Overcast"
-msgstr "Хмарно"
+msgstr "曇り"
 
 #: contents/ui/DetailsView.qml:1209
 msgid "Ozone (O₃)"
-msgstr "Озон (O₃)"
+msgstr "オゾン（O₃）"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:592
 msgid "O₃"
@@ -2149,158 +2149,158 @@ msgstr "PM2.5"
 #: contents/ui/config/configAppearance.qml:1978
 #: contents/ui/config/tabs/ConfigMiscTab.qml:132
 msgid "Panel"
-msgstr "Панель"
+msgstr "パネル"
 
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:96
 msgid "Panel Items"
-msgstr "Елементи панелі"
+msgstr "パネル項目"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:86
 msgid "Panel display settings"
-msgstr "Налаштування відображення панелі"
+msgstr "パネル表示設定"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:1002
 msgid "Panel font:"
-msgstr "Шрифт панелі:"
+msgstr "パネルフォント:"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:939
 msgid "Panel items settings"
-msgstr "Налаштування елементів панелі"
+msgstr "パネル項目設定"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:1167
 msgid "Panel items:"
-msgstr "Елементи панелі:"
+msgstr "パネル項目:"
 
 #: contents/ui/DetailsView.qml:1205
 msgid "Particulate Matter (PM10)"
-msgstr "Тверді частинки (PM10)"
+msgstr "粒子状物質（PM10）"
 
 #: contents/ui/DetailsView.qml:1203
 msgid "Particulate Matter (PM2.5)"
-msgstr "Тверді частинки (PM2.5)"
+msgstr "粒子状物質（PM2.5）"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:50
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:674
 #: contents/ui/main.qml:1830 contents/ui/main.qml:1882
 msgid "Partly cloudy"
-msgstr "Мінлива хмарність"
+msgstr "一部曇り"
 
 #: contents/ui/config/configAppearance.qml:231
 msgid "Partly cloudy (day)"
-msgstr "Мінлива хмарність (день)"
+msgstr "一部曇り（昼）"
 
 #: contents/ui/config/configAppearance.qml:236
 msgid "Partly cloudy (night)"
-msgstr "Мінлива хмарність (ніч)"
+msgstr "一部曇り（夜）"
 
 #: contents/ui/components/RadarWebEngineView.qml:87
 msgid "Pause"
-msgstr "Пауза"
+msgstr "一時停止"
 
 #: contents/ui/config/configNotifications.qml:308
 msgid "Per alert type:"
-msgstr "За типом попередження:"
+msgstr "警報の種類ごと:"
 
 #: contents/ui/config/configAppearance.qml:884
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:509
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:576
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:570
 msgid "Phase + moonrise & moonset"
-msgstr "Фаза + схід і захід місяця"
+msgstr "月相 + 月の出 & 月の入り"
 
 #: contents/ui/config/configAppearance.qml:888
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:513
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:580
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:574
 msgid "Phase + upcoming rise/set"
-msgstr "Фаза + майбутній схід/захід"
+msgstr "月相 + 今後の出入り"
 
 #: contents/ui/config/configLocation.qml:1578
 msgid "Pick an exact spot on the map for a more local forecast, such as your neighborhood block or a specific landmark."
-msgstr "Виберіть точне місце на карті для більш локального прогнозу, наприклад, ваш район або певну пам'ятку."
+msgstr "近隣の街区や特定のランドマークなど、よりローカルな予報のために地図上の正確な地点を選択してください。"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:869
 msgid "Pipe  |"
-msgstr "Риска  |"
+msgstr "パイプ  |"
 
 #: contents/ui/config/configGeneral.qml:303
 msgid "Pirate Weather (Key Required)"
-msgstr "Pirate Weather (Потрібен ключ)"
+msgstr "Pirate Weather（キー必須）"
 
 #: contents/ui/config/configGeneral.qml:494
 msgid "Pirate Weather API Key:"
-msgstr "Ключ API Pirate Weather:"
+msgstr "Pirate Weather API キー:"
 
 #: contents/ui/components/RadarWebEngineView.qml:86
 msgid "Play"
-msgstr "Відтворити"
+msgstr "再生"
 
 #: contents/ui/config/configAppearance.qml:1406
 #: contents/ui/config/configAppearance.qml:1529
 #: contents/ui/config/configAppearance.qml:1652 contents/ui/DetailsView.qml:317
 #: contents/ui/SimpleView.qml:267
 msgid "Pollen"
-msgstr "Пилок"
+msgstr "花粉"
 
 #: contents/ui/DetailsView.qml:1555
 msgid "Pollen data not available for this location."
-msgstr "Дані про пилок недоступні для цього розташування."
+msgstr "この位置の花粉データは利用できません。"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:352
 msgid "Pollen options"
-msgstr "Налаштування пилку"
+msgstr "花粉オプション"
 
 #: contents/ui/TooltipContent.qml:470
 msgid "Pollen:"
-msgstr "Пилок:"
+msgstr "花粉:"
 
 #: contents/ui/js/airQuality.js:50 contents/ui/main.qml:821
 msgid "Poor"
-msgstr "Погана"
+msgstr "悪い"
 
 #: contents/ui/main.qml:396
 msgid "Postpone"
-msgstr "Відкласти"
+msgstr "延期"
 
 #: contents/ui/SimpleView.qml:264
 msgid "Precip Sum"
-msgstr "Сума опадів"
+msgstr "降水合計"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:858
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:972
 msgid "Precip sum:"
-msgstr "Сума осадів:"
+msgstr "降水合計:"
 
 #: contents/ui/TooltipContent.qml:455
 msgid "Precip. Sum:"
-msgstr "Сума опадів:"
+msgstr "降水合計:"
 
 #: contents/ui/config/configAppearance.qml:1378
 #: contents/ui/config/configAppearance.qml:1501
 #: contents/ui/config/configAppearance.qml:1624 contents/ui/DetailsView.qml:313
 #: contents/ui/SimpleView.qml:263
 msgid "Precipitation"
-msgstr "Опади"
+msgstr "降水量"
 
 #: contents/ui/config/configAppearance.qml:1385
 #: contents/ui/config/configAppearance.qml:1508
 #: contents/ui/config/configAppearance.qml:1631 contents/ui/DetailsView.qml:314
 msgid "Precipitation Sum"
-msgstr "Кількість опадів"
+msgstr "降水量合計"
 
 #: contents/ui/config/configAppearance.qml:1379
 #: contents/ui/config/configAppearance.qml:1502
 #: contents/ui/config/configAppearance.qml:1625
 msgid "Precipitation rate (mm/h)"
-msgstr "Інтенсивність опадів (мм/год)"
+msgstr "降水強度（mm/h）"
 
 #: contents/ui/TooltipContent.qml:450
 msgid "Precipitation:"
-msgstr "Опади:"
+msgstr "降水量:"
 
 #: contents/ui/config/tabs/ConfigTooltipTab.qml:176
 msgid "Prefix style:"
-msgstr "Стиль префікса:"
+msgstr "接頭スタイル:"
 
 #: contents/ui/components/RadarWebEngineView.qml:77
 #: contents/ui/config/configAppearance.qml:1357
@@ -2308,33 +2308,33 @@ msgstr "Стиль префікса:"
 #: contents/ui/config/configAppearance.qml:1603 contents/ui/DetailsView.qml:306
 #: contents/ui/SimpleView.qml:260
 msgid "Pressure"
-msgstr "Тиск"
+msgstr "気圧"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:829
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:940
 msgid "Pressure forecast:"
-msgstr "Прогноз тиску:"
+msgstr "気圧予報:"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:283
 #: contents/ui/TooltipContent.qml:438
 msgid "Pressure:"
-msgstr "Тиск:"
+msgstr "気圧:"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:117
 msgid "Preview: 20°C"
-msgstr "Попередній перегляд: 20°C"
+msgstr "プレビュー: 20°C"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:101
 msgid "Primary unit shown first (e.g. °C / °F)"
-msgstr "Спочатку основна одиниця (напр. °C / °F)"
+msgstr "主単位を先に表示（例: °C / °F）"
 
 #: contents/ui/DetailsView.qml:2314
 msgid "Provider"
-msgstr "Провайдер"
+msgstr "プロバイダ"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:563
 msgid "Provider availability"
-msgstr "Доступність провайдера"
+msgstr "プロバイダの可用性"
 
 #: contents/ui/config/configGeneral.qml:442
 #: contents/ui/config/configGeneral.qml:444
@@ -2347,16 +2347,16 @@ msgstr "Доступність провайдера"
 #: contents/ui/config/configGeneral.qml:458
 #: contents/ui/config/configGeneral.qml:459
 msgid "Provider website:"
-msgstr "Сайт провайдера:"
+msgstr "プロバイダのウェブサイト:"
 
 #: contents/ui/config/configGeneral.qml:413 contents/ui/DetailsView.qml:2078
 #: contents/ui/DetailsView.qml:2792
 msgid "Provider:"
-msgstr "Провайдер:"
+msgstr "プロバイダ:"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:394
 msgid "Provider: %1"
-msgstr "Провайдер: %1"
+msgstr "プロバイダ: %1"
 
 #: contents/ui/config/configGeneral.qml:399
 msgid ""
@@ -2364,162 +2364,162 @@ msgid ""
 "Open-Meteo  →  met.no  →  Pirate Weather  →  Visual Crossing  →  Tomorrow.io  →  StormGlass  →  Weatherbit  →  QWeather  →  OpenWeatherMap  →  WeatherAPI.com\n"
 "Open-Meteo is always tried first - it is free and requires no API key."
 msgstr ""
-"Провайдери перевіряються по черзі, доки один не спрацює:\n"
+"プロバイダは成功するまで順番に試行されます:\n"
 "Open-Meteo  →  met.no  →  Pirate Weather  →  Visual Crossing  →  Tomorrow.io  →  StormGlass  →  Weatherbit  →  QWeather  →  OpenWeatherMap  →  WeatherAPI.com\n"
-"Open-Meteo завжди перевіряється першим - він безкоштовний і не вимагає ключа API."
+"Open-Meteo は常に最初に試行されます - 無料で API キーが不要です。"
 
 #: contents/ui/config/configGeneral.qml:323
 msgid "QWeather (Key Required)"
-msgstr "QWeather (Потрібен ключ)"
+msgstr "QWeather（キー必須）"
 
 #: contents/ui/config/configGeneral.qml:675
 msgid "QWeather API Host:"
-msgstr "QWeather API Хост:"
+msgstr "QWeather API ホスト:"
 
 #: contents/ui/config/configGeneral.qml:504
 msgid "QWeather API Key:"
-msgstr "Ключ API QWeather:"
+msgstr "QWeather API キー:"
 
 #: contents/ui/config/configGeneral.qml:260
 msgid "QWeather error (code %1). Check your API key."
-msgstr "Помилка QWeather (код %1). Перевірте ваш ключ API."
+msgstr "QWeather エラー（コード %1）。API キーを確認してください。"
 
 #: contents/ui/config/configLocation.qml:1059
 msgid "QtLocation and QtPositioning are not installed"
-msgstr "QtLocation та QtPositioning не встановлено"
+msgstr "QtLocation と QtPositioning がインストールされていません"
 
 #: contents/ui/RadarView.qml:151
 msgid "QtWebEngine is not installed"
-msgstr "QtWebEngine не встановлено"
+msgstr "QtWebEngine がインストールされていません"
 
 #: contents/ui/js/spaceWeather.js:173
 msgid "Quiet"
-msgstr "Спокійно"
+msgstr "静穏"
 
 #: contents/ui/components/RadarWebEngineView.qml:72
 #: contents/ui/config/configGeneral.qml:706
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:176 contents/ui/FullView.qml:562
 msgid "Radar"
-msgstr "Радар"
+msgstr "レーダー"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:199
 msgid "Radar only"
-msgstr "Лише радар"
+msgstr "レーダーのみ"
 
 #: contents/ui/config/configGeneral.qml:728
 msgid "Radar provider: <a href='https://www.rainviewer.com/'>Rain Viewer</a><br/><br/>The widget uses the free RainViewer API, which provides the past 2 hours of weather radar data in 10-minute intervals. Radar forecast is not supported.<br/><br/>Rain Viewer does not guarantee the availability of radar data. They do not conclude contracts with owners of this data. The reason is that the owners can ask them to remove their data from Rain Viewer, change the format, or stop sharing the data. They are trying to keep radar data for as long as possible, but sometimes the owners just stop providing the images."
-msgstr "Провайдер радара: <a href='https://www.rainviewer.com/'>Rain Viewer</a><br/><br/>Віджет використовує безкоштовний API RainViewer, який надає дані погодного радара за останні 2 години з 10-хвилинними інтервалами. Прогноз радара не підтримується.<br/><br/>Rain Viewer не гарантує доступність даних радара. Вони не укладають контракти з власниками цих даних. Причина в тому, що власники можуть попросити їх видалити дані з Rain Viewer, змінити формат або припинити їх обмін. Вони намагаються зберігати дані радара якомога довше, але іноді власники просто припиняють надання зображень."
+msgstr "レーダープロバイダ: <a href='https://www.rainviewer.com/'>Rain Viewer</a><br/><br/>ウィジェットは無料の RainViewer API を使用しており、過去 2 時間の気象レーダーデータを 10 分間隔で提供します。レーダー予報には対応していません。<br/><br/>Rain Viewer はレーダーデータの可用性を保証していません。データの所有者との間で契約を結んでいません。その理由は、所有者が Rain Viewer からのデータ削除を求めたり、形式を変更したり、データの共有を停止する可能性があるためです。レーダーデータは可能な限り長く保持するよう努めていますが、所有者が画像の提供を停止することもあります。"
 
 #: contents/ui/FullView.qml:719
 msgid "Radar:"
-msgstr "Радар:"
+msgstr "レーダー:"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:658
 #: contents/ui/DetailsView.qml:1412 contents/ui/main.qml:860
 msgid "Ragweed"
-msgstr "Амброзія"
+msgstr "ブタクサ"
 
 #: contents/ui/components/RadarWebEngineView.qml:73
 #: contents/ui/config/configNotifications.qml:49
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:55
 #: contents/ui/main.qml:949 contents/ui/main.qml:1587 contents/ui/main.qml:1850
 msgid "Rain"
-msgstr "Дощ"
+msgstr "雨"
 
 #: contents/ui/config/configAppearance.qml:265
 msgid "Rain (day)"
-msgstr "Дощ (день)"
+msgstr "雨（昼）"
 
 #: contents/ui/config/configAppearance.qml:270
 msgid "Rain (night)"
-msgstr "Дощ (ніч)"
+msgstr "雨（夜）"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:59
 msgid "Rain showers"
-msgstr "Дощові зливи"
+msgstr "にわか雨"
 
 #: contents/ui/config/configNotifications.qml:395
 msgid "Rain/Storm"
-msgstr "Дощ/Шторм"
+msgstr "雨 / 嵐"
 
 #: contents/ui/components/RadarWebEngineView.qml:88
 msgid "Real-time"
-msgstr "У реальному часі"
+msgstr "リアルタイム"
 
 #: contents/ui/components/RadarWebEngineView.qml:85
 msgid "Recent"
-msgstr "Недавні"
+msgstr "最近"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:465
 msgid "Recommended — e.g. 560"
-msgstr "Рекомендовано — напр. 560"
+msgstr "推奨 — 例: 560"
 
 #: contents/ui/config/configNotifications.qml:265
 msgid "Red"
-msgstr "Червоний"
+msgstr "赤"
 
 #: contents/ui/config/configLocation.qml:1533 contents/ui/FullView.qml:408
 #: contents/ui/main.qml:310
 msgid "Refresh"
-msgstr "Оновити"
+msgstr "更新"
 
 #: contents/ui/config/configGeneral.qml:779
 msgid "Refresh weather automatically"
-msgstr "Оновлювати погоду автоматично"
+msgstr "天気を自動的に更新"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:857
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:731
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:725
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:318
 msgid "Region default"
-msgstr "За замовчуванням для регіону"
+msgstr "地域のデフォルト"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:777
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:651
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:645
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:257
 msgid "Region default (long)"
-msgstr "За замовчуванням для регіону (довгий)"
+msgstr "地域のデフォルト（長）"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:776
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:650
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:644
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:258
 msgid "Region default (short)"
-msgstr "За замовчуванням для регіону (короткий)"
+msgstr "地域のデフォルト（短）"
 
 #: contents/ui/config/configAppearance.qml:1453
 #: contents/ui/config/configAppearance.qml:1597
 msgid "Relative humidity %"
-msgstr "Відносна вологість %"
+msgstr "相対湿度 %"
 
 #: contents/ui/config/configAppearance.qml:1351
 msgid "Relative humidity percentage"
-msgstr "Відсоток відносної вологості"
+msgstr "相対湿度のパーセント"
 
 #: contents/ui/config/configLocation.qml:1349
 msgid "Remove last location?"
-msgstr "Видалити останнє розташування?"
+msgstr "最後の位置を削除しますか?"
 
 #: contents/ui/config/configLocation.qml:1882
 msgid "Remove saved location"
-msgstr "Видалити збережене розташування"
+msgstr "保存した位置を削除"
 
 #: contents/ui/config/configLocation.qml:1851
 msgid "Rename location"
-msgstr "Перейменувати розташування"
+msgstr "位置の名前を変更"
 
 #: contents/ui/config/configNotifications.qml:290
 msgid "Repeat reminder until dismissed"
-msgstr "Повторювати нагадування до закриття"
+msgstr "閉じるまでリマインダーを繰り返す"
 
 #: contents/ui/config/configLocation.qml:799
 msgid "Requesting location via GeoClue2…"
-msgstr "Запит на розташування через GeoClue2…"
+msgstr "GeoClue2 経由で位置を要求中…"
 
 #: contents/ui/config/configLocation.qml:788
 msgid "Requesting location… (%1)"
-msgstr "Запит на розташування… (%1)"
+msgstr "位置を要求中…（%1）"
 
 #: contents/ui/config/configAppearance.qml:538
 #: contents/ui/config/configAppearance.qml:810
@@ -2530,23 +2530,23 @@ msgstr "Запит на розташування… (%1)"
 #: contents/ui/config/tabs/ConfigPanelTab.qml:578
 #: contents/ui/config/tabs/ConfigPanelTab.qml:691
 msgid "Reset"
-msgstr "Скинути"
+msgstr "リセット"
 
 #: contents/ui/config/configAppearance.qml:555
 msgid "Reset All to Defaults"
-msgstr "Скинути все до типових"
+msgstr "すべてデフォルトにリセット"
 
 #: contents/ui/config/configAppearance.qml:696
 msgid "Reset to default"
-msgstr "Скинути до типового"
+msgstr "デフォルトにリセット"
 
 #: contents/ui/main.qml:1836
 msgid "Rime fog"
-msgstr "Крижаний туман"
+msgstr "着氷霧"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:47
 msgid "Round values:"
-msgstr "Округляти значення:"
+msgstr "値の丸め:"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:593
 msgid "SO₂"
@@ -2554,1011 +2554,1011 @@ msgstr "SO₂"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:906
 msgid "Saturday"
-msgstr "Субота"
+msgstr "土曜日"
 
 #: contents/ui/config/configLocation.qml:1605
 msgid "Saved locations"
-msgstr "Збережені розташування"
+msgstr "保存した位置"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:749
 msgid "Scroll animation:"
-msgstr "Анімація прокрутки:"
+msgstr "スクロールアニメーション:"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:729
 msgid "Scroll interval (sec):"
-msgstr "Інтервал прокрутки (сек):"
+msgstr "スクロール間隔（秒）:"
 
 #: contents/ui/config/configLocation.qml:1566
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:293
 msgid "Search Location"
-msgstr "Пошук розташування"
+msgstr "位置を検索"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:538
 msgid "Search a weather station to set your location"
-msgstr "Знайдіть метеостанцію, щоб встановити своє розташування"
+msgstr "位置を設定するために気象観測所を検索"
 
 #: contents/ui/config/configLocation.qml:1570
 msgid "Search by city or place name. Results show the location name, region, and country, and are suitable for general city-level forecasts rather than exact street-level placement."
-msgstr "Шукайте за містом або назвою місця. Результати показують назву місця, регіон та країну, і підходять для загальних прогнозів на рівні міста, а не для точного розміщення на рівні вулиці."
+msgstr "都市名や地名で検索。結果には位置名、地域、国が表示され、正確なストリートレベルの配置よりも一般的な都市レベルの予報に適しています。"
 
 #: contents/ui/config/configLocation.qml:1563
 msgid "Search for a location or choose it on the map."
-msgstr "Знайдіть місце або виберіть його на карті."
+msgstr "位置を検索するか、地図上で選択してください。"
 
 #: contents/ui/config/configLocation.qml:1174
 msgid "Search location"
-msgstr "Шукати розташування"
+msgstr "位置を検索"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:284
 msgid "Search location…"
-msgstr "Пошук розташування…"
+msgstr "位置を検索…"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:101
 msgid "Secondary unit shown first (e.g. °F / °C)"
-msgstr "Вторинна одиниця спочатку (напр. °F / °C)"
+msgstr "副単位を先に表示（例: °F / °C）"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:106
 #: contents/ui/config/tabs/ConfigPanelTab.qml:858
 msgid "Separator:"
-msgstr "Розділювач:"
+msgstr "区切り:"
 
 #: contents/ui/js/pollen.js:45
 msgid "Serious risk; avoid outdoor activities."
-msgstr "Серйозний ризик; уникайте діяльності на свіжому повітрі."
+msgstr "深刻なリスク。屋外活動を避けてください。"
 
 #: contents/ui/config/configLocation.qml:1246
 msgid "Set <b>%1</b> as your default location?"
-msgstr "Встановити <b>%1</b> як ваше типове розташування?"
+msgstr "<b>%1</b> をデフォルト位置に設定しますか?"
 
 #: contents/ui/FullView.qml:221
 msgid "Set Location…"
-msgstr "Встановити розташування…"
+msgstr "位置を設定…"
 
 #: contents/ui/config/configLocation.qml:1809
 msgid "Set as default location"
-msgstr "Встановити як типове розташування"
+msgstr "デフォルト位置に設定"
 
 #: contents/ui/config/configLocation.qml:1219
 msgid "Set as default?"
-msgstr "Встановити як типове?"
+msgstr "デフォルトに設定しますか?"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:1156
 #: contents/ui/config/tabs/ConfigTooltipTab.qml:285
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:530
 msgid "Set your own icons…"
-msgstr "Встановіть власні значки…"
+msgstr "独自のアイコンを設定…"
 
 #: contents/ui/js/spaceWeather.js:88
 msgid "Severe geomagnetic storm."
-msgstr "Сильна геомагнітна буря."
+msgstr "強い地磁気嵐。"
 
 #: contents/ui/config/configNotifications.qml:253
 msgid "Severities:"
-msgstr "Рівні серйозності:"
+msgstr "深刻度:"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:973
 msgid "Shadow Color"
-msgstr "Колір тіні"
+msgstr "影の色"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:546
 msgid "Shadow color:"
-msgstr "Колір тіні:"
+msgstr "影の色:"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:526
 msgid "Shadow intensity:"
-msgstr "Інтенсивність тіні:"
+msgstr "影の強度:"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:964
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:817
 msgid "Show / hide the prefix icon"
-msgstr "Показати / приховати значок префікса"
+msgstr "接頭アイコンの表示 / 非表示"
 
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:833
 msgid "Show / hide the prefix icon on the panel"
-msgstr "Показати / приховати значок префікса на панелі"
+msgstr "パネルの接頭アイコンを表示 / 非表示"
 
 #: contents/ui/config/configGeneral.qml:718
 msgid "Show Radar tab in widget"
-msgstr "Показувати вкладку Радар у віджеті"
+msgstr "ウィジェットにレーダータブを表示"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:777
 msgid "Show Today:"
-msgstr "Показувати Сьогодні:"
+msgstr "今日を表示:"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:78
 msgid "Show both units:"
-msgstr "Показувати обидві одиниці:"
+msgstr "両方の単位を表示:"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:419
 msgid "Show in details"
-msgstr "Показувати в деталях"
+msgstr "詳細に表示"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:123
 msgid "Show in:"
-msgstr "Показувати в:"
+msgstr "表示位置:"
 
 #: contents/ui/components/RadarWebEngineView.qml:89
 msgid "Show my location"
-msgstr "Показати моє розташування"
+msgstr "現在地を表示"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:1004
 msgid "Show or hide this detail item"
-msgstr "Показати або приховати цей елемент деталей"
+msgstr "この詳細項目の表示 / 非表示"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:626
 msgid "Show pollen types in expanded view:"
-msgstr "Показувати типи пилку в розгорнутому вигляді:"
+msgstr "展開ビューに花粉の種類を表示:"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:561
 msgid "Show pollutants in expanded view:"
-msgstr "Показувати забруднювачі в розгорнутому вигляді:"
+msgstr "展開ビューに汚染物質を表示:"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:407
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:476
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:471
 msgid "Show prefix icon"
-msgstr "Показати значок префікса"
+msgstr "接頭アイコンを表示"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:690
 msgid "Show space weather items in expanded view:"
-msgstr "Показувати елементи космічної погоди в розгорнутому вигляді:"
+msgstr "展開ビューに宇宙天気項目を表示:"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:60
 msgid "Show temperature unit:"
-msgstr "Показувати одиницю температури:"
+msgstr "気温の単位を表示:"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:221
 msgid "Show update time and provider"
-msgstr "Показувати час оновлення та провайдера"
+msgstr "更新時刻とプロバイダを表示"
 
 #: contents/ui/config/configGeneral.qml:596
 msgid "Show/hide key"
-msgstr "Показати/приховати ключ"
+msgstr "キーを表示 / 非表示"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:187
 msgid "Show:"
-msgstr "Показувати:"
+msgstr "表示:"
 
 #: contents/ui/main.qml:1868
 msgid "Showers"
-msgstr "Зливи"
+msgstr "にわか雨"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:86
 msgid "Showing primary unit only"
-msgstr "Показується лише основна одиниця"
+msgstr "主単位のみ表示中"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:68
 msgid "Showing ° only"
-msgstr "Показується лише °"
+msgstr "° のみ表示中"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:68
 msgid "Showing °C / °F after values"
-msgstr "Показується °C / °F після значень"
+msgstr "値の後に °C / °F を表示中"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:144
 msgid "Shown"
-msgstr "Показано"
+msgstr "表示"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:116
 msgid "Simple"
-msgstr "Простий"
+msgstr "シンプル"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:104
 #: contents/ui/config/tabs/ConfigPanelTab.qml:122
 msgid "Simple (icon + temperature)"
-msgstr "Простий (значок + температура)"
+msgstr "シンプル（アイコン + 気温）"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:114
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:653
 msgid "Simple Mode Items"
-msgstr "Елементи простого режиму"
+msgstr "シンプルモードの項目"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:1006
 msgid "Simple Widget"
-msgstr "Простий Віджет"
+msgstr "シンプルウィジェット"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:704
 msgid "Simple chips:"
-msgstr "Прості картки:"
+msgstr "シンプルチップ:"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:140
 msgid "Simple display mode settings"
-msgstr "Налаштування простого режиму відображення"
+msgstr "シンプル表示モードの設定"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:96
 msgid "Single line (all items at once)"
-msgstr "Один рядок (усі елементи відразу)"
+msgstr "1 行（すべての項目を一度に）"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:1101
 #: contents/ui/config/tabs/ConfigTooltipTab.qml:230
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:494
 msgid "Size:"
-msgstr "Розмір:"
+msgstr "サイズ:"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:215
 msgid "Skipped — API key not configured"
-msgstr "Пропущено — ключ API не налаштовано"
+msgstr "スキップ — API キーが未設定"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:688
 msgid "Slight rain"
-msgstr "Легкий дощ"
+msgstr "弱い雨"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:704
 msgid "Slight rain showers"
-msgstr "Легкі дощові зливи"
+msgstr "弱いにわか雨"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:710
 msgid "Slight snow showers"
-msgstr "Легкі снігові зливи"
+msgstr "弱いにわか雪"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:696
 msgid "Slight snowfall"
-msgstr "Легкий снігопад"
+msgstr "弱い降雪"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:881
 msgid "Small circle  ⚬"
-msgstr "Мале коло  ⚬"
+msgstr "小さな丸  ⚬"
 
 #: contents/ui/config/configNotifications.qml:409
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:57
 #: contents/ui/main.qml:1860
 msgid "Snow"
-msgstr "Сніг"
+msgstr "雪"
 
 #: contents/ui/config/configAppearance.qml:309
 msgid "Snow (day)"
-msgstr "Сніг (день)"
+msgstr "雪（昼）"
 
 #: contents/ui/config/configAppearance.qml:314
 msgid "Snow (night)"
-msgstr "Сніг (ніч)"
+msgstr "雪（夜）"
 
 #: contents/ui/config/configAppearance.qml:1427
 #: contents/ui/config/configAppearance.qml:1550
 #: contents/ui/config/configAppearance.qml:1673 contents/ui/DetailsView.qml:320
 #: contents/ui/SimpleView.qml:270
 msgid "Snow Cover"
-msgstr "Сніговий покрив"
+msgstr "積雪"
 
 #: contents/ui/TooltipContent.qml:485
 msgid "Snow Cover:"
-msgstr "Сніговий покрив:"
+msgstr "積雪:"
 
 #: contents/ui/config/configAppearance.qml:1428
 #: contents/ui/config/configAppearance.qml:1551
 #: contents/ui/config/configAppearance.qml:1674
 msgid "Snow depth (cm/in)"
-msgstr "Глибина снігу (см/дюйм)"
+msgstr "積雪深（cm / in）"
 
 #: contents/ui/main.qml:1644
 msgid "Snow ending"
-msgstr "Сніг закінчується"
+msgstr "雪 終了予定"
 
 #: contents/ui/main.qml:1639
 msgid "Snow expected"
-msgstr "Очікується сніг"
+msgstr "雪 予想"
 
 #: contents/ui/main.qml:1645
 msgid "Snow expected to end %1."
-msgstr "Очікується, що сніг закінчиться %1."
+msgstr "雪は %1 に終了予定。"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:58
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:702
 #: contents/ui/main.qml:1864
 msgid "Snow grains"
-msgstr "Снігова крупа"
+msgstr "細氷"
 
 #: contents/ui/main.qml:1640
 msgid "Snow possible %1."
-msgstr "Можливий сніг %1."
+msgstr "雪の可能性あり %1。"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:60
 #: contents/ui/main.qml:1874
 msgid "Snow showers"
-msgstr "Снігові зливи"
+msgstr "にわか雪"
 
 #: contents/ui/config/configNotifications.qml:41 contents/ui/main.qml:941
 msgid "Snow/Ice"
-msgstr "Сніг/Лід"
+msgstr "雪/氷"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:719
 #: contents/ui/DetailsView.qml:1906
 msgid "Solar Wind"
-msgstr "Сонячний вітер"
+msgstr "太陽風"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:877
 msgid "Space"
-msgstr "Пробіл"
+msgstr "スペース"
 
 #: contents/ui/config/configAppearance.qml:1413
 #: contents/ui/config/configAppearance.qml:1536
 #: contents/ui/config/configAppearance.qml:1659 contents/ui/DetailsView.qml:318
 #: contents/ui/SimpleView.qml:268
 msgid "Space Weather"
-msgstr "Космічна погода"
+msgstr "宇宙天気"
 
 #: contents/ui/TooltipContent.qml:475
 msgid "Space Weather:"
-msgstr "Космічна погода:"
+msgstr "宇宙天気:"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:353
 msgid "Space weather options"
-msgstr "Налаштування космічної погоди"
+msgstr "宇宙天気オプション"
 
 #: contents/ui/config/configGeneral.qml:442
 msgid "Standard provider. API key required below."
-msgstr "Стандартний провайдер. Нижче потрібен ключ API."
+msgstr "標準プロバイダ。下に API キーが必要です。"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:748
 msgid "Stats items:"
-msgstr "Елементи статистики:"
+msgstr "統計項目:"
 
 #: contents/ui/components/RadarWebEngineView.qml:94
 #: contents/ui/components/RadarWebEngineView.qml:538
 #: contents/ui/js/spaceWeather.js:170
 msgid "Storm"
-msgstr "Шторм"
+msgstr "嵐"
 
 #: contents/ui/config/configGeneral.qml:315
 msgid "StormGlass (Key Required)"
-msgstr "StormGlass (Потрібен ключ)"
+msgstr "StormGlass（キー必須）"
 
 #: contents/ui/config/configGeneral.qml:500
 msgid "StormGlass API Key:"
-msgstr "Ключ API StormGlass:"
+msgstr "StormGlass API キー:"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:914
 msgid "Strip"
-msgstr "Смуга"
+msgstr "ストリップ"
 
 #: contents/ui/js/spaceWeather.js:169
 msgid "Strong"
-msgstr "Сильний"
+msgstr "強い"
 
 #: contents/ui/js/spaceWeather.js:89
 msgid "Strong geomagnetic storm."
-msgstr "Сильна геомагнітна буря."
+msgstr "強い地磁気嵐。"
 
 #: contents/ui/DetailsView.qml:1211
 msgid "Sulfur Dioxide (SO₂)"
-msgstr "Діоксид сірки (SO₂)"
+msgstr "二酸化硫黄（SO₂）"
 
 #: contents/ui/config/configAppearance.qml:1474
 #: contents/ui/config/configAppearance.qml:1611
 msgid "Sun rise & set times"
-msgstr "Час сходу і заходу сонця"
+msgstr "日の出 & 日の入り時刻"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:455
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:523
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:518
 msgid "Sun times mode:"
-msgstr "Режим часу сонця:"
+msgstr "太陽時刻のモード:"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:349
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:417
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:412
 msgid "Sun times options"
-msgstr "Налаштування часу сонця"
+msgstr "太陽時刻オプション"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:903
 msgid "Sunday"
-msgstr "Неділя"
+msgstr "日曜日"
 
 #: contents/ui/DetailsView.qml:3208 contents/ui/DetailsView.qml:3212
 #: contents/ui/DetailsView.qml:3534 contents/ui/DetailsView.qml:3538
 #: contents/ui/ForecastView.qml:1066
 msgid "Sunrise"
-msgstr "Схід"
+msgstr "日の出"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:231
 msgid "Sunrise / Sunset:"
-msgstr "Схід / Захід:"
+msgstr "日の出 / 日の入り:"
 
 #: contents/ui/config/configAppearance.qml:1329
 msgid "Sunrise and sunset times"
-msgstr "Час сходу та заходу сонця"
+msgstr "日の出と日の入りの時刻"
 
 #: contents/ui/config/configAppearance.qml:779
 msgid "Sunrise icon:"
-msgstr "Значок сходу:"
+msgstr "日の出のアイコン:"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:468
 msgid "Sunrise only"
-msgstr "Лише схід"
+msgstr "日の出のみ"
 
 #: contents/ui/config/configAppearance.qml:736
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:540
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:534
 msgid "Sunrise only  07:17"
-msgstr "Лише схід  07:17"
+msgstr "日の出のみ  07:17"
 
 #: contents/ui/config/configAppearance.qml:1328
 #: contents/ui/config/configAppearance.qml:1473
 #: contents/ui/config/configAppearance.qml:1610 contents/ui/DetailsView.qml:308
 msgid "Sunrise/Sunset"
-msgstr "Схід/Захід"
+msgstr "日の出 / 日の入り"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:926
 msgid "Sunrise/sunset markers:"
-msgstr "Маркери сходу/заходу:"
+msgstr "日の出 / 日の入りのマーカー:"
 
 #: contents/ui/TooltipContent.qml:588 contents/ui/TooltipContent.qml:604
 #: contents/ui/TooltipContent.qml:609
 msgid "Sunrise:"
-msgstr "Схід сонця:"
+msgstr "日の出:"
 
 #: contents/ui/DetailsView.qml:3210 contents/ui/DetailsView.qml:3212
 #: contents/ui/DetailsView.qml:3536 contents/ui/DetailsView.qml:3538
 msgid "Sunset"
-msgstr "Захід"
+msgstr "日の入り"
 
 #: contents/ui/config/configAppearance.qml:822
 msgid "Sunset icon:"
-msgstr "Значок заходу:"
+msgstr "日の入りのアイコン:"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:472
 msgid "Sunset only"
-msgstr "Лише захід"
+msgstr "日の入りのみ"
 
 #: contents/ui/config/configAppearance.qml:740
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:544
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:538
 msgid "Sunset only   18:03"
-msgstr "Лише захід   18:03"
+msgstr "日の入りのみ   18:03"
 
 #: contents/ui/TooltipContent.qml:592 contents/ui/TooltipContent.qml:601
 #: contents/ui/TooltipContent.qml:609
 msgid "Sunset:"
-msgstr "Захід сонця:"
+msgstr "日の入り:"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:91
 msgid "Swap order:"
-msgstr "Поміняти місцями:"
+msgstr "順序を入れ替え:"
 
 #: contents/ui/FullView.qml:324
 msgid "Switch location"
-msgstr "Змінити розташування"
+msgstr "位置を切り替え"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:307
 #: contents/ui/config/tabs/ConfigPanelTab.qml:316
 msgid "Symbolic"
-msgstr "Символічні"
+msgstr "シンボリック"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:1075
 #: contents/ui/config/tabs/ConfigTooltipTab.qml:204
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:42
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:51
 msgid "Symbolic (Bundled)"
-msgstr "Символічні (Вбудовані)"
+msgstr "シンボリック（同梱）"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:770
 msgid "Symbolic (follows theme colour)"
-msgstr "Символічні (слідує кольору теми)"
+msgstr "シンボリック（テーマカラーに追従）"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:719
 msgid "System Tray Badge Background Color"
-msgstr "Колір фону значка системного лотка"
+msgstr "システムトレイバッジの背景色"
 
 #: contents/ui/config/configLocation.qml:826
 msgid "System location unavailable, trying IP geolocation…"
-msgstr "Системне розташування недоступне, спроба геолокації за IP…"
+msgstr "システム位置が利用できません。IP 位置情報を試行中…"
 
 #: contents/ui/config/configAppearance.qml:1978
 msgid "System tray"
-msgstr "Системний лоток"
+msgstr "システムトレイ"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:86
 msgid "System tray display settings"
-msgstr "Налаштування відображення системного лотка"
+msgstr "システムトレイ表示設定"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:140
 msgid "System tray icon settings"
-msgstr "Налаштування значка системного лотка"
+msgstr "システムトレイアイコン設定"
 
 #: contents/ui/components/RadarWebEngineView.qml:75
 #: contents/ui/config/configAppearance.qml:1321
 #: contents/ui/config/configAppearance.qml:1568
 msgid "Temperature"
-msgstr "Температура"
+msgstr "気温"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:962
 msgid "Temperature Color"
-msgstr "Колір температури"
+msgstr "気温の色"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:587
 msgid "Temperature badge"
-msgstr "Значок температури"
+msgstr "気温バッジ"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:472
 msgid "Temperature color:"
-msgstr "Колір температури:"
+msgstr "気温の色:"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:232
 msgid "Temperature first"
-msgstr "Спочатку температура"
+msgstr "気温を先"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:199
 msgid "Temperature only"
-msgstr "Лише температура"
+msgstr "気温のみ"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:512
 msgid "Temperature shadow:"
-msgstr "Тінь температури:"
+msgstr "気温の影:"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:221
 #: contents/ui/TooltipContent.qml:411
 msgid "Temperature:"
-msgstr "Температура:"
+msgstr "気温:"
 
 #: contents/ui/config/configGeneral.qml:627
 msgid "Test API Key"
-msgstr "Перевірити ключ API"
+msgstr "API キーをテスト"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:524
 msgid "Test across providers"
-msgstr "Перевірити по всіх провайдерах"
+msgstr "プロバイダ横断テスト"
 
 #: contents/ui/config/configGeneral.qml:215
 msgid "Testing connection…"
-msgstr "Перевірка з'єднання…"
+msgstr "接続をテスト中…"
 
 #: contents/ui/config/configGeneral.qml:627
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:219
 msgid "Testing…"
-msgstr "Тестування…"
+msgstr "テスト中…"
 
 #: contents/ui/config/tabs/ConfigTooltipTab.qml:184
 msgid "Text labels (Temperature, Wind…)"
-msgstr "Текстові мітки (Температура, Вітер…)"
+msgstr "テキストラベル（気温、風…）"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:1025
 msgid "Text will follow the system font and expand to fill the available space."
-msgstr "Текст слідуватиме за системним шрифтом і розширюватиметься, щоб заповнити доступний простір."
+msgstr "テキストはシステムフォントに従い、利用可能な領域を埋めるよう拡張されます。"
 
 #: contents/ui/RadarView.qml:161
 msgid "The Radar tab requires the QtWebEngine package, which is not installed on this system."
-msgstr "Вкладка Радар вимагає пакунок QtWebEngine, який не встановлено на цій системі."
+msgstr "レーダータブには QtWebEngine パッケージが必要ですが、このシステムにはインストールされていません。"
 
 #: contents/ui/config/configLocation.qml:371
 msgid "The auto-detected location is already in your saved list."
-msgstr "Автоматично виявлене розташування вже у вашому збереженому списку."
+msgstr "自動検出された位置は既に保存リストにあります。"
 
 #: contents/ui/config/configAppearance.qml:465
 msgid "The condition icon will automatically reflect the current weather using your KDE system icon theme. No customisation is needed."
-msgstr "Значок умов автоматично відображатиме поточну погоду, використовуючи вашу системну тему значків KDE. Налаштування не потрібні."
+msgstr "天気アイコンは KDE システムアイコンテーマを使用して現在の天気を自動的に反映します。カスタマイズは不要です。"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:844
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:957
 msgid "The geomagnetic (Kp/G) forecast is only available up to 3 days ahead"
-msgstr "Прогноз геомагнітної активності (Kp/G) доступний лише на 3 дні наперед"
+msgstr "地磁気（Kp / G）予報は最大 3 日先まで利用可能です"
 
 #: contents/ui/config/configLocation.qml:1089
 msgid "The map picker requires the QtLocation and QtPositioning packages, which are not installed on this system."
-msgstr "Засіб вибору на карті вимагає пакунки QtLocation та QtPositioning, які не встановлені на цій системі."
+msgstr "地図ピッカーには QtLocation と QtPositioning パッケージが必要ですが、このシステムにはインストールされていません。"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:682
 msgid "Theme default"
-msgstr "Тема за замовчуванням"
+msgstr "テーマのデフォルト"
 
 #: contents/ui/config/configLocation.qml:182
 msgid "This location is already in your saved list."
-msgstr "Це розташування вже у вашому збереженому списку."
+msgstr "この位置は既に保存リストにあります。"
 
 #: contents/ui/config/configNotifications.qml:42
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:61
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:714
 #: contents/ui/main.qml:942 contents/ui/main.qml:1876
 msgid "Thunderstorm"
-msgstr "Гроза"
+msgstr "雷雨"
 
 #: contents/ui/config/configAppearance.qml:320
 msgid "Thunderstorm (day)"
-msgstr "Гроза (день)"
+msgstr "雷雨（昼）"
 
 #: contents/ui/config/configAppearance.qml:325
 msgid "Thunderstorm (night)"
-msgstr "Гроза (ніч)"
+msgstr "雷雨（夜）"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:62
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:716
 #: contents/ui/main.qml:1878
 msgid "Thunderstorm with hail"
-msgstr "Гроза з градом"
+msgstr "ひょうを伴う雷雨"
 
 #: contents/ui/config/configAppearance.qml:331
 msgid "Thunderstorm with hail (day)"
-msgstr "Гроза з градом (день)"
+msgstr "ひょうを伴う雷雨（昼）"
 
 #: contents/ui/config/configAppearance.qml:336
 msgid "Thunderstorm with hail (night)"
-msgstr "Гроза з градом (ніч)"
+msgstr "ひょうを伴う雷雨（夜）"
 
 #: contents/ui/config/configAppearance.qml:342
 msgid "Thunderstorm, heavy hail (day)"
-msgstr "Гроза, сильний град (день)"
+msgstr "雷雨、激しいひょう（昼）"
 
 #: contents/ui/config/configAppearance.qml:347
 msgid "Thunderstorm, heavy hail (night)"
-msgstr "Гроза, сильний град (ніч)"
+msgstr "雷雨、激しいひょう（夜）"
 
 #: contents/ui/main.qml:1587
 msgid "Thunderstorms"
-msgstr "Грози"
+msgstr "雷雨"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:310
 msgid "Time format:"
-msgstr "Формат часу:"
+msgstr "時刻形式:"
 
 #: contents/ui/config/configNotifications.qml:170
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:826
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:700
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:694
 msgid "Time:"
-msgstr "Час:"
+msgstr "時刻:"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:238
 msgid "Timed out"
-msgstr "Час вийшов"
+msgstr "タイムアウト"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:485
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:617
 msgid "Timezone:"
-msgstr "Часовий пояс:"
+msgstr "タイムゾーン:"
 
 #: contents/ui/config/configGeneral.qml:737
 msgid "To unlock additional map layers (Rain, Clouds, Temperature, Wind, Pressure): disable Adaptive mode, select OpenWeatherMap as your weather provider, and enter your API key above. When you are ready, you can enable Adaptive mode again."
-msgstr "Щоб розблокувати додаткові шари карти (Дощ, Хмари, Температура, Вітер, Тиск): вимкніть Адаптивний режим, виберіть OpenWeatherMap своїм провайдером погоди і введіть ключ API вище. Коли будете готові, можете знову увімкнути Адаптивний режим."
+msgstr "追加の地図レイヤー（雨、雲、気温、風、気圧）のロックを解除するには: アダプティブモードを無効化し、気象プロバイダとして OpenWeatherMap を選択して、上に API キーを入力してください。準備ができたら、再度アダプティブモードを有効化できます。"
 
 #: contents/ui/ForecastView.qml:445 contents/ui/main.qml:1436
 #: contents/ui/SimpleView.qml:423
 msgid "Today"
-msgstr "Сьогодні"
+msgstr "今日"
 
 #: contents/ui/config/configAppearance.qml:1386
 #: contents/ui/config/configAppearance.qml:1509
 #: contents/ui/config/configAppearance.qml:1632
 msgid "Today's total precipitation (mm/in)"
-msgstr "Загальна кількість опадів за сьогодні (мм/дюйм)"
+msgstr "本日の総降水量（mm / in）"
 
 #: contents/ui/config/configNotifications.qml:355
 msgid "Today's weather"
-msgstr "Погода сьогодні"
+msgstr "本日の天気"
 
 #: contents/ui/main.qml:1509
 msgid "Tomorrow"
-msgstr "Завтра"
+msgstr "明日"
 
 #: contents/ui/config/configNotifications.qml:375
 msgid "Tomorrow forecast"
-msgstr "Прогноз на завтра"
+msgstr "明日の予報"
 
 #: contents/ui/config/configGeneral.qml:311
 msgid "Tomorrow.io (Key Required)"
-msgstr "Tomorrow.io (Потрібен ключ)"
+msgstr "Tomorrow.io（キー必須）"
 
 #: contents/ui/config/configGeneral.qml:498
 msgid "Tomorrow.io API Key:"
-msgstr "Ключ API Tomorrow.io:"
+msgstr "Tomorrow.io API キー:"
 
 #: contents/ui/main.qml:1474
 msgid "Tonight"
-msgstr "Сьогодні вночі"
+msgstr "今夜"
 
 #: contents/ui/config/configAppearance.qml:1986
 #: contents/ui/config/tabs/ConfigMiscTab.qml:137
 msgid "Tooltip"
-msgstr "Підказка"
+msgstr "ツールチップ"
 
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:94
 msgid "Tooltip Items"
-msgstr "Елементи підказки"
+msgstr "ツールチップ項目"
 
 #: contents/ui/config/tabs/ConfigTooltipTab.qml:135
 msgid "Tooltip height:"
-msgstr "Висота підказки:"
+msgstr "ツールチップの高さ:"
 
 #: contents/ui/config/tabs/ConfigTooltipTab.qml:296
 msgid "Tooltip items"
-msgstr "Елементи підказки"
+msgstr "ツールチップ項目"
 
 #: contents/ui/config/tabs/ConfigTooltipTab.qml:54
 msgid "Tooltip items settings"
-msgstr "Налаштування елементів підказки"
+msgstr "ツールチップ項目設定"
 
 #: contents/ui/config/tabs/ConfigTooltipTab.qml:301
 msgid "Tooltip items:"
-msgstr "Елементи підказки:"
+msgstr "ツールチップ項目:"
 
 #: contents/ui/config/tabs/ConfigTooltipTab.qml:92
 msgid "Tooltip width:"
-msgstr "Ширина підказки:"
+msgstr "ツールチップの幅:"
 
 #: contents/ui/config/tabs/ConfigTooltipTab.qml:39
 msgid "Tooltip:"
-msgstr "Підказка:"
+msgstr "ツールチップ:"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:621
 msgid "Top Center"
-msgstr "Вгорі по центру"
+msgstr "上中央"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:613
 msgid "Top Left"
-msgstr "Вгорі зліва"
+msgstr "左上"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:609
 msgid "Top Right"
-msgstr "Вгорі справа"
+msgstr "右上"
 
 #: contents/ui/config/configNotifications.qml:274
 msgid "Treat alert notifications as critical"
-msgstr "Вважати сповіщення про попередження критичними"
+msgstr "アラート通知を重要として扱う"
 
 #: contents/ui/config/tabs/ConfigTooltipTab.qml:68
 msgid "Truncate (single line)"
-msgstr "Обрізати (один рядок)"
+msgstr "切り詰め（1 行）"
 
 #: contents/ui/config/configAppearance.qml:1392
 #: contents/ui/config/configAppearance.qml:1515
 #: contents/ui/config/configAppearance.qml:1638 contents/ui/DetailsView.qml:315
 #: contents/ui/SimpleView.qml:265
 msgid "UV Index"
-msgstr "УФ-індекс"
+msgstr "UV 指数"
 
 #: contents/ui/TooltipContent.qml:460
 msgid "UV Index:"
-msgstr "УФ-індекс:"
+msgstr "UV 指数:"
 
 #: contents/ui/config/configNotifications.qml:423 contents/ui/main.qml:1691
 msgid "UV index"
-msgstr "УФ-індекс"
+msgstr "UV 指数"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:851
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:964
 msgid "UV index forecast:"
-msgstr "Прогноз УФ-індексу:"
+msgstr "UV 指数予報:"
 
 #: contents/ui/main.qml:1688
 msgid "UV will be %1 (%2)"
-msgstr "УФ-індекс буде %1 (%2)"
+msgstr "UV は %1（%2）の予想"
 
 #: contents/ui/config/configAppearance.qml:1393
 #: contents/ui/config/configAppearance.qml:1516
 #: contents/ui/config/configAppearance.qml:1639
 msgid "Ultraviolet index"
-msgstr "Ультрафіолетовий індекс"
+msgstr "紫外線指数"
 
 #: contents/ui/config/configLocation.qml:865
 #: contents/ui/config/configLocation.qml:972
 msgid "Unable to detect location. All methods failed."
-msgstr "Не вдалося визначити розташування. Усі методи зазнали невдачі."
+msgstr "位置を検出できません。すべての方法が失敗しました。"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:149
 msgid "Unit preset:"
-msgstr "Пресет одиниць:"
+msgstr "単位プリセット:"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:144
 msgid "Units"
-msgstr "Одиниці"
+msgstr "単位"
 
 #: contents/ui/config/configLocation.qml:1753
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:717
 #: contents/ui/FullView.qml:348
 msgid "Unknown"
-msgstr "Невідомо"
+msgstr "不明"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:561
 msgid "Unknown location"
-msgstr "Невідоме розташування"
+msgstr "不明な位置"
 
 #: contents/ui/FullView.qml:371
 msgid "Unpin widget"
-msgstr "Відкріпити віджет"
+msgstr "ウィジェットのピンを解除"
 
 #: contents/ui/js/spaceWeather.js:172
 msgid "Unsettled"
-msgstr "Нестійка"
+msgstr "不安定"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:476
 msgid "Upcoming (auto)"
-msgstr "Майбутнє (авто)"
+msgstr "今後（自動）"
 
 #: contents/ui/config/configAppearance.qml:728
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:532
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:530
 msgid "Upcoming (next sunrise or sunset)"
-msgstr "Майбутнє (наступний схід або захід)"
+msgstr "今後（次の日の出または日の入り）"
 
 #: contents/ui/config/configAppearance.qml:892
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:517
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:592
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:586
 msgid "Upcoming rise/set only"
-msgstr "Лише майбутній схід/захід"
+msgstr "今後の出入りのみ"
 
 #: contents/ui/WeatherService.qml:134
 msgid "Update timed out. Tap to retry."
-msgstr "Час оновлення вийшов. Натисніть, щоб повторити."
+msgstr "更新がタイムアウトしました。タップして再試行。"
 
 #: contents/ui/WeatherService.qml:681
 msgid "Updated %1"
-msgstr "Оновлено %1"
+msgstr "%1 に更新"
 
 #: contents/ui/FullView.qml:392
 msgid "Updating…"
-msgstr "Оновлення…"
+msgstr "更新中…"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:358
 msgid "Use 24-hour format:"
-msgstr "Використовувати 24-годинний формат:"
+msgstr "24 時間形式を使用:"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:161
 msgid "Use KDE locale settings"
-msgstr "Використовувати локальні налаштування KDE"
+msgstr "KDE ロケール設定を使用"
 
 #: contents/ui/config/configLocation.qml:1549
 msgid "Use manual location"
-msgstr "Використовувати ручне розташування"
+msgstr "手動位置を使用"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:902
 msgid "Use region defaults"
-msgstr "Використовувати за замовчуванням для регіону"
+msgstr "地域のデフォルトを使用"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:1148
 #: contents/ui/config/tabs/ConfigTooltipTab.qml:277
 msgid "Uses KDE system icons by default. Click the button to customise each item's icon."
-msgstr "Використовує системні значки KDE за замовчуванням. Натисніть кнопку, щоб налаштувати значок кожного елемента."
+msgstr "デフォルトで KDE システムアイコンを使用します。ボタンをクリックして各項目のアイコンをカスタマイズできます。"
 
 #: contents/ui/js/airQuality.js:51
 msgid "V.Poor"
-msgstr "Д.Погана"
+msgstr "非常に悪い"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:55
 msgid "Values are rounded to whole numbers"
-msgstr "Значення округлені до цілих чисел"
+msgstr "値は整数に丸められます"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:55
 msgid "Values show decimal places"
-msgstr "Значення показують десяткові знаки"
+msgstr "値は小数点以下を表示"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:158
 msgid "Vertical"
-msgstr "Вертикально"
+msgstr "垂直"
 
 #: contents/ui/js/pollen.js:45 contents/ui/main.qml:808
 #: contents/ui/main.qml:852
 msgid "Very High"
-msgstr "Дуже високий"
+msgstr "非常に高い"
 
 #: contents/ui/js/airQuality.js:51 contents/ui/main.qml:822
 msgid "Very Poor"
-msgstr "Дуже погана"
+msgstr "非常に悪い"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:708
 msgid "Violent rain showers"
-msgstr "Сильні дощові зливи"
+msgstr "猛烈なにわか雨"
 
 #: contents/ui/config/configAppearance.qml:1487 contents/ui/DetailsView.qml:310
 #: contents/ui/SimpleView.qml:262
 msgid "Visibility"
-msgstr "Видимість"
+msgstr "視程"
 
 #: contents/ui/config/configAppearance.qml:1488
 msgid "Visibility distance"
-msgstr "Дальність видимості"
+msgstr "視程距離"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:865
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:980
 #: contents/ui/TooltipContent.qml:445
 msgid "Visibility:"
-msgstr "Видимість:"
+msgstr "視程:"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:188
 msgid "Visible tabs:"
-msgstr "Видимі вкладки:"
+msgstr "表示タブ:"
 
 #: contents/ui/config/configGeneral.qml:307
 msgid "Visual Crossing (Key Required)"
-msgstr "Visual Crossing (Потрібен ключ)"
+msgstr "Visual Crossing（キー必須）"
 
 #: contents/ui/config/configGeneral.qml:496
 msgid "Visual Crossing API Key:"
-msgstr "Ключ API Visual Crossing:"
+msgstr "Visual Crossing API キー:"
 
 #: contents/ui/main.qml:2013
 msgid "Waning Crescent"
-msgstr "Спадаючий серп"
+msgstr "有明月"
 
 #: contents/ui/main.qml:2009
 msgid "Waning Gibbous"
-msgstr "Спадаючий місяць"
+msgstr "居待月"
 
 #: contents/ui/main.qml:2001
 msgid "Waxing Crescent"
-msgstr "Зростаючий серп"
+msgstr "三日月"
 
 #: contents/ui/main.qml:2005
 msgid "Waxing Gibbous"
-msgstr "Зростаючий місяць"
+msgstr "十三夜月"
 
 #: contents/ui/config/configLocation.qml:1148
 msgid "We detected your coordinates: <b>%1°, %2°</b>."
-msgstr "Ми визначили ваші координати: <b>%1°, %2°</b>."
+msgstr "座標を検出しました: <b>%1°, %2°</b>。"
 
 #: contents/ui/config/configLocation.qml:1148
 msgid "We detected your location as: <b>%1</b>."
-msgstr "Ми визначили ваше розташування як: <b>%1</b>."
+msgstr "位置を検出しました: <b>%1</b>。"
 
 #: contents/ui/config/configGeneral.qml:350
 msgid "Weather Provider"
-msgstr "Провайдер погоди"
+msgstr "気象プロバイダ"
 
 #: contents/ui/TooltipContent.qml:227
 msgid "Weather Widget"
-msgstr "Віджет погоди"
+msgstr "天気ウィジェット"
 
 #: contents/ui/main.qml:1184
 msgid "Weather alert"
-msgstr "Попередження про погоду"
+msgstr "天気アラート"
 
 #: contents/ui/config/configAppearance.qml:1421
 #: contents/ui/config/configAppearance.qml:1544
 #: contents/ui/config/configAppearance.qml:1667
 #: contents/ui/config/configNotifications.qml:240
 msgid "Weather alerts"
-msgstr "Попередження про погоду"
+msgstr "天気アラート"
 
 #: contents/ui/config/configAppearance.qml:1576
 msgid "Weather condition text"
-msgstr "Текст погодних умов"
+msgstr "天気状態テキスト"
 
 #: contents/ui/config/configAppearance.qml:1315
 msgid "Weather icon + condition text"
-msgstr "Значок погоди + текст умов"
+msgstr "天気アイコン + 天気テキスト"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:295
 msgid "Weather icon style:"
-msgstr "Стиль значка погоди:"
+msgstr "天気アイコンのスタイル:"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:136
 msgid "Weather icon theme:"
-msgstr "Тема значків погоди:"
+msgstr "天気アイコンテーマ:"
 
 #: contents/ui/WeatherService.qml:681
 msgid "Weather provider:"
-msgstr "Провайдер погоди:"
+msgstr "気象プロバイダ:"
 
 #: contents/ui/config/configGeneral.qml:299
 msgid "WeatherAPI.com (Key Required)"
-msgstr "WeatherAPI.com (Потрібен ключ)"
+msgstr "WeatherAPI.com（キー必須）"
 
 #: contents/ui/config/configGeneral.qml:505
 msgid "WeatherAPI.com API Key:"
-msgstr "Ключ API WeatherAPI.com:"
+msgstr "WeatherAPI.com API キー:"
 
 #: contents/ui/config/configGeneral.qml:319
 msgid "Weatherbit (Key Required)"
-msgstr "Weatherbit (Потрібен ключ)"
+msgstr "Weatherbit（キー必須）"
 
 #: contents/ui/config/configGeneral.qml:502
 msgid "Weatherbit API Key:"
-msgstr "Ключ API Weatherbit:"
+msgstr "Weatherbit API キー:"
 
 #: contents/ui/DetailsView.qml:2316
 msgid "Website"
-msgstr "Сайт"
+msgstr "ウェブサイト"
 
 #: contents/ui/config/configAppearance.qml:1982
 #: contents/ui/config/tabs/ConfigMiscTab.qml:127
 msgid "Widget"
-msgstr "Віджет"
+msgstr "ウィジェット"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:405
 msgid "Widget Size"
-msgstr "Розмір віджета"
+msgstr "ウィジェットサイズ"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:249
 msgid "Widget panel area:"
-msgstr "Область панелі віджета:"
+msgstr "ウィジェットのパネル領域:"
 
 #: contents/ui/components/RadarWebEngineView.qml:76
 #: contents/ui/config/configAppearance.qml:1335
@@ -3567,161 +3567,161 @@ msgstr "Область панелі віджета:"
 #: contents/ui/config/configNotifications.qml:40
 #: contents/ui/DetailsView.qml:307 contents/ui/main.qml:940
 msgid "Wind"
-msgstr "Вітер"
+msgstr "風"
 
 #: contents/ui/config/configAppearance.qml:1467
 #: contents/ui/config/configAppearance.qml:1590
 msgid "Wind speed + direction"
-msgstr "Швидкість вітру + напрям"
+msgstr "風速 + 風向"
 
 #: contents/ui/config/configAppearance.qml:1336
 msgid "Wind speed and direction"
-msgstr "Швидкість і напрямок вітру"
+msgstr "風速と風向"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:248
 msgid "Wind speed:"
-msgstr "Швидкість вітру:"
+msgstr "風速:"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:872
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:988
 #: contents/ui/TooltipContent.qml:422
 msgid "Wind:"
-msgstr "Вітер:"
+msgstr "風:"
 
 #: contents/ui/config/tabs/ConfigTooltipTab.qml:72
 msgid "Wrap to next line"
-msgstr "Перенести на наступний рядок"
+msgstr "次の行に折り返す"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:722
 #: contents/ui/DetailsView.qml:2051
 msgid "X-ray Flare Class"
-msgstr "Клас рентгенівського спалаху"
+msgstr "X 線フレアクラス"
 
 #: contents/ui/config/configNotifications.qml:255
 msgid "Yellow"
-msgstr "Жовтий"
+msgstr "黄"
 
 #: contents/ui/config/configLocation.qml:1255
 msgid "Yes"
-msgstr "Так"
+msgstr "はい"
 
 #: contents/ui/config/configLocation.qml:1383
 msgid "Yes, remove it"
-msgstr "Так, видалити це"
+msgstr "はい、削除します"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:305
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:396
 msgid "You can see date/time format reference at: <a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method\">Qt documentation</a>"
-msgstr "Ви можете переглянути довідник форматів дати/часу на: <a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method\">Документації Qt</a>"
+msgstr "日付 / 時刻形式のリファレンスは <a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method\">Qt ドキュメント</a> を参照してください"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:891
 msgid "You may need to increase the widget's width to see all the selected information"
-msgstr "Можливо, потрібно збільшити ширину віджета, щоб побачити всю вибрану інформацію"
+msgstr "選択した情報をすべて表示するには、ウィジェットの幅を広げる必要がある場合があります"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:490
 msgid "Zoom in"
-msgstr "Збільшити"
+msgstr "拡大"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:499
 msgid "Zoom out"
-msgstr "Зменшити"
+msgstr "縮小"
 
 #: contents/ui/main.qml:1661
 msgid "a decrease from yesterday"
-msgstr "зменшення порівняно з учорашнім днем"
+msgstr "昨日から減少"
 
 #: contents/ui/main.qml:1465
 msgid "a few clouds"
-msgstr "невелика хмарність"
+msgstr "多少の雲"
 
 #: contents/ui/main.qml:1660
 msgid "an increase from yesterday"
-msgstr "збільшення порівняно з учорашнім днем"
+msgstr "昨日から増加"
 
 #: contents/ui/main.qml:1466
 msgid "clear skies"
-msgstr "ясне небо"
+msgstr "快晴"
 
 #: contents/ui/main.qml:1464
 msgid "cloudy skies"
-msgstr "хмарно"
+msgstr "曇り空"
 
 #: contents/ui/main.qml:1461
 msgid "drizzle"
-msgstr "невеликий дощ"
+msgstr "霧雨"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:421
 msgid "e.g. Sofia, Bulgaria"
-msgstr "напр. Софія, Болгарія"
+msgstr "例: ソフィア、ブルガリア"
 
 #: contents/ui/main.qml:1670 contents/ui/main.qml:1713
 msgid "extreme"
-msgstr "екстремальний"
+msgstr "極端"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:462
 msgid "feet"
-msgstr "фути"
+msgstr "フィート"
 
 #: contents/ui/main.qml:1462
 msgid "fog"
-msgstr "туман"
+msgstr "霧"
 
 #: contents/ui/main.qml:1459
 msgid "freezing rain"
-msgstr "крижаний дощ"
+msgstr "着氷性の雨"
 
 #: contents/ui/main.qml:1146
 msgid "from %1"
-msgstr "від %1"
+msgstr "%1 から"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:370
 msgid "ft"
-msgstr "фут"
+msgstr "ft"
 
 #: contents/ui/main.qml:1668
 msgid "high"
-msgstr "високий"
+msgstr "高い"
 
 #: contents/ui/main.qml:1592
 msgid "in the next hours"
-msgstr "у найближчі години"
+msgstr "これからの数時間で"
 
 #: contents/ui/DetailsView.qml:3449
 msgid "left"
-msgstr "залишилось"
+msgstr "残り"
 
 #: contents/ui/main.qml:1666
 msgid "low"
-msgstr "низький"
+msgstr "低い"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:370
 msgid "m"
-msgstr "м"
+msgstr "m"
 
 #: contents/ui/config/configGeneral.qml:291
 msgid "met.no (free)"
-msgstr "met.no (безкоштовно)"
+msgstr "met.no（無料）"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:462
 msgid "meters"
-msgstr "метри"
+msgstr "メートル"
 
 #: contents/ui/main.qml:1709
 msgid "minor"
-msgstr "незначна"
+msgstr "弱い"
 
 #: contents/ui/config/configGeneral.qml:799
 #: contents/ui/config/configNotifications.qml:345
 msgid "minutes"
-msgstr "хвилини"
+msgstr "分"
 
 #: contents/ui/main.qml:1667 contents/ui/main.qml:1710
 msgid "moderate"
-msgstr "помірний"
+msgstr "中程度"
 
 #: contents/ui/main.qml:1463
 msgid "overcast skies"
-msgstr "суцільна хмарність"
+msgstr "曇り空"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:844
 #: contents/ui/config/tabs/ConfigTooltipTab.qml:127
@@ -3731,90 +3731,93 @@ msgstr "px"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:288
 msgid "px height"
-msgstr "px висота"
+msgstr "px 高さ"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:288
 msgid "px width"
-msgstr "px ширина"
+msgstr "px 幅"
 
 #: contents/ui/main.qml:1708
 msgid "quiet"
-msgstr "спокійна"
+msgstr "静穏"
 
 #: contents/ui/main.qml:1460
 msgid "rain"
-msgstr "дощ"
+msgstr "雨"
 
 #: contents/ui/main.qml:1712
 msgid "severe"
-msgstr "сильна"
+msgstr "激しい"
 
 #: contents/ui/main.qml:1458
 msgid "showers"
-msgstr "зливи"
+msgstr "にわか雨"
 
 #: contents/ui/main.qml:1454
 msgid "showers and thunderstorms"
-msgstr "зливи з грозами"
+msgstr "にわか雨と雷雨"
 
 #: contents/ui/main.qml:1662
 msgid "similar to yesterday"
-msgstr "подібно до вчорашнього дня"
+msgstr "昨日と同様"
 
 #: contents/ui/main.qml:1457
 msgid "snow"
-msgstr "сніг"
+msgstr "雪"
 
 #: contents/ui/main.qml:1456
 msgid "snow showers"
-msgstr "снігові зливи"
+msgstr "にわか雪"
 
 #: contents/ui/main.qml:1711
 msgid "strong"
-msgstr "сильна"
+msgstr "強い"
 
 #: contents/ui/config/configLocation.qml:900
 msgid "system location"
-msgstr "системне розташування"
+msgstr "システム位置"
 
 #: contents/ui/main.qml:1595
 msgid "this afternoon"
-msgstr "сьогодні вдень"
+msgstr "今日の午後"
 
 #: contents/ui/main.qml:1594
 msgid "this morning"
-msgstr "сьогодні зранку"
+msgstr "今日の午前"
 
 #: contents/ui/main.qml:1455
 msgid "thunderstorms"
-msgstr "грози"
+msgstr "雷雨"
 
 #: contents/ui/main.qml:1596
 msgid "tonight"
-msgstr "сьогодні вночі"
+msgstr "今夜"
 
 #: contents/ui/main.qml:1147
 msgid "until %1"
-msgstr "до %1"
+msgstr "%1 まで"
 
 #: contents/ui/DetailsView.qml:3446
 msgid "until dawn"
-msgstr "до світанку"
+msgstr "夜明けまで"
 
 #: contents/ui/main.qml:1669
 msgid "very high"
-msgstr "дуже високий"
+msgstr "非常に高い"
 
 #: contents/ui/main.qml:1154 contents/ui/main.qml:1434
 #: contents/ui/main.qml:1507
 msgid "your location"
-msgstr "ваше місцезнаходження"
+msgstr "あなたの位置"
 
 #~ msgid "Postpone %1 min"
-#~ msgstr "Відкласти на %1 хв"
+#~ msgstr "%1 分延期"
 
 #~ msgid "Repeat reminder every:"
-#~ msgstr "Повторювати нагадування кожні:"
+#~ msgstr "リマインダーの繰り返し間隔:"
 
 #~ msgid "Reload radar"
-#~ msgstr "Оновити радар"
+#~ msgstr "レーダーを再読み込み"
+
+#~ msgid "this night"
+#~ msgstr "今夜"

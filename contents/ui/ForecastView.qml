@@ -248,8 +248,13 @@ Item {
     // Sum of strip rows always shown: time(18) + icon(48) + trend(32) + temp(18) + precip(18) + 4×2 spacing
     readonly property int _hourlyStripBaseHeight: 142
     readonly property int _hourlyStripContentHeight: _hourlyStripBaseHeight + (_hourlyShowWind ? 30 : 0) + _hourlyExtraRowCount * 20
-    // +16 reserves room for the horizontal scrollbar overlay so it doesn't cover the last row
-    readonly property int _hourlyStripHeight: _hourlyStripContentHeight + 8 + 16
+    // Reserve room for the horizontal scrollbar so it never covers the last row or the
+    // day-section divider. Breeze (and other classic themes) render an always-visible,
+    // thicker inline scrollbar than the default Plasma overlay, so size the reserve to
+    // the actual scrollbar height at runtime (with a sensible floor).
+    readonly property int _hourlyStripScrollbarReserve: Math.max(16, _stripScrollbarHeight + 6)
+    property int _stripScrollbarHeight: 16
+    readonly property int _hourlyStripHeight: _hourlyStripContentHeight + 8 + _hourlyStripScrollbarReserve
     readonly property int _hourlyCardWidth: {
         var w = 100;
         if (_hourlyShowKpIndex)    w = Math.max(w, 132);
@@ -798,6 +803,17 @@ Item {
                                     ScrollBar.horizontal: ScrollBar {
                                         id: stripHBar
                                         policy: ScrollBar.AsNeeded
+                                        // Feed the real (theme-dependent) scrollbar thickness back to the
+                                        // strip height calc so the reserve matches Breeze's always-visible
+                                        // inline scrollbar as well as the slim default-theme overlay.
+                                        onImplicitHeightChanged: {
+                                            if (implicitHeight > 0)
+                                                forecastRoot._stripScrollbarHeight = implicitHeight;
+                                        }
+                                        Component.onCompleted: {
+                                            if (implicitHeight > 0)
+                                                forecastRoot._stripScrollbarHeight = implicitHeight;
+                                        }
                                     }
 
                                     NumberAnimation {
@@ -1736,7 +1752,12 @@ Item {
                                                     RowLayout {
                                                         Layout.alignment: Qt.AlignHCenter
                                                         spacing: -5
-                                                        visible: modelData.precipMm !== undefined && !isNaN(modelData.precipMm) && modelData.precipMm > 0
+                                                        // Open-Meteo can report a trace precip amount (e.g. 0.1 mm)
+                                                        // for an hour whose weather code and probability are dry.
+                                                        // Only show the rate when the code itself implies precipitation,
+                                                        // so it doesn't contradict a clear/sunny icon at 0% probability.
+                                                        visible: modelData.precipMm !== undefined && !isNaN(modelData.precipMm)
+                                                                 && modelData.precipMm > 0 && W.isPrecipCode(modelData.code)
                                                         WeatherIcon {
                                                             iconInfo: IconResolver.resolve("preciprate", 32, forecastRoot.iconsBaseDir,
                                                                 forecastRoot.widgetIconTheme === "kde" ? "flat-color" :

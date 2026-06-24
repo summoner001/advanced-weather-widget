@@ -367,25 +367,34 @@ PlasmoidItem {
         flags: Notification.CloseOnTimeout | Notification.SkipGrouping | Notification.DefaultEvent
     }
 
-    // Dedicated notification for weather alerts — stays open (no auto-timeout)
-    // and offers Dismiss / Postpone actions.
+    // Dedicated notification for weather alerts. When repeat is enabled it stays
+    // open (no auto-timeout) and offers Dismiss / Postpone actions. When repeat is
+    // disabled it is shown once as a normal auto-closing notification with no actions.
     Notification {
         id: weatherAlertNotification
         componentName: "plasma_workspace"
         eventId: "notification"
         iconName: _bundledAlertIcon("storm-warning")
-        flags: Notification.Persistent | Notification.SkipGrouping | Notification.DefaultEvent
+        flags: root._alertNotificationRepeatEnabled()
+            ? (Notification.Persistent | Notification.SkipGrouping | Notification.DefaultEvent)
+            : (Notification.CloseOnTimeout | Notification.SkipGrouping | Notification.DefaultEvent)
 
-        actions: [
-            NotificationAction {
-                label: i18n("Dismiss")
-                onActivated: root._dismissAlertNotification()
-            },
-            NotificationAction {
-                label: i18n("Postpone %1 min", Plasmoid.configuration.notificationAlertsRepeatMinutes)
-                onActivated: root._postponeAlertNotification()
-            }
-        ]
+        actions: root._alertNotificationRepeatEnabled() ? [dismissAlertAction, postponeAlertAction] : []
+    }
+
+    NotificationAction {
+        id: dismissAlertAction
+        label: i18n("Dismiss")
+        onActivated: root._dismissAlertNotification()
+    }
+
+    NotificationAction {
+        id: postponeAlertAction
+        // No fixed "%1 min" label: the actual postpone delay is computed
+        // per-alert (halfway to its expiry, capped by the repeat-interval
+        // setting), so a static minute count here would often be wrong.
+        label: i18n("Postpone")
+        onActivated: root._postponeAlertNotification()
     }
 
     // ══════════════════════════════════════════════════════════════════════
@@ -924,6 +933,69 @@ PlasmoidItem {
         }
     }
 
+    /** Canonical MeteoAlarm awareness types exposed in the config UI.
+     *  rain-flood (12) is folded into rain (10); unknown (0) is not configurable. */
+    function _alertTypeList() {
+        return [
+            { type: 1,  name: i18n("Wind") },
+            { type: 2,  name: i18n("Snow/Ice") },
+            { type: 3,  name: i18n("Thunderstorm") },
+            { type: 4,  name: i18n("Fog") },
+            { type: 5,  name: i18n("High temperature") },
+            { type: 6,  name: i18n("Low temperature") },
+            { type: 7,  name: i18n("Coastal event") },
+            { type: 8,  name: i18n("Forest fire") },
+            { type: 9,  name: i18n("Avalanche") },
+            { type: 10, name: i18n("Rain") },
+            { type: 11, name: i18n("Flood") }
+        ];
+    }
+
+    /** Normalizes an alert's awareness type to one of the configurable types
+     *  (folds rain-flood 12 → rain 10; everything unknown → 10/rain is NOT assumed,
+     *  unknown stays 0 and is treated as always-allowed with the global interval). */
+    function _alertConfigType(awarenessType) {
+        var t = parseInt(awarenessType, 10);
+        if (isNaN(t)) return 0;
+        if (t === 12) return 10;   // rain-flood → rain
+        return t;
+    }
+
+    /** Default repeat interval (minutes) for alert types that haven't set
+     *  their own — there is no global "Repeat reminder every" setting anymore;
+     *  each alert type carries its own interval. */
+    readonly property int _defaultAlertRepeatMinutes: 30
+
+    /** Parsed JSON map: awareness type → { enabled, minutes }. */
+    property var _alertTypeSettings: ({})
+    function _loadAlertTypeSettings() {
+        try {
+            var o = JSON.parse(Plasmoid.configuration.alertNotificationsTypeSettings || "{}");
+            _alertTypeSettings = (o && typeof o === "object") ? o : ({});
+        } catch (e) {
+            _alertTypeSettings = ({});
+        }
+    }
+
+    /** Whether the given alert's type is enabled for notifications.
+     *  Unknown types (0) and types with no stored setting default to enabled. */
+    function _alertTypeEnabled(awarenessType) {
+        var t = _alertConfigType(awarenessType);
+        if (t === 0) return true;
+        var s = _alertTypeSettings[t];
+        if (!s || s.enabled === undefined) return true;
+        return s.enabled === true;
+    }
+
+    /** Per-type repeat interval in minutes, falling back to the default. */
+    function _alertTypeRepeatMinutes(awarenessType) {
+        var t = _alertConfigType(awarenessType);
+        var s = (t !== 0) ? _alertTypeSettings[t] : null;
+        var m = (s && s.minutes !== undefined) ? parseInt(s.minutes, 10) : NaN;
+        if (isNaN(m)) m = _defaultAlertRepeatMinutes;
+        return Math.max(1, Math.min(720, m));
+    }
+
     function _resetAlertNotificationState() {
         _alertNotificationState = ({});
         Plasmoid.configuration.alertNotificationState = "{}";
@@ -943,6 +1015,7 @@ PlasmoidItem {
     // one-shot suppression flag instead: skip exactly the first evaluation
     // right after enabling, then resume normal firing.
     property bool _suppressRainNotificationOnce: false
+    property bool _suppressSnowNotificationOnce: false
 
     function _notificationTimeToMinutes(raw, fallback) {
         var s = (raw || "").trim();
@@ -957,6 +1030,7 @@ PlasmoidItem {
         case "today": return Plasmoid.configuration.notificationTodayEnabled === true;
         case "tomorrow": return Plasmoid.configuration.notificationTomorrowEnabled === true;
         case "rain": return Plasmoid.configuration.notificationRainEnabled === true;
+        case "snow": return Plasmoid.configuration.notificationSnowEnabled === true;
         case "uv": return Plasmoid.configuration.notificationUvEnabled === true;
         case "space": return Plasmoid.configuration.notificationSpaceWeatherEnabled === true;
         default: return false;
@@ -1012,11 +1086,10 @@ PlasmoidItem {
         return [name, src, onset, expires].join("|");
     }
 
-    /** Clamp the configured alert repeat/postpone interval to 1–30 minutes. */
-    function _alertNotificationRepeatMinutes() {
-        var m = parseInt(Plasmoid.configuration.notificationAlertsRepeatMinutes, 10);
-        if (isNaN(m)) m = 30;
-        return Math.max(1, Math.min(30, m));
+    /** Whether the persistent alert notification should repeat (and offer
+     *  Dismiss/Postpone). When false, each alert is shown exactly once. */
+    function _alertNotificationRepeatEnabled() {
+        return Plasmoid.configuration.alertNotificationsRepeatEnabled !== false;
     }
 
     /** Looks up (or lazily creates) the per-alert state entry for a fingerprint. */
@@ -1036,11 +1109,24 @@ PlasmoidItem {
         _persistAlertNotificationState();
     }
 
+    /** Postpone duration: halfway between now and the alert's expiry, capped
+     *  by the alert type's own repeat interval as a maximum — so a multi-day
+     *  alert doesn't go silent for absurdly long, but a soon-to-expire alert
+     *  gets a shorter, more relevant snooze instead of always waiting the
+     *  full repeat interval. */
+    function _alertPostponeMs(expiresMs, awarenessType) {
+        var maxMs = _alertTypeRepeatMinutes(awarenessType) * 60000;
+        if (!expiresMs) return maxMs;
+        var untilExpiry = expiresMs - Date.now();
+        if (untilExpiry <= 0) return maxMs;
+        return Math.min(maxMs, Math.max(60000, Math.round(untilExpiry / 2)));
+    }
+
     function _postponeAlertNotification() {
         if (!_activeAlertNotificationFingerprint) return;
         var entry = _alertEntry(_activeAlertNotificationFingerprint);
         entry.dismissed = false;
-        entry.nextDueMs = Date.now() + _alertNotificationRepeatMinutes() * 60000;
+        entry.nextDueMs = Date.now() + _alertPostponeMs(entry.expiresMs, entry.awarenessType);
         _persistAlertNotificationState();
     }
 
@@ -1243,10 +1329,10 @@ PlasmoidItem {
      * Weather-alert notifications fire whenever a new alert becomes active
      * (no day/time schedule — alerts are checked on every weather refresh,
      * which polls every refreshIntervalMinutes). While an alert remains
-     * active, the notification repeats every notificationAlertsRepeatMinutes
-     * (10–30, default 30) until the user dismisses it (no repeat until a
-     * new alert appears) or postpones it (repeats again after the same
-     * interval).
+     * active, the notification repeats every per-type interval
+     * (_alertTypeRepeatMinutes, default 30) until the user dismisses it (no
+     * repeat until a new alert appears) or postpones it (repeats again after
+     * the postpone interval).
      *
      * State is tracked per alert *identity* (fingerprint: name+source+
      * onset+expires), not per location — so dismissing/postponing an alert
@@ -1264,6 +1350,7 @@ PlasmoidItem {
             return;
 
         var nowMs = now.getTime();
+        var repeatEnabled = _alertNotificationRepeatEnabled();
         var didChange = false;
 
         for (var i = 0; i < alerts.length; i++) {
@@ -1272,12 +1359,14 @@ PlasmoidItem {
                 continue;
             if (!_alertColorAllowed(a.color))
                 continue;
+            if (!_alertTypeEnabled(a.awarenessType))
+                continue;
 
             var fp = _alertFingerprint(a);
             var entry = _alertNotificationState[fp];
             var isNewAlert = !entry;
             if (isNewAlert) {
-                entry = { dismissed: false, nextDueMs: 0, expiresMs: 0 };
+                entry = { dismissed: false, nextDueMs: 0, expiresMs: 0, shownOnce: false, awarenessType: 0 };
                 _alertNotificationState[fp] = entry;
             }
             // Keep the expiry fresh so pruning drops it once it truly expires.
@@ -1286,20 +1375,32 @@ PlasmoidItem {
                 entry.expiresMs = expMs;
                 didChange = true;
             }
+            // Track the type so Postpone can use the per-type interval as its cap.
+            var awType = parseInt(a.awarenessType, 10) || 0;
+            if (awType !== entry.awarenessType) {
+                entry.awarenessType = awType;
+                didChange = true;
+            }
 
             if (isNewAlert) {
                 _sendAlertNotification(a);
-                entry.nextDueMs = nowMs + _alertNotificationRepeatMinutes() * 60000;
+                entry.shownOnce = true;
+                entry.nextDueMs = nowMs + _alertTypeRepeatMinutes(a.awarenessType) * 60000;
                 didChange = true;
                 continue;
             }
+
+            // Repeat disabled: alert was already shown once; never re-fire while
+            // it stays active (the user only wants a single, button-less alert).
+            if (!repeatEnabled)
+                continue;
 
             if (entry.dismissed)
                 continue;
 
             if (nowMs >= entry.nextDueMs) {
                 _sendAlertNotification(a);
-                entry.nextDueMs = nowMs + _alertNotificationRepeatMinutes() * 60000;
+                entry.nextDueMs = nowMs + _alertTypeRepeatMinutes(a.awarenessType) * 60000;
                 didChange = true;
             }
         }
@@ -1415,9 +1516,17 @@ PlasmoidItem {
         return code === 95 || code === 96 || code === 99;
     }
 
+    /** Snow fall / snow grains (71-77) and snow showers (85-86). */
+    function _isSnowCode(code) {
+        return (code >= 71 && code <= 77) || code === 85 || code === 86;
+    }
+
     function _isRainOrStormCode(code) {
         if (_isStormCode(code)) return true;
-        return code >= 51 && code <= 82;
+        // Drizzle (51-57), rain & freezing rain (61-67), rain showers (80-82).
+        // Deliberately excludes the snow band (71-77, 85-86) so snowfall does
+        // not trigger a "Rain expected" notification.
+        return (code >= 51 && code <= 67) || (code >= 80 && code <= 82);
     }
 
     function _hourSampleEpoch(dateStr, hhmm) {
@@ -1426,17 +1535,19 @@ PlasmoidItem {
         return new Date(dateStr + "T" + hhmm + ":00").getTime();
     }
 
-    function _nextRainTransition(nowMs, wantStart) {
+    /** Finds the next start/end transition for a boolean sample field ("wet" or "snow").
+     *  Returns { timeMs, active, code, dateStr, prevCode } or null. */
+    function _nextConditionTransition(nowMs, wantStart, field) {
         var arr = _notificationHourlyWindow || [];
         if (arr.length === 0)
             return null;
-        var prevWet = false;
+        var prevActive = false;
         var prevCode = NaN;
         var hadPast = false;
         for (var i = 0; i < arr.length; i++) {
             var p = arr[i];
             if (p.timeMs <= nowMs) {
-                prevWet = p.wet;
+                prevActive = p[field];
                 prevCode = p.code;
                 hadPast = true;
             } else {
@@ -1444,37 +1555,45 @@ PlasmoidItem {
             }
         }
         if (!hadPast) {
-            prevWet = false;
+            prevActive = false;
             prevCode = NaN;
         }
-        if (!wantStart && !prevWet)
+        if (!wantStart && !prevActive)
             return null;
         for (var j = 0; j < arr.length; j++) {
             var c = arr[j];
             if (c.timeMs <= nowMs)
                 continue;
-            if (wantStart && !prevWet && c.wet)
-                return { timeMs: c.timeMs, wet: c.wet, code: c.code, dateStr: c.dateStr, prevCode: prevCode };
-            if (!wantStart && prevWet && !c.wet)
-                return { timeMs: c.timeMs, wet: c.wet, code: c.code, dateStr: c.dateStr, prevCode: prevCode };
-            prevWet = c.wet;
+            if (wantStart && !prevActive && c[field])
+                return { timeMs: c.timeMs, active: c[field], code: c.code, dateStr: c.dateStr, prevCode: prevCode };
+            if (!wantStart && prevActive && !c[field])
+                return { timeMs: c.timeMs, active: c[field], code: c.code, dateStr: c.dateStr, prevCode: prevCode };
+            prevActive = c[field];
             prevCode = c.code;
         }
         return null;
     }
 
-    /** "Thunderstorm" for storm codes (95/96/99), otherwise "Rain". */
-    function _rainOrThunderLabel(code) {
-        return _isStormCode(code) ? i18n("Thunderstorm") : i18n("Rain");
+    function _nextRainTransition(nowMs, wantStart) {
+        return _nextConditionTransition(nowMs, wantStart, "wet");
     }
 
-    /** "in the next hours" / "this morning" / "this afternoon" / "this night" for a target time. */
+    function _nextSnowTransition(nowMs, wantStart) {
+        return _nextConditionTransition(nowMs, wantStart, "snow");
+    }
+
+    /** "Thunderstorm" for storm codes (95/96/99), otherwise "Rain". */
+    function _rainOrThunderLabel(code) {
+        return _isStormCode(code) ? i18n("Thunderstorms") : i18n("Rain");
+    }
+
+    /** "in the next hours" / "this morning" / "this afternoon" / "tonight" for a target time. */
     function _dayPartLabel(targetMs, nowMs) {
         if ((targetMs - nowMs) <= 3 * 3600000) return i18n("in the next hours");
         var h = new Date(targetMs).getHours();
         if (h >= 6 && h < 12) return i18n("this morning");
         if (h >= 12 && h < 18) return i18n("this afternoon");
-        return i18n("this night");
+        return i18n("tonight");
     }
 
     function _processRainNotifications(now) {
@@ -1501,6 +1620,31 @@ PlasmoidItem {
             var msg2 = i18n("%1 expected to end %2.", label2, _dayPartLabel(endEv.timeMs, nowMs));
             var icon2 = W.weatherCodeToIcon(endEv.prevCode, isNightTime());
             _sendNotificationOnce("rain-end:" + endEv.timeMs, title2, msg2, Notification.NormalUrgency, icon2);
+        }
+    }
+
+    function _processSnowNotifications(now) {
+        if (!Plasmoid.configuration.notificationSnowEnabled)
+            return;
+        if ((_notificationHourlyWindow || []).length === 0)
+            return;
+        if (_suppressSnowNotificationOnce) {
+            _suppressSnowNotificationOnce = false;
+            return;
+        }
+        var nowMs = now.getTime();
+        var startEv = _nextSnowTransition(nowMs, true);
+        var endEv = _nextSnowTransition(nowMs, false);
+        if (startEv && (!endEv || startEv.timeMs <= endEv.timeMs)) {
+            var title = i18n("Snow expected");
+            var msg = i18n("Snow possible %1.", _dayPartLabel(startEv.timeMs, nowMs));
+            var icon = W.weatherCodeToIcon(startEv.code, isNightTime());
+            _sendNotificationOnce("snow-start:" + startEv.timeMs, title, msg, Notification.NormalUrgency, icon);
+        } else if (endEv) {
+            var title2 = i18n("Snow ending");
+            var msg2 = i18n("Snow expected to end %1.", _dayPartLabel(endEv.timeMs, nowMs));
+            var icon2 = W.weatherCodeToIcon(endEv.prevCode, isNightTime());
+            _sendNotificationOnce("snow-end:" + endEv.timeMs, title2, msg2, Notification.NormalUrgency, icon2);
         }
     }
 
@@ -1609,6 +1753,7 @@ PlasmoidItem {
         _safeNotificationStep("today", _processTodayNotification, now);
         _safeNotificationStep("tomorrow", _processTomorrowNotification, now);
         _safeNotificationStep("rain", _processRainNotifications, now);
+        _safeNotificationStep("snow", _processSnowNotifications, now);
         _safeNotificationStep("uv", _processUvNotification, now);
         _safeNotificationStep("space", _processSpaceWeatherNotification, now);
     }
@@ -1618,7 +1763,7 @@ PlasmoidItem {
             _notificationHourlyWindow = [];
             return;
         }
-        if (!_notificationTypeEnabled("rain") && !_notificationTypeEnabled("tomorrow")) {
+        if (!_notificationTypeEnabled("rain") && !_notificationTypeEnabled("snow") && !_notificationTypeEnabled("tomorrow")) {
             _notificationHourlyWindow = [];
             return;
         }
@@ -1647,8 +1792,12 @@ PlasmoidItem {
                         if (isNaN(tms)) continue;
                         var code = (h.code !== undefined) ? h.code : NaN;
                         var precip = (h.precipMm !== undefined && h.precipMm !== null) ? h.precipMm : NaN;
-                        var wet = _isRainOrStormCode(code) || (!isNaN(precip) && precip >= 0.2);
-                        merged.push({ timeMs: tms, wet: wet, code: code, dateStr: dateStr });
+                        // Snow also reports precipitation (water equivalent); don't let the
+                        // precip fallback flag a snowy hour as rain.
+                        var wet = _isRainOrStormCode(code)
+                                  || (!_isSnowCode(code) && !isNaN(precip) && precip >= 0.2);
+                        var snow = _isSnowCode(code);
+                        merged.push({ timeMs: tms, wet: wet, snow: snow, code: code, dateStr: dateStr });
                     }
                 }
                 pushSamples(today, a || []);
@@ -2438,6 +2587,7 @@ PlasmoidItem {
         // shown today (e.g. the geomagnetic-activity summary).
         _loadNotificationSentKeys();
         _loadAlertNotificationState();
+        _loadAlertTypeSettings();
         _refreshNotificationRainWindowIfNeeded(true);
         _evaluateNotifications();
         if (Plasmoid.configuration.autoDetectLocation)
@@ -2511,6 +2661,16 @@ PlasmoidItem {
         function onAlertNotificationsRedEnabledChanged() {
             root._evaluateNotifications();
         }
+        function onAlertNotificationsRepeatEnabledChanged() {
+            root._evaluateNotifications();
+        }
+        function onNotificationAlertsRepeatMinutesChanged() {
+            root._evaluateNotifications();
+        }
+        function onAlertNotificationsTypeSettingsChanged() {
+            root._loadAlertTypeSettings();
+            root._evaluateNotifications();
+        }
         function onNotificationAlertsDaysChanged() {
             root._evaluateNotifications();
         }
@@ -2548,6 +2708,12 @@ PlasmoidItem {
         function onNotificationRainEnabledChanged() {
             if (Plasmoid.configuration.notificationRainEnabled)
                 root._suppressRainNotificationOnce = true;
+            root._refreshNotificationRainWindowIfNeeded(true);
+            root._evaluateNotifications();
+        }
+        function onNotificationSnowEnabledChanged() {
+            if (Plasmoid.configuration.notificationSnowEnabled)
+                root._suppressSnowNotificationOnce = true;
             root._refreshNotificationRainWindowIfNeeded(true);
             root._evaluateNotifications();
         }

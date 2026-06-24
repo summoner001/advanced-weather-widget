@@ -5,22 +5,23 @@
 
 |  Locale  |  Lines  | % Done|
 |----------|---------|-------|
-| Template |     823 |       |
-| bg       | 823/823 |  100% |
-| cs_CZ    | 698/823 |   84% |
-| de       | 291/823 |   35% |
-| es       | 627/823 |   76% |
-| fr       | 738/823 |   89% |
-| hu_HU    | 738/823 |   89% |
-| it_IT    | 738/823 |   89% |
-| nl       | 735/823 |   89% |
-| pl_PL    | 734/823 |   89% |
-| pt_BR    | 290/823 |   35% |
-| ru       | 291/823 |   35% |
-| tr_TR    | 291/823 |   35% |
-| uk       | 738/823 |   89% |
-| zh_CN    | 627/823 |   76% |
-| zh_TW    | 718/823 |   87% |
+| Template |     842 |       |
+| bg       | 842/842 |  100% |
+| cs_CZ    | 842/842 |  100% |
+| de       | 291/842 |   34% |
+| es       | 842/842 |  100% |
+| fr       | 738/842 |   87% |
+| hu_HU    | 842/842 |  100% |
+| it_IT    | 842/842 |  100% |
+| ja_JP    | 842/842 |  100% |
+| nl       | 842/842 |  100% |
+| pl_PL    | 842/842 |  100% |
+| pt_BR    | 290/842 |   34% |
+| ru       | 291/842 |   34% |
+| tr_TR    | 291/842 |   34% |
+| uk       | 842/842 |  100% |
+| zh_CN    | 842/842 |  100% |
+| zh_TW    | 842/842 |  100% |
 
 
 
@@ -73,7 +74,7 @@ Thank you to everyone who contributed translations to this project ❤️
 - **Russian** - [Dmaliog](https://github.com/dmaliog)
 - **French** - [LAZER-TY](https://github.com/LAZER-TY) and [rcspam](https://github.com/rcspam)
 - **Turkish** - [herzane52](https://github.com/herzane52)
-- **Spanish** - [NecaX](https://github.com/NecaX)
+- **Spanish** - [NecaX](https://github.com/NecaX) and [BroxiCoros](https://github.com/BroxiCoros)
 - **Chinese (Traditional)** - [Yo-oo](https://github.com/Yo-oo)
 - **Chinese (Simplified)** - [Guokangz](https://github.com/Guokangz)
 - **Czech** - [Zero-MF](https://github.com/Zero-MF)
@@ -81,3 +82,4 @@ Thank you to everyone who contributed translations to this project ❤️
 - **Hungarian** - [summoner001](https://github.com/summoner001)
 - **Polish** - [l3monik](https://github.com/l3monik)
 - **Ukrainian** - [NaviMen (Oleksandr)](https://github.com/NaviMen)
+- **Japanese** - [presire](https://github.com/presire)

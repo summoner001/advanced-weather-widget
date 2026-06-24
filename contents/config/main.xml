@@ -284,7 +284,12 @@
     <entry name="alertNotificationsOrangeEnabled" type="Bool"><default>true</default></entry>
     <entry name="alertNotificationsRedEnabled"    type="Bool"><default>true</default></entry>
     <entry name="alertNotificationsCriticalEnabled" type="Bool"><default>true</default></entry>
-    <entry name="notificationAlertsRepeatMinutes" type="Int"><default>30</default><min>1</min><max>30</max></entry>
+    <!-- When false, each alert is shown only once (no repeat, no Dismiss/Postpone actions). -->
+    <entry name="alertNotificationsRepeatEnabled" type="Bool"><default>true</default></entry>
+    <!-- Internal: JSON map of awareness-type number (1-11) → { enabled: bool, minutes: int }.
+         Each alert type carries its own repeat interval; missing types fall back
+         to enabled=true and a 30-minute default interval. -->
+    <entry name="alertNotificationsTypeSettings" type="String"><default>{}</default></entry>
 
     <entry name="notificationTodayEnabled"   type="Bool"><default>true</default></entry>
     <entry name="notificationTodayTime"      type="String"><default>08:00</default></entry>
@@ -293,6 +298,8 @@
     <entry name="notificationTomorrowTime"      type="String"><default>20:00</default></entry>
 
     <entry name="notificationRainEnabled"   type="Bool"><default>true</default></entry>
+
+    <entry name="notificationSnowEnabled"   type="Bool"><default>true</default></entry>
 
     <entry name="notificationUvEnabled"   type="Bool"><default>true</default></entry>
     <entry name="notificationUvTime"      type="String"><default>08:00</default></entry>
