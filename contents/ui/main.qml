@@ -943,6 +943,7 @@ PlasmoidItem {
     // one-shot suppression flag instead: skip exactly the first evaluation
     // right after enabling, then resume normal firing.
     property bool _suppressRainNotificationOnce: false
+    property bool _suppressSnowNotificationOnce: false
 
     function _notificationTimeToMinutes(raw, fallback) {
         var s = (raw || "").trim();
@@ -957,6 +958,7 @@ PlasmoidItem {
         case "today": return Plasmoid.configuration.notificationTodayEnabled === true;
         case "tomorrow": return Plasmoid.configuration.notificationTomorrowEnabled === true;
         case "rain": return Plasmoid.configuration.notificationRainEnabled === true;
+        case "snow": return Plasmoid.configuration.notificationSnowEnabled === true;
         case "uv": return Plasmoid.configuration.notificationUvEnabled === true;
         case "space": return Plasmoid.configuration.notificationSpaceWeatherEnabled === true;
         default: return false;
@@ -1415,9 +1417,17 @@ PlasmoidItem {
         return code === 95 || code === 96 || code === 99;
     }
 
+    /** Snow fall / snow grains (71-77) and snow showers (85-86). */
+    function _isSnowCode(code) {
+        return (code >= 71 && code <= 77) || code === 85 || code === 86;
+    }
+
     function _isRainOrStormCode(code) {
         if (_isStormCode(code)) return true;
-        return code >= 51 && code <= 82;
+        // Drizzle (51-57), rain & freezing rain (61-67), rain showers (80-82).
+        // Deliberately excludes the snow band (71-77, 85-86) so snowfall does
+        // not trigger a "Rain expected" notification.
+        return (code >= 51 && code <= 67) || (code >= 80 && code <= 82);
     }
 
     function _hourSampleEpoch(dateStr, hhmm) {
@@ -1426,17 +1436,19 @@ PlasmoidItem {
         return new Date(dateStr + "T" + hhmm + ":00").getTime();
     }
 
-    function _nextRainTransition(nowMs, wantStart) {
+    /** Finds the next start/end transition for a boolean sample field ("wet" or "snow").
+     *  Returns { timeMs, active, code, dateStr, prevCode } or null. */
+    function _nextConditionTransition(nowMs, wantStart, field) {
         var arr = _notificationHourlyWindow || [];
         if (arr.length === 0)
             return null;
-        var prevWet = false;
+        var prevActive = false;
         var prevCode = NaN;
         var hadPast = false;
         for (var i = 0; i < arr.length; i++) {
             var p = arr[i];
             if (p.timeMs <= nowMs) {
-                prevWet = p.wet;
+                prevActive = p[field];
                 prevCode = p.code;
                 hadPast = true;
             } else {
@@ -1444,23 +1456,31 @@ PlasmoidItem {
             }
         }
         if (!hadPast) {
-            prevWet = false;
+            prevActive = false;
             prevCode = NaN;
         }
-        if (!wantStart && !prevWet)
+        if (!wantStart && !prevActive)
             return null;
         for (var j = 0; j < arr.length; j++) {
             var c = arr[j];
             if (c.timeMs <= nowMs)
                 continue;
-            if (wantStart && !prevWet && c.wet)
-                return { timeMs: c.timeMs, wet: c.wet, code: c.code, dateStr: c.dateStr, prevCode: prevCode };
-            if (!wantStart && prevWet && !c.wet)
-                return { timeMs: c.timeMs, wet: c.wet, code: c.code, dateStr: c.dateStr, prevCode: prevCode };
-            prevWet = c.wet;
+            if (wantStart && !prevActive && c[field])
+                return { timeMs: c.timeMs, active: c[field], code: c.code, dateStr: c.dateStr, prevCode: prevCode };
+            if (!wantStart && prevActive && !c[field])
+                return { timeMs: c.timeMs, active: c[field], code: c.code, dateStr: c.dateStr, prevCode: prevCode };
+            prevActive = c[field];
             prevCode = c.code;
         }
         return null;
+    }
+
+    function _nextRainTransition(nowMs, wantStart) {
+        return _nextConditionTransition(nowMs, wantStart, "wet");
+    }
+
+    function _nextSnowTransition(nowMs, wantStart) {
+        return _nextConditionTransition(nowMs, wantStart, "snow");
     }
 
     /** "Thunderstorm" for storm codes (95/96/99), otherwise "Rain". */
@@ -1501,6 +1521,31 @@ PlasmoidItem {
             var msg2 = i18n("%1 expected to end %2.", label2, _dayPartLabel(endEv.timeMs, nowMs));
             var icon2 = W.weatherCodeToIcon(endEv.prevCode, isNightTime());
             _sendNotificationOnce("rain-end:" + endEv.timeMs, title2, msg2, Notification.NormalUrgency, icon2);
+        }
+    }
+
+    function _processSnowNotifications(now) {
+        if (!Plasmoid.configuration.notificationSnowEnabled)
+            return;
+        if ((_notificationHourlyWindow || []).length === 0)
+            return;
+        if (_suppressSnowNotificationOnce) {
+            _suppressSnowNotificationOnce = false;
+            return;
+        }
+        var nowMs = now.getTime();
+        var startEv = _nextSnowTransition(nowMs, true);
+        var endEv = _nextSnowTransition(nowMs, false);
+        if (startEv && (!endEv || startEv.timeMs <= endEv.timeMs)) {
+            var title = i18n("Snow expected");
+            var msg = i18n("Snow possible %1.", _dayPartLabel(startEv.timeMs, nowMs));
+            var icon = W.weatherCodeToIcon(startEv.code, isNightTime());
+            _sendNotificationOnce("snow-start:" + startEv.timeMs, title, msg, Notification.NormalUrgency, icon);
+        } else if (endEv) {
+            var title2 = i18n("Snow ending");
+            var msg2 = i18n("Snow expected to end %1.", _dayPartLabel(endEv.timeMs, nowMs));
+            var icon2 = W.weatherCodeToIcon(endEv.prevCode, isNightTime());
+            _sendNotificationOnce("snow-end:" + endEv.timeMs, title2, msg2, Notification.NormalUrgency, icon2);
         }
     }
 
@@ -1609,6 +1654,7 @@ PlasmoidItem {
         _safeNotificationStep("today", _processTodayNotification, now);
         _safeNotificationStep("tomorrow", _processTomorrowNotification, now);
         _safeNotificationStep("rain", _processRainNotifications, now);
+        _safeNotificationStep("snow", _processSnowNotifications, now);
         _safeNotificationStep("uv", _processUvNotification, now);
         _safeNotificationStep("space", _processSpaceWeatherNotification, now);
     }
@@ -1618,7 +1664,7 @@ PlasmoidItem {
             _notificationHourlyWindow = [];
             return;
         }
-        if (!_notificationTypeEnabled("rain") && !_notificationTypeEnabled("tomorrow")) {
+        if (!_notificationTypeEnabled("rain") && !_notificationTypeEnabled("snow") && !_notificationTypeEnabled("tomorrow")) {
             _notificationHourlyWindow = [];
             return;
         }
@@ -1647,8 +1693,12 @@ PlasmoidItem {
                         if (isNaN(tms)) continue;
                         var code = (h.code !== undefined) ? h.code : NaN;
                         var precip = (h.precipMm !== undefined && h.precipMm !== null) ? h.precipMm : NaN;
-                        var wet = _isRainOrStormCode(code) || (!isNaN(precip) && precip >= 0.2);
-                        merged.push({ timeMs: tms, wet: wet, code: code, dateStr: dateStr });
+                        // Snow also reports precipitation (water equivalent); don't let the
+                        // precip fallback flag a snowy hour as rain.
+                        var wet = _isRainOrStormCode(code)
+                                  || (!_isSnowCode(code) && !isNaN(precip) && precip >= 0.2);
+                        var snow = _isSnowCode(code);
+                        merged.push({ timeMs: tms, wet: wet, snow: snow, code: code, dateStr: dateStr });
                     }
                 }
                 pushSamples(today, a || []);
@@ -2548,6 +2598,12 @@ PlasmoidItem {
         function onNotificationRainEnabledChanged() {
             if (Plasmoid.configuration.notificationRainEnabled)
                 root._suppressRainNotificationOnce = true;
+            root._refreshNotificationRainWindowIfNeeded(true);
+            root._evaluateNotifications();
+        }
+        function onNotificationSnowEnabledChanged() {
+            if (Plasmoid.configuration.notificationSnowEnabled)
+                root._suppressSnowNotificationOnce = true;
             root._refreshNotificationRainWindowIfNeeded(true);
             root._evaluateNotifications();
         }

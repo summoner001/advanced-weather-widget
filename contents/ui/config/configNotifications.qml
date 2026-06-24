@@ -39,6 +39,8 @@ KCM.SimpleKCM {
 
     property bool cfg_notificationRainEnabled: false
 
+    property bool cfg_notificationSnowEnabled: false
+
     property bool cfg_notificationUvEnabled: false
     property string cfg_notificationUvTime: "08:00"
 
@@ -300,6 +302,20 @@ KCM.SimpleKCM {
                 text: i18n("Notify about upcoming rain/storms")
                 checked: root.cfg_notificationRainEnabled
                 onToggled: root.cfg_notificationRainEnabled = checked
+            }
+        }
+
+        // Snow
+        ColumnLayout {
+            Layout.fillWidth: true
+            spacing: 6
+
+            SectionHeader { title: i18n("Snow") }
+
+            Switch {
+                text: i18n("Notify about upcoming snow")
+                checked: root.cfg_notificationSnowEnabled
+                onToggled: root.cfg_notificationSnowEnabled = checked
             }
         }
 

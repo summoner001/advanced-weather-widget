@@ -294,6 +294,8 @@
 
     <entry name="notificationRainEnabled"   type="Bool"><default>true</default></entry>
 
+    <entry name="notificationSnowEnabled"   type="Bool"><default>true</default></entry>
+
     <entry name="notificationUvEnabled"   type="Bool"><default>true</default></entry>
     <entry name="notificationUvTime"      type="String"><default>08:00</default></entry>
     <entry name="notificationUvLastDate"  type="String"><default></default></entry>
