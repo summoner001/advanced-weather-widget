@@ -390,7 +390,10 @@ PlasmoidItem {
 
     NotificationAction {
         id: postponeAlertAction
-        label: i18n("Postpone %1 min", Plasmoid.configuration.notificationAlertsRepeatMinutes)
+        // No fixed "%1 min" label: the actual postpone delay is computed
+        // per-alert (halfway to its expiry, capped by the repeat-interval
+        // setting), so a static minute count here would often be wrong.
+        label: i18n("Postpone")
         onActivated: root._postponeAlertNotification()
     }
 
@@ -958,6 +961,11 @@ PlasmoidItem {
         return t;
     }
 
+    /** Default repeat interval (minutes) for alert types that haven't set
+     *  their own — there is no global "Repeat reminder every" setting anymore;
+     *  each alert type carries its own interval. */
+    readonly property int _defaultAlertRepeatMinutes: 30
+
     /** Parsed JSON map: awareness type → { enabled, minutes }. */
     property var _alertTypeSettings: ({})
     function _loadAlertTypeSettings() {
@@ -979,12 +987,12 @@ PlasmoidItem {
         return s.enabled === true;
     }
 
-    /** Per-type repeat interval in minutes, falling back to the global value. */
+    /** Per-type repeat interval in minutes, falling back to the default. */
     function _alertTypeRepeatMinutes(awarenessType) {
         var t = _alertConfigType(awarenessType);
         var s = (t !== 0) ? _alertTypeSettings[t] : null;
         var m = (s && s.minutes !== undefined) ? parseInt(s.minutes, 10) : NaN;
-        if (isNaN(m)) m = _alertNotificationRepeatMinutes();
+        if (isNaN(m)) m = _defaultAlertRepeatMinutes;
         return Math.max(1, Math.min(720, m));
     }
 
@@ -1078,13 +1086,6 @@ PlasmoidItem {
         return [name, src, onset, expires].join("|");
     }
 
-    /** Clamp the configured alert repeat/postpone interval to 1–720 minutes. */
-    function _alertNotificationRepeatMinutes() {
-        var m = parseInt(Plasmoid.configuration.notificationAlertsRepeatMinutes, 10);
-        if (isNaN(m)) m = 30;
-        return Math.max(1, Math.min(720, m));
-    }
-
     /** Whether the persistent alert notification should repeat (and offer
      *  Dismiss/Postpone). When false, each alert is shown exactly once. */
     function _alertNotificationRepeatEnabled() {
@@ -1108,11 +1109,24 @@ PlasmoidItem {
         _persistAlertNotificationState();
     }
 
+    /** Postpone duration: halfway between now and the alert's expiry, capped
+     *  by the alert type's own repeat interval as a maximum — so a multi-day
+     *  alert doesn't go silent for absurdly long, but a soon-to-expire alert
+     *  gets a shorter, more relevant snooze instead of always waiting the
+     *  full repeat interval. */
+    function _alertPostponeMs(expiresMs, awarenessType) {
+        var maxMs = _alertTypeRepeatMinutes(awarenessType) * 60000;
+        if (!expiresMs) return maxMs;
+        var untilExpiry = expiresMs - Date.now();
+        if (untilExpiry <= 0) return maxMs;
+        return Math.min(maxMs, Math.max(60000, Math.round(untilExpiry / 2)));
+    }
+
     function _postponeAlertNotification() {
         if (!_activeAlertNotificationFingerprint) return;
         var entry = _alertEntry(_activeAlertNotificationFingerprint);
         entry.dismissed = false;
-        entry.nextDueMs = Date.now() + _alertNotificationRepeatMinutes() * 60000;
+        entry.nextDueMs = Date.now() + _alertPostponeMs(entry.expiresMs, entry.awarenessType);
         _persistAlertNotificationState();
     }
 
@@ -1315,10 +1329,10 @@ PlasmoidItem {
      * Weather-alert notifications fire whenever a new alert becomes active
      * (no day/time schedule — alerts are checked on every weather refresh,
      * which polls every refreshIntervalMinutes). While an alert remains
-     * active, the notification repeats every notificationAlertsRepeatMinutes
-     * (10–30, default 30) until the user dismisses it (no repeat until a
-     * new alert appears) or postpones it (repeats again after the same
-     * interval).
+     * active, the notification repeats every per-type interval
+     * (_alertTypeRepeatMinutes, default 30) until the user dismisses it (no
+     * repeat until a new alert appears) or postpones it (repeats again after
+     * the postpone interval).
      *
      * State is tracked per alert *identity* (fingerprint: name+source+
      * onset+expires), not per location — so dismissing/postponing an alert
@@ -1352,13 +1366,19 @@ PlasmoidItem {
             var entry = _alertNotificationState[fp];
             var isNewAlert = !entry;
             if (isNewAlert) {
-                entry = { dismissed: false, nextDueMs: 0, expiresMs: 0, shownOnce: false };
+                entry = { dismissed: false, nextDueMs: 0, expiresMs: 0, shownOnce: false, awarenessType: 0 };
                 _alertNotificationState[fp] = entry;
             }
             // Keep the expiry fresh so pruning drops it once it truly expires.
             var expMs = a.expires ? new Date(a.expires).getTime() : 0;
             if (expMs !== entry.expiresMs) {
                 entry.expiresMs = expMs;
+                didChange = true;
+            }
+            // Track the type so Postpone can use the per-type interval as its cap.
+            var awType = parseInt(a.awarenessType, 10) || 0;
+            if (awType !== entry.awarenessType) {
+                entry.awarenessType = awType;
                 didChange = true;
             }
 

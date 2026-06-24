@@ -30,7 +30,6 @@ KCM.SimpleKCM {
     property bool cfg_alertNotificationsRedEnabled: true
     property bool cfg_alertNotificationsCriticalEnabled: true
     property bool cfg_alertNotificationsRepeatEnabled: true
-    property int cfg_notificationAlertsRepeatMinutes: 30
     property string cfg_alertNotificationsTypeSettings: "{}"
 
     // Parsed working copy of the per-type settings JSON map.
@@ -55,10 +54,13 @@ KCM.SimpleKCM {
         var s = alertTypeSettings[t];
         return (!s || s.enabled === undefined) ? true : s.enabled === true;
     }
+    // Default repeat interval for types that haven't set their own. Matches
+    // main.qml's _defaultAlertRepeatMinutes — there is no global interval.
+    readonly property int defaultAlertRepeatMinutes: 30
     function alertTypeMinutes(t) {
         var s = alertTypeSettings[t];
         var m = (s && s.minutes !== undefined) ? parseInt(s.minutes, 10) : NaN;
-        return isNaN(m) ? cfg_notificationAlertsRepeatMinutes : Math.max(1, Math.min(720, m));
+        return isNaN(m) ? defaultAlertRepeatMinutes : Math.max(1, Math.min(720, m));
     }
     function setAlertType(t, enabled, minutes) {
         var copy = {};
@@ -296,22 +298,6 @@ KCM.SimpleKCM {
                 showCloseButton: true
                 visible: root.cfg_alertNotificationsEnabled && !root.cfg_alertNotificationsRepeatEnabled
                 text: i18n("Each alert is shown only once, without Dismiss and Postpone buttons.")
-            }
-
-            RowLayout {
-                Layout.fillWidth: true
-                enabled: root.cfg_alertNotificationsEnabled && root.cfg_alertNotificationsRepeatEnabled
-                opacity: enabled ? 1.0 : 0.5
-                spacing: 8
-                Label { text: i18n("Repeat reminder every:") }
-                SpinBox {
-                    from: 1
-                    to: 720
-                    stepSize: 1
-                    value: root.cfg_notificationAlertsRepeatMinutes
-                    onValueModified: root.cfg_notificationAlertsRepeatMinutes = value
-                }
-                Label { text: i18n("minutes") }
             }
 
             // ── Per-type overrides ─────────────────────────────────────────
