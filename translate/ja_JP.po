@@ -1,26 +1,24 @@
-# Spanish translation of Advanced Weather Widget
+# Japanese translation for Advanced Weather Widget.
 # Copyright (C) 2026 THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the Advanced Weather Widget package.
 #
-# SPDX-FileCopyrightText: 2026 Broxi <broxygames.zf@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: Advanced Weather Widget\n"
 "Report-Msgid-Bugs-To: https://github.com/pnedyalkov91/advanced-weather-widget/issues\n"
 "POT-Creation-Date: 2026-06-24 09:36+0300\n"
-"PO-Revision-Date: 2026-06-20 18:52-0600\n"
-"Last-Translator: Broxi <broxygames.zf@gmail.com>\n"
-"Language-Team: Spanish <kde-i18n-doc@kde.org>\n"
-"Language: es\n"
+"PO-Revision-Date: 2026-06-22 00:00+0900\n"
+"Last-Translator: \n"
+"Language-Team: Japanese\n"
+"Language: ja_JP\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 26.04.2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: contents/ui/DetailsView.qml:3443 contents/ui/DetailsView.qml:3445
 msgid " until dawn"
-msgstr " hasta el amanecer"
+msgstr " 夜明けまで"
 
 #: contents/ui/main.qml:1394
 msgid "%1 %2"
@@ -28,31 +26,31 @@ msgstr "%1 %2"
 
 #: contents/ui/main.qml:1338
 msgid "%1 - Today"
-msgstr "%1 - Hoy"
+msgstr "%1 - 今日"
 
 #: contents/ui/main.qml:1411
 msgid "%1 - Tomorrow"
-msgstr "%1 - Mañana"
+msgstr "%1 - 明日"
 
 #: contents/ui/main.qml:1520
 msgid "%1 ending"
-msgstr "%1 finalizando"
+msgstr "%1 終了予定"
 
 #: contents/ui/main.qml:1514
 msgid "%1 expected"
-msgstr "Se prevé %1"
+msgstr "%1 予想"
 
 #: contents/ui/main.qml:1521
 msgid "%1 expected to end %2."
-msgstr "%1 con fin previsto %2."
+msgstr "%1 は %2 に終了予定。"
 
 #: contents/ui/main.qml:1515
 msgid "%1 possible %2."
-msgstr "Es posible que haya %1 %2."
+msgstr "%1 の可能性あり %2。"
 
 #: contents/ui/main.qml:1323
 msgid "%1 will be %2 with a low of %3 and a high of %4."
-msgstr "%1 habrá %2 con una mínima de %3 y una máxima de %4."
+msgstr "%1 は %2、最低 %3、最高 %4。"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:1049
 msgctxt "@info %1 size %2 family"
@@ -66,29 +64,29 @@ msgstr "--"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:449
 msgid "-180 to 180 (e.g. 23.3219)"
-msgstr "-180 a 180 (p. ej. 23.3219)"
+msgstr "-180 から 180（例: 23.3219）"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:432
 msgid "-90 to 90 (e.g. 42.6977)"
-msgstr "-90 a 90 (p. ej. 42.6977)"
+msgstr "-90 から 90（例: 42.6977）"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:848
 msgid "0 = auto (120 px per chip). Increase if values are truncated."
-msgstr "0 = automático (120 px por elemento). Aumentar si los valores se truncan."
+msgstr "0 = 自動（チップあたり 120 px）。値が切り捨てられる場合は増やしてください。"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:848
 msgid "0 = auto. Increase if items are cut off."
-msgstr "0 = automático. Aumentar si los elementos se cortan."
+msgstr "0 = 自動。項目が切り捨てられる場合は増やしてください。"
 
 #: contents/ui/main.qml:906
 msgid "1 Alert"
-msgstr "1 alerta"
+msgstr "1 件のアラート"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:835
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:709
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:703
 msgid "12-hour format"
-msgstr "Formato de 12 horas"
+msgstr "12時間表示"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:847
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:721
@@ -100,7 +98,7 @@ msgstr "12h"
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:709
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:703
 msgid "24-hour format"
-msgstr "Formato de 24 horas"
+msgstr "24時間表示"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:847
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:721
@@ -113,228 +111,228 @@ msgstr "24h"
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:44
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:53
 msgid "3D Oxygen (Bundled)"
-msgstr "3D Oxygen (incluido)"
+msgstr "3D Oxygen（同梱）"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:117
 msgid "68°F"
-msgstr "68 °F"
+msgstr "68°F"
 
 #: contents/ui/main.qml:1103
 msgid "<b>Effective:</b> %1"
-msgstr "<b>Vigente:</b> %1"
+msgstr "<b>発効:</b> %1"
 
 #: contents/ui/main.qml:1100
 msgid "<b>Headline:</b> %1"
-msgstr "<b>Titular:</b> %1"
+msgstr "<b>見出し:</b> %1"
 
 #: contents/ui/main.qml:1106
 msgid "<b>Instruction:</b> %1"
-msgstr "<b>Instrucción:</b> %1"
+msgstr "<b>指示:</b> %1"
 
 #: contents/ui/main.qml:1109
 msgid "<b>Provider:</b> %1"
-msgstr "<b>Proveedor:</b> %1"
+msgstr "<b>プロバイダ:</b> %1"
 
 #: contents/ui/main.qml:1098
 #, javascript-format
 msgid "<b>Severity:</b> %1%2"
-msgstr "<b>Gravedad:</b> %1%2"
+msgstr "<b>深刻度:</b> %1%2"
 
 #: contents/ui/config/configGeneral.qml:745
 msgid "<b>Why OWM layers may not match RainViewer radar</b><br/><br/>OWM precipitation/cloud layers are <b>static model tiles</b> - they show a smoothed NWP (Numerical Weather Prediction) output, not actual radar returns. They represent where the model <i>thinks</i> it is raining based on interpolation between weather stations and model runs.<br/><br/>RainViewer uses <b>real weather radar composites</b> from radar stations - actual measured reflectivity updated every 2–10 minutes. This discrepancy is expected and known."
-msgstr "<b>Por qué las capas de OWM pueden no coincidir con el radar de RainViewer</b><br/><br/>Las capas de precipitación/nubes de OWM son <b>teselas de modelo estático</b>: muestran una salida suavizada de predicción numérica del tiempo (PNT), no retornos de radar reales. Representan dónde el modelo <i>cree</i> que está lloviendo, basándose en la interpolación entre estaciones meteorológicas y pasadas del modelo.<br/><br/>RainViewer usa <b>composites reales de radar meteorológico</b> de estaciones de radar: reflectividad medida real actualizada cada 2–10 minutos. Esta discrepancia es esperada y conocida."
+msgstr "<b>OWM のレイヤーが RainViewer レーダーと一致しない理由</b><br/><br/>OWM の降水・雲レイヤーは<b>静的なモデルタイル</b>であり、実際のレーダー観測ではなく、平滑化された NWP（数値予報）の出力を表示します。気象観測所とモデル実行の間の補間に基づいて、モデルが雨が降っていると<i>推定</i>している場所を表しています。<br/><br/>RainViewer はレーダー観測所からの<b>実際の気象レーダー合成画像</b>を使用し、2〜10 分ごとに更新される実際の観測反射強度を表示します。この差異は想定されており、既知の現象です。"
 
 #: contents/ui/config/configGeneral.qml:450
 msgid "AI-powered weather intelligence. API key required below."
-msgstr "Inteligencia meteorológica con IA. Se requiere clave API a continuación."
+msgstr "AI 搭載の気象情報サービス。下に API キーが必要です。"
 
 #: contents/ui/config/configGeneral.qml:211
 msgid "API key is empty."
-msgstr "La clave API está vacía."
+msgstr "API キーが空です。"
 
 #: contents/ui/DetailsView.qml:1088 contents/ui/main.qml:823
 msgid "AQHI"
-msgstr "ICSA"
+msgstr "AQHI"
 
 #: contents/ui/DetailsView.qml:1088 contents/ui/main.qml:823
 msgid "AQI"
-msgstr "ICA"
+msgstr "AQI"
 
 #: contents/ui/DetailsView.qml:1995 contents/ui/js/spaceWeather.js:171
 msgid "Active"
-msgstr "Activo"
+msgstr "活動中"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:393
 msgid "Adaptive (Open-Meteo)"
-msgstr "Adaptativo (Open-Meteo)"
+msgstr "アダプティブ（Open-Meteo）"
 
 #: contents/ui/config/configGeneral.qml:383
 msgid "Adaptive (auto-fallback)"
-msgstr "Adaptativo (con respaldo automático)"
+msgstr "アダプティブ（自動フォールバック）"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:384
 msgid "Add Location Manually"
-msgstr "Agregar ubicación manualmente"
+msgstr "位置を手動で追加"
 
 #: contents/ui/CompactView.qml:787 contents/ui/CompactView.qml:1123
 msgid "Add a location"
-msgstr "Agregar una ubicación"
+msgstr "位置を追加"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:115
 msgid "Advanced (all tabs)"
-msgstr "Avanzado (ver todo)"
+msgstr "詳細（すべてのタブ）"
 
 #: contents/ui/main.qml:1374
 msgid "Afternoon"
-msgstr "Tarde"
+msgstr "午後"
 
 #: contents/ui/config/configAppearance.qml:1399
 #: contents/ui/config/configAppearance.qml:1522
 #: contents/ui/config/configAppearance.qml:1645 contents/ui/DetailsView.qml:316
 #: contents/ui/SimpleView.qml:266
 msgid "Air Quality"
-msgstr "Calidad del aire"
+msgstr "空気質"
 
 #: contents/ui/TooltipContent.qml:465
 msgid "Air Quality:"
-msgstr "Calidad del aire:"
+msgstr "空気質:"
 
 #: contents/ui/config/configAppearance.qml:1400
 #: contents/ui/config/configAppearance.qml:1523
 #: contents/ui/config/configAppearance.qml:1646
 msgid "Air quality index"
-msgstr "Índice de calidad del aire"
+msgstr "空気質指数"
 
 #: contents/ui/js/airQuality.js:48
 msgid "Air quality is acceptable."
-msgstr "La calidad del aire es aceptable."
+msgstr "空気質は許容範囲です。"
 
 #: contents/ui/js/airQuality.js:52
 msgid "Air quality is extremely poor."
-msgstr "La calidad del aire es extremadamente mala."
+msgstr "空気質は極めて悪いです。"
 
 #: contents/ui/js/airQuality.js:49
 msgid "Air quality is fair."
-msgstr "La calidad del aire es regular."
+msgstr "空気質はまあまあです。"
 
 #: contents/ui/js/airQuality.js:50
 msgid "Air quality is poor."
-msgstr "La calidad del aire es mala."
+msgstr "空気質は悪いです。"
 
 #: contents/ui/js/airQuality.js:47
 msgid "Air quality is satisfactory."
-msgstr "La calidad del aire es satisfactoria."
+msgstr "空気質は良好です。"
 
 #: contents/ui/js/airQuality.js:51
 msgid "Air quality is very poor."
-msgstr "La calidad del aire es muy mala."
+msgstr "空気質は非常に悪いです。"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:351
 msgid "Air quality options"
-msgstr "Opciones de calidad del aire"
+msgstr "空気質オプション"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:653
 #: contents/ui/DetailsView.qml:1402 contents/ui/main.qml:846
 msgid "Alder"
-msgstr "Aliso"
+msgstr "ヤナギ"
 
 #: contents/ui/config/configAppearance.qml:1420
 #: contents/ui/config/configAppearance.qml:1543
 #: contents/ui/config/configAppearance.qml:1666 contents/ui/DetailsView.qml:319
 #: contents/ui/SimpleView.qml:269
 msgid "Alerts"
-msgstr "Alertas"
+msgstr "アラート"
 
 #: contents/ui/TooltipContent.qml:480
 msgid "Alerts:"
-msgstr "Alertas:"
+msgstr "アラート:"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:810
 msgid "All days show hourly forecast when opening the tab"
-msgstr "Todos los días muestran el pronóstico por horas al abrir la pestaña"
+msgstr "タブを開いたとき、すべての日に時間予報を表示"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:794
 msgid "All days start collapsed"
-msgstr "Todos los días empiezan contraídos"
+msgstr "すべての日を折りたたんで表示"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:196
 msgid "All tabs"
-msgstr "Todas las pestañas"
+msgstr "すべてのタブ"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:371
 msgid "Alt: %1 %2"
-msgstr "Alt: %1 %2"
+msgstr "標高: %1 %2"
 
 #: contents/ui/config/configLocation.qml:1777
 msgid "Alt: %1 m"
-msgstr "Alt: %1 m"
+msgstr "標高: %1 m"
 
 #: contents/ui/config/configGeneral.qml:444
 msgid "Alternative provider. API key required below."
-msgstr "Proveedor alternativo. Se requiere clave API a continuación."
+msgstr "代替プロバイダ。下に API キーが必要です。"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:461
 msgid "Altitude (%1):"
-msgstr "Altitud (%1):"
+msgstr "標高（%1）:"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:480
 msgid "Altitude is optional, but strongly recommended for accurate forecasts. MET Norway (met.no) uses it to correct temperature and pressure for elevation; leaving it at 0 for a mountain location will return sea-level values."
-msgstr "La altitud es opcional, pero muy recomendable para pronósticos precisos. MET Norway (met.no) la usa para corregir la temperatura y presión según la elevación; dejarla en 0 para una ubicación montañosa devolverá valores al nivel del mar."
+msgstr "標高は省略可能ですが、正確な予報のためには強く推奨されます。MET Norway (met.no) は標高に応じて気温と気圧を補正します。山岳地帯で 0 のままにすると、海抜の値が返されます。"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:610
 msgid "Altitude:"
-msgstr "Altitud:"
+msgstr "標高:"
 
 #: contents/ui/config/configGeneral.qml:640
 msgid "An API key is required for %1. Weather data cannot be retrieved without it."
-msgstr "Se requiere una clave API para %1. No se pueden obtener datos meteorológicos sin ella."
+msgstr "%1 には API キーが必要です。API キーがないと気象データを取得できません。"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:751
 msgid "Animate row scrolling"
-msgstr "Animar desplazamiento de filas"
+msgstr "行スクロールをアニメーション"
 
 #: contents/ui/config/configAppearance.qml:1344
 msgid "Apparent (feels-like) temperature"
-msgstr "Temperatura aparente (sensación térmica)"
+msgstr "体感温度"
 
 #: contents/ui/config/configAppearance.qml:1446
 #: contents/ui/config/configAppearance.qml:1583
 msgid "Apparent temperature"
-msgstr "Temperatura aparente"
+msgstr "体感温度"
 
 #: contents/config/config.qml:57
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:130
 msgid "Appearance"
-msgstr "Apariencia"
+msgstr "外観"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:50
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:39
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:38
 msgid "Apply Settings?"
-msgstr "¿Aplicar configuración?"
+msgstr "設定を適用しますか?"
 
 #: contents/ui/config/configLocation.qml:1165
 msgid "Apply detected location"
-msgstr "Aplicar ubicación detectada"
+msgstr "検出した位置を適用"
 
 #: contents/ui/config/configLocation.qml:1374
 msgid "Are you sure? This is your last saved location. If you remove it, the widget will no longer show weather information."
-msgstr "¿Estás seguro? Esta es tu última ubicación guardada. Si la eliminas, el widget dejará de mostrar información meteorológica."
+msgstr "本当によろしいですか? これは最後に保存した位置です。削除すると、ウィジェットは気象情報を表示しなくなります。"
 
 #: contents/ui/DetailsView.qml:3445
 msgid "Around midnight — "
-msgstr "Cerca de la medianoche — "
+msgstr "真夜中頃 — "
 
 #: contents/ui/config/configAppearance.qml:1358
 #: contents/ui/config/configAppearance.qml:1460
 #: contents/ui/config/configAppearance.qml:1604
 msgid "Atmospheric pressure"
-msgstr "Presión atmosférica"
+msgstr "大気圧"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:720
 #: contents/ui/DetailsView.qml:1945
 msgid "Aurora Visibility"
-msgstr "Visibilidad de auroras"
+msgstr "オーロラ可視性"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:257
 #: contents/ui/config/tabs/ConfigPanelTab.qml:352
@@ -347,41 +345,41 @@ msgstr "Visibilidad de auroras"
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:584
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:618
 msgid "Auto"
-msgstr "Automático"
+msgstr "自動"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:108
 msgid "Auto (detect on save)"
-msgstr "Automático (detectar al guardar)"
+msgstr "自動（保存時に検出）"
 
 #: contents/ui/config/configLocation.qml:1518
 msgid "Auto-detection first asks GeoClue2, the system location service, for your current position. If system location is unavailable, the widget estimates your location from your public IP address, which is usually less precise and only updates when detection runs again."
-msgstr "La detección automática consulta primero a GeoClue2, el servicio de ubicación del sistema, para obtener tu posición actual. Si la ubicación del sistema no está disponible, el widget estima tu ubicación a partir de tu dirección IP pública, que suele ser menos precisa y solo se actualiza cuando se vuelve a ejecutar la detección."
+msgstr "自動検出では、まずシステム位置サービスである GeoClue2 に現在位置を問い合わせます。システム位置が利用できない場合、ウィジェットは公衆 IP アドレスから位置を推定します。これは通常精度が低く、検出を再実行したときにのみ更新されます。"
 
 #: contents/ui/config/configLocation.qml:1479
 msgid "Auto-detection is limited without QtLocation and QtPositioning. It will fall back to IP-based detection, which may be less accurate and will not update in real time as you move. If you want to improve auto-detection accuracy, please install the required packages for your distribution. For more details, see the install guide."
-msgstr "La detección automática tiene limitaciones sin QtLocation y QtPositioning. Recurrirá a la detección por IP, que puede ser menos precisa y no se actualizará en tiempo real a medida que te muevas. Si quieres mejorar la precisión de la detección automática, instala los paquetes necesarios para tu distribución. Para más detalles, consulta la guía de instalación."
+msgstr "QtLocation と QtPositioning がないと自動検出は制限されます。IP ベースの検出にフォールバックしますが、精度が低く、移動してもリアルタイムで更新されません。自動検出の精度を向上させるには、ディストリビューション用の必要なパッケージをインストールしてください。詳細はインストールガイドを参照してください。"
 
 #: contents/ui/config/configLocation.qml:747
 msgid "Auto-detection updated coordinates."
-msgstr "La detección automática actualizó las coordenadas."
+msgstr "自動検出で座標を更新しました。"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:784
 msgid "Auto-open hourly forecast:"
-msgstr "Abrir pronóstico por horas automáticamente:"
+msgstr "時間予報を自動展開:"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:1018
 msgid "Automatic"
-msgstr "Automático"
+msgstr "自動"
 
 #: contents/ui/config/configLocation.qml:1502
 msgid "Automatically detect location"
-msgstr "Detectar ubicación automáticamente"
+msgstr "位置を自動検出"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:266
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:126
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:124
 msgid "Available"
-msgstr "Disponible"
+msgstr "利用可能"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:100
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:371
@@ -390,58 +388,58 @@ msgstr "Disponible"
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:84
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:83
 msgid "Back"
-msgstr "Volver"
+msgstr "戻る"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:719
 msgid "Badge Background Color"
-msgstr "Color de fondo de la insignia"
+msgstr "バッジの背景色"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:655
 msgid "Badge background:"
-msgstr "Fondo de la insignia:"
+msgstr "バッジの背景:"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:699
 msgid "Badge opacity:"
-msgstr "Opacidad de la insignia:"
+msgstr "バッジの不透明度:"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:593
 msgid "Badge position:"
-msgstr "Posición de la insignia:"
+msgstr "バッジの位置:"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:639
 msgid "Badge spacing:"
-msgstr "Espaciado de la insignia:"
+msgstr "バッジの間隔:"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:160
 msgid "Behavior"
-msgstr "Comportamiento"
+msgstr "動作"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:654
 #: contents/ui/DetailsView.qml:1404 contents/ui/main.qml:847
 msgid "Birch"
-msgstr "Abedul"
+msgstr "カバ"
 
 #: contents/ui/config/configAppearance.qml:732
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:536
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:526
 msgid "Both  07:17 / 18:03"
-msgstr "Ambos  07:17 / 18:03"
+msgstr "両方  07:17 / 18:03"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:464
 msgid "Both (sunrise & sunset)"
-msgstr "Ambos (amanecer y atardecer)"
+msgstr "両方（日の出と日の入り）"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:617
 msgid "Bottom Center"
-msgstr "Centro inferior"
+msgstr "下中央"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:605
 msgid "Bottom Left"
-msgstr "Izquierda inferior"
+msgstr "左下"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:601
 msgid "Bottom Right"
-msgstr "Derecha inferior"
+msgstr "右下"
 
 #: contents/ui/config/configAppearance.qml:528
 #: contents/ui/config/configAppearance.qml:680
@@ -450,21 +448,21 @@ msgstr "Derecha inferior"
 #: contents/ui/config/configAppearance.qml:966
 #: contents/ui/config/configAppearance.qml:1009
 msgid "Browse…"
-msgstr "Explorar…"
+msgstr "参照…"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:865
 msgid "Bullet  •"
-msgstr "Punto  •"
+msgstr "中黒  •"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:936
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:784
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:775
 msgid "Button guide"
-msgstr "Guía de botones"
+msgstr "ボタンガイド"
 
 #: contents/ui/DetailsView.qml:1984
 msgid "Bz (Magnetic Field)"
-msgstr "Bz (campo magnético)"
+msgstr "Bz（磁場）"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:594
 msgid "CO"
@@ -476,153 +474,153 @@ msgstr "CO"
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:68
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:67
 msgid "Cancel"
-msgstr "Cancelar"
+msgstr "キャンセル"
 
 #: contents/ui/config/configLocation.qml:1842
 msgid "Cancel rename"
-msgstr "Cancelar cambio de nombre"
+msgstr "名前変更をキャンセル"
 
 #: contents/ui/DetailsView.qml:1213
 msgid "Carbon Monoxide (CO)"
-msgstr "Monóxido de carbono (CO)"
+msgstr "一酸化炭素（CO）"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:913
 msgid "Cards"
-msgstr "Tarjetas"
+msgstr "カード"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:566
 msgid "Cards (2 columns)"
-msgstr "Tarjetas (2 columnas)"
+msgstr "カード（2列）"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:577
 msgid "Cards height:"
-msgstr "Altura de las tarjetas:"
+msgstr "カードの高さ:"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:227
 msgid "Celsius (°C)"
-msgstr "Celsius (°C)"
+msgstr "摂氏（°C）"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:540
 msgid "Changes staged. Click the main Apply button to save."
-msgstr "Cambios preparados. Haz clic en el botón Aplicar principal para guardar."
+msgstr "変更がステージングされました。メインの適用ボタンをクリックして保存してください。"
 
 #: contents/ui/config/configGeneral.qml:88
 #: contents/ui/config/configLocation.qml:481
 msgid "Checking location availability…"
-msgstr "Comprobando disponibilidad de ubicación…"
+msgstr "位置の利用可能性を確認中…"
 
 #: contents/ui/config/configGeneral.qml:456
 msgid "Chinese weather provider with global coverage. API key required below."
-msgstr "Proveedor meteorológico chino con cobertura global. Se requiere clave API a continuación."
+msgstr "グローバルカバレッジの中国気象プロバイダ。下に API キーが必要です。"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:945
 msgid "Choose Simple Mode Font"
-msgstr "Elegir fuente del modo simple"
+msgstr "シンプルモードのフォントを選択"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:1036
 msgctxt "@action:button"
 msgid "Choose Style…"
-msgstr "Elegir estilo…"
+msgstr "スタイルを選択…"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:984
 msgid "Choose a Panel Font"
-msgstr "Elegir una fuente para el panel"
+msgstr "パネルのフォントを選択"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:978
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:818
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:804
 msgid "Choose a custom icon for this item"
-msgstr "Elegir un icono personalizado para este elemento"
+msgstr "この項目のカスタムアイコンを選択"
 
 #: contents/ui/config/configLocation.qml:1574
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:256
 msgid "Choose on Map"
-msgstr "Elegir en el mapa"
+msgstr "地図上で選択"
 
 #: contents/ui/config/configLocation.qml:1189
 msgid "Choose on map"
-msgstr "Elegir en el mapa"
+msgstr "地図上で選択"
 
 #: contents/ui/config/configAppearance.qml:1365
 msgid "City / location name"
-msgstr "Ciudad / nombre de la ubicación"
+msgstr "都市 / 位置名"
 
 #: contents/ui/config/configGeneral.qml:601
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:48
 msgid "Clear"
-msgstr "Despejado"
+msgstr "クリア"
 
 #: contents/ui/config/configAppearance.qml:209
 msgid "Clear (day)"
-msgstr "Despejado (día)"
+msgstr "晴れ（昼）"
 
 #: contents/ui/config/configAppearance.qml:214
 msgid "Clear (night)"
-msgstr "Despejado (noche)"
+msgstr "晴れ（夜）"
 
 #: contents/ui/main.qml:1727
 msgid "Clear night"
-msgstr "Noche despejada"
+msgstr "晴れた夜"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:670
 #: contents/ui/main.qml:1727
 msgid "Clear sky"
-msgstr "Cielo despejado"
+msgstr "快晴"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:578
 msgid "Click \"Test across providers\" to check if the coordinates are serviceable by each supported weather provider. Providers requiring an API key that is not configured will be skipped."
-msgstr "Haz clic en \"Probar en proveedores\" para comprobar si las coordenadas son compatibles con cada proveedor meteorológico. Se omitirán los proveedores que requieran una clave API no configurada."
+msgstr "「プロバイダ横断テスト」をクリックして、座標が各対応気象プロバイダで利用可能か確認します。API キーが必要だが設定されていないプロバイダはスキップされます。"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:635
 msgid "Click on the map to select a location"
-msgstr "Haz clic en el mapa para seleccionar una ubicación"
+msgstr "地図をクリックして位置を選択"
 
 #: contents/ui/TooltipContent.qml:256
 msgid "Click to configure a location"
-msgstr "Haz clic para configurar una ubicación"
+msgstr "クリックして位置を設定"
 
 #: contents/ui/components/RadarWebEngineView.qml:74
 msgid "Clouds"
-msgstr "Nubes"
+msgstr "雲"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:303
 #: contents/ui/config/tabs/ConfigPanelTab.qml:312
 msgid "Colorful"
-msgstr "Colorido"
+msgstr "カラー"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:766
 msgid "Colorful (KDE color icons)"
-msgstr "Colorido (iconos de color de KDE)"
+msgstr "カラー（KDE カラーアイコン）"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:1025
 msgid "Compass in forecast:"
-msgstr "Brújula en el pronóstico:"
+msgstr "予報内のコンパス:"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:162
 #: contents/ui/config/tabs/ConfigPanelTab.qml:180
 msgid "Compressed"
-msgstr "Comprimido"
+msgstr "圧縮"
 
 #: contents/ui/config/configAppearance.qml:1314
 #: contents/ui/config/configAppearance.qml:1575 contents/ui/DetailsView.qml:312
 msgid "Condition"
-msgstr "Condición"
+msgstr "天気"
 
 #: contents/ui/config/configAppearance.qml:423
 msgid "Condition Icons"
-msgstr "Iconos de condición"
+msgstr "天気アイコン"
 
 #: contents/ui/TooltipContent.qml:417
 msgid "Condition:"
-msgstr "Condición:"
+msgstr "天気:"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:991
 msgid "Configure display mode options"
-msgstr "Configurar opciones del modo de visualización"
+msgstr "表示モードオプションを設定"
 
 #: contents/ui/config/configAppearance.qml:619
 msgid "Configure icon — %1"
-msgstr "Configurar icono — %1"
+msgstr "アイコンを設定 — %1"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:368
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:388
@@ -631,12 +629,12 @@ msgstr "Configurar icono — %1"
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:428
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:448
 msgid "Configure icon…"
-msgstr "Configurar icono…"
+msgstr "アイコンを設定…"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:335
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:150
 msgid "Configure weather icons…"
-msgstr "Configurar iconos del tiempo…"
+msgstr "天気アイコンを設定…"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:789
 #: contents/ui/config/tabs/ConfigPanelTab.qml:1202
@@ -644,58 +642,58 @@ msgstr "Configurar iconos del tiempo…"
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:695
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:740
 msgid "Configure…"
-msgstr "Configurar…"
+msgstr "設定…"
 
 #: contents/ui/config/configLocation.qml:1834
 msgid "Confirm rename"
-msgstr "Confirmar cambio de nombre"
+msgstr "名前変更を確定"
 
 #: contents/ui/config/configLocation.qml:1119
 msgid "Confirm your location"
-msgstr "Confirma tu ubicación"
+msgstr "位置を確認"
 
 #: contents/ui/config/configGeneral.qml:278
 msgid "Connection failed (HTTP %1)."
-msgstr "Error de conexión (HTTP %1)."
+msgstr "接続に失敗しました（HTTP %1）。"
 
 #: contents/ui/config/configGeneral.qml:271
 msgid "Connection successful! %1 key is valid."
-msgstr "¡Conexión exitosa! La clave %1 es válida."
+msgstr "接続に成功しました! %1 のキーは有効です。"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:270
 msgid "Coordinates"
-msgstr "Coordenadas"
+msgstr "座標"
 
 #: contents/ui/config/configNotifications.qml:234
 msgid "Critical notifications are still shown even when Do Not Disturb is enabled, or while you're playing a game or watching a fullscreen video (if those options are enabled in System Settings → Notifications)."
-msgstr "Las notificaciones críticas siguen mostrándose aunque el modo No molestar esté activado o mientras juegas a un juego o ves un vídeo en pantalla completa (si esas opciones están habilitadas en Configuración del sistema → Notificaciones)."
+msgstr "重要な通知は、Do Not Disturb が有効でも、ゲーム中や全画面動画視聴中でも表示されます（システム設定 → 通知でそのオプションが有効な場合）。"
 
 #: contents/ui/config/configAppearance.qml:1435
 #: contents/ui/config/configAppearance.qml:1558
 #: contents/ui/config/configAppearance.qml:1681
 msgid "Current date and/or time"
-msgstr "Fecha u hora actual"
+msgstr "現在の日付と時刻"
 
 #: contents/ui/config/configAppearance.qml:1372
 msgid "Current moon phase"
-msgstr "Fase lunar actual"
+msgstr "現在の月相"
 
 #: contents/ui/config/configAppearance.qml:1322
 #: contents/ui/config/configAppearance.qml:1569
 msgid "Current temperature"
-msgstr "Temperatura actual"
+msgstr "現在の気温"
 
 #: contents/ui/config/tabs/ConfigTooltipTab.qml:216
 msgid "Custom"
-msgstr "Personalizado"
+msgstr "カスタム"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:165
 msgid "Custom (set each unit manually)"
-msgstr "Personalizado (establecer cada unidad manualmente)"
+msgstr "カスタム（各单位を手動設定）"
 
 #: contents/ui/config/configAppearance.qml:451
 msgid "Custom per-condition icons"
-msgstr "Iconos personalizados por condición"
+msgstr "状態別カスタムアイコン"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:781
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:861
@@ -710,679 +708,679 @@ msgstr "Iconos personalizados por condición"
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:264
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:323
 msgid "Custom…"
-msgstr "Personalizado…"
+msgstr "カスタム…"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:823
 msgid "Daily Forecast Settings"
-msgstr "Ajustes del pronóstico diario"
+msgstr "日別予報設定"
 
 #: contents/ui/config/configGeneral.qml:446
 msgid "Dark Sky-compatible API with US alerts. API key required below."
-msgstr "API compatible con Dark Sky con alertas de EE. UU. Se requiere clave API a continuación."
+msgstr "Dark Sky 互換 API（米国アラート対応）。下に API キーが必要です。"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:873
 msgid "Dash  –"
-msgstr "Guion  –"
+msgstr "ダッシュ  –"
 
 #: contents/ui/config/configGeneral.qml:763
 msgid "Data Refresh"
-msgstr "Actualización de datos"
+msgstr "データ更新"
 
 #: contents/ui/config/configAppearance.qml:1434
 #: contents/ui/config/configAppearance.qml:1557
 #: contents/ui/config/configAppearance.qml:1680 contents/ui/DetailsView.qml:321
 msgid "Date / Time"
-msgstr "Fecha / Hora"
+msgstr "日付 / 時刻"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:354
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:419
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:414
 msgid "Date / Time options"
-msgstr "Opciones de fecha / hora"
+msgstr "日付 / 時刻オプション"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:240
 msgid "Date and time in header:"
-msgstr "Fecha y hora en el encabezado:"
+msgstr "ヘッダーに日付と時刻:"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:249
 msgid "Date format:"
-msgstr "Formato de fecha:"
+msgstr "日付形式:"
 
 #: contents/ui/TooltipContent.qml:620
 msgid "Date/Time:"
-msgstr "Fecha/Hora:"
+msgstr "日付/時刻:"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:766
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:640
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:634
 msgid "Date:"
-msgstr "Fecha:"
+msgstr "日付:"
 
 #: contents/ui/DetailsView.qml:3441
 msgid "Dawn approaching — "
-msgstr "Se acerca el amanecer — "
+msgstr "夜明けが近づいています — "
 
 #: contents/ui/DetailsView.qml:3421
 msgid "Day"
-msgstr "Día"
+msgstr "昼"
 
 #: contents/ui/DetailsView.qml:3449
 msgid "Daylight over"
-msgstr "Luz del día terminada"
+msgstr "昼光が終了"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:495
 #: contents/ui/config/tabs/ConfigPanelTab.qml:569
 msgid "Default"
-msgstr "Por defecto"
+msgstr "デフォルト"
 
 #: contents/ui/config/configLocation.qml:1809
 msgid "Default location (click to unset)"
-msgstr "Ubicación predeterminada (clic para quitar)"
+msgstr "デフォルト位置（クリックで解除）"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:166
 msgid "Default tab:"
-msgstr "Pestaña predeterminada:"
+msgstr "デフォルトタブ:"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:684
 msgid "Dense drizzle"
-msgstr "Llovizna densa"
+msgstr "濃い霧雨"
 
 #: contents/ui/DetailsView.qml:2303 contents/ui/DetailsView.qml:2305
 msgid "Description"
-msgstr "Descripción"
+msgstr "説明"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:80
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:174 contents/ui/FullView.qml:554
 msgid "Details"
-msgstr "Detalles"
+msgstr "詳細"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:114
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:653
 msgid "Details Items"
-msgstr "Elementos de detalles"
+msgstr "詳細項目"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:659
 msgid "Details items:"
-msgstr "Elementos de detalles:"
+msgstr "詳細項目:"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:559
 msgid "Details layout:"
-msgstr "Diseño de detalles:"
+msgstr "詳細レイアウト:"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:197
 msgid "Details only"
-msgstr "Solo detalles"
+msgstr "詳細のみ"
 
 #: contents/ui/main.qml:304
 msgid "Detect / change location"
-msgstr "Detectar / cambiar ubicación"
+msgstr "位置を検出 / 変更"
 
 #: contents/ui/FullView.qml:385
 msgid "Detect / change location…"
-msgstr "Detectar / cambiar ubicación…"
+msgstr "位置を検出 / 変更…"
 
 #: contents/ui/config/configLocation.qml:1530
 msgid "Detecting…"
-msgstr "Detectando…"
+msgstr "検出中…"
 
 #: contents/ui/config/configAppearance.qml:1480 contents/ui/DetailsView.qml:309
 #: contents/ui/SimpleView.qml:261
 msgid "Dew Point"
-msgstr "Punto de rocío"
+msgstr "露点"
 
 #: contents/ui/config/configAppearance.qml:1481
 msgid "Dew point temperature"
-msgstr "Temperatura del punto de rocío"
+msgstr "露点温度"
 
 #: contents/ui/TooltipContent.qml:441
 msgid "Dew point:"
-msgstr "Punto de rocío:"
+msgstr "露点:"
 
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:488
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:483
 msgid "Disable item"
-msgstr "Deshabilitar elemento"
+msgstr "項目を無効化"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:519
 #: contents/ui/config/tabs/ConfigTooltipTab.qml:47
 msgid "Disabled"
-msgstr "Deshabilitado"
+msgstr "無効"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:69
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:58
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:57
 msgid "Discard"
-msgstr "Descartar"
+msgstr "破棄"
 
 #: contents/ui/main.qml:381
 msgid "Dismiss"
-msgstr "Descartar"
+msgstr "閉じる"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:43
 msgid "Display"
-msgstr "Pantalla"
+msgstr "表示"
 
 #: contents/ui/config/configAppearance.qml:717
 #: contents/ui/config/configAppearance.qml:873
 #: contents/ui/config/tabs/ConfigPanelTab.qml:92
 #: contents/ui/config/tabs/ConfigPanelTab.qml:121
 msgid "Display mode:"
-msgstr "Modo de visualización:"
+msgstr "表示モード:"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:86
 msgid "Displaying °C and °F together"
-msgstr "Se muestra °C y °F juntos"
+msgstr "°C と °F を同時表示"
 
 #: contents/ui/config/configAppearance.qml:1407
 #: contents/ui/config/configAppearance.qml:1530
 #: contents/ui/config/configAppearance.qml:1653
 msgid "Dominant pollen type and index"
-msgstr "Tipo de polen dominante e índice"
+msgstr "優勢な花粉の種類と指数"
 
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:802
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:790
 msgid "Drag to reorder enabled items"
-msgstr "Arrastra para reordenar los elementos habilitados"
+msgstr "ドラッグして有効な項目を並べ替え"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:951
 msgid "Drag to reorder shown items"
-msgstr "Arrastra para reordenar los elementos mostrados"
+msgstr "ドラッグして表示項目を並べ替え"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:53
 #: contents/ui/main.qml:1741
 msgid "Drizzle"
-msgstr "Llovizna"
+msgstr "霧雨"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:74
 msgid "Dual temperature"
-msgstr "Temperatura dual"
+msgstr "二重温度表示"
 
 #: contents/ui/config/configGeneral.qml:682
 msgid "Each QWeather project has a unique API host. Find yours at console.qweather.com under your project settings."
-msgstr "Cada proyecto de QWeather tiene un host de API único. Encuéntralo en console.qweather.com en la configuración de tu proyecto."
+msgstr "各 QWeather プロジェクトには固有の API ホストがあります。console.qweather.com のプロジェクト設定で確認してください。"
 
 #: contents/ui/config/configNotifications.qml:183
 msgid "Each notification type can be enabled independently, with its own daily time where applicable."
-msgstr "Cada tipo de notificación puede habilitarse de forma independiente, con su propio horario diario cuando corresponda."
+msgstr "各通知タイプは個別に有効化でき、該当する場合は毎日の時刻も設定できます。"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:383
 msgid "Edit Saved Location"
-msgstr "Editar ubicación guardada"
+msgstr "保存した位置を編集"
 
 #: contents/ui/config/configLocation.qml:1864
 msgid "Edit location details"
-msgstr "Editar detalles de la ubicación"
+msgstr "位置の詳細を編集"
 
 #: contents/ui/DetailsView.qml:2308
 msgid "Effective"
-msgstr "Vigente"
+msgstr "発効"
 
 #: contents/ui/config/configNotifications.qml:194
 msgid "Enable alert notifications"
-msgstr "Habilitar notificaciones de alertas"
+msgstr "アラート通知を有効化"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:568
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:633
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:697
 msgid "Enable all"
-msgstr "Habilitar todos"
+msgstr "すべて有効化"
 
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:488
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:483
 msgid "Enable item"
-msgstr "Habilitar elemento"
+msgstr "項目を有効化"
 
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:830
 msgid "Enable or disable this item"
-msgstr "Habilitar o deshabilitar este elemento"
+msgstr "この項目を有効化または無効化"
 
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:848
 msgid "Enable or disable this item on the panel"
-msgstr "Habilitar o deshabilitar este elemento en el panel"
+msgstr "パネル上のこの項目を有効化または無効化"
 
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:126
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:124
 #: contents/ui/config/tabs/ConfigPanelTab.qml:519
 #: contents/ui/config/tabs/ConfigTooltipTab.qml:47
 msgid "Enabled"
-msgstr "Habilitado"
+msgstr "有効"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:412
 msgid "Enter Location"
-msgstr "Introducir ubicación"
+msgstr "位置を入力"
 
 #: contents/ui/config/configLocation.qml:1588
 msgid "Enter Manually"
-msgstr "Introducir manualmente"
+msgstr "手動で入力"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:542
 msgid "Enter a location name and valid coordinates, then click the main Apply button."
-msgstr "Introduce un nombre de ubicación y coordenadas válidas, luego haz clic en el botón Aplicar principal."
+msgstr "位置名と有効な座標を入力し、メインの適用ボタンをクリックしてください。"
 
 #: contents/ui/config/configLocation.qml:1592
 msgid "Enter exact latitude, longitude, and optional elevation for a more local forecast. You can copy coordinates from OpenStreetMap, GeoNames, or Google Maps."
-msgstr "Introduce la latitud, longitud y elevación exactas (opcional) para un pronóstico más local. Puedes copiar las coordenadas desde OpenStreetMap, GeoNames o Google Maps."
+msgstr "よりローカルな予報のため、正確な緯度、経度、および任意の標高を入力してください。OpenStreetMap、GeoNames、Google Maps から座標をコピーできます。"
 
 #: contents/ui/config/configLocation.qml:1179
 msgid "Enter manually"
-msgstr "Introducir manualmente"
+msgstr "手動で入力"
 
 #: contents/ui/config/configGeneral.qml:519
 msgid "Enter your OpenWeatherMap API key"
-msgstr "Introduce tu clave API de OpenWeatherMap"
+msgstr "OpenWeatherMap API キーを入力"
 
 #: contents/ui/config/configGeneral.qml:521
 msgid "Enter your Pirate Weather API key"
-msgstr "Introduce tu clave API de Pirate Weather"
+msgstr "Pirate Weather API キーを入力"
 
 #: contents/ui/config/configGeneral.qml:531
 msgid "Enter your QWeather API key"
-msgstr "Introduce tu clave API de QWeather"
+msgstr "QWeather API キーを入力"
 
 #: contents/ui/config/configGeneral.qml:527
 msgid "Enter your StormGlass API key"
-msgstr "Introduce tu clave API de StormGlass"
+msgstr "StormGlass API キーを入力"
 
 #: contents/ui/config/configGeneral.qml:525
 msgid "Enter your Tomorrow.io API key"
-msgstr "Introduce tu clave API de Tomorrow.io"
+msgstr "Tomorrow.io API キーを入力"
 
 #: contents/ui/config/configGeneral.qml:523
 msgid "Enter your Visual Crossing API key"
-msgstr "Introduce tu clave API de Visual Crossing"
+msgstr "Visual Crossing API キーを入力"
 
 #: contents/ui/config/configGeneral.qml:532
 msgid "Enter your WeatherAPI.com key"
-msgstr "Introduce tu clave de WeatherAPI.com"
+msgstr "WeatherAPI.com キーを入力"
 
 #: contents/ui/config/configGeneral.qml:529
 msgid "Enter your Weatherbit API key"
-msgstr "Introduce tu clave API de Weatherbit"
+msgstr "Weatherbit API キーを入力"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:256
 msgid "Error (code %1)"
-msgstr "Error (código %1)"
+msgstr "エラー（コード %1）"
 
 #: contents/ui/DetailsView.qml:3443
 msgid "Evening — "
-msgstr "Tarde — "
+msgstr "夕方 — "
 
 #: contents/ui/js/spaceWeather.js:194
 msgid "Excellent"
-msgstr "Excelente"
+msgstr "最高"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:801
 msgid "Expand all days:"
-msgstr "Expandir todos los días:"
+msgstr "すべての日を展開:"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:933
 msgid "Expand widget to fill available panel space"
-msgstr "Expandir widget para ocupar el espacio disponible del panel"
+msgstr "ウィジェットを展開して利用可能なパネル領域を埋める"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:611
 msgid "Expanded cards height:"
-msgstr "Altura de las tarjetas expandidas:"
+msgstr "展開カードの高さ:"
 
 #: contents/ui/DetailsView.qml:2310
 msgid "Expires"
-msgstr "Vence"
+msgstr "失効"
 
 #: contents/ui/js/airQuality.js:52 contents/ui/js/spaceWeather.js:168
 #: contents/ui/js/spaceWeather.js:182 contents/ui/main.qml:800
 msgid "Extreme"
-msgstr "Extremo"
+msgstr "極端"
 
 #: contents/ui/js/spaceWeather.js:87
 msgid "Extreme geomagnetic storm."
-msgstr "Tormenta geomagnética extrema."
+msgstr "極度の地磁気嵐。"
 
 #: contents/ui/js/airQuality.js:52 contents/ui/main.qml:814
 msgid "Extremely Poor"
-msgstr "Extremadamente mala"
+msgstr "極めて悪い"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:231
 msgid "Fahrenheit (°F)"
-msgstr "Fahrenheit (°F)"
+msgstr "華氏（°F）"
 
 #: contents/ui/WeatherService.qml:728
 msgid "Failed to load weather providers"
-msgstr "Error al cargar los proveedores meteorológicos"
+msgstr "気象プロバイダの読み込みに失敗しました"
 
 #: contents/ui/WeatherService.qml:716
 msgid "Failed: %1"
-msgstr "Error: %1"
+msgstr "失敗: %1"
 
 #: contents/ui/js/airQuality.js:48 contents/ui/main.qml:810
 msgid "Fair"
-msgstr "Regular"
+msgstr "まあまあ"
 
 #: contents/ui/config/configAppearance.qml:1343
 #: contents/ui/config/configAppearance.qml:1445
 #: contents/ui/config/configAppearance.qml:1582 contents/ui/DetailsView.qml:304
 #: contents/ui/SimpleView.qml:258
 msgid "Feels Like"
-msgstr "Sensación térmica"
+msgstr "体感温度"
 
 #: contents/ui/TooltipContent.qml:414
 msgid "Feels like:"
-msgstr "Sensación:"
+msgstr "体感温度:"
 
 #: contents/ui/FullView.qml:85 contents/ui/SimpleView.qml:59
 msgid "Feels like: %1"
-msgstr "Sensación: %1"
+msgstr "体感温度: %1"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:261
 msgid "Fill panel"
-msgstr "Rellenar panel"
+msgstr "パネルを埋める"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:932
 msgid "Fill panel:"
-msgstr "Rellenar panel:"
+msgstr "パネルを埋める:"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:314
 msgid "Find"
-msgstr "Buscar"
+msgstr "検索"
 
 #: contents/ui/main.qml:1904
 msgid "First Quarter"
-msgstr "Cuarto creciente"
+msgstr "上弦の月"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:893
 msgid "First day of week:"
-msgstr "Primer día de la semana:"
+msgstr "週の最初の日:"
 
 #: contents/ui/DetailsView.qml:2060
 msgid "Flare Warning"
-msgstr "Aviso de erupción solar"
+msgstr "フレア警報"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:1079
 #: contents/ui/config/tabs/ConfigTooltipTab.qml:208
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:43
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:52
 msgid "Flat Color (Bundled)"
-msgstr "Color plano (incluido)"
+msgstr "フラットカラー（同梱）"
 
 #: contents/ui/config/configAppearance.qml:248
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:52
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:678
 #: contents/ui/main.qml:1735
 msgid "Fog"
-msgstr "Niebla"
+msgstr "霧"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:1071
 #: contents/ui/config/tabs/ConfigTooltipTab.qml:200
 msgid "Font icons (default)"
-msgstr "Iconos de fuente (predeterminado)"
+msgstr "フォントアイコン（デフォルト）"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:426
 msgid "Font size:"
-msgstr "Tamaño de fuente:"
+msgstr "フォントサイズ:"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:214
 msgid "Footer:"
-msgstr "Pie de página:"
+msgstr "フッター:"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:84
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:175 contents/ui/FullView.qml:555
 msgid "Forecast"
-msgstr "Pronóstico"
+msgstr "予報"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:770
 msgid "Forecast days:"
-msgstr "Días de pronóstico:"
+msgstr "予報日数:"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:198
 msgid "Forecast only"
-msgstr "Solo pronóstico"
+msgstr "予報のみ"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:1016
 msgid "Forecast:"
-msgstr "Pronóstico:"
+msgstr "予報:"
 
 #: contents/ui/config/configGeneral.qml:458
 msgid "Free Norwegian Meteorological Institute service. No API key needed."
-msgstr "Servicio gratuito del Instituto Meteorológico Noruego. No se necesita clave API."
+msgstr "ノルウェー気象研究所の無料サービス。API キーは不要です。"
 
 #: contents/ui/config/configGeneral.qml:459
 msgid "Free and open-source. No API key needed. Recommended."
-msgstr "Gratuito y de código abierto. No se necesita clave API. Recomendado."
+msgstr "無料でオープンソース。API キーは不要です。推奨。"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:54
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:686
 #: contents/ui/main.qml:1747
 msgid "Freezing drizzle"
-msgstr "Llovizna helada"
+msgstr "着氷性の霧雨"
 
 #: contents/ui/config/configAppearance.qml:276
 msgid "Freezing drizzle (day)"
-msgstr "Llovizna helada (día)"
+msgstr "着氷性の霧雨（昼）"
 
 #: contents/ui/config/configAppearance.qml:281
 msgid "Freezing drizzle (night)"
-msgstr "Llovizna helada (noche)"
+msgstr "着氷性の霧雨（夜）"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:56
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:694
 #: contents/ui/main.qml:1757
 msgid "Freezing rain"
-msgstr "Lluvia helada"
+msgstr "着氷性の雨"
 
 #: contents/ui/config/configAppearance.qml:287
 msgid "Freezing rain (day)"
-msgstr "Lluvia helada (día)"
+msgstr "着氷性の雨（昼）"
 
 #: contents/ui/config/configAppearance.qml:292
 msgid "Freezing rain (night)"
-msgstr "Lluvia helada (noche)"
+msgstr "着氷性の雨（夜）"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:905
 msgid "Friday"
-msgstr "Viernes"
+msgstr "金曜日"
 
 #: contents/ui/main.qml:1908
 msgid "Full Moon"
-msgstr "Luna llena"
+msgstr "満月"
 
 #: contents/ui/DetailsView.qml:2693
 msgid "Future alerts"
-msgstr "Alertas futuras"
+msgstr "将来のアラート"
 
 #: contents/ui/config/configLocation.qml:1530
 msgid "GPS / GeoClue2 unavailable (install qt6-qtlocation for best accuracy). Using IP-based detection."
-msgstr "GPS / GeoClue2 no disponible (instala qt6-qtlocation para mayor precisión). Usando detección por IP."
+msgstr "GPS / GeoClue2 が利用できません（最高精度のため qt6-qtlocation をインストール）。IP ベースの検出を使用します。"
 
 #: contents/config/config.qml:52 contents/ui/config/tabs/ConfigWidgetTab.qml:76
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:764
 msgid "General"
-msgstr "General"
+msgstr "一般"
 
 #: contents/ui/config/configLocation.qml:813
 msgid "GeoClue2 unavailable, trying system location…"
-msgstr "GeoClue2 no disponible, intentando con la ubicación del sistema…"
+msgstr "GeoClue2 が利用できません。システム位置を試行中…"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:717
 #: contents/ui/DetailsView.qml:1831
 msgid "Geomagnetic Storm"
-msgstr "Tormenta geomagnética"
+msgstr "地磁気嵐"
 
 #: contents/ui/config/configNotifications.qml:347 contents/ui/main.qml:1632
 msgid "Geomagnetic activity"
-msgstr "Actividad geomagnética"
+msgstr "地磁気活動"
 
 #: contents/ui/main.qml:1629
 msgid "Geomagnetic activity will be %1 (Kp %2)"
-msgstr "La actividad geomagnética estará en nivel %1 (Kp %2)"
+msgstr "地磁気活動は %1（Kp %2）になる予想"
 
 #: contents/ui/js/airQuality.js:47 contents/ui/main.qml:809
 msgid "Good"
-msgstr "Buena"
+msgstr "良好"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:655
 #: contents/ui/DetailsView.qml:1406 contents/ui/main.qml:848
 msgid "Grass"
-msgstr "Gramíneas"
+msgstr "イネ科"
 
 #: contents/ui/DetailsView.qml:2300
 msgid "Headline"
-msgstr "Titular"
+msgstr "見出し"
 
 #: contents/ui/components/RadarWebEngineView.qml:93
 #: contents/ui/components/RadarWebEngineView.qml:548
 msgid "Heavy"
-msgstr "Intenso"
+msgstr "強い"
 
 #: contents/ui/main.qml:1743
 msgid "Heavy drizzle"
-msgstr "Llovizna intensa"
+msgstr "強い霧雨"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:692
 #: contents/ui/main.qml:1753
 msgid "Heavy rain"
-msgstr "Lluvia intensa"
+msgstr "大雨"
 
 #: contents/ui/main.qml:1771
 msgid "Heavy showers"
-msgstr "Chubascos fuertes"
+msgstr "強いにわか雨"
 
 #: contents/ui/main.qml:1763
 msgid "Heavy snow"
-msgstr "Nevada intensa"
+msgstr "大雪"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:712
 msgid "Heavy snow showers"
-msgstr "Chubascos de nieve intensa"
+msgstr "強いにわか雪"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:700
 msgid "Heavy snowfall"
-msgstr "Nevada intensa"
+msgstr "大雪"
 
 #: contents/ui/main.qml:1781
 msgid "Heavy thunderstorm with hail"
-msgstr "Tormenta eléctrica intensa con granizo"
+msgstr "ひょうを伴う激しい雷雨"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:144
 msgid "Hidden"
-msgstr "Oculto"
+msgstr "非表示"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:419
 msgid "Hide from details"
-msgstr "Ocultar en detalles"
+msgstr "詳細から非表示"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:407
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:476
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:471
 msgid "Hide prefix icon"
-msgstr "Ocultar icono de prefijo"
+msgstr "接頭アイコンを非表示"
 
 #: contents/ui/DetailsView.qml:1028 contents/ui/FullView.qml:493
 #: contents/ui/js/pollen.js:44 contents/ui/js/spaceWeather.js:183
 #: contents/ui/js/spaceWeather.js:195 contents/ui/main.qml:798
 #: contents/ui/main.qml:842
 msgid "High"
-msgstr "Alto"
+msgstr "高"
 
 #: contents/ui/config/configGeneral.qml:454
 msgid "High precision forecast provider. API key required below."
-msgstr "Proveedor de pronósticos de alta precisión. Se requiere clave API a continuación."
+msgstr "高精度予報プロバイダ。下に API キーが必要です。"
 
 #: contents/ui/config/configGeneral.qml:448
 msgid "Historical and forecast data provider. API key required below."
-msgstr "Proveedor de datos históricos y de pronóstico. Se requiere clave API a continuación."
+msgstr "過去と予報データプロバイダ。下に API キーが必要です。"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:154
 msgid "Horizontal"
-msgstr "Horizontal"
+msgstr "水平"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:899
 msgid "Hourly Forecast Settings"
-msgstr "Ajustes del pronóstico por horas"
+msgstr "時間別予報設定"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:909
 msgid "Hourly layout:"
-msgstr "Diseño por horas:"
+msgstr "時間別レイアウト:"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:735
 msgid "How often the rows scroll to reveal the next item"
-msgstr "Con qué frecuencia se desplazan las filas para mostrar el siguiente elemento"
+msgstr "次の項目を表示するための行スクロール間隔"
 
 #: contents/ui/config/configAppearance.qml:1350
 #: contents/ui/config/configAppearance.qml:1452
 #: contents/ui/config/configAppearance.qml:1596 contents/ui/DetailsView.qml:305
 #: contents/ui/SimpleView.qml:259
 msgid "Humidity"
-msgstr "Humedad"
+msgstr "湿度"
 
 #: contents/ui/TooltipContent.qml:435
 msgid "Humidity:"
-msgstr "Humedad:"
+msgstr "湿度:"
 
 #: contents/ui/config/configLocation.qml:932
 #: contents/ui/config/configLocation.qml:963
 msgid "IP geolocation"
-msgstr "Geolocalización por IP"
+msgstr "IP 位置情報"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:195
 msgid "Icon and temperature"
-msgstr "Icono y temperatura"
+msgstr "アイコンと気温"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:228
 msgid "Icon first"
-msgstr "Icono primero"
+msgstr "アイコンを先"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:203
 msgid "Icon only"
-msgstr "Solo icono"
+msgstr "アイコンのみ"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:344
 msgid "Icon size:"
-msgstr "Tamaño del icono:"
+msgstr "アイコンサイズ:"
 
 #: contents/ui/config/configAppearance.qml:440
 msgid "Icon source:"
-msgstr "Fuente del icono:"
+msgstr "アイコンソース:"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:1063
 #: contents/ui/config/tabs/ConfigTooltipTab.qml:191
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:482
 msgid "Icon theme:"
-msgstr "Tema de iconos:"
+msgstr "アイコンテーマ:"
 
 #: contents/ui/config/configAppearance.qml:658
 msgid "Icon:"
-msgstr "Icono:"
+msgstr "アイコン:"
 
 #: contents/ui/config/tabs/ConfigTooltipTab.qml:184
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:477
 msgid "Icons"
-msgstr "Iconos"
+msgstr "アイコン"
 
 #: contents/ui/config/configLocation.qml:1155
 msgid "If this looks correct, apply it. Otherwise, choose your location manually."
-msgstr "Si parece correcto, aplícalo. De lo contrario, elige tu ubicación manualmente."
+msgstr "正しい場合は適用してください。そうでない場合は、位置を手動で選択してください。"
 
 #: contents/ui/config/configGeneral.qml:664
 msgid "If you have just registered a new OpenWeatherMap API key, it might take up to 2 hours for it to become active. Please try again later if it doesn't work immediately."
-msgstr "Si acabas de registrar una nueva clave API de OpenWeatherMap, puede tardar hasta 2 horas en activarse. Si no funciona de inmediato, inténtalo de nuevo más tarde."
+msgstr "新しく OpenWeatherMap API キーを登録したばかりの場合、有効になるまで最大 2 時間かかることがあります。すぐに動作しない場合は、後でもう一度お試しください。"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:157
 msgid "Imperial (°F, mph, inHg, in)"
-msgstr "Imperial (°F, mph, inHg, in)"
+msgstr "ヤード・ポンド法（°F、mph、inHg、in）"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:132
 msgid "In a vertical panel, long item labels may be truncated. Consider using \"Simple\" mode, increasing the panel width, or reducing the font size."
-msgstr "En un panel vertical, las etiquetas largas pueden truncarse. Considera usar el modo «Simple», aumentar el ancho del panel o reducir el tamaño de fuente."
+msgstr "垂直パネルでは、長い項目ラベルが切り捨てられる場合があります。「シンプル」モードの使用、パネル幅の増加、またはフォントサイズの縮小を検討してください。"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:314
 msgid ""
 "Individual dropdowns are editable only in Custom mode.\n"
 "Other presets set units automatically."
 msgstr ""
-"Los menús desplegables individuales solo son editables en el modo Personalizado.\n"
-"Los demás preajustes establecen las unidades automáticamente."
+"個別のドロップダウンはカスタムモードでのみ編集できます。\n"
+"他のプリセットは単位を自動的に設定します。"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:216
 msgid "Individual units"
-msgstr "Unidades individuales"
+msgstr "個別の単位"
 
 #: contents/ui/config/configLocation.qml:1102
 msgid ""
@@ -1393,12 +1391,12 @@ msgid ""
 "\n"
 "You can still search for a location or enter coordinates manually. Note that auto-detection will continue to work using an IP fallback, but it may be less accurate and won’t update in real time as you move around."
 msgstr ""
-"Instálalo para tu distribución:\n"
+"ディストリビューション用にインストールしてください:\n"
 "  • Fedora / RHEL / Arch: qt6-qtlocation\n"
 "  • openSUSE: qt6-location\n"
-"  • Debian / Kubuntu / KDE Neon: qml6-module-qtlocation y qml6-module-qtpositioning\n"
+"  • Debian / Kubuntu / KDE Neon: qml6-module-qtlocation および qml6-module-qtpositioning\n"
 "\n"
-"Aún puedes buscar una ubicación o introducir coordenadas manualmente. La detección automática seguirá funcionando mediante IP como respaldo, pero puede ser menos precisa y no se actualizará en tiempo real a medida que te muevas."
+"位置の検索や座標の手動入力は引き続き可能です。自動検出は IP フォールバックで引き続き動作しますが、精度が低く、移動時にリアルタイムで更新されません。"
 
 #: contents/ui/RadarView.qml:176
 msgid ""
@@ -1407,309 +1405,309 @@ msgid ""
 "- openSUSE / Arch: qt6-webengine\n"
 "- Debian / Kubuntu / KDE Neon: qml6-module-qtwebengine"
 msgstr ""
-"Instálalo para tu distribución:\n"
+"ディストリビューション用にインストールしてください:\n"
 "- Fedora / RHEL: qt6-qtwebengine\n"
 "- openSUSE / Arch: qt6-webengine\n"
 "- Debian / Kubuntu / KDE Neon: qml6-module-qtwebengine"
 
 #: contents/ui/DetailsView.qml:2312
 msgid "Instruction"
-msgstr "Instrucción"
+msgstr "指示"
 
 #: contents/ui/config/configGeneral.qml:790
 msgid "Interval:"
-msgstr "Intervalo:"
+msgstr "間隔:"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:268
 msgid "Invalid API key (HTTP %1)"
-msgstr "Clave API inválida (HTTP %1)"
+msgstr "無効な API キー（HTTP %1）"
 
 #: contents/ui/config/configGeneral.qml:275
 msgid "Invalid API key. Please check and try again."
-msgstr "Clave API inválida. Por favor, compruébala e inténtalo de nuevo."
+msgstr "無効な API キーです。確認して再試行してください。"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:261
 msgid "Invalid response"
-msgstr "Respuesta inválida"
+msgstr "無効なレスポンス"
 
 #: contents/ui/config/configGeneral.qml:265
 msgid "Invalid response from QWeather."
-msgstr "Respuesta inválida de QWeather."
+msgstr "QWeather からのレスポンスが無効です。"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:917
 msgid "Item spacing:"
-msgstr "Espaciado de elementos:"
+msgstr "項目の間隔:"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:835
 msgid "Item width:"
-msgstr "Ancho del elemento:"
+msgstr "項目の幅:"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:220
 msgid "Items Order:"
-msgstr "Orden de los elementos:"
+msgstr "項目の順序:"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:1087
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:41
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:49
 msgid "KDE Icon Theme"
-msgstr "Tema de iconos de KDE"
+msgstr "KDE アイコンテーマ"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:50
 msgid "KDE Symbolic"
-msgstr "KDE Simbólico"
+msgstr "KDE シンボリック"
 
 #: contents/ui/config/configAppearance.qml:446
 msgid "KDE System Icons (automatic, follows weather code)"
-msgstr "Iconos del sistema KDE (automático, sigue el código meteorológico)"
+msgstr "KDE システムアイコン（自動、天気コードに追従）"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:526
 msgid "KDE icon themes don't fully support many item icons. You can set your own icons by clicking \"Set your own icons\"."
-msgstr "Los temas de iconos de KDE no admiten completamente muchos iconos de elementos. Puedes establecer tus propios iconos haciendo clic en «Establecer tus propios iconos»."
+msgstr "KDE アイコンテーマは多くの項目アイコンを完全にはサポートしていません。「独自のアイコンを設定」をクリックして独自のアイコンを設定できます。"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:61
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:50
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:49
 msgid "Keep Changes"
-msgstr "Conservar cambios"
+msgstr "変更を保持"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:56
 msgid "Keep the changes you made to Details Items?"
-msgstr "¿Conservar los cambios realizados en los elementos de detalles?"
+msgstr "詳細項目に加えた変更を保持しますか?"
 
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:45
 msgid "Keep the changes you made to Panel Items?"
-msgstr "¿Conservar los cambios realizados en los elementos del panel?"
+msgstr "パネル項目に加えた変更を保持しますか?"
 
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:44
 msgid "Keep the changes you made to Tooltip Items?"
-msgstr "¿Conservar los cambios realizados en los elementos de información emergente?"
+msgstr "ツールチップ項目に加えた変更を保持しますか?"
 
 #: contents/ui/FullView.qml:371
 msgid "Keep widget open"
-msgstr "Mantener widget abierto"
+msgstr "ウィジェットを開いたままにする"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:266
 msgid "Knots (kn)"
-msgstr "Nudos (kn)"
+msgstr "ノット（kn）"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:718
 #: contents/ui/DetailsView.qml:1866
 msgid "Kp Index"
-msgstr "Índice Kp"
+msgstr "Kp 指数"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:836
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:948
 msgid "Kp index/G forecast:"
-msgstr "Pronóstico de índice Kp/G:"
+msgstr "Kp 指数 / G 予報:"
 
 #: contents/ui/main.qml:1912
 msgid "Last Quarter"
-msgstr "Cuarto menguante"
+msgstr "下弦の月"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:595
 msgid "Lat:"
-msgstr "Lat:"
+msgstr "緯度:"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:367
 msgid "Lat: %1°"
-msgstr "Lat: %1°"
+msgstr "緯度: %1°"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:293
 msgid "Latitude"
-msgstr "Latitud"
+msgstr "緯度"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:429
 msgid "Latitude:"
-msgstr "Latitud:"
+msgstr "緯度:"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:102
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:550
 msgid "Layout"
-msgstr "Diseño"
+msgstr "レイアウト"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:146
 #: contents/ui/config/tabs/ConfigPanelTab.qml:179
 msgid "Layout type:"
-msgstr "Tipo de diseño:"
+msgstr "レイアウトタイプ:"
 
 #: contents/ui/components/RadarWebEngineView.qml:91
 #: contents/ui/components/RadarWebEngineView.qml:548
 msgid "Light"
-msgstr "Ligero"
+msgstr "弱い"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:680
 #: contents/ui/main.qml:1739
 msgid "Light drizzle"
-msgstr "Llovizna ligera"
+msgstr "弱い霧雨"
 
 #: contents/ui/main.qml:1745
 msgid "Light freezing drizzle"
-msgstr "Llovizna helada ligera"
+msgstr "弱い着氷性の霧雨"
 
 #: contents/ui/main.qml:1755
 msgid "Light freezing rain"
-msgstr "Lluvia helada ligera"
+msgstr "弱い着氷性の雨"
 
 #: contents/ui/main.qml:1749
 msgid "Light rain"
-msgstr "Lluvia ligera"
+msgstr "小雨"
 
 #: contents/ui/config/configAppearance.qml:254
 msgid "Light rain / Drizzle (day)"
-msgstr "Lluvia ligera / Llovizna (día)"
+msgstr "小雨 / 霧雨（昼）"
 
 #: contents/ui/config/configAppearance.qml:259
 msgid "Light rain / Drizzle (night)"
-msgstr "Lluvia ligera / Llovizna (noche)"
+msgstr "小雨 / 霧雨（夜）"
 
 #: contents/ui/main.qml:1767
 msgid "Light showers"
-msgstr "Chubascos ligeros"
+msgstr "弱いにわか雨"
 
 #: contents/ui/main.qml:1759
 msgid "Light snow"
-msgstr "Nieve ligera"
+msgstr "小雪"
 
 #: contents/ui/config/configAppearance.qml:298
 msgid "Light snow (day)"
-msgstr "Nieve ligera (día)"
+msgstr "小雪（昼）"
 
 #: contents/ui/config/configAppearance.qml:303
 msgid "Light snow (night)"
-msgstr "Nieve ligera (noche)"
+msgstr "小雪（夜）"
 
 #: contents/ui/main.qml:1773
 msgid "Light snow showers"
-msgstr "Chubascos de nieve ligera"
+msgstr "弱いにわか雪"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:739
 msgid "Lines:"
-msgstr "Líneas:"
+msgstr "行数:"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:567
 msgid "List"
-msgstr "Lista"
+msgstr "リスト"
 
 #: contents/ui/DetailsView.qml:543
 msgid "Loading details…"
-msgstr "Cargando detalles…"
+msgstr "詳細を読み込み中…"
 
 #: contents/ui/ForecastView.qml:342
 msgid "Loading forecast…"
-msgstr "Cargando pronóstico…"
+msgstr "予報を読み込み中…"
 
 #: contents/ui/ForecastView.qml:770
 msgid "Loading hourly data…"
-msgstr "Cargando datos por horas…"
+msgstr "時間別データを読み込み中…"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:538
 msgid "Loading locations…"
-msgstr "Cargando ubicaciones…"
+msgstr "位置を読み込み中…"
 
 #: contents/ui/RadarView.qml:116
 msgid "Loading radar…"
-msgstr "Cargando radar…"
+msgstr "レーダーを読み込み中…"
 
 #: contents/config/config.qml:47
 msgid "Location"
-msgstr "Ubicación"
+msgstr "位置"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:513
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:92
 msgid "Location '%1' is already in your saved list. You can apply the selected location, but it will not be saved again."
-msgstr "La ubicación «%1» ya está en tu lista guardada. Puedes aplicar la ubicación seleccionada, pero no se volverá a guardar."
+msgstr "位置 '%1' は既に保存リストにあります。選択した位置を適用できますが、再度保存されません。"
 
 #: contents/ui/config/configAppearance.qml:1364
 msgid "Location Name"
-msgstr "Nombre de la ubicación"
+msgstr "位置名"
 
 #: contents/ui/config/configLocation.qml:745
 msgid "Location auto-detected."
-msgstr "Ubicación detectada automáticamente."
+msgstr "位置を自動検出しました。"
 
 #: contents/ui/config/configLocation.qml:1530
 msgid "Location detection is depending on system configuration and permissions."
-msgstr "La detección de ubicación depende de la configuración del sistema y los permisos."
+msgstr "位置検出はシステム設定と権限に依存します。"
 
 #: contents/ui/config/configGeneral.qml:174
 #: contents/ui/config/configLocation.qml:536
 msgid "Location is available on %1."
-msgstr "La ubicación está disponible en %1."
+msgstr "位置は %1 で利用可能です。"
 
 #: contents/ui/config/configGeneral.qml:177
 #: contents/ui/config/configLocation.qml:539
 msgid "Location is not available on %1 (HTTP %2). Try a different provider or location."
-msgstr "La ubicación no está disponible en %1 (HTTP %2). Prueba con otro proveedor o ubicación."
+msgstr "位置は %1 で利用できません（HTTP %2）。別のプロバイダまたは位置をお試しください。"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:270
 msgid "Location name"
-msgstr "Nombre de la ubicación"
+msgstr "位置名"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:418
 #: contents/ui/config/tabs/ConfigTooltipTab.qml:61
 msgid "Location name:"
-msgstr "Nombre de la ubicación:"
+msgstr "位置名:"
 
 #: contents/ui/config/configLocation.qml:1515
 msgid "Location package notice"
-msgstr "Aviso de paquetes de ubicación"
+msgstr "位置パッケージの通知"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:541
 msgid "Location staged. Click the main Apply button to save."
-msgstr "Ubicación preparada. Haz clic en el botón Aplicar principal para guardar."
+msgstr "位置がステージングされました。メインの適用ボタンをクリックして保存してください。"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:346
 msgid "Location:"
-msgstr "Ubicación:"
+msgstr "位置:"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:602
 msgid "Lon:"
-msgstr "Lon:"
+msgstr "経度:"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:368
 msgid "Lon: %1°"
-msgstr "Lon: %1°"
+msgstr "経度: %1°"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:305
 msgid "Longitude"
-msgstr "Longitud"
+msgstr "経度"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:446
 msgid "Longitude:"
-msgstr "Longitud:"
+msgstr "経度:"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:561
 msgid "Looking up location…"
-msgstr "Buscando ubicación…"
+msgstr "位置を検索中…"
 
 #: contents/ui/DetailsView.qml:1028 contents/ui/FullView.qml:513
 #: contents/ui/js/pollen.js:42 contents/ui/js/spaceWeather.js:185
 #: contents/ui/js/spaceWeather.js:197 contents/ui/main.qml:796
 #: contents/ui/main.qml:840
 msgid "Low"
-msgstr "Bajo"
+msgstr "低"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:721
 msgid "Magnetic Field (Bz)"
-msgstr "Campo magnético (Bz)"
+msgstr "磁場（Bz）"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:757
 msgid "Main icon style:"
-msgstr "Estilo del icono principal:"
+msgstr "メインアイコンのスタイル:"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:49
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:672
 #: contents/ui/main.qml:1729
 msgid "Mainly clear"
-msgstr "Principalmente despejado"
+msgstr "概ね晴れ"
 
 #: contents/ui/config/configAppearance.qml:220
 msgid "Mainly clear (day)"
-msgstr "Principalmente despejado (día)"
+msgstr "概ね晴れ（昼）"
 
 #: contents/ui/config/configAppearance.qml:225
 msgid "Mainly clear (night)"
-msgstr "Principalmente despejado (noche)"
+msgstr "概ね晴れ（夜）"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:265
 #: contents/ui/config/tabs/ConfigPanelTab.qml:356
@@ -1722,201 +1720,201 @@ msgstr "Principalmente despejado (noche)"
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:585
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:619
 msgid "Manual"
-msgstr "Manual"
+msgstr "手動"
 
 #: contents/ui/config/configGeneral.qml:452
 msgid "Marine and weather data provider. API key required below."
-msgstr "Proveedor de datos marinos y meteorológicos. Se requiere clave API a continuación."
+msgstr "海洋・気象データプロバイダ。下に API キーが必要です。"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:153
 msgid "Metric (°C, km/h, hPa, mm)"
-msgstr "Métrico (°C, km/h, hPa, mm)"
+msgstr "メートル法（°C、km/h、hPa、mm）"
 
 #: contents/ui/js/pollen.js:43
 msgid "Mild symptoms in highly sensitive individuals."
-msgstr "Síntomas leves en personas muy sensibles."
+msgstr "高感受性の人に軽度の症状が出る可能性があります。"
 
 #: contents/ui/js/pollen.js:42
 msgid "Minimal to no risk."
-msgstr "Riesgo mínimo o nulo."
+msgstr "リスクはほぼありません。"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:440
 msgid "Minimum height:"
-msgstr "Altura mínima:"
+msgstr "最小の高さ:"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:411
 msgid "Minimum width:"
-msgstr "Ancho mínimo:"
+msgstr "最小の幅:"
 
 #: contents/ui/js/spaceWeather.js:91
 msgid "Minor geomagnetic storm."
-msgstr "Tormenta geomagnética menor."
+msgstr "弱い地磁気嵐。"
 
 #: contents/ui/config/configAppearance.qml:1990
 msgid "Misc"
-msgstr "Varios"
+msgstr "その他"
 
 #: contents/ui/components/RadarWebEngineView.qml:548
 msgid "Mod"
-msgstr "Moder."
+msgstr "中"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:108
 msgid "Mode:"
-msgstr "Modo:"
+msgstr "モード:"
 
 #: contents/ui/components/RadarWebEngineView.qml:92
 #: contents/ui/js/airQuality.js:49 contents/ui/js/pollen.js:43
 #: contents/ui/js/spaceWeather.js:184 contents/ui/js/spaceWeather.js:196
 #: contents/ui/main.qml:797 contents/ui/main.qml:811 contents/ui/main.qml:841
 msgid "Moderate"
-msgstr "Moderado"
+msgstr "中程度"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:682
 msgid "Moderate drizzle"
-msgstr "Llovizna moderada"
+msgstr "適度な霧雨"
 
 #: contents/ui/js/spaceWeather.js:90
 msgid "Moderate geomagnetic storm."
-msgstr "Tormenta geomagnética moderada."
+msgstr "中程度の地磁気嵐。"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:690
 msgid "Moderate rain"
-msgstr "Lluvia moderada"
+msgstr "適度な雨"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:706
 msgid "Moderate rain showers"
-msgstr "Chubascos moderados"
+msgstr "適度なにわか雨"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:698
 msgid "Moderate snowfall"
-msgstr "Nevada moderada"
+msgstr "適度な降雪"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:904
 msgid "Monday"
-msgstr "Lunes"
+msgstr "月曜日"
 
 #: contents/ui/DetailsView.qml:311
 msgid "Moon"
-msgstr "Luna"
+msgstr "月"
 
 #: contents/ui/config/configAppearance.qml:1371
 msgid "Moon Phase"
-msgstr "Fase lunar"
+msgstr "月相"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:500
 msgid "Moon mode:"
-msgstr "Modo lunar:"
+msgstr "月のモード:"
 
 #: contents/ui/config/configAppearance.qml:1494
 #: contents/ui/config/configAppearance.qml:1617
 msgid "Moon phase and moonrise/moonset"
-msgstr "Fase lunar y salida/puesta de luna"
+msgstr "月相と月の出 / 月の入り"
 
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:568
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:562
 msgid "Moon phase mode:"
-msgstr "Modo de fase lunar:"
+msgstr "月相のモード:"
 
 #: contents/ui/config/configAppearance.qml:896
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:521
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:584
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:578
 msgid "Moon phase only"
-msgstr "Solo fase lunar"
+msgstr "月相のみ"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:350
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:418
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:413
 msgid "Moon phase options"
-msgstr "Opciones de fase lunar"
+msgstr "月相オプション"
 
 #: contents/ui/config/configAppearance.qml:1495
 #: contents/ui/config/configAppearance.qml:1618
 msgid "Moon phase, moonrise & moonset"
-msgstr "Fase lunar, salida y puesta de luna"
+msgstr "月相、月の出 & 月の入り"
 
 #: contents/ui/TooltipContent.qml:496 contents/ui/TooltipContent.qml:538
 #: contents/ui/TooltipContent.qml:560
 msgid "Moon:"
-msgstr "Luna:"
+msgstr "月:"
 
 #: contents/ui/DetailsView.qml:3653 contents/ui/DetailsView.qml:3658
 #: contents/ui/DetailsView.qml:3975 contents/ui/DetailsView.qml:3980
 msgid "Moonrise"
-msgstr "Salida de la luna"
+msgstr "月の出"
 
 #: contents/ui/config/configAppearance.qml:900
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:525
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:588
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:582
 msgid "Moonrise & moonset only"
-msgstr "Solo salida y puesta de luna"
+msgstr "月の出 & 月の入りのみ"
 
 #: contents/ui/config/configAppearance.qml:947
 msgid "Moonrise icon:"
-msgstr "Icono de salida de luna:"
+msgstr "月の出のアイコン:"
 
 #: contents/ui/config/configAppearance.qml:904
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:529
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:596
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:590
 msgid "Moonrise only"
-msgstr "Solo salida de luna"
+msgstr "月の出のみ"
 
 #: contents/ui/DetailsView.qml:3651 contents/ui/DetailsView.qml:3973
 msgid "Moonrise/Moonset"
-msgstr "Salida/Puesta de luna"
+msgstr "月の出 / 月の入り"
 
 #: contents/ui/TooltipContent.qml:499 contents/ui/TooltipContent.qml:521
 #: contents/ui/TooltipContent.qml:528 contents/ui/TooltipContent.qml:552
 #: contents/ui/TooltipContent.qml:561
 msgid "Moonrise:"
-msgstr "Salida de luna:"
+msgstr "月の出:"
 
 #: contents/ui/DetailsView.qml:3655 contents/ui/DetailsView.qml:3658
 #: contents/ui/DetailsView.qml:3977 contents/ui/DetailsView.qml:3980
 msgid "Moonset"
-msgstr "Puesta de luna"
+msgstr "月の入り"
 
 #: contents/ui/config/configAppearance.qml:990
 msgid "Moonset icon:"
-msgstr "Icono de puesta de luna:"
+msgstr "月の入りのアイコン:"
 
 #: contents/ui/config/configAppearance.qml:908
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:533
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:600
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:594
 msgid "Moonset only"
-msgstr "Solo puesta de luna"
+msgstr "月の入りのみ"
 
 #: contents/ui/TooltipContent.qml:503 contents/ui/TooltipContent.qml:518
 #: contents/ui/TooltipContent.qml:528 contents/ui/TooltipContent.qml:549
 #: contents/ui/TooltipContent.qml:562
 msgid "Moonset:"
-msgstr "Puesta de luna:"
+msgstr "月の入り:"
 
 #: contents/ui/main.qml:1373
 msgid "Morning"
-msgstr "Mañana"
+msgstr "午前"
 
 #: contents/ui/js/pollen.js:44
 msgid "Most allergy sufferers will experience discomfort."
-msgstr "La mayoría de los alérgicos experimentarán molestias."
+msgstr "多くのアレルギー患者が不快感を感じます。"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:656
 #: contents/ui/DetailsView.qml:1408 contents/ui/main.qml:849
 msgid "Mugwort"
-msgstr "Artemisa"
+msgstr "ヨモギ"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:100
 msgid "Multiple lines (tall panel)"
-msgstr "Varias líneas (panel alto)"
+msgstr "複数行（高いパネル）"
 
 #: contents/ui/config/configAppearance.qml:1414
 #: contents/ui/config/configAppearance.qml:1537
 #: contents/ui/config/configAppearance.qml:1660
 msgid "NOAA Kp index and geomagnetic activity"
-msgstr "Índice Kp de la NOAA y actividad geomagnética"
+msgstr "NOAA Kp 指数および地磁気活動"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:591
 msgid "NO₂"
@@ -1924,59 +1922,59 @@ msgstr "NO₂"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:407
 msgid "Need the coordinates for a place? You can look them up at <a href=\"https://www.mapcoordinates.net/\">mapcoordinates.net</a>."
-msgstr "¿Necesitas las coordenadas de un lugar? Puedes buscarlas en <a href=\"https://www.mapcoordinates.net/\">mapcoordinates.net</a>."
+msgstr "場所の座標が必要ですか?<a href=\"https://www.mapcoordinates.net/\">mapcoordinates.net</a> で検索できます。"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:270
 msgid "Network error"
-msgstr "Error de red"
+msgstr "ネットワークエラー"
 
 #: contents/ui/main.qml:1900
 msgid "New Moon"
-msgstr "Luna nueva"
+msgstr "新月"
 
 #: contents/ui/DetailsView.qml:3418
 msgid "Night"
-msgstr "Noche"
+msgstr "夜"
 
 #: contents/ui/DetailsView.qml:1207
 msgid "Nitrogen Dioxide (NO₂)"
-msgstr "Dióxido de nitrógeno (NO₂)"
+msgstr "二酸化窒素（NO₂）"
 
 #: contents/ui/config/configLocation.qml:1301
 msgid "No"
-msgstr "No"
+msgstr "いいえ"
 
 #: contents/ui/DetailsView.qml:543
 msgid "No details data"
-msgstr "Sin datos de detalles"
+msgstr "詳細データがありません"
 
 #: contents/ui/ForecastView.qml:342
 msgid "No forecast data"
-msgstr "Sin datos de pronóstico"
+msgstr "予報データがありません"
 
 #: contents/ui/js/spaceWeather.js:92
 msgid "No geomagnetic storm activity."
-msgstr "Sin actividad de tormenta geomagnética."
+msgstr "地磁気嵐の活動はありません。"
 
 #: contents/ui/ForecastView.qml:1202 contents/ui/ForecastView.qml:1651
 msgid "No info"
-msgstr "Sin info."
+msgstr "情報なし"
 
 #: contents/ui/ForecastView.qml:581
 msgid "No information"
-msgstr "Sin información"
+msgstr "情報なし"
 
 #: contents/ui/FullView.qml:212
 msgid "No location set"
-msgstr "Sin ubicación configurada"
+msgstr "位置が設定されていません"
 
 #: contents/ui/config/configLocation.qml:1621
 msgid "No saved locations. Save the current location to quickly switch between places."
-msgstr "Sin ubicaciones guardadas. Guarda la ubicación actual para cambiar rápidamente entre lugares."
+msgstr "保存された位置がありません。現在の位置を保存すると、場所をすばやく切り替えられます。"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:538
 msgid "No weather stations found for '%1'"
-msgstr "No se encontraron estaciones meteorológicas para «%1»"
+msgstr "'%1' の気象観測所が見つかりません"
 
 #: contents/ui/components/RadarWebEngineView.qml:90
 #: contents/ui/components/RadarWebEngineView.qml:548
@@ -1985,123 +1983,123 @@ msgstr "No se encontraron estaciones meteorológicas para «%1»"
 #: contents/ui/js/spaceWeather.js:198 contents/ui/main.qml:904
 #: contents/ui/main.qml:906
 msgid "None"
-msgstr "Ninguno"
+msgstr "なし"
 
 #: contents/ui/config/configLocation.qml:629
 msgid "None Selected"
-msgstr "Ninguno seleccionado"
+msgstr "未選択"
 
 #: contents/ui/DetailsView.qml:1028
 msgid "Normal"
-msgstr "Normal"
+msgstr "通常"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:272
 msgid "Not available (HTTP %1)"
-msgstr "No disponible (HTTP %1)"
+msgstr "利用できません（HTTP %1）"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:620
 msgid "Not tested"
-msgstr "Sin probar"
+msgstr "未テスト"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:1053
 msgid "Note: size may be reduced if the panel is not thick enough."
-msgstr "Nota: el tamaño puede reducirse si el panel no es suficientemente grueso."
+msgstr "注意: パネルが十分な厚さでない場合、サイズが縮小されることがあります。"
 
 #: contents/config/config.qml:62 contents/ui/config/configNotifications.qml:175
 msgid "Notifications"
-msgstr "Notificaciones"
+msgstr "通知"
 
 #: contents/ui/config/configNotifications.qml:302
 msgid "Notify about upcoming rain/storms"
-msgstr "Notificar sobre lluvia/tormentas próximas"
+msgstr "今後の雨 / 嵐を通知"
 
 #: contents/ui/config/configNotifications.qml:316
 msgid "Notify about upcoming snow"
-msgstr "Avisar sobre nieve próxima"
+msgstr "降雪が予想される場合に通知する"
 
 #: contents/ui/config/configNotifications.qml:330
 msgid "Notify with today's UV forecast"
-msgstr "Notificar con el pronóstico UV de hoy"
+msgstr "本日の UV 予報を通知"
 
 #: contents/ui/config/configNotifications.qml:262
 msgid "Notify with today's forecast"
-msgstr "Notificar con el pronóstico de hoy"
+msgstr "本日の予報を通知"
 
 #: contents/ui/config/configNotifications.qml:350
 msgid "Notify with today's geomagnetic activity forecast"
-msgstr "Notificar con el pronóstico de actividad geomagnética de hoy"
+msgstr "本日の地磁気活動予報を通知"
 
 #: contents/ui/config/configNotifications.qml:282
 msgid "Notify with tomorrow's forecast"
-msgstr "Notificar con el pronóstico de mañana"
+msgstr "明日の予報を通知"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:398
 #, javascript-format
 msgid "Now: %1%2"
-msgstr "Ahora: %1%2"
+msgstr "現在: %1%2"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:745
 msgid "Number of item rows visible at once. Resize the panel height in KDE settings to match."
-msgstr "Número de filas de elementos visibles a la vez. Ajusta la altura del panel en la configuración de KDE para que coincida."
+msgstr "一度に表示される項目の行数。KDE 設定でパネルの高さを一致するよう調整してください。"
 
 #: contents/ui/config/configAppearance.qml:569
 msgid "OK"
-msgstr "Aceptar"
+msgstr "OK"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:657
 #: contents/ui/DetailsView.qml:1410 contents/ui/main.qml:850
 msgid "Olive"
-msgstr "Olivo"
+msgstr "オリーブ"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:811
 msgid "Only the clicked day expands"
-msgstr "Solo se expande el día en que se hace clic"
+msgstr "クリックした日のみ展開"
 
 #: contents/ui/config/configLocation.qml:1106
 #: contents/ui/config/configLocation.qml:1483 contents/ui/RadarView.qml:191
 msgid "Open install guide"
-msgstr "Abrir guía de instalación"
+msgstr "インストールガイドを開く"
 
 #: contents/ui/RadarView.qml:198
 msgid "Open radar in browser"
-msgstr "Abrir radar en el navegador"
+msgstr "ブラウザでレーダーを開く"
 
 #: contents/ui/config/configGeneral.qml:287
 msgid "Open-Meteo (recommended, free)"
-msgstr "Open-Meteo (recomendado, gratuito)"
+msgstr "Open-Meteo（推奨、無料）"
 
 #: contents/ui/config/configGeneral.qml:295
 msgid "OpenWeatherMap (Key Required)"
-msgstr "OpenWeatherMap (requiere clave)"
+msgstr "OpenWeatherMap（キー必須）"
 
 #: contents/ui/config/configGeneral.qml:492
 msgid "OpenWeatherMap API Key:"
-msgstr "Clave API de OpenWeatherMap:"
+msgstr "OpenWeatherMap API キー:"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:793
 msgid "Opens today's hourly forecast automatically (or the next available day)"
-msgstr "Abre automáticamente el pronóstico por horas de hoy (o el siguiente día disponible)"
+msgstr "本日の時間別予報を自動的に開く（または次に利用可能な日）"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:355
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:420
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:415
 msgid "Options"
-msgstr "Opciones"
+msgstr "オプション"
 
 #: contents/ui/config/configNotifications.qml:211
 msgid "Orange"
-msgstr "Naranja"
+msgstr "オレンジ"
 
 #: contents/ui/config/configAppearance.qml:242
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:51
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:676
 #: contents/ui/main.qml:1733
 msgid "Overcast"
-msgstr "Nublado"
+msgstr "曇り"
 
 #: contents/ui/DetailsView.qml:1209
 msgid "Ozone (O₃)"
-msgstr "Ozono (O₃)"
+msgstr "オゾン（O₃）"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:592
 msgid "O₃"
@@ -2118,154 +2116,154 @@ msgstr "PM2.5"
 #: contents/ui/config/configAppearance.qml:1978
 #: contents/ui/config/tabs/ConfigMiscTab.qml:132
 msgid "Panel"
-msgstr "Panel"
+msgstr "パネル"
 
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:96
 msgid "Panel Items"
-msgstr "Elementos del panel"
+msgstr "パネル項目"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:86
 msgid "Panel display settings"
-msgstr "Configuración de visualización del panel"
+msgstr "パネル表示設定"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:1002
 msgid "Panel font:"
-msgstr "Fuente del panel:"
+msgstr "パネルフォント:"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:939
 msgid "Panel items settings"
-msgstr "Configuración de elementos del panel"
+msgstr "パネル項目設定"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:1167
 msgid "Panel items:"
-msgstr "Elementos del panel:"
+msgstr "パネル項目:"
 
 #: contents/ui/DetailsView.qml:1205
 msgid "Particulate Matter (PM10)"
-msgstr "Partículas en suspensión (PM10)"
+msgstr "粒子状物質（PM10）"
 
 #: contents/ui/DetailsView.qml:1203
 msgid "Particulate Matter (PM2.5)"
-msgstr "Partículas en suspensión (PM2.5)"
+msgstr "粒子状物質（PM2.5）"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:50
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:674
 #: contents/ui/main.qml:1731 contents/ui/main.qml:1783
 msgid "Partly cloudy"
-msgstr "Parcialmente nublado"
+msgstr "一部曇り"
 
 #: contents/ui/config/configAppearance.qml:231
 msgid "Partly cloudy (day)"
-msgstr "Parcialmente nublado (día)"
+msgstr "一部曇り（昼）"
 
 #: contents/ui/config/configAppearance.qml:236
 msgid "Partly cloudy (night)"
-msgstr "Parcialmente nublado (noche)"
+msgstr "一部曇り（夜）"
 
 #: contents/ui/components/RadarWebEngineView.qml:87
 msgid "Pause"
-msgstr "Pausar"
+msgstr "一時停止"
 
 #: contents/ui/config/configAppearance.qml:884
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:509
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:576
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:570
 msgid "Phase + moonrise & moonset"
-msgstr "Fase + salida y puesta de luna"
+msgstr "月相 + 月の出 & 月の入り"
 
 #: contents/ui/config/configAppearance.qml:888
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:513
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:580
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:574
 msgid "Phase + upcoming rise/set"
-msgstr "Fase + próxima salida/puesta"
+msgstr "月相 + 今後の出入り"
 
 #: contents/ui/config/configLocation.qml:1578
 msgid "Pick an exact spot on the map for a more local forecast, such as your neighborhood block or a specific landmark."
-msgstr "Elige un punto exacto en el mapa para un pronóstico más local, como tu cuadra o un lugar de referencia específico."
+msgstr "近隣の街区や特定のランドマークなど、よりローカルな予報のために地図上の正確な地点を選択してください。"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:869
 msgid "Pipe  |"
-msgstr "Barra  |"
+msgstr "パイプ  |"
 
 #: contents/ui/config/configGeneral.qml:303
 msgid "Pirate Weather (Key Required)"
-msgstr "Pirate Weather (requiere clave)"
+msgstr "Pirate Weather（キー必須）"
 
 #: contents/ui/config/configGeneral.qml:494
 msgid "Pirate Weather API Key:"
-msgstr "Clave API de Pirate Weather:"
+msgstr "Pirate Weather API キー:"
 
 #: contents/ui/components/RadarWebEngineView.qml:86
 msgid "Play"
-msgstr "Reproducir"
+msgstr "再生"
 
 #: contents/ui/config/configAppearance.qml:1406
 #: contents/ui/config/configAppearance.qml:1529
 #: contents/ui/config/configAppearance.qml:1652 contents/ui/DetailsView.qml:317
 #: contents/ui/SimpleView.qml:267
 msgid "Pollen"
-msgstr "Polen"
+msgstr "花粉"
 
 #: contents/ui/DetailsView.qml:1555
 msgid "Pollen data not available for this location."
-msgstr "Datos de polen no disponibles para esta ubicación."
+msgstr "この位置の花粉データは利用できません。"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:352
 msgid "Pollen options"
-msgstr "Opciones de polen"
+msgstr "花粉オプション"
 
 #: contents/ui/TooltipContent.qml:470
 msgid "Pollen:"
-msgstr "Polen:"
+msgstr "花粉:"
 
 #: contents/ui/js/airQuality.js:50 contents/ui/main.qml:812
 msgid "Poor"
-msgstr "Mala"
+msgstr "悪い"
 
 #: contents/ui/main.qml:385
 msgid "Postpone %1 min"
-msgstr "Posponer %1 min"
+msgstr "%1 分延期"
 
 #: contents/ui/SimpleView.qml:264
 msgid "Precip Sum"
-msgstr "Precip. total"
+msgstr "降水合計"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:858
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:972
 msgid "Precip sum:"
-msgstr "Precip. total:"
+msgstr "降水合計:"
 
 #: contents/ui/TooltipContent.qml:455
 msgid "Precip. Sum:"
-msgstr "Precip. total:"
+msgstr "降水合計:"
 
 #: contents/ui/config/configAppearance.qml:1378
 #: contents/ui/config/configAppearance.qml:1501
 #: contents/ui/config/configAppearance.qml:1624 contents/ui/DetailsView.qml:313
 #: contents/ui/SimpleView.qml:263
 msgid "Precipitation"
-msgstr "Precipitación"
+msgstr "降水量"
 
 #: contents/ui/config/configAppearance.qml:1385
 #: contents/ui/config/configAppearance.qml:1508
 #: contents/ui/config/configAppearance.qml:1631 contents/ui/DetailsView.qml:314
 msgid "Precipitation Sum"
-msgstr "Precipitación total"
+msgstr "降水量合計"
 
 #: contents/ui/config/configAppearance.qml:1379
 #: contents/ui/config/configAppearance.qml:1502
 #: contents/ui/config/configAppearance.qml:1625
 msgid "Precipitation rate (mm/h)"
-msgstr "Tasa de precipitación (mm/h)"
+msgstr "降水強度（mm/h）"
 
 #: contents/ui/TooltipContent.qml:450
 msgid "Precipitation:"
-msgstr "Precipitación:"
+msgstr "降水量:"
 
 #: contents/ui/config/tabs/ConfigTooltipTab.qml:176
 msgid "Prefix style:"
-msgstr "Estilo de prefijo:"
+msgstr "接頭スタイル:"
 
 #: contents/ui/components/RadarWebEngineView.qml:77
 #: contents/ui/config/configAppearance.qml:1357
@@ -2273,33 +2271,33 @@ msgstr "Estilo de prefijo:"
 #: contents/ui/config/configAppearance.qml:1603 contents/ui/DetailsView.qml:306
 #: contents/ui/SimpleView.qml:260
 msgid "Pressure"
-msgstr "Presión"
+msgstr "気圧"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:829
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:940
 msgid "Pressure forecast:"
-msgstr "Pronóstico de presión:"
+msgstr "気圧予報:"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:283
 #: contents/ui/TooltipContent.qml:438
 msgid "Pressure:"
-msgstr "Presión:"
+msgstr "気圧:"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:117
 msgid "Preview: 20°C"
-msgstr "Vista previa: 20 °C"
+msgstr "プレビュー: 20°C"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:101
 msgid "Primary unit shown first (e.g. °C / °F)"
-msgstr "La unidad principal se muestra primero (p. ej. °C / °F)"
+msgstr "主単位を先に表示（例: °C / °F）"
 
 #: contents/ui/DetailsView.qml:2314
 msgid "Provider"
-msgstr "Proveedor"
+msgstr "プロバイダ"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:563
 msgid "Provider availability"
-msgstr "Disponibilidad del proveedor"
+msgstr "プロバイダの可用性"
 
 #: contents/ui/config/configGeneral.qml:442
 #: contents/ui/config/configGeneral.qml:444
@@ -2312,16 +2310,16 @@ msgstr "Disponibilidad del proveedor"
 #: contents/ui/config/configGeneral.qml:458
 #: contents/ui/config/configGeneral.qml:459
 msgid "Provider website:"
-msgstr "Sitio web del proveedor:"
+msgstr "プロバイダのウェブサイト:"
 
 #: contents/ui/config/configGeneral.qml:413 contents/ui/DetailsView.qml:2078
 #: contents/ui/DetailsView.qml:2792
 msgid "Provider:"
-msgstr "Proveedor:"
+msgstr "プロバイダ:"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:394
 msgid "Provider: %1"
-msgstr "Proveedor: %1"
+msgstr "プロバイダ: %1"
 
 #: contents/ui/config/configGeneral.qml:399
 msgid ""
@@ -2329,165 +2327,165 @@ msgid ""
 "Open-Meteo  →  met.no  →  Pirate Weather  →  Visual Crossing  →  Tomorrow.io  →  StormGlass  →  Weatherbit  →  QWeather  →  OpenWeatherMap  →  WeatherAPI.com\n"
 "Open-Meteo is always tried first - it is free and requires no API key."
 msgstr ""
-"Los proveedores se prueban en orden hasta que uno tenga éxito:\n"
+"プロバイダは成功するまで順番に試行されます:\n"
 "Open-Meteo  →  met.no  →  Pirate Weather  →  Visual Crossing  →  Tomorrow.io  →  StormGlass  →  Weatherbit  →  QWeather  →  OpenWeatherMap  →  WeatherAPI.com\n"
-"Open-Meteo siempre se prueba primero: es gratuito y no requiere clave API."
+"Open-Meteo は常に最初に試行されます - 無料で API キーが不要です。"
 
 #: contents/ui/config/configGeneral.qml:323
 msgid "QWeather (Key Required)"
-msgstr "QWeather (requiere clave)"
+msgstr "QWeather（キー必須）"
 
 #: contents/ui/config/configGeneral.qml:675
 msgid "QWeather API Host:"
-msgstr "Host de API de QWeather:"
+msgstr "QWeather API ホスト:"
 
 #: contents/ui/config/configGeneral.qml:504
 msgid "QWeather API Key:"
-msgstr "Clave API de QWeather:"
+msgstr "QWeather API キー:"
 
 #: contents/ui/config/configGeneral.qml:260
 msgid "QWeather error (code %1). Check your API key."
-msgstr "Error de QWeather (código %1). Comprueba tu clave API."
+msgstr "QWeather エラー（コード %1）。API キーを確認してください。"
 
 #: contents/ui/config/configLocation.qml:1059
 msgid "QtLocation and QtPositioning are not installed"
-msgstr "QtLocation y QtPositioning no están instalados"
+msgstr "QtLocation と QtPositioning がインストールされていません"
 
 #: contents/ui/RadarView.qml:151
 msgid "QtWebEngine is not installed"
-msgstr "QtWebEngine no está instalado"
+msgstr "QtWebEngine がインストールされていません"
 
 #: contents/ui/js/spaceWeather.js:173
 msgid "Quiet"
-msgstr "Tranquilo"
+msgstr "静穏"
 
 #: contents/ui/components/RadarWebEngineView.qml:72
 #: contents/ui/config/configGeneral.qml:706
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:176 contents/ui/FullView.qml:556
 msgid "Radar"
-msgstr "Radar"
+msgstr "レーダー"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:199
 msgid "Radar only"
-msgstr "Solo radar"
+msgstr "レーダーのみ"
 
 #: contents/ui/config/configGeneral.qml:728
 msgid "Radar provider: <a href='https://www.rainviewer.com/'>Rain Viewer</a><br/><br/>The widget uses the free RainViewer API, which provides the past 2 hours of weather radar data in 10-minute intervals. Radar forecast is not supported.<br/><br/>Rain Viewer does not guarantee the availability of radar data. They do not conclude contracts with owners of this data. The reason is that the owners can ask them to remove their data from Rain Viewer, change the format, or stop sharing the data. They are trying to keep radar data for as long as possible, but sometimes the owners just stop providing the images."
-msgstr "Proveedor de radar: <a href='https://www.rainviewer.com/'>Rain Viewer</a><br/><br/>El widget utiliza la API gratuita de RainViewer, que proporciona los últimos 2 horas de datos de radar meteorológico en intervalos de 10 minutos. No se admite la previsión por radar.<br/><br/>Rain Viewer no garantiza la disponibilidad de los datos de radar. No celebran contratos con los propietarios de estos datos, quienes pueden pedirles que eliminen sus datos, cambien el formato o dejen de compartirlos. Intentan mantener los datos de radar el mayor tiempo posible, pero a veces los propietarios simplemente dejan de proporcionar las imágenes."
+msgstr "レーダープロバイダ: <a href='https://www.rainviewer.com/'>Rain Viewer</a><br/><br/>ウィジェットは無料の RainViewer API を使用しており、過去 2 時間の気象レーダーデータを 10 分間隔で提供します。レーダー予報には対応していません。<br/><br/>Rain Viewer はレーダーデータの可用性を保証していません。データの所有者との間で契約を結んでいません。その理由は、所有者が Rain Viewer からのデータ削除を求めたり、形式を変更したり、データの共有を停止する可能性があるためです。レーダーデータは可能な限り長く保持するよう努めていますが、所有者が画像の提供を停止することもあります。"
 
 #: contents/ui/FullView.qml:713
 msgid "Radar:"
-msgstr "Radar:"
+msgstr "レーダー:"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:658
 #: contents/ui/DetailsView.qml:1412 contents/ui/main.qml:851
 msgid "Ragweed"
-msgstr "Ambrosía"
+msgstr "ブタクサ"
 
 #: contents/ui/components/RadarWebEngineView.qml:73
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:55
 #: contents/ui/main.qml:1488 contents/ui/main.qml:1751
 msgid "Rain"
-msgstr "Lluvia"
+msgstr "雨"
 
 #: contents/ui/config/configAppearance.qml:265
 msgid "Rain (day)"
-msgstr "Lluvia (día)"
+msgstr "雨（昼）"
 
 #: contents/ui/config/configAppearance.qml:270
 msgid "Rain (night)"
-msgstr "Lluvia (noche)"
+msgstr "雨（夜）"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:59
 msgid "Rain showers"
-msgstr "Chubascos"
+msgstr "にわか雨"
 
 #: contents/ui/config/configNotifications.qml:299
 msgid "Rain/Storm"
-msgstr "Lluvia/Tormenta"
+msgstr "雨 / 嵐"
 
 #: contents/ui/components/RadarWebEngineView.qml:88
 msgid "Real-time"
-msgstr "Tiempo real"
+msgstr "リアルタイム"
 
 #: contents/ui/components/RadarWebEngineView.qml:85
 msgid "Recent"
-msgstr "Reciente"
+msgstr "最近"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:465
 msgid "Recommended — e.g. 560"
-msgstr "Recomendado — p. ej. 560"
+msgstr "推奨 — 例: 560"
 
 #: contents/ui/config/configNotifications.qml:216
 msgid "Red"
-msgstr "Rojo"
+msgstr "赤"
 
 #: contents/ui/config/configLocation.qml:1533 contents/ui/FullView.qml:408
 #: contents/ui/main.qml:310
 msgid "Refresh"
-msgstr "Actualizar"
+msgstr "更新"
 
 #: contents/ui/config/configGeneral.qml:779
 msgid "Refresh weather automatically"
-msgstr "Actualizar el tiempo automáticamente"
+msgstr "天気を自動的に更新"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:857
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:731
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:725
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:318
 msgid "Region default"
-msgstr "Por defecto de la región"
+msgstr "地域のデフォルト"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:777
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:651
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:645
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:257
 msgid "Region default (long)"
-msgstr "Por defecto de la región (largo)"
+msgstr "地域のデフォルト（長）"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:776
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:650
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:644
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:258
 msgid "Region default (short)"
-msgstr "Por defecto de la región (corto)"
+msgstr "地域のデフォルト（短）"
 
 #: contents/ui/config/configAppearance.qml:1453
 #: contents/ui/config/configAppearance.qml:1597
 msgid "Relative humidity %"
-msgstr "Humedad relativa %"
+msgstr "相対湿度 %"
 
 #: contents/ui/config/configAppearance.qml:1351
 msgid "Relative humidity percentage"
-msgstr "Porcentaje de humedad relativa"
+msgstr "相対湿度のパーセント"
 
 #: contents/ui/components/RadarWebEngineView.qml:499
 msgid "Reload radar"
-msgstr "Recargar radar"
+msgstr "レーダーを再読み込み"
 
 #: contents/ui/config/configLocation.qml:1349
 msgid "Remove last location?"
-msgstr "¿Eliminar la última ubicación?"
+msgstr "最後の位置を削除しますか?"
 
 #: contents/ui/config/configLocation.qml:1882
 msgid "Remove saved location"
-msgstr "Eliminar ubicación guardada"
+msgstr "保存した位置を削除"
 
 #: contents/ui/config/configLocation.qml:1851
 msgid "Rename location"
-msgstr "Cambiar nombre de la ubicación"
+msgstr "位置の名前を変更"
 
 #: contents/ui/config/configNotifications.qml:242
 msgid "Repeat reminder every:"
-msgstr "Repetir recordatorio cada:"
+msgstr "リマインダーの繰り返し間隔:"
 
 #: contents/ui/config/configLocation.qml:799
 msgid "Requesting location via GeoClue2…"
-msgstr "Solicitando ubicación mediante GeoClue2…"
+msgstr "GeoClue2 経由で位置を要求中…"
 
 #: contents/ui/config/configLocation.qml:788
 msgid "Requesting location… (%1)"
-msgstr "Solicitando ubicación… (%1)"
+msgstr "位置を要求中…（%1）"
 
 #: contents/ui/config/configAppearance.qml:538
 #: contents/ui/config/configAppearance.qml:810
@@ -2498,23 +2496,23 @@ msgstr "Solicitando ubicación… (%1)"
 #: contents/ui/config/tabs/ConfigPanelTab.qml:578
 #: contents/ui/config/tabs/ConfigPanelTab.qml:691
 msgid "Reset"
-msgstr "Restablecer"
+msgstr "リセット"
 
 #: contents/ui/config/configAppearance.qml:555
 msgid "Reset All to Defaults"
-msgstr "Restablecer todo a los valores predeterminados"
+msgstr "すべてデフォルトにリセット"
 
 #: contents/ui/config/configAppearance.qml:696
 msgid "Reset to default"
-msgstr "Restablecer al predeterminado"
+msgstr "デフォルトにリセット"
 
 #: contents/ui/main.qml:1737
 msgid "Rime fog"
-msgstr "Niebla de escarcha"
+msgstr "着氷霧"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:47
 msgid "Round values:"
-msgstr "Redondear valores:"
+msgstr "値の丸め:"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:593
 msgid "SO₂"
@@ -2522,1118 +2520,1118 @@ msgstr "SO₂"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:906
 msgid "Saturday"
-msgstr "Sábado"
+msgstr "土曜日"
 
 #: contents/ui/config/configLocation.qml:1605
 msgid "Saved locations"
-msgstr "Ubicaciones guardadas"
+msgstr "保存した位置"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:749
 msgid "Scroll animation:"
-msgstr "Animación de desplazamiento:"
+msgstr "スクロールアニメーション:"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:729
 msgid "Scroll interval (sec):"
-msgstr "Intervalo de desplazamiento (seg):"
+msgstr "スクロール間隔（秒）:"
 
 #: contents/ui/config/configLocation.qml:1566
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:293
 msgid "Search Location"
-msgstr "Buscar ubicación"
+msgstr "位置を検索"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:538
 msgid "Search a weather station to set your location"
-msgstr "Busca una estación meteorológica para establecer tu ubicación"
+msgstr "位置を設定するために気象観測所を検索"
 
 #: contents/ui/config/configLocation.qml:1570
 msgid "Search by city or place name. Results show the location name, region, and country, and are suitable for general city-level forecasts rather than exact street-level placement."
-msgstr "Busca por nombre de ciudad o lugar. Los resultados muestran el nombre de la ubicación, la región y el país, y son adecuados para pronósticos generales a nivel de ciudad, no para una ubicación exacta a nivel de calle."
+msgstr "都市名や地名で検索。結果には位置名、地域、国が表示され、正確なストリートレベルの配置よりも一般的な都市レベルの予報に適しています。"
 
 #: contents/ui/config/configLocation.qml:1563
 msgid "Search for a location or choose it on the map."
-msgstr "Busca una ubicación o selecciónala en el mapa."
+msgstr "位置を検索するか、地図上で選択してください。"
 
 #: contents/ui/config/configLocation.qml:1174
 msgid "Search location"
-msgstr "Buscar ubicación"
+msgstr "位置を検索"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:284
 msgid "Search location…"
-msgstr "Buscar ubicación…"
+msgstr "位置を検索…"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:101
 msgid "Secondary unit shown first (e.g. °F / °C)"
-msgstr "La unidad secundaria se muestra primero (p. ej. °F / °C)"
+msgstr "副単位を先に表示（例: °F / °C）"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:106
 #: contents/ui/config/tabs/ConfigPanelTab.qml:858
 msgid "Separator:"
-msgstr "Separador:"
+msgstr "区切り:"
 
 #: contents/ui/js/pollen.js:45
 msgid "Serious risk; avoid outdoor activities."
-msgstr "Riesgo grave; evita las actividades al aire libre."
+msgstr "深刻なリスク。屋外活動を避けてください。"
 
 #: contents/ui/config/configLocation.qml:1246
 msgid "Set <b>%1</b> as your default location?"
-msgstr "¿Establecer <b>%1</b> como tu ubicación predeterminada?"
+msgstr "<b>%1</b> をデフォルト位置に設定しますか?"
 
 #: contents/ui/FullView.qml:221
 msgid "Set Location…"
-msgstr "Establecer ubicación…"
+msgstr "位置を設定…"
 
 #: contents/ui/config/configLocation.qml:1809
 msgid "Set as default location"
-msgstr "Establecer como ubicación predeterminada"
+msgstr "デフォルト位置に設定"
 
 #: contents/ui/config/configLocation.qml:1219
 msgid "Set as default?"
-msgstr "¿Establecer como predeterminada?"
+msgstr "デフォルトに設定しますか?"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:1156
 #: contents/ui/config/tabs/ConfigTooltipTab.qml:285
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:530
 msgid "Set your own icons…"
-msgstr "Establecer tus propios iconos…"
+msgstr "独自のアイコンを設定…"
 
 #: contents/ui/js/spaceWeather.js:88
 msgid "Severe geomagnetic storm."
-msgstr "Tormenta geomagnética severa."
+msgstr "強い地磁気嵐。"
 
 #: contents/ui/config/configNotifications.qml:204
 msgid "Severities:"
-msgstr "Gravedades:"
+msgstr "深刻度:"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:973
 msgid "Shadow Color"
-msgstr "Color de sombra"
+msgstr "影の色"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:546
 msgid "Shadow color:"
-msgstr "Color de sombra:"
+msgstr "影の色:"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:526
 msgid "Shadow intensity:"
-msgstr "Intensidad de la sombra:"
+msgstr "影の強度:"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:964
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:817
 msgid "Show / hide the prefix icon"
-msgstr "Mostrar / ocultar el icono de prefijo"
+msgstr "接頭アイコンの表示 / 非表示"
 
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:833
 msgid "Show / hide the prefix icon on the panel"
-msgstr "Mostrar / ocultar el icono de prefijo en el panel"
+msgstr "パネルの接頭アイコンを表示 / 非表示"
 
 #: contents/ui/config/configGeneral.qml:718
 msgid "Show Radar tab in widget"
-msgstr "Mostrar pestaña de radar en el widget"
+msgstr "ウィジェットにレーダータブを表示"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:777
 msgid "Show Today:"
-msgstr "Mostrar hoy:"
+msgstr "今日を表示:"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:78
 msgid "Show both units:"
-msgstr "Mostrar ambas unidades:"
+msgstr "両方の単位を表示:"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:419
 msgid "Show in details"
-msgstr "Mostrar en detalles"
+msgstr "詳細に表示"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:123
 msgid "Show in:"
-msgstr "Mostrar en:"
+msgstr "表示位置:"
 
 #: contents/ui/components/RadarWebEngineView.qml:89
 msgid "Show my location"
-msgstr "Mostrar mi ubicación"
+msgstr "現在地を表示"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:1004
 msgid "Show or hide this detail item"
-msgstr "Mostrar u ocultar este elemento de detalle"
+msgstr "この詳細項目の表示 / 非表示"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:626
 msgid "Show pollen types in expanded view:"
-msgstr "Mostrar tipos de polen en vista expandida:"
+msgstr "展開ビューに花粉の種類を表示:"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:561
 msgid "Show pollutants in expanded view:"
-msgstr "Mostrar contaminantes en vista expandida:"
+msgstr "展開ビューに汚染物質を表示:"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:407
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:476
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:471
 msgid "Show prefix icon"
-msgstr "Mostrar icono de prefijo"
+msgstr "接頭アイコンを表示"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:690
 msgid "Show space weather items in expanded view:"
-msgstr "Mostrar elementos de clima espacial en vista expandida:"
+msgstr "展開ビューに宇宙天気項目を表示:"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:60
 msgid "Show temperature unit:"
-msgstr "Mostrar unidad de temperatura:"
+msgstr "気温の単位を表示:"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:221
 msgid "Show update time and provider"
-msgstr "Mostrar hora de actualización y proveedor"
+msgstr "更新時刻とプロバイダを表示"
 
 #: contents/ui/config/configGeneral.qml:596
 msgid "Show/hide key"
-msgstr "Mostrar/ocultar clave"
+msgstr "キーを表示 / 非表示"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:187
 msgid "Show:"
-msgstr "Mostrar:"
+msgstr "表示:"
 
 #: contents/ui/main.qml:1769
 msgid "Showers"
-msgstr "Chubascos"
+msgstr "にわか雨"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:86
 msgid "Showing primary unit only"
-msgstr "Se muestra solo la unidad principal"
+msgstr "主単位のみ表示中"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:68
 msgid "Showing ° only"
-msgstr "Se muestra solo °"
+msgstr "° のみ表示中"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:68
 msgid "Showing °C / °F after values"
-msgstr "Se muestra °C / °F tras los valores"
+msgstr "値の後に °C / °F を表示中"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:144
 msgid "Shown"
-msgstr "Mostrado"
+msgstr "表示"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:116
 msgid "Simple"
-msgstr "Simple"
+msgstr "シンプル"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:104
 #: contents/ui/config/tabs/ConfigPanelTab.qml:122
 msgid "Simple (icon + temperature)"
-msgstr "Simple (icono + temperatura)"
+msgstr "シンプル（アイコン + 気温）"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:114
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:653
 msgid "Simple Mode Items"
-msgstr "Elementos del modo simple"
+msgstr "シンプルモードの項目"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:1006
 msgid "Simple Widget"
-msgstr "Widget simple"
+msgstr "シンプルウィジェット"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:704
 msgid "Simple chips:"
-msgstr "Chips del modo simple:"
+msgstr "シンプルチップ:"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:140
 msgid "Simple display mode settings"
-msgstr "Configuración del modo de visualización simple"
+msgstr "シンプル表示モードの設定"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:96
 msgid "Single line (all items at once)"
-msgstr "Una sola línea (todos los elementos a la vez)"
+msgstr "1 行（すべての項目を一度に）"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:1101
 #: contents/ui/config/tabs/ConfigTooltipTab.qml:230
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:494
 msgid "Size:"
-msgstr "Tamaño:"
+msgstr "サイズ:"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:215
 msgid "Skipped — API key not configured"
-msgstr "Omitido — clave API no configurada"
+msgstr "スキップ — API キーが未設定"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:688
 msgid "Slight rain"
-msgstr "Lluvia leve"
+msgstr "弱い雨"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:704
 msgid "Slight rain showers"
-msgstr "Chubascos leves"
+msgstr "弱いにわか雨"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:710
 msgid "Slight snow showers"
-msgstr "Chubascos de nieve leves"
+msgstr "弱いにわか雪"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:696
 msgid "Slight snowfall"
-msgstr "Nevada leve"
+msgstr "弱い降雪"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:881
 msgid "Small circle  ⚬"
-msgstr "Círculo pequeño  ⚬"
+msgstr "小さな丸  ⚬"
 
 #: contents/ui/config/configNotifications.qml:313
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:57
 #: contents/ui/main.qml:1761
 msgid "Snow"
-msgstr "Nieve"
+msgstr "雪"
 
 #: contents/ui/config/configAppearance.qml:309
 msgid "Snow (day)"
-msgstr "Nieve (día)"
+msgstr "雪（昼）"
 
 #: contents/ui/config/configAppearance.qml:314
 msgid "Snow (night)"
-msgstr "Nieve (noche)"
+msgstr "雪（夜）"
 
 #: contents/ui/config/configAppearance.qml:1427
 #: contents/ui/config/configAppearance.qml:1550
 #: contents/ui/config/configAppearance.qml:1673 contents/ui/DetailsView.qml:320
 #: contents/ui/SimpleView.qml:270
 msgid "Snow Cover"
-msgstr "Cobertura de nieve"
+msgstr "積雪"
 
 #: contents/ui/TooltipContent.qml:485
 msgid "Snow Cover:"
-msgstr "Cobertura de nieve:"
+msgstr "積雪:"
 
 #: contents/ui/config/configAppearance.qml:1428
 #: contents/ui/config/configAppearance.qml:1551
 #: contents/ui/config/configAppearance.qml:1674
 msgid "Snow depth (cm/in)"
-msgstr "Profundidad de nieve (cm/in)"
+msgstr "積雪深（cm / in）"
 
 #: contents/ui/main.qml:1545
 msgid "Snow ending"
-msgstr "Nieve finalizando"
+msgstr "雪 終了予定"
 
 #: contents/ui/main.qml:1540
 msgid "Snow expected"
-msgstr "Se prevé nieve"
+msgstr "雪 予想"
 
 #: contents/ui/main.qml:1546
 msgid "Snow expected to end %1."
-msgstr "Nieve con fin previsto %1."
+msgstr "雪は %1 に終了予定。"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:58
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:702
 #: contents/ui/main.qml:1765
 msgid "Snow grains"
-msgstr "Gránulos de nieve"
+msgstr "細氷"
 
 #: contents/ui/main.qml:1541
 msgid "Snow possible %1."
-msgstr "Es posible que haya nieve %1."
+msgstr "雪の可能性あり %1。"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:60
 #: contents/ui/main.qml:1775
 msgid "Snow showers"
-msgstr "Chubascos de nieve"
+msgstr "にわか雪"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:719
 #: contents/ui/DetailsView.qml:1906
 msgid "Solar Wind"
-msgstr "Viento solar"
+msgstr "太陽風"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:877
 msgid "Space"
-msgstr "Espacio"
+msgstr "スペース"
 
 #: contents/ui/config/configAppearance.qml:1413
 #: contents/ui/config/configAppearance.qml:1536
 #: contents/ui/config/configAppearance.qml:1659 contents/ui/DetailsView.qml:318
 #: contents/ui/SimpleView.qml:268
 msgid "Space Weather"
-msgstr "Clima espacial"
+msgstr "宇宙天気"
 
 #: contents/ui/TooltipContent.qml:475
 msgid "Space Weather:"
-msgstr "Clima espacial:"
+msgstr "宇宙天気:"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:353
 msgid "Space weather options"
-msgstr "Opciones de clima espacial"
+msgstr "宇宙天気オプション"
 
 #: contents/ui/config/configGeneral.qml:442
 msgid "Standard provider. API key required below."
-msgstr "Proveedor estándar. Se requiere clave API a continuación."
+msgstr "標準プロバイダ。下に API キーが必要です。"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:748
 msgid "Stats items:"
-msgstr "Elementos de estadísticas:"
+msgstr "統計項目:"
 
 #: contents/ui/components/RadarWebEngineView.qml:94
 #: contents/ui/components/RadarWebEngineView.qml:548
 #: contents/ui/js/spaceWeather.js:170
 msgid "Storm"
-msgstr "Tormenta"
+msgstr "嵐"
 
 #: contents/ui/config/configGeneral.qml:315
 msgid "StormGlass (Key Required)"
-msgstr "StormGlass (requiere clave)"
+msgstr "StormGlass（キー必須）"
 
 #: contents/ui/config/configGeneral.qml:500
 msgid "StormGlass API Key:"
-msgstr "Clave API de StormGlass:"
+msgstr "StormGlass API キー:"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:914
 msgid "Strip"
-msgstr "En fila"
+msgstr "ストリップ"
 
 #: contents/ui/js/spaceWeather.js:169
 msgid "Strong"
-msgstr "Fuerte"
+msgstr "強い"
 
 #: contents/ui/js/spaceWeather.js:89
 msgid "Strong geomagnetic storm."
-msgstr "Tormenta geomagnética fuerte."
+msgstr "強い地磁気嵐。"
 
 #: contents/ui/DetailsView.qml:1211
 msgid "Sulfur Dioxide (SO₂)"
-msgstr "Dióxido de azufre (SO₂)"
+msgstr "二酸化硫黄（SO₂）"
 
 #: contents/ui/config/configAppearance.qml:1474
 #: contents/ui/config/configAppearance.qml:1611
 msgid "Sun rise & set times"
-msgstr "Horas de salida y puesta del sol"
+msgstr "日の出 & 日の入り時刻"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:455
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:523
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:518
 msgid "Sun times mode:"
-msgstr "Modo de horas solares:"
+msgstr "太陽時刻のモード:"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:349
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:417
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:412
 msgid "Sun times options"
-msgstr "Opciones de horas solares"
+msgstr "太陽時刻オプション"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:903
 msgid "Sunday"
-msgstr "Domingo"
+msgstr "日曜日"
 
 #: contents/ui/DetailsView.qml:3208 contents/ui/DetailsView.qml:3212
 #: contents/ui/DetailsView.qml:3534 contents/ui/DetailsView.qml:3538
 #: contents/ui/ForecastView.qml:1050
 msgid "Sunrise"
-msgstr "Amanecer"
+msgstr "日の出"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:231
 msgid "Sunrise / Sunset:"
-msgstr "Amanecer / Atardecer:"
+msgstr "日の出 / 日の入り:"
 
 #: contents/ui/config/configAppearance.qml:1329
 msgid "Sunrise and sunset times"
-msgstr "Horas de amanecer y atardecer"
+msgstr "日の出と日の入りの時刻"
 
 #: contents/ui/config/configAppearance.qml:779
 msgid "Sunrise icon:"
-msgstr "Icono de amanecer:"
+msgstr "日の出のアイコン:"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:468
 msgid "Sunrise only"
-msgstr "Solo amanecer"
+msgstr "日の出のみ"
 
 #: contents/ui/config/configAppearance.qml:736
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:540
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:534
 msgid "Sunrise only  07:17"
-msgstr "Solo amanecer  07:17"
+msgstr "日の出のみ  07:17"
 
 #: contents/ui/config/configAppearance.qml:1328
 #: contents/ui/config/configAppearance.qml:1473
 #: contents/ui/config/configAppearance.qml:1610 contents/ui/DetailsView.qml:308
 msgid "Sunrise/Sunset"
-msgstr "Amanecer/Atardecer"
+msgstr "日の出 / 日の入り"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:926
 msgid "Sunrise/sunset markers:"
-msgstr "Marcadores de amanecer/atardecer:"
+msgstr "日の出 / 日の入りのマーカー:"
 
 #: contents/ui/TooltipContent.qml:588 contents/ui/TooltipContent.qml:604
 #: contents/ui/TooltipContent.qml:609
 msgid "Sunrise:"
-msgstr "Amanecer:"
+msgstr "日の出:"
 
 #: contents/ui/DetailsView.qml:3210 contents/ui/DetailsView.qml:3212
 #: contents/ui/DetailsView.qml:3536 contents/ui/DetailsView.qml:3538
 msgid "Sunset"
-msgstr "Atardecer"
+msgstr "日の入り"
 
 #: contents/ui/config/configAppearance.qml:822
 msgid "Sunset icon:"
-msgstr "Icono de atardecer:"
+msgstr "日の入りのアイコン:"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:472
 msgid "Sunset only"
-msgstr "Solo atardecer"
+msgstr "日の入りのみ"
 
 #: contents/ui/config/configAppearance.qml:740
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:544
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:538
 msgid "Sunset only   18:03"
-msgstr "Solo atardecer   18:03"
+msgstr "日の入りのみ   18:03"
 
 #: contents/ui/TooltipContent.qml:592 contents/ui/TooltipContent.qml:601
 #: contents/ui/TooltipContent.qml:609
 msgid "Sunset:"
-msgstr "Atardecer:"
+msgstr "日の入り:"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:91
 msgid "Swap order:"
-msgstr "Invertir orden:"
+msgstr "順序を入れ替え:"
 
 #: contents/ui/FullView.qml:324
 msgid "Switch location"
-msgstr "Cambiar ubicación"
+msgstr "位置を切り替え"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:307
 #: contents/ui/config/tabs/ConfigPanelTab.qml:316
 msgid "Symbolic"
-msgstr "Simbólico"
+msgstr "シンボリック"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:1075
 #: contents/ui/config/tabs/ConfigTooltipTab.qml:204
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:42
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:51
 msgid "Symbolic (Bundled)"
-msgstr "Simbólico (incluido)"
+msgstr "シンボリック（同梱）"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:770
 msgid "Symbolic (follows theme colour)"
-msgstr "Simbólico (sigue el color del tema)"
+msgstr "シンボリック（テーマカラーに追従）"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:719
 msgid "System Tray Badge Background Color"
-msgstr "Color de fondo de la insignia en la bandeja del sistema"
+msgstr "システムトレイバッジの背景色"
 
 #: contents/ui/config/configLocation.qml:826
 msgid "System location unavailable, trying IP geolocation…"
-msgstr "Ubicación del sistema no disponible, intentando con geolocalización por IP…"
+msgstr "システム位置が利用できません。IP 位置情報を試行中…"
 
 #: contents/ui/config/configAppearance.qml:1978
 msgid "System tray"
-msgstr "Bandeja del sistema"
+msgstr "システムトレイ"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:86
 msgid "System tray display settings"
-msgstr "Ajustes de visualización de la bandeja del sistema"
+msgstr "システムトレイ表示設定"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:140
 msgid "System tray icon settings"
-msgstr "Ajustes del icono de la bandeja del sistema"
+msgstr "システムトレイアイコン設定"
 
 #: contents/ui/components/RadarWebEngineView.qml:75
 #: contents/ui/config/configAppearance.qml:1321
 #: contents/ui/config/configAppearance.qml:1568
 msgid "Temperature"
-msgstr "Temperatura"
+msgstr "気温"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:962
 msgid "Temperature Color"
-msgstr "Color de temperatura"
+msgstr "気温の色"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:587
 msgid "Temperature badge"
-msgstr "Insignia de temperatura"
+msgstr "気温バッジ"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:472
 msgid "Temperature color:"
-msgstr "Color de temperatura:"
+msgstr "気温の色:"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:232
 msgid "Temperature first"
-msgstr "Temperatura primero"
+msgstr "気温を先"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:199
 msgid "Temperature only"
-msgstr "Solo temperatura"
+msgstr "気温のみ"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:512
 msgid "Temperature shadow:"
-msgstr "Sombra de temperatura:"
+msgstr "気温の影:"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:221
 #: contents/ui/TooltipContent.qml:411
 msgid "Temperature:"
-msgstr "Temperatura:"
+msgstr "気温:"
 
 #: contents/ui/config/configGeneral.qml:627
 msgid "Test API Key"
-msgstr "Probar clave API"
+msgstr "API キーをテスト"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:524
 msgid "Test across providers"
-msgstr "Probar en proveedores"
+msgstr "プロバイダ横断テスト"
 
 #: contents/ui/config/configGeneral.qml:215
 msgid "Testing connection…"
-msgstr "Probando conexión…"
+msgstr "接続をテスト中…"
 
 #: contents/ui/config/configGeneral.qml:627
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:219
 msgid "Testing…"
-msgstr "Probando…"
+msgstr "テスト中…"
 
 #: contents/ui/config/tabs/ConfigTooltipTab.qml:184
 msgid "Text labels (Temperature, Wind…)"
-msgstr "Etiquetas de texto (Temperatura, Viento…)"
+msgstr "テキストラベル（気温、風…）"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:1025
 msgid "Text will follow the system font and expand to fill the available space."
-msgstr "El texto seguirá la fuente del sistema y se expandirá para ocupar el espacio disponible."
+msgstr "テキストはシステムフォントに従い、利用可能な領域を埋めるよう拡張されます。"
 
 #: contents/ui/RadarView.qml:161
 msgid "The Radar tab requires the QtWebEngine package, which is not installed on this system."
-msgstr "La pestaña de radar requiere el paquete QtWebEngine, que no está instalado en este sistema."
+msgstr "レーダータブには QtWebEngine パッケージが必要ですが、このシステムにはインストールされていません。"
 
 #: contents/ui/config/configLocation.qml:371
 msgid "The auto-detected location is already in your saved list."
-msgstr "La ubicación detectada automáticamente ya está en tu lista guardada."
+msgstr "自動検出された位置は既に保存リストにあります。"
 
 #: contents/ui/config/configAppearance.qml:465
 msgid "The condition icon will automatically reflect the current weather using your KDE system icon theme. No customisation is needed."
-msgstr "El icono de condición reflejará automáticamente el tiempo actual usando tu tema de iconos del sistema KDE. No se necesita personalización."
+msgstr "天気アイコンは KDE システムアイコンテーマを使用して現在の天気を自動的に反映します。カスタマイズは不要です。"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:844
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:957
 msgid "The geomagnetic (Kp/G) forecast is only available up to 3 days ahead"
-msgstr "El pronóstico geomagnético (Kp/G) solo está disponible hasta 3 días de antelación"
+msgstr "地磁気（Kp / G）予報は最大 3 日先まで利用可能です"
 
 #: contents/ui/config/configLocation.qml:1089
 msgid "The map picker requires the QtLocation and QtPositioning packages, which are not installed on this system."
-msgstr "El selector de mapa requiere los paquetes QtLocation y QtPositioning, que no están instalados en este sistema."
+msgstr "地図ピッカーには QtLocation と QtPositioning パッケージが必要ですが、このシステムにはインストールされていません。"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:682
 msgid "Theme default"
-msgstr "Predeterminado del tema"
+msgstr "テーマのデフォルト"
 
 #: contents/ui/config/configLocation.qml:182
 msgid "This location is already in your saved list."
-msgstr "Esta ubicación ya está en tu lista guardada."
+msgstr "この位置は既に保存リストにあります。"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:61
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:714
 #: contents/ui/main.qml:1777
 msgid "Thunderstorm"
-msgstr "Tormenta eléctrica"
+msgstr "雷雨"
 
 #: contents/ui/config/configAppearance.qml:320
 msgid "Thunderstorm (day)"
-msgstr "Tormenta eléctrica (día)"
+msgstr "雷雨（昼）"
 
 #: contents/ui/config/configAppearance.qml:325
 msgid "Thunderstorm (night)"
-msgstr "Tormenta eléctrica (noche)"
+msgstr "雷雨（夜）"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:62
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:716
 #: contents/ui/main.qml:1779
 msgid "Thunderstorm with hail"
-msgstr "Tormenta eléctrica con granizo"
+msgstr "ひょうを伴う雷雨"
 
 #: contents/ui/config/configAppearance.qml:331
 msgid "Thunderstorm with hail (day)"
-msgstr "Tormenta eléctrica con granizo (día)"
+msgstr "ひょうを伴う雷雨（昼）"
 
 #: contents/ui/config/configAppearance.qml:336
 msgid "Thunderstorm with hail (night)"
-msgstr "Tormenta eléctrica con granizo (noche)"
+msgstr "ひょうを伴う雷雨（夜）"
 
 #: contents/ui/config/configAppearance.qml:342
 msgid "Thunderstorm, heavy hail (day)"
-msgstr "Tormenta eléctrica con granizo intenso (día)"
+msgstr "雷雨、激しいひょう（昼）"
 
 #: contents/ui/config/configAppearance.qml:347
 msgid "Thunderstorm, heavy hail (night)"
-msgstr "Tormenta eléctrica con granizo intenso (noche)"
+msgstr "雷雨、激しいひょう（夜）"
 
 #: contents/ui/main.qml:1488
 msgid "Thunderstorms"
-msgstr "Tormentas"
+msgstr "雷雨"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:310
 msgid "Time format:"
-msgstr "Formato de hora:"
+msgstr "時刻形式:"
 
 #: contents/ui/config/configNotifications.qml:122
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:826
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:700
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:694
 msgid "Time:"
-msgstr "Hora:"
+msgstr "時刻:"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:238
 msgid "Timed out"
-msgstr "Tiempo de espera agotado"
+msgstr "タイムアウト"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:485
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:617
 msgid "Timezone:"
-msgstr "Zona horaria:"
+msgstr "タイムゾーン:"
 
 #: contents/ui/config/configGeneral.qml:737
 msgid "To unlock additional map layers (Rain, Clouds, Temperature, Wind, Pressure): disable Adaptive mode, select OpenWeatherMap as your weather provider, and enter your API key above. When you are ready, you can enable Adaptive mode again."
-msgstr "Para desbloquear capas de mapa adicionales (Lluvia, Nubes, Temperatura, Viento, Presión): desactiva el modo Adaptativo, selecciona OpenWeatherMap como proveedor meteorológico e introduce tu clave API arriba. Cuando estés listo, puedes volver a habilitar el modo Adaptativo."
+msgstr "追加の地図レイヤー（雨、雲、気温、風、気圧）のロックを解除するには: アダプティブモードを無効化し、気象プロバイダとして OpenWeatherMap を選択して、上に API キーを入力してください。準備ができたら、再度アダプティブモードを有効化できます。"
 
 #: contents/ui/ForecastView.qml:440 contents/ui/main.qml:1337
 #: contents/ui/SimpleView.qml:423
 msgid "Today"
-msgstr "Hoy"
+msgstr "今日"
 
 #: contents/ui/config/configAppearance.qml:1386
 #: contents/ui/config/configAppearance.qml:1509
 #: contents/ui/config/configAppearance.qml:1632
 msgid "Today's total precipitation (mm/in)"
-msgstr "Precipitación total de hoy (mm/in)"
+msgstr "本日の総降水量（mm / in）"
 
 #: contents/ui/config/configNotifications.qml:259
 msgid "Today's weather"
-msgstr "El tiempo de hoy"
+msgstr "本日の天気"
 
 #: contents/ui/main.qml:1410
 msgid "Tomorrow"
-msgstr "Mañana"
+msgstr "明日"
 
 #: contents/ui/config/configNotifications.qml:279
 msgid "Tomorrow forecast"
-msgstr "Pronóstico de mañana"
+msgstr "明日の予報"
 
 #: contents/ui/config/configGeneral.qml:311
 msgid "Tomorrow.io (Key Required)"
-msgstr "Tomorrow.io (requiere clave)"
+msgstr "Tomorrow.io（キー必須）"
 
 #: contents/ui/config/configGeneral.qml:498
 msgid "Tomorrow.io API Key:"
-msgstr "Clave API de Tomorrow.io:"
+msgstr "Tomorrow.io API キー:"
 
 #: contents/ui/main.qml:1375
 msgid "Tonight"
-msgstr "Esta noche"
+msgstr "今夜"
 
 #: contents/ui/config/configAppearance.qml:1986
 #: contents/ui/config/tabs/ConfigMiscTab.qml:137
 msgid "Tooltip"
-msgstr "Información emergente"
+msgstr "ツールチップ"
 
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:94
 msgid "Tooltip Items"
-msgstr "Elementos de información emergente"
+msgstr "ツールチップ項目"
 
 #: contents/ui/config/tabs/ConfigTooltipTab.qml:135
 msgid "Tooltip height:"
-msgstr "Altura de la información emergente:"
+msgstr "ツールチップの高さ:"
 
 #: contents/ui/config/tabs/ConfigTooltipTab.qml:296
 msgid "Tooltip items"
-msgstr "Elementos de información emergente"
+msgstr "ツールチップ項目"
 
 #: contents/ui/config/tabs/ConfigTooltipTab.qml:54
 msgid "Tooltip items settings"
-msgstr "Configuración de los elementos de información emergente"
+msgstr "ツールチップ項目設定"
 
 #: contents/ui/config/tabs/ConfigTooltipTab.qml:301
 msgid "Tooltip items:"
-msgstr "Elementos de información emergente:"
+msgstr "ツールチップ項目:"
 
 #: contents/ui/config/tabs/ConfigTooltipTab.qml:92
 msgid "Tooltip width:"
-msgstr "Ancho de la información emergente:"
+msgstr "ツールチップの幅:"
 
 #: contents/ui/config/tabs/ConfigTooltipTab.qml:39
 msgid "Tooltip:"
-msgstr "Información emergente:"
+msgstr "ツールチップ:"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:621
 msgid "Top Center"
-msgstr "Centro superior"
+msgstr "上中央"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:613
 msgid "Top Left"
-msgstr "Izquierda superior"
+msgstr "左上"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:609
 msgid "Top Right"
-msgstr "Derecha superior"
+msgstr "右上"
 
 #: contents/ui/config/configNotifications.qml:225
 msgid "Treat alert notifications as critical"
-msgstr "Tratar las notificaciones de alertas como críticas"
+msgstr "アラート通知を重要として扱う"
 
 #: contents/ui/config/tabs/ConfigTooltipTab.qml:68
 msgid "Truncate (single line)"
-msgstr "Truncar (una sola línea)"
+msgstr "切り詰め（1 行）"
 
 #: contents/ui/config/configAppearance.qml:1392
 #: contents/ui/config/configAppearance.qml:1515
 #: contents/ui/config/configAppearance.qml:1638 contents/ui/DetailsView.qml:315
 #: contents/ui/SimpleView.qml:265
 msgid "UV Index"
-msgstr "Índice UV"
+msgstr "UV 指数"
 
 #: contents/ui/TooltipContent.qml:460
 msgid "UV Index:"
-msgstr "Índice UV:"
+msgstr "UV 指数:"
 
 #: contents/ui/config/configNotifications.qml:327 contents/ui/main.qml:1592
 msgid "UV index"
-msgstr "Índice UV"
+msgstr "UV 指数"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:851
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:964
 msgid "UV index forecast:"
-msgstr "Pronóstico de índice UV:"
+msgstr "UV 指数予報:"
 
 #: contents/ui/main.qml:1589
 msgid "UV will be %1 (%2)"
-msgstr "El índice UV será %1 (%2)"
+msgstr "UV は %1（%2）の予想"
 
 #: contents/ui/config/configAppearance.qml:1393
 #: contents/ui/config/configAppearance.qml:1516
 #: contents/ui/config/configAppearance.qml:1639
 msgid "Ultraviolet index"
-msgstr "Índice ultravioleta"
+msgstr "紫外線指数"
 
 #: contents/ui/config/configLocation.qml:865
 #: contents/ui/config/configLocation.qml:972
 msgid "Unable to detect location. All methods failed."
-msgstr "No se puede detectar la ubicación. Todos los métodos fallaron."
+msgstr "位置を検出できません。すべての方法が失敗しました。"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:149
 msgid "Unit preset:"
-msgstr "Preajuste de unidades:"
+msgstr "単位プリセット:"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:144
 msgid "Units"
-msgstr "Unidades"
+msgstr "単位"
 
 #: contents/ui/config/configLocation.qml:1753
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:717
 #: contents/ui/FullView.qml:348
 msgid "Unknown"
-msgstr "Desconocido"
+msgstr "不明"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:561
 msgid "Unknown location"
-msgstr "Ubicación desconocida"
+msgstr "不明な位置"
 
 #: contents/ui/FullView.qml:371
 msgid "Unpin widget"
-msgstr "Desanclar widget"
+msgstr "ウィジェットのピンを解除"
 
 #: contents/ui/js/spaceWeather.js:172
 msgid "Unsettled"
-msgstr "Inestable"
+msgstr "不安定"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:476
 msgid "Upcoming (auto)"
-msgstr "Próximo (automático)"
+msgstr "今後（自動）"
 
 #: contents/ui/config/configAppearance.qml:728
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:532
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:530
 msgid "Upcoming (next sunrise or sunset)"
-msgstr "Próximo (siguiente amanecer o atardecer)"
+msgstr "今後（次の日の出または日の入り）"
 
 #: contents/ui/config/configAppearance.qml:892
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:517
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:592
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:586
 msgid "Upcoming rise/set only"
-msgstr "Solo próxima salida/puesta"
+msgstr "今後の出入りのみ"
 
 #: contents/ui/WeatherService.qml:134
 msgid "Update timed out. Tap to retry."
-msgstr "Tiempo de actualización agotado. Toca para reintentar."
+msgstr "更新がタイムアウトしました。タップして再試行。"
 
 #: contents/ui/WeatherService.qml:681
 msgid "Updated %1"
-msgstr "Actualizado %1"
+msgstr "%1 に更新"
 
 #: contents/ui/FullView.qml:392
 msgid "Updating…"
-msgstr "Actualizando…"
+msgstr "更新中…"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:358
 msgid "Use 24-hour format:"
-msgstr "Usar formato de 24 horas:"
+msgstr "24 時間形式を使用:"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:161
 msgid "Use KDE locale settings"
-msgstr "Usar configuración regional de KDE"
+msgstr "KDE ロケール設定を使用"
 
 #: contents/ui/config/configLocation.qml:1549
 msgid "Use manual location"
-msgstr "Usar ubicación manual"
+msgstr "手動位置を使用"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:902
 msgid "Use region defaults"
-msgstr "Usar predet. de la región"
+msgstr "地域のデフォルトを使用"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:1148
 #: contents/ui/config/tabs/ConfigTooltipTab.qml:277
 msgid "Uses KDE system icons by default. Click the button to customise each item's icon."
-msgstr "Usa los iconos del sistema KDE por defecto. Haz clic en el botón para personalizar el icono de cada elemento."
+msgstr "デフォルトで KDE システムアイコンを使用します。ボタンをクリックして各項目のアイコンをカスタマイズできます。"
 
 #: contents/ui/js/airQuality.js:51
 msgid "V.Poor"
-msgstr "Muy mala"
+msgstr "非常に悪い"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:55
 msgid "Values are rounded to whole numbers"
-msgstr "Los valores se redondean a números enteros"
+msgstr "値は整数に丸められます"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:55
 msgid "Values show decimal places"
-msgstr "Los valores muestran decimales"
+msgstr "値は小数点以下を表示"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:158
 msgid "Vertical"
-msgstr "Vertical"
+msgstr "垂直"
 
 #: contents/ui/js/pollen.js:45 contents/ui/main.qml:799
 #: contents/ui/main.qml:843
 msgid "Very High"
-msgstr "Muy alto"
+msgstr "非常に高い"
 
 #: contents/ui/js/airQuality.js:51 contents/ui/main.qml:813
 msgid "Very Poor"
-msgstr "Muy mala"
+msgstr "非常に悪い"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:708
 msgid "Violent rain showers"
-msgstr "Chubascos torrenciales"
+msgstr "猛烈なにわか雨"
 
 #: contents/ui/config/configAppearance.qml:1487 contents/ui/DetailsView.qml:310
 #: contents/ui/SimpleView.qml:262
 msgid "Visibility"
-msgstr "Visibilidad"
+msgstr "視程"
 
 #: contents/ui/config/configAppearance.qml:1488
 msgid "Visibility distance"
-msgstr "Distancia de visibilidad"
+msgstr "視程距離"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:865
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:980
 #: contents/ui/TooltipContent.qml:445
 msgid "Visibility:"
-msgstr "Visibilidad:"
+msgstr "視程:"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:188
 msgid "Visible tabs:"
-msgstr "Pestañas visibles:"
+msgstr "表示タブ:"
 
 #: contents/ui/config/configGeneral.qml:307
 msgid "Visual Crossing (Key Required)"
-msgstr "Visual Crossing (requiere clave)"
+msgstr "Visual Crossing（キー必須）"
 
 #: contents/ui/config/configGeneral.qml:496
 msgid "Visual Crossing API Key:"
-msgstr "Clave API de Visual Crossing:"
+msgstr "Visual Crossing API キー:"
 
 #: contents/ui/main.qml:1914
 msgid "Waning Crescent"
-msgstr "Luna menguante"
+msgstr "有明月"
 
 #: contents/ui/main.qml:1910
 msgid "Waning Gibbous"
-msgstr "Luna gibosa menguante"
+msgstr "居待月"
 
 #: contents/ui/main.qml:1902
 msgid "Waxing Crescent"
-msgstr "Luna creciente"
+msgstr "三日月"
 
 #: contents/ui/main.qml:1906
 msgid "Waxing Gibbous"
-msgstr "Luna gibosa creciente"
+msgstr "十三夜月"
 
 #: contents/ui/config/configLocation.qml:1148
 msgid "We detected your coordinates: <b>%1°, %2°</b>."
-msgstr "Hemos detectado tus coordenadas: <b>%1°, %2°</b>."
+msgstr "座標を検出しました: <b>%1°, %2°</b>。"
 
 #: contents/ui/config/configLocation.qml:1148
 msgid "We detected your location as: <b>%1</b>."
-msgstr "Hemos detectado tu ubicación como: <b>%1</b>."
+msgstr "位置を検出しました: <b>%1</b>。"
 
 #: contents/ui/config/configGeneral.qml:350
 msgid "Weather Provider"
-msgstr "Proveedor meteorológico"
+msgstr "気象プロバイダ"
 
 #: contents/ui/TooltipContent.qml:227
 msgid "Weather Widget"
-msgstr "Widget del tiempo"
+msgstr "天気ウィジェット"
 
 #: contents/ui/main.qml:1100
 msgid "Weather alert"
-msgstr "Alerta meteorológica"
+msgstr "天気アラート"
 
 #: contents/ui/config/configAppearance.qml:1421
 #: contents/ui/config/configAppearance.qml:1544
 #: contents/ui/config/configAppearance.qml:1667
 #: contents/ui/config/configNotifications.qml:191
 msgid "Weather alerts"
-msgstr "Alertas meteorológicas"
+msgstr "天気アラート"
 
 #: contents/ui/config/configAppearance.qml:1576
 msgid "Weather condition text"
-msgstr "Texto de condición meteorológica"
+msgstr "天気状態テキスト"
 
 #: contents/ui/config/configAppearance.qml:1315
 msgid "Weather icon + condition text"
-msgstr "Icono del tiempo + texto de condición"
+msgstr "天気アイコン + 天気テキスト"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:295
 msgid "Weather icon style:"
-msgstr "Estilo del icono del tiempo:"
+msgstr "天気アイコンのスタイル:"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:136
 msgid "Weather icon theme:"
-msgstr "Tema de iconos del tiempo:"
+msgstr "天気アイコンテーマ:"
 
 #: contents/ui/WeatherService.qml:681
 msgid "Weather provider:"
-msgstr "Proveedor meteorológico:"
+msgstr "気象プロバイダ:"
 
 #: contents/ui/config/configGeneral.qml:299
 msgid "WeatherAPI.com (Key Required)"
-msgstr "WeatherAPI.com (requiere clave)"
+msgstr "WeatherAPI.com（キー必須）"
 
 #: contents/ui/config/configGeneral.qml:505
 msgid "WeatherAPI.com API Key:"
-msgstr "Clave API de WeatherAPI.com:"
+msgstr "WeatherAPI.com API キー:"
 
 #: contents/ui/config/configGeneral.qml:319
 msgid "Weatherbit (Key Required)"
-msgstr "Weatherbit (requiere clave)"
+msgstr "Weatherbit（キー必須）"
 
 #: contents/ui/config/configGeneral.qml:502
 msgid "Weatherbit API Key:"
-msgstr "Clave API de Weatherbit:"
+msgstr "Weatherbit API キー:"
 
 #: contents/ui/DetailsView.qml:2316
 msgid "Website"
-msgstr "Sitio web"
+msgstr "ウェブサイト"
 
 #: contents/ui/config/configAppearance.qml:1982
 #: contents/ui/config/tabs/ConfigMiscTab.qml:127
 msgid "Widget"
-msgstr "Widget"
+msgstr "ウィジェット"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:405
 msgid "Widget Size"
-msgstr "Tamaño del widget"
+msgstr "ウィジェットサイズ"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:249
 msgid "Widget panel area:"
-msgstr "Área del widget en el panel:"
+msgstr "ウィジェットのパネル領域:"
 
 #: contents/ui/components/RadarWebEngineView.qml:76
 #: contents/ui/config/configAppearance.qml:1335
 #: contents/ui/config/configAppearance.qml:1466
 #: contents/ui/config/configAppearance.qml:1589 contents/ui/DetailsView.qml:307
 msgid "Wind"
-msgstr "Viento"
+msgstr "風"
 
 #: contents/ui/config/configAppearance.qml:1467
 #: contents/ui/config/configAppearance.qml:1590
 msgid "Wind speed + direction"
-msgstr "Velocidad + dirección del viento"
+msgstr "風速 + 風向"
 
 #: contents/ui/config/configAppearance.qml:1336
 msgid "Wind speed and direction"
-msgstr "Velocidad y dirección del viento"
+msgstr "風速と風向"
 
 #: contents/ui/config/tabs/ConfigMiscTab.qml:248
 msgid "Wind speed:"
-msgstr "Velocidad del viento:"
+msgstr "風速:"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:872
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:988
 #: contents/ui/TooltipContent.qml:422
 msgid "Wind:"
-msgstr "Viento:"
+msgstr "風:"
 
 #: contents/ui/config/tabs/ConfigTooltipTab.qml:72
 msgid "Wrap to next line"
-msgstr "Salto de línea automático"
+msgstr "次の行に折り返す"
 
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:722
 #: contents/ui/DetailsView.qml:2051
 msgid "X-ray Flare Class"
-msgstr "Clase de erupción de rayos X"
+msgstr "X 線フレアクラス"
 
 #: contents/ui/config/configNotifications.qml:206
 msgid "Yellow"
-msgstr "Amarillo"
+msgstr "黄"
 
 #: contents/ui/config/configLocation.qml:1255
 msgid "Yes"
-msgstr "Sí"
+msgstr "はい"
 
 #: contents/ui/config/configLocation.qml:1383
 msgid "Yes, remove it"
-msgstr "Sí, eliminarla"
+msgstr "はい、削除します"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:305
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:396
 msgid "You can see date/time format reference at: <a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method\">Qt documentation</a>"
-msgstr "Puedes ver la referencia de formato de fecha/hora en: <a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method\">la documentación de Qt</a>"
+msgstr "日付 / 時刻形式のリファレンスは <a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method\">Qt ドキュメント</a> を参照してください"
 
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:891
 msgid "You may need to increase the widget's width to see all the selected information"
-msgstr "Es posible que necesites aumentar el ancho del widget para ver toda la información seleccionada"
+msgstr "選択した情報をすべて表示するには、ウィジェットの幅を広げる必要がある場合があります"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:490
 msgid "Zoom in"
-msgstr "Acercar"
+msgstr "拡大"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:499
 msgid "Zoom out"
-msgstr "Alejar"
+msgstr "縮小"
 
 #: contents/ui/main.qml:1562
 msgid "a decrease from yesterday"
-msgstr "más bajo que ayer"
+msgstr "昨日から減少"
 
 #: contents/ui/main.qml:1366
 msgid "a few clouds"
-msgstr "algunas nubes"
+msgstr "多少の雲"
 
 #: contents/ui/main.qml:1561
 msgid "an increase from yesterday"
-msgstr "más alto que ayer"
+msgstr "昨日から増加"
 
 #: contents/ui/main.qml:1367
 msgid "clear skies"
-msgstr "cielos despejados"
+msgstr "快晴"
 
 #: contents/ui/main.qml:1365
 msgid "cloudy skies"
-msgstr "cielos nublados"
+msgstr "曇り空"
 
 #: contents/ui/main.qml:1362
 msgid "drizzle"
-msgstr "llovizna"
+msgstr "霧雨"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:421
 msgid "e.g. Sofia, Bulgaria"
-msgstr "p. ej. Madrid, España"
+msgstr "例: ソフィア、ブルガリア"
 
 #: contents/ui/main.qml:1571 contents/ui/main.qml:1614
 msgid "extreme"
-msgstr "extremo"
+msgstr "極端"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:462
 msgid "feet"
-msgstr "pies"
+msgstr "フィート"
 
 #: contents/ui/main.qml:1363
 msgid "fog"
-msgstr "niebla"
+msgstr "霧"
 
 #: contents/ui/main.qml:1360
 msgid "freezing rain"
-msgstr "lluvia helada"
+msgstr "着氷性の雨"
 
 #: contents/ui/main.qml:1062
 msgid "from %1"
-msgstr "desde %1"
+msgstr "%1 から"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:370
 msgid "ft"
@@ -3641,19 +3639,19 @@ msgstr "ft"
 
 #: contents/ui/main.qml:1569
 msgid "high"
-msgstr "alto"
+msgstr "高い"
 
 #: contents/ui/main.qml:1493
 msgid "in the next hours"
-msgstr "en las próximas horas"
+msgstr "これからの数時間で"
 
 #: contents/ui/DetailsView.qml:3449
 msgid "left"
-msgstr "restante"
+msgstr "残り"
 
 #: contents/ui/main.qml:1567
 msgid "low"
-msgstr "bajo"
+msgstr "低い"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:370
 msgid "m"
@@ -3661,28 +3659,28 @@ msgstr "m"
 
 #: contents/ui/config/configGeneral.qml:291
 msgid "met.no (free)"
-msgstr "met.no (gratuito)"
+msgstr "met.no（無料）"
 
 #: contents/ui/config/subpages/ConfigLocationManualSubPage.qml:462
 msgid "meters"
-msgstr "metros"
+msgstr "メートル"
 
 #: contents/ui/main.qml:1610
 msgid "minor"
-msgstr "menor"
+msgstr "弱い"
 
 #: contents/ui/config/configGeneral.qml:799
 #: contents/ui/config/configNotifications.qml:250
 msgid "minutes"
-msgstr "minutos"
+msgstr "分"
 
 #: contents/ui/main.qml:1568 contents/ui/main.qml:1611
 msgid "moderate"
-msgstr "moderado"
+msgstr "中程度"
 
 #: contents/ui/main.qml:1364
 msgid "overcast skies"
-msgstr "cielos cubiertos"
+msgstr "曇り空"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:844
 #: contents/ui/config/tabs/ConfigTooltipTab.qml:127
@@ -3692,105 +3690,84 @@ msgstr "px"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:288
 msgid "px height"
-msgstr "px de alto"
+msgstr "px 高さ"
 
 #: contents/ui/config/tabs/ConfigPanelTab.qml:288
 msgid "px width"
-msgstr "px de ancho"
+msgstr "px 幅"
 
 #: contents/ui/main.qml:1609
 msgid "quiet"
-msgstr "tranquilo"
+msgstr "静穏"
 
 #: contents/ui/main.qml:1361
 msgid "rain"
-msgstr "lluvia"
+msgstr "雨"
 
 #: contents/ui/main.qml:1613
 msgid "severe"
-msgstr "severo"
+msgstr "激しい"
 
 #: contents/ui/main.qml:1359
 msgid "showers"
-msgstr "chubascos"
+msgstr "にわか雨"
 
 #: contents/ui/main.qml:1355
 msgid "showers and thunderstorms"
-msgstr "chubascos y tormentas eléctricas"
+msgstr "にわか雨と雷雨"
 
 #: contents/ui/main.qml:1563
 msgid "similar to yesterday"
-msgstr "similar a ayer"
+msgstr "昨日と同様"
 
 #: contents/ui/main.qml:1358
 msgid "snow"
-msgstr "nieve"
+msgstr "雪"
 
 #: contents/ui/main.qml:1357
 msgid "snow showers"
-msgstr "chubascos de nieve"
+msgstr "にわか雪"
 
 #: contents/ui/main.qml:1612
 msgid "strong"
-msgstr "fuerte"
+msgstr "強い"
 
 #: contents/ui/config/configLocation.qml:900
 msgid "system location"
-msgstr "ubicación del sistema"
+msgstr "システム位置"
 
 #: contents/ui/main.qml:1496
 msgid "this afternoon"
-msgstr "esta tarde"
+msgstr "今日の午後"
 
 #: contents/ui/main.qml:1495
 msgid "this morning"
-msgstr "esta mañana"
+msgstr "今日の午前"
 
 #: contents/ui/main.qml:1356
 msgid "thunderstorms"
-msgstr "tormentas eléctricas"
+msgstr "雷雨"
 
 #: contents/ui/main.qml:1497
 msgid "tonight"
-msgstr "esta noche"
+msgstr "今夜"
 
 #: contents/ui/main.qml:1063
 msgid "until %1"
-msgstr "hasta %1"
+msgstr "%1 まで"
 
 #: contents/ui/DetailsView.qml:3446
 msgid "until dawn"
-msgstr "hasta el amanecer"
+msgstr "夜明けまで"
 
 #: contents/ui/main.qml:1570
 msgid "very high"
-msgstr "muy alto"
+msgstr "非常に高い"
 
 #: contents/ui/main.qml:1070 contents/ui/main.qml:1335
 #: contents/ui/main.qml:1408
 msgid "your location"
-msgstr "tu ubicación"
+msgstr "あなたの位置"
 
 #~ msgid "this night"
-#~ msgstr "esta noche"
-
-#~ msgid "Both"
-#~ msgstr "Ambos"
-
-#~ msgid "Hourly forecast:"
-#~ msgstr "Pronóstico por horas:"
-
-#~ msgid "Location information"
-#~ msgstr "Información de ubicación"
-
-#~ msgid ""
-#~ "Providers are tried in order until one succeeds:\n"
-#~ "Open-Meteo  →  met.no  →  Pirate Weather  →  Visual Crossing  →  Tomorrow.io  →  StormGlass  →  Weatherbit  →  QWeather  →  OpenWeatherMap  →  WeatherAPI.com\n"
-#~ "Open-Meteo is always tried first — it is free and requires no API key."
-#~ msgstr ""
-#~ "Los proveedores se prueban en orden hasta que uno tenga éxito:\n"
-#~ "Open-Meteo  →  met.no  →  Pirate Weather  →  Visual Crossing  →  Tomorrow.io  →  StormGlass  →  Weatherbit  →  QWeather  →  OpenWeatherMap  →  WeatherAPI.com\n"
-#~ "Open-Meteo siempre se prueba primero — es gratuito y no requiere clave API."
-
-#~ msgid "Show sunrise/sunset markers"
-#~ msgstr "Mostrar marcadores de amanecer/atardecer"
+#~ msgstr "今夜"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Advanced Weather Widget\n"
 "Report-Msgid-Bugs-To: https://github.com/pnedyalkov91/advanced-weather-widget/issues\n"
-"POT-Creation-Date: 2026-06-19 17:06+0300\n"
+"POT-Creation-Date: 2026-06-24 09:36+0300\n"
 "PO-Revision-Date: 2026-06-23 12:41+0800\n"
 "Last-Translator: Yo\n"
 "Language-Team: \n"
@@ -21,35 +21,35 @@ msgstr ""
 msgid " until dawn"
 msgstr " 後日出"
 
-#: contents/ui/main.qml:1392
+#: contents/ui/main.qml:1394
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: contents/ui/main.qml:1336
+#: contents/ui/main.qml:1338
 msgid "%1 - Today"
 msgstr "%1 - 今天"
 
-#: contents/ui/main.qml:1409
+#: contents/ui/main.qml:1411
 msgid "%1 - Tomorrow"
 msgstr "%1 - 明天"
 
-#: contents/ui/main.qml:1500
+#: contents/ui/main.qml:1520
 msgid "%1 ending"
 msgstr "%1 趨緩"
 
-#: contents/ui/main.qml:1494
+#: contents/ui/main.qml:1514
 msgid "%1 expected"
 msgstr "預計有%1"
 
-#: contents/ui/main.qml:1501
+#: contents/ui/main.qml:1521
 msgid "%1 expected to end %2."
 msgstr "%1 預計於%2結束。"
 
-#: contents/ui/main.qml:1495
+#: contents/ui/main.qml:1515
 msgid "%1 possible %2."
 msgstr "%2 可能有%1。"
 
-#: contents/ui/main.qml:1321
+#: contents/ui/main.qml:1323
 msgid "%1 will be %2 with a low of %3 and a high of %4."
 msgstr "%1 天氣將為%2，低溫 %3，高溫 %4。"
 
@@ -118,23 +118,23 @@ msgstr "3D Oxygen（內建）"
 msgid "68°F"
 msgstr "68°F"
 
-#: contents/ui/main.qml:1101
+#: contents/ui/main.qml:1103
 msgid "<b>Effective:</b> %1"
 msgstr "<b>生效時間：</b>%1"
 
-#: contents/ui/main.qml:1098
+#: contents/ui/main.qml:1100
 msgid "<b>Headline:</b> %1"
 msgstr "<b>標題：</b>%1"
 
-#: contents/ui/main.qml:1104
+#: contents/ui/main.qml:1106
 msgid "<b>Instruction:</b> %1"
 msgstr "<b>說明：</b>%1"
 
-#: contents/ui/main.qml:1107
+#: contents/ui/main.qml:1109
 msgid "<b>Provider:</b> %1"
 msgstr "<b>資料來源：</b>%1"
 
-#: contents/ui/main.qml:1096
+#: contents/ui/main.qml:1098
 #, javascript-format
 msgid "<b>Severity:</b> %1%2"
 msgstr "<b>嚴重程度：</b>%1%2"
@@ -183,7 +183,7 @@ msgstr "新增地點"
 msgid "Advanced (all tabs)"
 msgstr "進階（所有頁籤）"
 
-#: contents/ui/main.qml:1372
+#: contents/ui/main.qml:1374
 msgid "Afternoon"
 msgstr "下午"
 
@@ -559,12 +559,12 @@ msgstr "晴（白天）"
 msgid "Clear (night)"
 msgstr "晴（夜晚）"
 
-#: contents/ui/main.qml:1677
+#: contents/ui/main.qml:1727
 msgid "Clear night"
 msgstr "晴夜"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:670
-#: contents/ui/main.qml:1677
+#: contents/ui/main.qml:1727
 msgid "Clear sky"
 msgstr "晴空"
 
@@ -665,7 +665,7 @@ msgstr "連線成功！%1 金鑰有效。"
 msgid "Coordinates"
 msgstr "座標"
 
-#: contents/ui/config/configNotifications.qml:232
+#: contents/ui/config/configNotifications.qml:234
 msgid "Critical notifications are still shown even when Do Not Disturb is enabled, or while you're playing a game or watching a fullscreen video (if those options are enabled in System Settings → Notifications)."
 msgstr "即使啟用「勿擾」模式，或您正在遊玩遊戲或觀看全螢幕影片時（如已在系統設定 → 通知中啟用相關選項），重要通知仍然會顯示。"
 
@@ -888,7 +888,7 @@ msgid "Drag to reorder shown items"
 msgstr "拖曳以重新排列顯示的項目"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:53
-#: contents/ui/main.qml:1691
+#: contents/ui/main.qml:1741
 msgid "Drizzle"
 msgstr "毛雨"
 
@@ -900,7 +900,7 @@ msgstr "雙溫度"
 msgid "Each QWeather project has a unique API host. Find yours at console.qweather.com under your project settings."
 msgstr "每個 QWeather 專案都有獨特的 API 主機位址，請至 console.qweather.com 的專案設定中查詢。"
 
-#: contents/ui/config/configNotifications.qml:181
+#: contents/ui/config/configNotifications.qml:183
 msgid "Each notification type can be enabled independently, with its own daily time where applicable."
 msgstr "每種通知類型可獨立啟用，並可個別設定每日觸發時間（如適用）。"
 
@@ -916,7 +916,7 @@ msgstr "編輯地點詳細資訊"
 msgid "Effective"
 msgstr "生效時間"
 
-#: contents/ui/config/configNotifications.qml:192
+#: contents/ui/config/configNotifications.qml:194
 msgid "Enable alert notifications"
 msgstr "啟用警報通知"
 
@@ -1082,7 +1082,7 @@ msgstr "填滿面板："
 msgid "Find"
 msgstr "尋找"
 
-#: contents/ui/main.qml:1854
+#: contents/ui/main.qml:1904
 msgid "First Quarter"
 msgstr "上弦月"
 
@@ -1104,7 +1104,7 @@ msgstr "純色（內建）"
 #: contents/ui/config/configAppearance.qml:248
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:52
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:678
-#: contents/ui/main.qml:1685
+#: contents/ui/main.qml:1735
 msgid "Fog"
 msgstr "霧"
 
@@ -1148,7 +1148,7 @@ msgstr "免費且開放原始碼，無需 API 金鑰，推薦使用。"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:54
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:686
-#: contents/ui/main.qml:1697
+#: contents/ui/main.qml:1747
 msgid "Freezing drizzle"
 msgstr "凍毛雨"
 
@@ -1162,7 +1162,7 @@ msgstr "凍毛雨（夜晚）"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:56
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:694
-#: contents/ui/main.qml:1707
+#: contents/ui/main.qml:1757
 msgid "Freezing rain"
 msgstr "凍雨"
 
@@ -1178,7 +1178,7 @@ msgstr "凍雨（夜晚）"
 msgid "Friday"
 msgstr "星期五"
 
-#: contents/ui/main.qml:1858
+#: contents/ui/main.qml:1908
 msgid "Full Moon"
 msgstr "滿月"
 
@@ -1204,11 +1204,11 @@ msgstr "GeoClue2 無法使用，嘗試系統位置⋯"
 msgid "Geomagnetic Storm"
 msgstr "地磁風暴"
 
-#: contents/ui/config/configNotifications.qml:331 contents/ui/main.qml:1587
+#: contents/ui/config/configNotifications.qml:347 contents/ui/main.qml:1632
 msgid "Geomagnetic activity"
 msgstr "地磁活動"
 
-#: contents/ui/main.qml:1584
+#: contents/ui/main.qml:1629
 msgid "Geomagnetic activity will be %1 (Kp %2)"
 msgstr "地磁活動將達%1（Kp %2）"
 
@@ -1230,20 +1230,20 @@ msgstr "標題"
 msgid "Heavy"
 msgstr "大量"
 
-#: contents/ui/main.qml:1693
+#: contents/ui/main.qml:1743
 msgid "Heavy drizzle"
 msgstr "大毛雨"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:692
-#: contents/ui/main.qml:1703
+#: contents/ui/main.qml:1753
 msgid "Heavy rain"
 msgstr "大雨"
 
-#: contents/ui/main.qml:1721
+#: contents/ui/main.qml:1771
 msgid "Heavy showers"
 msgstr "大陣雨"
 
-#: contents/ui/main.qml:1713
+#: contents/ui/main.qml:1763
 msgid "Heavy snow"
 msgstr "大雪"
 
@@ -1255,7 +1255,7 @@ msgstr "大陣雪"
 msgid "Heavy snowfall"
 msgstr "大降雪"
 
-#: contents/ui/main.qml:1731
+#: contents/ui/main.qml:1781
 msgid "Heavy thunderstorm with hail"
 msgstr "夾雹大雷雨"
 
@@ -1501,7 +1501,7 @@ msgstr "Kp 指數"
 msgid "Kp index/G forecast:"
 msgstr "Kp 指數/G 等級預報："
 
-#: contents/ui/main.qml:1862
+#: contents/ui/main.qml:1912
 msgid "Last Quarter"
 msgstr "下弦月"
 
@@ -1537,19 +1537,19 @@ msgid "Light"
 msgstr "微量"
 
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:680
-#: contents/ui/main.qml:1689
+#: contents/ui/main.qml:1739
 msgid "Light drizzle"
 msgstr "輕毛雨"
 
-#: contents/ui/main.qml:1695
+#: contents/ui/main.qml:1745
 msgid "Light freezing drizzle"
 msgstr "輕凍毛雨"
 
-#: contents/ui/main.qml:1705
+#: contents/ui/main.qml:1755
 msgid "Light freezing rain"
 msgstr "輕凍雨"
 
-#: contents/ui/main.qml:1699
+#: contents/ui/main.qml:1749
 msgid "Light rain"
 msgstr "小雨"
 
@@ -1561,11 +1561,11 @@ msgstr "小雨/毛雨（白天）"
 msgid "Light rain / Drizzle (night)"
 msgstr "小雨/毛雨（夜晚）"
 
-#: contents/ui/main.qml:1717
+#: contents/ui/main.qml:1767
 msgid "Light showers"
 msgstr "小陣雨"
 
-#: contents/ui/main.qml:1709
+#: contents/ui/main.qml:1759
 msgid "Light snow"
 msgstr "小雪"
 
@@ -1577,7 +1577,7 @@ msgstr "小雪（白天）"
 msgid "Light snow (night)"
 msgstr "小雪（夜晚）"
 
-#: contents/ui/main.qml:1723
+#: contents/ui/main.qml:1773
 msgid "Light snow showers"
 msgstr "小陣雪"
 
@@ -1698,7 +1698,7 @@ msgstr "主圖示樣式："
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:49
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:672
-#: contents/ui/main.qml:1679
+#: contents/ui/main.qml:1729
 msgid "Mainly clear"
 msgstr "大致晴朗"
 
@@ -1894,7 +1894,7 @@ msgstr "僅顯示月落"
 msgid "Moonset:"
 msgstr "月落："
 
-#: contents/ui/main.qml:1371
+#: contents/ui/main.qml:1373
 msgid "Morning"
 msgstr "上午"
 
@@ -1929,7 +1929,7 @@ msgstr "需要查詢某地的座標？可至 <a href=\\\"https://www.mapcoordina
 msgid "Network error"
 msgstr "網路錯誤"
 
-#: contents/ui/main.qml:1850
+#: contents/ui/main.qml:1900
 msgid "New Moon"
 msgstr "新月"
 
@@ -2006,27 +2006,31 @@ msgstr "未測試"
 msgid "Note: size may be reduced if the panel is not thick enough."
 msgstr "注意：若面板不夠厚，大小可能會縮減。"
 
-#: contents/config/config.qml:62 contents/ui/config/configNotifications.qml:173
+#: contents/config/config.qml:62 contents/ui/config/configNotifications.qml:175
 msgid "Notifications"
 msgstr "通知"
 
-#: contents/ui/config/configNotifications.qml:300
+#: contents/ui/config/configNotifications.qml:302
 msgid "Notify about upcoming rain/storms"
 msgstr "即將降雨/雷雨通知"
 
-#: contents/ui/config/configNotifications.qml:314
+#: contents/ui/config/configNotifications.qml:316
+msgid "Notify about upcoming snow"
+msgstr "即將下雪時通知"
+
+#: contents/ui/config/configNotifications.qml:330
 msgid "Notify with today's UV forecast"
 msgstr "今日紫外線指數預報通知"
 
-#: contents/ui/config/configNotifications.qml:260
+#: contents/ui/config/configNotifications.qml:262
 msgid "Notify with today's forecast"
 msgstr "今日天氣預報通知"
 
-#: contents/ui/config/configNotifications.qml:334
+#: contents/ui/config/configNotifications.qml:350
 msgid "Notify with today's geomagnetic activity forecast"
 msgstr "今日地磁活動預報通知"
 
-#: contents/ui/config/configNotifications.qml:280
+#: contents/ui/config/configNotifications.qml:282
 msgid "Notify with tomorrow's forecast"
 msgstr "明日天氣預報通知"
 
@@ -2083,14 +2087,14 @@ msgstr "自動展開今日逐時預報（或下一個可用日期）"
 msgid "Options"
 msgstr "選項"
 
-#: contents/ui/config/configNotifications.qml:209
+#: contents/ui/config/configNotifications.qml:211
 msgid "Orange"
 msgstr "橙色"
 
 #: contents/ui/config/configAppearance.qml:242
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:51
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:676
-#: contents/ui/main.qml:1683
+#: contents/ui/main.qml:1733
 msgid "Overcast"
 msgstr "陰"
 
@@ -2145,7 +2149,7 @@ msgstr "細懸浮微粒（PM2.5）"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:50
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:674
-#: contents/ui/main.qml:1681 contents/ui/main.qml:1733
+#: contents/ui/main.qml:1731 contents/ui/main.qml:1783
 msgid "Partly cloudy"
 msgstr "多雲"
 
@@ -2381,7 +2385,7 @@ msgstr "豚草"
 
 #: contents/ui/components/RadarWebEngineView.qml:73
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:55
-#: contents/ui/main.qml:1468 contents/ui/main.qml:1701
+#: contents/ui/main.qml:1488 contents/ui/main.qml:1751
 msgid "Rain"
 msgstr "雨"
 
@@ -2397,7 +2401,7 @@ msgstr "雨（夜晚）"
 msgid "Rain showers"
 msgstr "陣雨"
 
-#: contents/ui/config/configNotifications.qml:297
+#: contents/ui/config/configNotifications.qml:299
 msgid "Rain/Storm"
 msgstr "降雨/雷雨"
 
@@ -2413,7 +2417,7 @@ msgstr "最近"
 msgid "Recommended — e.g. 560"
 msgstr "建議值 — 例如 560"
 
-#: contents/ui/config/configNotifications.qml:214
+#: contents/ui/config/configNotifications.qml:216
 msgid "Red"
 msgstr "紅色"
 
@@ -2472,7 +2476,7 @@ msgstr "移除已儲存的地點"
 msgid "Rename location"
 msgstr "重新命名地點"
 
-#: contents/ui/config/configNotifications.qml:240
+#: contents/ui/config/configNotifications.qml:242
 msgid "Repeat reminder every:"
 msgstr "重複提醒間隔："
 
@@ -2503,7 +2507,7 @@ msgstr "全部重設為預設值"
 msgid "Reset to default"
 msgstr "重設為預設值"
 
-#: contents/ui/main.qml:1687
+#: contents/ui/main.qml:1737
 msgid "Rime fog"
 msgstr "霧淞"
 
@@ -2595,7 +2599,7 @@ msgstr "設定自訂圖示⋯"
 msgid "Severe geomagnetic storm."
 msgstr "嚴重地磁風暴。"
 
-#: contents/ui/config/configNotifications.qml:202
+#: contents/ui/config/configNotifications.qml:204
 msgid "Severities:"
 msgstr "嚴重程度："
 
@@ -2682,7 +2686,7 @@ msgstr "顯示/隱藏金鑰"
 msgid "Show:"
 msgstr "顯示："
 
-#: contents/ui/main.qml:1719
+#: contents/ui/main.qml:1769
 msgid "Showers"
 msgstr "陣雨"
 
@@ -2762,8 +2766,9 @@ msgstr "微量降雪"
 msgid "Small circle  ⚬"
 msgstr "小圓圈  ⚬"
 
+#: contents/ui/config/configNotifications.qml:313
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:57
-#: contents/ui/main.qml:1711
+#: contents/ui/main.qml:1761
 msgid "Snow"
 msgstr "雪"
 
@@ -2792,14 +2797,30 @@ msgstr "積雪覆蓋："
 msgid "Snow depth (cm/in)"
 msgstr "積雪深度（公分/英吋）"
 
+#: contents/ui/main.qml:1545
+msgid "Snow ending"
+msgstr "雪 趨緩"
+
+#: contents/ui/main.qml:1540
+msgid "Snow expected"
+msgstr "預計有雪"
+
+#: contents/ui/main.qml:1546
+msgid "Snow expected to end %1."
+msgstr "雪 預計於%1結束。"
+
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:58
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:702
-#: contents/ui/main.qml:1715
+#: contents/ui/main.qml:1765
 msgid "Snow grains"
 msgstr "雪粒"
 
+#: contents/ui/main.qml:1541
+msgid "Snow possible %1."
+msgstr "%1 可能有雪。"
+
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:60
-#: contents/ui/main.qml:1725
+#: contents/ui/main.qml:1775
 msgid "Snow showers"
 msgstr "陣雪"
 
@@ -3088,7 +3109,7 @@ msgstr "此位置已在您的儲存清單中。"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:61
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:714
-#: contents/ui/main.qml:1468 contents/ui/main.qml:1727
+#: contents/ui/main.qml:1777
 msgid "Thunderstorm"
 msgstr "雷雨"
 
@@ -3102,7 +3123,7 @@ msgstr "雷雨（夜晚）"
 
 #: contents/ui/config/subpages/ConfigLocationSubPage.qml:62
 #: contents/ui/config/subpages/ConfigMapSubPage.qml:716
-#: contents/ui/main.qml:1729
+#: contents/ui/main.qml:1779
 msgid "Thunderstorm with hail"
 msgstr "夾雹雷雨"
 
@@ -3122,11 +3143,15 @@ msgstr "夾雹大雷雨（白天）"
 msgid "Thunderstorm, heavy hail (night)"
 msgstr "夾雹大雷雨（夜晚）"
 
+#: contents/ui/main.qml:1488
+msgid "Thunderstorms"
+msgstr "雷暴"
+
 #: contents/ui/config/tabs/ConfigWidgetTab.qml:310
 msgid "Time format:"
 msgstr "時間格式："
 
-#: contents/ui/config/configNotifications.qml:120
+#: contents/ui/config/configNotifications.qml:122
 #: contents/ui/config/subpages/ConfigDetailsSubPage.qml:826
 #: contents/ui/config/subpages/ConfigPanelSubPage.qml:700
 #: contents/ui/config/subpages/ConfigTooltipSubPage.qml:694
@@ -3146,7 +3171,7 @@ msgstr "時區："
 msgid "To unlock additional map layers (Rain, Clouds, Temperature, Wind, Pressure): disable Adaptive mode, select OpenWeatherMap as your weather provider, and enter your API key above. When you are ready, you can enable Adaptive mode again."
 msgstr "若要解鎖其他地圖圖層（雨量、雲層、溫度、風速、氣壓）：請停用自適應模式，選擇 OpenWeatherMap 作為天氣供應商，並在上方填入 API 金鑰。完成後可再次啟用自適應模式。"
 
-#: contents/ui/ForecastView.qml:440 contents/ui/main.qml:1335
+#: contents/ui/ForecastView.qml:440 contents/ui/main.qml:1337
 #: contents/ui/SimpleView.qml:423
 msgid "Today"
 msgstr "今天"
@@ -3157,15 +3182,15 @@ msgstr "今天"
 msgid "Today's total precipitation (mm/in)"
 msgstr "今日累積降水量（mm/英吋）"
 
-#: contents/ui/config/configNotifications.qml:257
+#: contents/ui/config/configNotifications.qml:259
 msgid "Today's weather"
 msgstr "今日天氣"
 
-#: contents/ui/main.qml:1408
+#: contents/ui/main.qml:1410
 msgid "Tomorrow"
 msgstr "明天"
 
-#: contents/ui/config/configNotifications.qml:277
+#: contents/ui/config/configNotifications.qml:279
 msgid "Tomorrow forecast"
 msgstr "明日預報"
 
@@ -3177,7 +3202,7 @@ msgstr "Tomorrow.io（需要金鑰）"
 msgid "Tomorrow.io API Key:"
 msgstr "Tomorrow.io API 金鑰："
 
-#: contents/ui/main.qml:1373
+#: contents/ui/main.qml:1375
 msgid "Tonight"
 msgstr "今晚"
 
@@ -3226,7 +3251,7 @@ msgstr "左上"
 msgid "Top Right"
 msgstr "右上"
 
-#: contents/ui/config/configNotifications.qml:223
+#: contents/ui/config/configNotifications.qml:225
 msgid "Treat alert notifications as critical"
 msgstr "將警報通知設為重要通知"
 
@@ -3245,7 +3270,7 @@ msgstr "紫外線指數"
 msgid "UV Index:"
 msgstr "紫外線指數："
 
-#: contents/ui/config/configNotifications.qml:311 contents/ui/main.qml:1547
+#: contents/ui/config/configNotifications.qml:327 contents/ui/main.qml:1592
 msgid "UV index"
 msgstr "紫外線指數"
 
@@ -3254,7 +3279,7 @@ msgstr "紫外線指數"
 msgid "UV index forecast:"
 msgstr "紫外線指數預報："
 
-#: contents/ui/main.qml:1544
+#: contents/ui/main.qml:1589
 msgid "UV will be %1 (%2)"
 msgstr "紫外線指數將達 %1（%2）"
 
@@ -3401,19 +3426,19 @@ msgstr "Visual Crossing（需要金鑰）"
 msgid "Visual Crossing API Key:"
 msgstr "Visual Crossing API 金鑰："
 
-#: contents/ui/main.qml:1864
+#: contents/ui/main.qml:1914
 msgid "Waning Crescent"
 msgstr "殘月"
 
-#: contents/ui/main.qml:1860
+#: contents/ui/main.qml:1910
 msgid "Waning Gibbous"
 msgstr "虧凸月"
 
-#: contents/ui/main.qml:1852
+#: contents/ui/main.qml:1902
 msgid "Waxing Crescent"
 msgstr "眉月"
 
-#: contents/ui/main.qml:1856
+#: contents/ui/main.qml:1906
 msgid "Waxing Gibbous"
 msgstr "盈凸月"
 
@@ -3433,14 +3458,14 @@ msgstr "天氣供應商"
 msgid "Weather Widget"
 msgstr "天氣小工具"
 
-#: contents/ui/main.qml:1098
+#: contents/ui/main.qml:1100
 msgid "Weather alert"
 msgstr "天氣警報"
 
 #: contents/ui/config/configAppearance.qml:1421
 #: contents/ui/config/configAppearance.qml:1544
 #: contents/ui/config/configAppearance.qml:1667
-#: contents/ui/config/configNotifications.qml:189
+#: contents/ui/config/configNotifications.qml:191
 msgid "Weather alerts"
 msgstr "天氣警報"
 
@@ -3532,7 +3557,7 @@ msgstr "折行"
 msgid "X-ray Flare Class"
 msgstr "X 射線閃焰等級"
 
-#: contents/ui/config/configNotifications.qml:204
+#: contents/ui/config/configNotifications.qml:206
 msgid "Yellow"
 msgstr "黃色"
 
@@ -3561,27 +3586,27 @@ msgstr "放大"
 msgid "Zoom out"
 msgstr "縮小"
 
-#: contents/ui/main.qml:1517
+#: contents/ui/main.qml:1562
 msgid "a decrease from yesterday"
 msgstr "較昨日減少"
 
-#: contents/ui/main.qml:1364
+#: contents/ui/main.qml:1366
 msgid "a few clouds"
 msgstr "少雲"
 
-#: contents/ui/main.qml:1516
+#: contents/ui/main.qml:1561
 msgid "an increase from yesterday"
 msgstr "較昨日增加"
 
-#: contents/ui/main.qml:1365
+#: contents/ui/main.qml:1367
 msgid "clear skies"
 msgstr "晴空"
 
-#: contents/ui/main.qml:1363
+#: contents/ui/main.qml:1365
 msgid "cloudy skies"
 msgstr "多雲"
 
-#: contents/ui/main.qml:1360
+#: contents/ui/main.qml:1362
 msgid "drizzle"
 msgstr "毛毛雨"
 
@@ -3589,7 +3614,7 @@ msgstr "毛毛雨"
 msgid "e.g. Sofia, Bulgaria"
 msgstr "例如：保加利亞索非亞"
 
-#: contents/ui/main.qml:1526 contents/ui/main.qml:1569
+#: contents/ui/main.qml:1571 contents/ui/main.qml:1614
 msgid "extreme"
 msgstr "極端"
 
@@ -3597,15 +3622,15 @@ msgstr "極端"
 msgid "feet"
 msgstr "英尺"
 
-#: contents/ui/main.qml:1361
+#: contents/ui/main.qml:1363
 msgid "fog"
 msgstr "霧"
 
-#: contents/ui/main.qml:1358
+#: contents/ui/main.qml:1360
 msgid "freezing rain"
 msgstr "凍雨"
 
-#: contents/ui/main.qml:1060
+#: contents/ui/main.qml:1062
 msgid "from %1"
 msgstr "自 %1 起"
 
@@ -3613,11 +3638,11 @@ msgstr "自 %1 起"
 msgid "ft"
 msgstr "英尺"
 
-#: contents/ui/main.qml:1524
+#: contents/ui/main.qml:1569
 msgid "high"
 msgstr "高"
 
-#: contents/ui/main.qml:1473
+#: contents/ui/main.qml:1493
 msgid "in the next hours"
 msgstr "在未來數小時內"
 
@@ -3625,7 +3650,7 @@ msgstr "在未來數小時內"
 msgid "left"
 msgstr "後日落"
 
-#: contents/ui/main.qml:1522
+#: contents/ui/main.qml:1567
 msgid "low"
 msgstr "低"
 
@@ -3641,20 +3666,20 @@ msgstr "met.no（免費）"
 msgid "meters"
 msgstr "公尺"
 
-#: contents/ui/main.qml:1565
+#: contents/ui/main.qml:1610
 msgid "minor"
 msgstr "輕微"
 
 #: contents/ui/config/configGeneral.qml:799
-#: contents/ui/config/configNotifications.qml:248
+#: contents/ui/config/configNotifications.qml:250
 msgid "minutes"
 msgstr "分鐘"
 
-#: contents/ui/main.qml:1523 contents/ui/main.qml:1566
+#: contents/ui/main.qml:1568 contents/ui/main.qml:1611
 msgid "moderate"
 msgstr "中度"
 
-#: contents/ui/main.qml:1362
+#: contents/ui/main.qml:1364
 msgid "overcast skies"
 msgstr "陰天"
 
@@ -3672,39 +3697,39 @@ msgstr "px 高度"
 msgid "px width"
 msgstr "px 寬度"
 
-#: contents/ui/main.qml:1564
+#: contents/ui/main.qml:1609
 msgid "quiet"
 msgstr "平靜"
 
-#: contents/ui/main.qml:1359
+#: contents/ui/main.qml:1361
 msgid "rain"
 msgstr "雨"
 
-#: contents/ui/main.qml:1568
+#: contents/ui/main.qml:1613
 msgid "severe"
 msgstr "嚴重"
 
-#: contents/ui/main.qml:1357
+#: contents/ui/main.qml:1359
 msgid "showers"
 msgstr "陣雨"
 
-#: contents/ui/main.qml:1353
+#: contents/ui/main.qml:1355
 msgid "showers and thunderstorms"
 msgstr "雷陣雨"
 
-#: contents/ui/main.qml:1518
+#: contents/ui/main.qml:1563
 msgid "similar to yesterday"
 msgstr "與昨日相近"
 
-#: contents/ui/main.qml:1356
+#: contents/ui/main.qml:1358
 msgid "snow"
 msgstr "雪"
 
-#: contents/ui/main.qml:1355
+#: contents/ui/main.qml:1357
 msgid "snow showers"
 msgstr "陣雪"
 
-#: contents/ui/main.qml:1567
+#: contents/ui/main.qml:1612
 msgid "strong"
 msgstr "強烈"
 
@@ -3712,23 +3737,23 @@ msgstr "強烈"
 msgid "system location"
 msgstr "系統位置"
 
-#: contents/ui/main.qml:1476
+#: contents/ui/main.qml:1496
 msgid "this afternoon"
 msgstr "今日下午"
 
-#: contents/ui/main.qml:1475
+#: contents/ui/main.qml:1495
 msgid "this morning"
 msgstr "今日上午"
 
-#: contents/ui/main.qml:1477
-msgid "this night"
-msgstr "今夜"
-
-#: contents/ui/main.qml:1354
+#: contents/ui/main.qml:1356
 msgid "thunderstorms"
 msgstr "雷雨"
 
-#: contents/ui/main.qml:1061
+#: contents/ui/main.qml:1497
+msgid "tonight"
+msgstr "今晚"
+
+#: contents/ui/main.qml:1063
 msgid "until %1"
 msgstr "至 %1"
 
@@ -3736,14 +3761,17 @@ msgstr "至 %1"
 msgid "until dawn"
 msgstr "後日出"
 
-#: contents/ui/main.qml:1525
+#: contents/ui/main.qml:1570
 msgid "very high"
 msgstr "非常高"
 
-#: contents/ui/main.qml:1068 contents/ui/main.qml:1333
-#: contents/ui/main.qml:1406
+#: contents/ui/main.qml:1070 contents/ui/main.qml:1335
+#: contents/ui/main.qml:1408
 msgid "your location"
 msgstr "您的位置"
+
+#~ msgid "this night"
+#~ msgstr "今夜"
 
 #~ msgid "Both"
 #~ msgstr "兩者"
